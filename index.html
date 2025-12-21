@@ -1,3 +1,4 @@
+this my whole index file:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +18,7 @@
 <link rel="stylesheet" href="./complete-styles.css?v=3">
 
     <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co;">
-
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co;">
 </head>
 <body>
     <!-- Dark Mode Toggle -->
@@ -2561,27 +2561,41 @@
     <!-- 10. MODULE VERIFICATION (debug helper) -->
    <script src="./module-verification.js"></script>
     <!-- 11. EMERGENCY CLICK FIX -->
-<script>
-    // Keep the app marked as ready even if some background errors happened
+    <script>
+        // Force the app to be 'Ready' regardless of background errors
+        window.APP_READY = true;
+        window.APP_INIT_FAILED = false;
+        
+        // Ensure every module card triggers the Modal
+        document.addEventListener('click', function(e) {
+            const card = e.target.closest('[data-module-id]');
+            if (card) {
+                const moduleId = card.getAttribute('data-module-id');
+                if (window.ModuleModal && typeof window.ModuleModal.show === 'function') {
+                    window.ModuleModal.show(moduleId);
+                }
+            }
+        });
+        console.log('🚀 Launch Clicks Activated');
+    </script>
+    <script>
+    // Force the app to be ready so buttons work
     window.APP_READY = true;
     window.APP_INIT_FAILED = false;
-
-    // Ensure clicks on module cards always open the module modal
-    document.addEventListener('click', function (e) {
+    
+    // Ensure clicks on modules always work
+    document.addEventListener('click', function(e) {
         const card = e.target.closest('[data-module-id]');
-        if (!card) return;
-
-        const moduleId = card.getAttribute('data-module-id');
-        if (window.ModuleModal && typeof window.ModuleModal.show === 'function') {
-            window.ModuleModal.show(moduleId);
+        if (card) {
+            const moduleId = card.getAttribute('data-module-id');
+            if (window.ModuleModal && typeof window.ModuleModal.show === 'function') {
+                window.ModuleModal.show(moduleId);
+            }
         }
     });
-
-    console.log('🚀 Launch Clicks Activated (emergency click fix)');
 </script>
 </body>
 </html>
-
 
 
 
