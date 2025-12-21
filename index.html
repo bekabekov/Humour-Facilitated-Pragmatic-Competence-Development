@@ -7,14 +7,14 @@
     <link rel="icon" href="data:,">
 
     <!-- Modular CSS Architecture - Load in order -->
-    <link rel="stylesheet" href="css/variables.css?v=3">
-    <link rel="stylesheet" href="css/base.css?v=3">
-    <link rel="stylesheet" href="css/layout.css?v=3">
-    <link rel="stylesheet" href="css/components.css?v=3">
-    <link rel="stylesheet" href="css/modules.css?v=3">
-    <link rel="stylesheet" href="css/theory-compact.css?v=3">
-    <link rel="stylesheet" href="css/pragmatics-scaffold.css?v=3">
-    <link rel="stylesheet" href="css/complete-styles.css?v=3">
+    <link rel="stylesheet" href="./css/variables.css?v=3">
+<link rel="stylesheet" href="./css/base.css?v=3">
+<link rel="stylesheet" href="./css/layout.css?v=3">
+<link rel="stylesheet" href="./css/components.css?v=3">
+<link rel="stylesheet" href="./css/modules.css?v=3">
+<link rel="stylesheet" href="./css/theory-compact.css?v=3">
+<link rel="stylesheet" href="./css/pragmatics-scaffold.css?v=3">
+<link rel="stylesheet" href="./css/complete-styles.css?v=3">
 
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co;">
@@ -2519,51 +2519,46 @@
     <!-- Modular JavaScript Architecture - Load in specific order -->
 
     <!-- 0. SECURITY AND BOOTSTRAP -->
-    <script src="js/security.js"></script>
-    <script src="js/dev-bootstrap.js"></script>
+    <script src="./js/security.js"></script>
+<script src="./js/dev-bootstrap.js"></script>
 
     <!-- LANGUAGE TOGGLE (handles language switching) -->
-    <script src="js/language.js"></script>
+   <script src="./js/language.js"></script>
 
     <!-- 1. STATE MANAGEMENT (manages app state and localStorage) -->
-    <script src="js/state.js"></script>
-
+   <script src="./js/state.js"></script>
+                    
     <!-- 2. DATA LOADER (loads JSON data files) -->
-    <script src="js/data.js"></script>
+    <script src="./js/data.js"></script>
 
     <!-- 3. ROUTER (handles navigation and routing) -->
-    <script src="js/router.js"></script>
+    <script src="./js/router.js"></script>
 
     <!-- 4. UI (handles DOM rendering) -->
-    <script src="js/ui.js"></script>
+   <script src="./js/ui.js"></script>
 
     <!-- 4.5 PRAGMATICS SCAFFOLD (research-grade analysis component) -->
-    <script src="js/pragmatics-scaffold.js"></script>
-
-    <!-- 5. ASSESSMENT (handles quizzes and tests) -->
-    <script src="js/assessment.js"></script>
-
+   <script src="./js/pragmatics-scaffold.js"></script>
+                    <!-- 5. ASSESSMENT (handles quizzes and tests) -->
+    <script src="./js/assessment.js"></script>
     <!-- 5.5. QR CODE LIBRARIES (must load before module-learning.js) -->
-    <script src="js/vendor/qrious.min.js"></script>
-    <script src="js/vendor/html5-qrcode.min.js"></script>
+    <script src="./js/vendor/qrious.min.js"></script>
+<script src="./js/vendor/html5-qrcode.min.js"></script>
 
     <!-- 6. MODULE LEARNING (handles module progression and mastery) -->
-    <script src="js/module-learning.js"></script>
-
+   <script src="./js/module-learning.js"></script>
     <!-- 7. APP INITIALIZATION (coordinates all modules) -->
-    <script src="js/app.js"></script>
+    <script src="./js/app.js"></script>
 
     <!-- 8. INITIALIZATION AND FIXES -->
-    <script src="js/index-init.js"></script>
-    
-    <script src="js/actions.js"></script>
-
+    <script src="./js/index-init.js"></script>
+<script src="./js/actions.js"></script>
     <!-- 9. UI BRIDGE (must load AFTER all modules are defined) -->
-    <script src="js/legacy-ui-bridge.js"></script>
+   <script src="./js/legacy-ui-bridge.js"></script>
     
 
     <!-- 10. MODULE VERIFICATION (debug helper) -->
-    <script src="js/module-verification.js"></script>
+    <script src="./js/module-verification.js"></script>
 
     <!-- 11. EMERGENCY CLICK FIX -->
     <script>
@@ -2601,4 +2596,5 @@
 </script>
 </body>
 </html>
+
 
