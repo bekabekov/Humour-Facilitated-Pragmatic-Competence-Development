@@ -1,0 +1,1173 @@
+[
+    {
+        "id": "module-1",
+        "title": "First Steps in Pragmatics",
+        "subtitle": "Foundations (A1-A2)",
+        "level": "A1-A2",
+        "icon": "1",
+        "color": "#10b981",
+        "estimatedTime": "60-90 minutes",
+        "prerequisites": [],
+        "subUnits": [
+            {
+                "id": "module-1-meaning",
+                "title": "Literal vs Figurative",
+                "focus": "Implied Meaning",
+                "skills": [
+                    "polysemy",
+                    "literal-figurative"
+                ],
+                "jokeIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "activityIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "id": "module-1-speech",
+                "title": "Simple Requests",
+                "focus": "Speech Acts",
+                "skills": [
+                    "basic-requests"
+                ],
+                "jokeIndices": [
+                    7,
+                    27
+                ],
+                "activityIndices": [
+                    4,
+                    5
+                ]
+            },
+            {
+                "id": "module-1-polite",
+                "title": "Being Polite",
+                "focus": "Politeness",
+                "skills": [
+                    "politeness-markers"
+                ],
+                "jokeIndices": [
+                    4,
+                    5
+                ],
+                "activityIndices": [
+                    2,
+                    6
+                ]
+            },
+            {
+                "id": "module-1-culture",
+                "title": "Culture Matters",
+                "focus": "Cultural Awareness",
+                "skills": [
+                    "culture-awareness"
+                ],
+                "jokeIndices": [
+                    28
+                ],
+                "activityIndices": [
+                    7
+                ]
+            }
+        ],
+        "preTest": {
+            "instructions": "Quick check!",
+            "questions": [
+                {
+                    "id": "m1-pre-1",
+                    "stem": "\"The clock has hands\" - \"hands\" means:",
+                    "options": [
+                        "Body parts",
+                        "Clock pointers",
+                        "Helpers",
+                        "Gloves"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m1-pre-2",
+                    "stem": "more polite: \"Give me water\" or \"Could I have water please\"?",
+                    "options": [
+                        "Give me water",
+                        "Could I have water please"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m1-pre-3",
+                    "stem": "\"Can you pass the salt?\" is:",
+                    "options": [
+                        "Ability question",
+                        "Polite request"
+                    ],
+                    "correct": 1
+                }
+            ]
+        },
+        "postTest": {
+            "instructions": "Show what you learned!",
+            "questions": [
+                {
+                    "id": "m1-post-1",
+                    "stem": "\"Feeling blue\" means:",
+                    "options": [
+                        "Cold",
+                        "Sad",
+                        "Painted blue",
+                        "Being healthy"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m1-post-2",
+                    "stem": "\"Would you mind closing the door?\" is:",
+                    "options": [
+                        "Very rude",
+                        "Polite request",
+                        "Asking about mental state",
+                        "Direct command"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m1-post-3",
+                    "stem": "Your friend says \"Give me a hand with this box.\" What do they want?",
+                    "options": [
+                        "Your actual hand",
+                        "Help carrying the box",
+                        "A picture of a hand",
+                        "To shake hands"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m1-post-4",
+                    "stem": "Which is MORE polite?",
+                    "options": [
+                        "\"I want water\"",
+                        "\"Water\"",
+                        "\"Could I please have some water?\"",
+                        "\"Give me water\""
+                    ],
+                    "correct": 2
+                },
+                {
+                    "id": "m1-post-5",
+                    "stem": "\"It's raining cats and dogs\" means:",
+                    "options": [
+                        "Animals are falling from sky",
+                        "It's raining very heavily",
+                        "There are cats and dogs outside",
+                        "The weather is nice"
+                    ],
+                    "correct": 1
+                }
+            ]
+        },
+        "reflection": {
+            "prompts": [
+                "What surprised you about figurative language?",
+                "How is English politeness different from your language?"
+            ]
+        }
+    },
+    {
+        "id": "module-2",
+        "title": "Building Pragmatic Skills",
+        "subtitle": "Intermediate (B1)",
+        "level": "B1",
+        "icon": "2",
+        "color": "#f59e0b",
+        "estimatedTime": "60-90 minutes",
+        "prerequisites": [
+            "module-1"
+        ],
+        "subUnits": [
+            {
+                "id": "module-2-meaning",
+                "title": "Reading Between Lines",
+                "focus": "Implicature",
+                "skills": [
+                    "conversational-implicature"
+                ],
+                "jokeIndices": [
+                    4,
+                    5,
+                    11,
+                    18
+                ],
+                "activityIndices": [
+                    5,
+                    8,
+                    13
+                ]
+            },
+            {
+                "id": "module-2-speech",
+                "title": "Indirect Requests",
+                "focus": "Speech Acts",
+                "skills": [
+                    "indirect-requests"
+                ],
+                "jokeIndices": [
+                    7,
+                    8,
+                    26,
+                    27
+                ],
+                "activityIndices": [
+                    4,
+                    8,
+                    9
+                ]
+            },
+            {
+                "id": "module-2-polite",
+                "title": "Face & Politeness",
+                "focus": "Politeness Strategies",
+                "skills": [
+                    "positive-face",
+                    "negative-face"
+                ],
+                "jokeIndices": [
+                    10,
+                    22
+                ],
+                "activityIndices": [
+                    6,
+                    9,
+                    10
+                ]
+            },
+            {
+                "id": "module-2-culture",
+                "title": "Direct vs Indirect",
+                "focus": "Cultural Styles",
+                "skills": [
+                    "directness-norms"
+                ],
+                "jokeIndices": [
+                    17,
+                    21,
+                    28
+                ],
+                "activityIndices": [
+                    12,
+                    16
+                ]
+            }
+        ],
+        "preTest": {
+            "instructions": "Check your level!",
+            "questions": [
+                {
+                    "id": "m2-pre-1",
+                    "stem": "\"It's getting late...\" in a meeting means:",
+                    "options": [
+                        "Asking time",
+                        "Let's finish soon"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m2-pre-2",
+                    "stem": "\"I don't suppose you could help?\" is:",
+                    "options": [
+                        "Negative statement",
+                        "Indirect request"
+                    ],
+                    "correct": 1
+                }
+            ]
+        },
+        "postTest": {
+            "instructions": "Show B1 skills!",
+            "questions": [
+                {
+                    "id": "m2-post-1",
+                    "stem": "Your colleague says \"I have a deadline today\" when you ask them to lunch. They mean:",
+                    "options": [
+                        "They work on deadlines",
+                        "No, they're too busy (implicature)",
+                        "Yes, after the deadline",
+                        "They don't understand"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m2-post-2",
+                    "stem": "\"It's a bit cold in here\" is probably:",
+                    "options": [
+                        "Just sharing information",
+                        "An indirect request to close window/turn on heat",
+                        "A scientific observation",
+                        "A complaint about life"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m2-post-3",
+                    "stem": "Which maxim is violated when someone says \"Nice weather!\" during a storm?",
+                    "options": [
+                        "Quantity (not enough info)",
+                        "Quality (not being truthful)",
+                        "Relation (off topic)",
+                        "Manner (not clear)"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m2-post-4",
+                    "stem": "Positive face is:",
+                    "options": [
+                        "Having a pretty face",
+                        "Desire to be liked and approved",
+                        "Desire to be left alone",
+                        "Being positive about life"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m2-post-5",
+                    "stem": "Which is an example of hedging?",
+                    "options": [
+                        "\"You are wrong\"",
+                        "\"That is bad\"",
+                        "\"I think this might need some work\"",
+                        "\"Fix this now\""
+                    ],
+                    "correct": 2
+                },
+                {
+                    "id": "m2-post-6",
+                    "stem": "Boss: \"Do you think you could finish this by Friday?\" This is:",
+                    "options": [
+                        "A genuine question about your opinion",
+                        "An indirect request (sounds polite but expects yes)",
+                        "Asking about thinking ability",
+                        "An offer of help"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m2-post-7",
+                    "stem": "Why do people use indirect requests?",
+                    "options": [
+                        "To confuse others",
+                        "To be more polite and give options to refuse",
+                        "Because they don't know grammar",
+                        "To waste time"
+                    ],
+                    "correct": 1
+                }
+            ]
+        },
+        "reflection": {
+            "prompts": [
+                "When do you use indirect speech?",
+                "How do you protect face when giving bad news?"
+            ]
+        }
+    },
+    {
+        "id": "module-3",
+        "title": "Sharpening Your Pragmatic Edge",
+        "subtitle": "Upper-Intermediate (B2)",
+        "level": "B2",
+        "icon": "3",
+        "color": "#8b5cf6",
+        "estimatedTime": "60-90 minutes",
+        "prerequisites": [
+            "module-2"
+        ],
+        "subUnits": [
+            {
+                "id": "module-3-meaning",
+                "title": "Sarcasm & Irony",
+                "focus": "Non-Literal Meaning",
+                "skills": [
+                    "detect-sarcasm",
+                    "verbal-irony"
+                ],
+                "jokeIndices": [
+                    10,
+                    11,
+                    23,
+                    24,
+                    25
+                ],
+                "activityIndices": [
+                    9,
+                    13,
+                    14
+                ]
+            },
+            {
+                "id": "module-3-speech",
+                "title": "Complex Speech Acts",
+                "focus": "Advanced Speech Acts",
+                "skills": [
+                    "complaints",
+                    "persuasion"
+                ],
+                "jokeIndices": [
+                    12,
+                    22
+                ],
+                "activityIndices": [
+                    10,
+                    11,
+                    14
+                ]
+            },
+            {
+                "id": "module-3-polite",
+                "title": "Strategic Politeness",
+                "focus": "Face Management",
+                "skills": [
+                    "face-threatening-acts",
+                    "mitigation"
+                ],
+                "jokeIndices": [
+                    10,
+                    22
+                ],
+                "activityIndices": [
+                    10,
+                    14,
+                    15
+                ]
+            },
+            {
+                "id": "module-3-culture",
+                "title": "Pragmatic Transfer",
+                "focus": "Cross-Cultural Errors",
+                "skills": [
+                    "pragmatic-transfer"
+                ],
+                "jokeIndices": [
+                    15,
+                    16,
+                    21,
+                    22
+                ],
+                "activityIndices": [
+                    12,
+                    16,
+                    17
+                ]
+            }
+        ],
+        "preTest": {
+            "instructions": "Test advanced awareness!",
+            "questions": [
+                {
+                    "id": "m3-pre-1",
+                    "stem": "\"Oh GREAT, more homework\" (flat voice):",
+                    "options": [
+                        "Happy",
+                        "Frustrated (sarcasm)"
+                    ],
+                    "correct": 1
+                }
+            ]
+        },
+        "postTest": {
+            "instructions": "Show B2 mastery!",
+            "questions": [
+                {
+                    "id": "m3-post-1",
+                    "stem": "Your flatmate leaves dishes everywhere. You say \"I LOVE living in a pigsty!\" (sarcastic tone). This is:",
+                    "options": [
+                        "Genuine happiness",
+                        "Verbal irony/sarcasm to express frustration",
+                        "A compliment",
+                        "Confusion"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m3-post-2",
+                    "stem": "Fire station burns down - this is an example of:",
+                    "options": [
+                        "Bad luck only",
+                        "Situational irony (ironic situation)",
+                        "Sarcasm",
+                        "A metaphor"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m3-post-3",
+                    "stem": "A student from a direct culture says to a British professor \"Your explanation was unclear.\" This might be:",
+                    "options": [
+                        "Perfect - honest feedback",
+                        "Pragmatic transfer (too direct for British context)",
+                        "Good use of hedging",
+                        "Appropriate formality"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m3-post-4",
+                    "stem": "How can you recognize sarcasm in English?",
+                    "options": [
+                        "People always say \"I'm being sarcastic\"",
+                        "Mismatch between words and reality + flat/exaggerated tone",
+                        "Only through emojis",
+                        "Impossible to detect"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m3-post-5",
+                    "stem": "You need to complain about noise. Which is BEST for British English?",
+                    "options": [
+                        "\"You are too loud, stop it\"",
+                        "\"I'm terribly sorry to bother you, but I wonder if you might possibly keep it down a bit?\"",
+                        "\"STOP THE NOISE\"",
+                        "\"Why are you so inconsiderate?\""
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m3-post-6",
+                    "stem": "Pragmalinguistic failure means:",
+                    "options": [
+                        "Using wrong social judgment",
+                        "Using wrong linguistic form for the function",
+                        "Grammar mistakes",
+                        "Pronunciation errors"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m3-post-7",
+                    "stem": "British colleague: \"That's an interesting approach\" (flat tone). They likely mean:",
+                    "options": [
+                        "They genuinely find it interesting",
+                        "They disagree but are being polite (understatement)",
+                        "They are confused",
+                        "They want more information"
+                    ],
+                    "correct": 1
+                }
+            ]
+        },
+        "reflection": {
+            "prompts": [
+                "Have you been misunderstood because of sarcasm?",
+                "What pragmatic mistakes have you made?"
+            ]
+        }
+    },
+    {
+        "id": "module-4",
+        "title": "Pragmatic Mastery",
+        "subtitle": "Advanced (C1)",
+        "level": "C1",
+        "icon": "4",
+        "color": "#ef4444",
+        "estimatedTime": "60-90 minutes",
+        "prerequisites": [
+            "module-3"
+        ],
+        "subUnits": [
+            {
+                "id": "module-4-meaning",
+                "title": "Layered Meaning",
+                "focus": "Complex Implicature",
+                "skills": [
+                    "layered-implicature"
+                ],
+                "jokeIndices": [
+                    14,
+                    19,
+                    20
+                ],
+                "activityIndices": [
+                    17,
+                    19
+                ]
+            },
+            {
+                "id": "module-4-speech",
+                "title": "Institutional Discourse",
+                "focus": "Professional Communication",
+                "skills": [
+                    "professional-requests"
+                ],
+                "jokeIndices": [
+                    22
+                ],
+                "activityIndices": [
+                    8,
+                    18,
+                    19
+                ]
+            },
+            {
+                "id": "module-4-polite",
+                "title": "Power & Rapport",
+                "focus": "Advanced Politeness",
+                "skills": [
+                    "power-dynamics"
+                ],
+                "jokeIndices": [
+                    10,
+                    22
+                ],
+                "activityIndices": [
+                    18,
+                    19,
+                    20
+                ]
+            },
+            {
+                "id": "module-4-culture",
+                "title": "Cultural Adaptation",
+                "focus": "Cross-Cultural Mastery",
+                "skills": [
+                    "cultural-scripts",
+                    "cultural-adaptation"
+                ],
+                "jokeIndices": [
+                    15,
+                    16,
+                    17,
+                    21,
+                    28
+                ],
+                "activityIndices": [
+                    12,
+                    16,
+                    17,
+                    18,
+                    20
+                ]
+            }
+        ],
+        "preTest": {
+            "instructions": "Advanced check!",
+            "questions": [
+                {
+                    "id": "m4-pre-1",
+                    "stem": "\"I'll think about it\" from Japanese businessperson:",
+                    "options": [
+                        "Genuine consideration",
+                        "Polite refusal"
+                    ],
+                    "correct": 1
+                }
+            ]
+        },
+        "postTest": {
+            "instructions": "Demonstrate C1 mastery!",
+            "questions": [
+                {
+                    "id": "m4-post-1",
+                    "stem": "Pragmalinguistic failure vs. Sociopragmatic failure:",
+                    "options": [
+                        "Grammar mistakes vs. vocabulary mistakes",
+                        "Wrong linguistic form vs. wrong social judgment",
+                        "Formal vs. informal",
+                        "British vs. American English"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m4-post-2",
+                    "stem": "A Japanese businessperson says \"We will consider your proposal carefully.\" This is likely:",
+                    "options": [
+                        "Genuine interest - wait for response",
+                        "A polite refusal (cultural script for \"no\")",
+                        "A request for more information",
+                        "Enthusiasm about the idea"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m4-post-3",
+                    "stem": "In professional email to a senior colleague, which shows best understanding of power dynamics?",
+                    "options": [
+                        "\"Do this by Friday\"",
+                        "\"I need this by Friday\"",
+                        "\"I was wondering if it might be possible to receive this by Friday, if convenient?\"",
+                        "\"Friday deadline\""
+                    ],
+                    "correct": 2
+                },
+                {
+                    "id": "m4-post-4",
+                    "stem": "Your manager says \"I'm sure you'll make the right decision\" about your project approach. This is:",
+                    "options": [
+                        "Complete freedom to decide",
+                        "Layered meaning: gentle directive to reconsider (trust the subtext)",
+                        "They don't care",
+                        "Genuine confidence only"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m4-post-5",
+                    "stem": "Why might an Uzbek learner say \"Come to my house\" directly while British speakers say \"You should pop round sometime\"?",
+                    "options": [
+                        "Uzbek learners have poor English",
+                        "Different cultural scripts: Uzbek hospitality is direct/warm, British is indirect/tentative",
+                        "British people don't like visitors",
+                        "Grammar differences"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m4-post-6",
+                    "stem": "In academic writing, \"The results suggest...\" instead of \"The results prove...\" shows:",
+                    "options": [
+                        "Uncertainty about findings",
+                        "Appropriate hedging for scholarly caution and face-saving",
+                        "Weak research",
+                        "Grammar preference"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m4-post-7",
+                    "stem": "A professor says \"Your argument is provocative.\" (neutral tone). They mean:",
+                    "options": [
+                        "It's controversial and interesting (could be positive or critical - needs more context)",
+                        "It's definitely bad",
+                        "It's definitely good",
+                        "They're angry"
+                    ],
+                    "correct": 0
+                }
+            ]
+        },
+        "reflection": {
+            "prompts": [
+                "How do you adapt communication across cultures?",
+                "What is the most important pragmatic lesson?"
+            ]
+        }
+    },
+    {
+        "id": "module-5",
+        "title": "Bridging Cultures",
+        "subtitle": "Cross-Cultural Humour (B2-C1)",
+        "level": "B2-C1",
+        "icon": "5",
+        "color": "#06b6d4",
+        "estimatedTime": "75-100 minutes",
+        "prerequisites": [
+            "module-3"
+        ],
+        "subUnits": [
+            {
+                "id": "module-5-uzbek",
+                "title": "Uzbek Humour Patterns",
+                "focus": "Understanding Your L1 Humour",
+                "skills": [
+                    "l1-awareness",
+                    "cultural-scripts",
+                    "askiya-traditions"
+                ],
+                "jokeIndices": [
+                    29,
+                    30,
+                    31
+                ],
+                "activityIndices": [
+                    21,
+                    22,
+                    23
+                ]
+            },
+            {
+                "id": "module-5-british",
+                "title": "British Humour Decoded",
+                "focus": "Understatement, Irony & Sarcasm",
+                "skills": [
+                    "british-understatement",
+                    "dry-wit",
+                    "self-deprecation"
+                ],
+                "jokeIndices": [
+                    32,
+                    33,
+                    34,
+                    35
+                ],
+                "activityIndices": [
+                    21,
+                    22,
+                    24,
+                    25
+                ]
+            },
+            {
+                "id": "module-5-practice",
+                "title": "Cross-Cultural Practice",
+                "focus": "Applying Both Perspectives",
+                "skills": [
+                    "cultural-bridging",
+                    "pragmatic-flexibility",
+                    "humour-adaptation"
+                ],
+                "jokeIndices": [
+                    36,
+                    37,
+                    38,
+                    39
+                ],
+                "activityIndices": [
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28
+                ]
+            }
+        ],
+        "preTest": {
+            "instructions": "Let's see how well you understand cross-cultural humour differences!",
+            "questions": [
+                {
+                    "id": "m5-pre-1",
+                    "stem": "A British colleague says \"Not bad\" about your excellent presentation. They mean:",
+                    "options": [
+                        "It was mediocre, just acceptable",
+                        "It was actually very good (British understatement)",
+                        "They didn't pay attention",
+                        "They want you to improve it"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m5-pre-2",
+                    "stem": "In Uzbek culture, teasing someone about eating too little typically means:",
+                    "options": [
+                        "Criticism of their appetite",
+                        "A sign of care and hospitality",
+                        "They should leave the table",
+                        "The food is not good"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m5-pre-3",
+                    "stem": "Why might an Uzbek learner miss British sarcasm?",
+                    "options": [
+                        "British people speak too fast",
+                        "Uzbek culture uses more direct, warm communication",
+                        "Sarcasm doesn't exist in Uzbek",
+                        "British accents are difficult"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m5-pre-4",
+                    "stem": "\"Askiya\" in Uzbek tradition is:",
+                    "options": [
+                        "A type of food",
+                        "A witty verbal duel using wordplay and clever responses",
+                        "A formal greeting",
+                        "A written poetry form"
+                    ],
+                    "correct": 1
+                }
+            ]
+        },
+        "postTest": {
+            "instructions": "Demonstrate your cross-cultural humour competence!",
+            "questions": [
+                {
+                    "id": "m5-post-1",
+                    "stem": "British person: \"Well, that's certainly ONE way to do it.\" This is:",
+                    "options": [
+                        "Neutral observation",
+                        "Polite criticism through understatement",
+                        "Genuine praise",
+                        "A question"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m5-post-2",
+                    "stem": "An Uzbek grandmother says \"You look healthy!\" to a thin grandchild. The pragmatic meaning is:",
+                    "options": [
+                        "A genuine health compliment",
+                        "Concern that the child is too thin (needs feeding)",
+                        "The child should exercise more",
+                        "A formal greeting"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m5-post-3",
+                    "stem": "A British colleague says your presentation was \"not bad at all.\" They mean:",
+                    "options": [
+                        "It was mediocre and disappointing",
+                        "It was actually quite good (British understatement)",
+                        "They didn't pay attention",
+                        "They are confused"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m5-post-4",
+                    "stem": "In Uzbek \"askiya\" tradition, witty verbal duels show:",
+                    "options": [
+                        "Aggression and conflict",
+                        "Quick thinking, respect, and social bonding through humor",
+                        "Formal education",
+                        "Disrespect to elders"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m5-post-5",
+                    "stem": "Why might British self-deprecating humor (\"I'm terrible at this\") confuse Uzbek learners?",
+                    "options": [
+                        "British people can't do anything well",
+                        "Uzbek culture values direct pride in achievements; British culture values modesty",
+                        "It's a grammar mistake",
+                        "Uzbek learners don't understand English"
+                    ],
+                    "correct": 1
+                },
+                {
+                    "id": "m5-post-6",
+                    "stem": "Best strategy for cross-cultural humor:",
+                    "options": [
+                        "Avoid all humor with non-native speakers",
+                        "Use only universal slapstick humor",
+                        "Observe, adapt, ask for clarification, and be willing to explain cultural context",
+                        "Speak louder so everyone understands"
+                    ],
+                    "correct": 2
+                },
+                {
+                    "id": "m5-post-7",
+                    "stem": "When a British person says \"I suppose it could be worse,\" they are:",
+                    "options": [
+                        "Being pessimistic about a bad situation",
+                        "Using understatement - might mean it's actually quite good",
+                        "Asking a question",
+                        "Comparing two things"
+                    ],
+                    "correct": 1
+                }
+            ]
+        },
+        "reflection": {
+            "prompts": [
+                "What surprised you most about the differences between Uzbek and British humour?",
+                "Can you think of a time when humour didn't translate well across cultures in your experience?",
+                "How might understanding these differences help you in professional or academic English contexts?",
+                "Which aspects of British humour do you find most challenging? Why?"
+            ]
+        }
+    },
+    {
+        "id": "module-6",
+        "title": "Analysing Humour: Attardo's GTVH",
+        "subtitle": "Advanced Theory (B2-C1)",
+        "level": "B2-C1",
+        "icon": "6",
+        "color": "#8b5cf6",
+        "estimatedTime": "90-120 minutes",
+        "prerequisites": [
+            "module-2"
+        ],
+        "subUnits": [
+            {
+                "id": "module-6-intro",
+                "title": "Introduction to GTVH",
+                "focus": "Understanding the Framework",
+                "skills": [
+                    "theoretical-frameworks",
+                    "analytical-thinking"
+                ],
+                "jokeIndices": [
+                    0,
+                    4,
+                    7
+                ],
+                "activityIndices": [
+                    0
+                ]
+            },
+            {
+                "id": "module-6-kr",
+                "title": "The 6 Knowledge Resources",
+                "focus": "Learning Each Component",
+                "skills": [
+                    "script-opposition",
+                    "logical-mechanism",
+                    "narrative-analysis"
+                ],
+                "jokeIndices": [
+                    1,
+                    5,
+                    8
+                ],
+                "activityIndices": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "id": "module-6-practice",
+                "title": "Guided Analysis Practice",
+                "focus": "Applying GTVH to Real Jokes",
+                "skills": [
+                    "joke-analysis",
+                    "systematic-breakdown"
+                ],
+                "jokeIndices": [
+                    2,
+                    6,
+                    9
+                ],
+                "activityIndices": [
+                    3,
+                    4
+                ]
+            }
+        ],
+        "preTest": {
+            "instructions": "Test your joke analysis skills!",
+            "questions": [
+                {
+                    "id": "m6-pre-1",
+                    "stem": "What makes a joke funny according to most humour theories?",
+                    "options": [
+                        "Random words put together",
+                        "An unexpected twist or incongruity",
+                        "Using big words",
+                        "Speaking loudly"
+                    ],
+                    "correct": 1,
+                    "explanation": "Most humour theories agree that incongruity (something unexpected) is central to humour."
+                },
+                {
+                    "id": "m6-pre-2",
+                    "stem": "\"Why did the scarecrow win an award? Because he was outstanding in his field!\" What creates the humour?",
+                    "options": [
+                        "Scarecrows are funny",
+                        "Double meaning of \"outstanding in his field\"",
+                        "Awards are exciting",
+                        "The question format"
+                    ],
+                    "correct": 1,
+                    "explanation": "Outstanding in his field means both excellent AND literally standing out in a farm field."
+                },
+                {
+                    "id": "m6-pre-3",
+                    "stem": "GTVH stands for:",
+                    "options": [
+                        "General Theory of Verbal Humour",
+                        "Great Techniques for Very Hilarious content",
+                        "Guided Training in Verbal Habits",
+                        "German Theory of Vocal Harmony"
+                    ],
+                    "correct": 0,
+                    "explanation": "GTVH = General Theory of Verbal Humour, developed by Salvatore Attardo and Victor Raskin."
+                }
+            ]
+        },
+        "postTest": {
+            "instructions": "Show your GTVH analysis skills!",
+            "questions": [
+                {
+                    "id": "m6-post-1",
+                    "stem": "Which Knowledge Resource deals with the TWO conflicting interpretations in a joke?",
+                    "options": [
+                        "Logical Mechanism (LM)",
+                        "Script Opposition (SO)",
+                        "Target (TA)",
+                        "Language (LA)"
+                    ],
+                    "correct": 1,
+                    "explanation": "Script Opposition (SO) identifies the two scripts/meanings that clash to create humour."
+                },
+                {
+                    "id": "m6-post-2",
+                    "stem": "In \"I used to be a banker but I lost interest,\" the Logical Mechanism is:",
+                    "options": [
+                        "Analogy",
+                        "Faulty reasoning",
+                        "Double meaning / Polysemy",
+                        "Exaggeration"
+                    ],
+                    "correct": 2,
+                    "explanation": "The LM is polysemy - \"interest\" means both enthusiasm and bank interest."
+                },
+                {
+                    "id": "m6-post-3",
+                    "stem": "Why is GTVH useful for language learners?",
+                    "options": [
+                        "It makes all jokes funny",
+                        "It provides a systematic way to understand WHY jokes work",
+                        "It translates jokes automatically",
+                        "It removes the need to understand culture"
+                    ],
+                    "correct": 1,
+                    "explanation": "GTVH gives learners a framework to systematically analyze jokes."
+                },
+                {
+                    "id": "m6-post-4",
+                    "stem": "A joke makes fun of a forgetful professor who keeps losing their notes. Which Knowledge Resource identifies who is being teased?",
+                    "options": [
+                        "Target (TA)",
+                        "Situation (SI)",
+                        "Script Opposition (SO)",
+                        "Language (LA)"
+                    ],
+                    "correct": 0,
+                    "explanation": "Target (TA) identifies the person or group being mocked or teased in the joke."
+                },
+                {
+                    "id": "m6-post-5",
+                    "stem": "A joke happens in a hospital waiting room with a doctor and a patient. Which Knowledge Resource captures the setting and participants?",
+                    "options": [
+                        "Situation (SI)",
+                        "Target (TA)",
+                        "Narrative Strategy (NS)",
+                        "Logical Mechanism (LM)"
+                    ],
+                    "correct": 0,
+                    "explanation": "Situation (SI) describes the setting, roles, and context of the joke."
+                },
+                {
+                    "id": "m6-post-6",
+                    "stem": "A joke saves the punchline for the final line to create a twist. Which Knowledge Resource is about the order and structure of the story?",
+                    "options": [
+                        "Narrative Strategy (NS)",
+                        "Script Opposition (SO)",
+                        "Language (LA)",
+                        "Target (TA)"
+                    ],
+                    "correct": 0,
+                    "explanation": "Narrative Strategy (NS) covers how the joke is structured and when the punchline appears."
+                }
+            ]
+        },
+        "reflection": {
+            "prompts": [
+                "How does having a framework (like GTVH) help you understand jokes that initially confused you?",
+                "Which Knowledge Resource do you find most useful for understanding English humour?",
+                "Can you think of a joke from your culture and analyze it using GTVH?",
+                "How might GTVH help you explain jokes to others?"
+            ]
+        }
+    }
+]

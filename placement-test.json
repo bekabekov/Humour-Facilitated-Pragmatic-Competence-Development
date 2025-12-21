@@ -1,0 +1,242 @@
+{
+    "title": "Find Your Level",
+    "description": "Answer 15 questions to discover your starting point",
+    "questions": [
+        {
+            "id": "pt-1",
+            "question": "\"What has hands but cannot clap? A clock!\" This joke is funny because:",
+            "options": [
+                "Clocks are strange objects",
+                "The word \"hands\" has two different meanings",
+                "It rhymes nicely",
+                "Clocks cannot move"
+            ],
+            "correct": 1,
+            "level": "A1-A2",
+            "explanation": "The word \"hands\" means both human body parts AND clock pointers. This double meaning creates the humor.",
+            "stem": "\"What has hands but cannot clap? A clock!\" This joke is funny because:"
+        },
+        {
+            "id": "pt-10",
+            "question": "\"Oh great, another Monday morning meeting\" (said with a sigh) expresses:",
+            "options": [
+                "Genuine excitement about the meeting",
+                "Frustration or annoyance (verbal irony)",
+                "Confusion about the schedule",
+                "A neutral observation about the day"
+            ],
+            "correct": 1,
+            "level": "B2",
+            "explanation": "The word \"great\" combined with a sigh signals verbal irony. The speaker means the opposite - they are NOT happy about the meeting.",
+            "stem": "\"Oh great, another Monday morning meeting\" (said with a sigh) expresses:"
+        },
+        {
+            "id": "pt-11",
+            "question": "An American says \"I'll think about it\" to a business proposal. A Japanese colleague says the same phrase. The key difference is:",
+            "options": [
+                "No difference - same meaning in both cultures",
+                "Different illocutionary force: American = maybe, Japanese = polite refusal",
+                "Grammar is different in each culture",
+                "Americans are more honest than Japanese"
+            ],
+            "correct": 1,
+            "level": "C1",
+            "explanation": "Same words, different pragmatic meaning across cultures. In Japanese business culture, \"I'll think about it\" conventionally signals a polite \"no.\"",
+            "stem": "An American says \"I'll think about it\" to a business proposal. A Japanese colleague says the same phrase. The key difference is:"
+        },
+        {
+            "id": "pt-12",
+            "question": "At an Uzbek gathering, a foreign guest refuses food by saying \"No thanks, I'm full.\" The host looks offended. Why?",
+            "options": [
+                "The guest spoke too quietly",
+                "Direct refusal of food threatens the host's positive face in Uzbek hospitality culture",
+                "The guest should have asked for more food",
+                "\"I'm full\" is grammatically incorrect"
+            ],
+            "correct": 1,
+            "level": "C1",
+            "explanation": "In Uzbek culture, hospitality is a core value. Directly refusing food can be seen as rejecting the host's care and generosity. Better strategies: accept a small portion, praise the food, give elaborate reasons.",
+            "stem": "At an Uzbek gathering, a foreign guest refuses food by saying \"No thanks, I'm full.\" The host looks offended. Why?"
+        },
+        {
+            "id": "pt-13",
+            "level": "B1",
+            "stem": "Coworker: \"Could we maybe revisit your proposal next week?\" said after a long meeting. What do they likely mean?",
+            "options": [
+                "They are excited and want a second meeting immediately",
+                "They need more time and are politely delaying a decision",
+                "They completely reject the proposal and will never revisit it",
+                "They did not understand the proposal at all"
+            ],
+            "correct": 1,
+            "explanation": "\"Maybe revisit next week\" is an indirect, face-saving delay rather than immediate agreement or total rejection.",
+            "question": "Coworker: \"Could we maybe revisit your proposal next week?\" said after a long meeting. What do they likely mean?"
+        },
+        {
+            "id": "pt-14",
+            "level": "B2",
+            "stem": "Friend (deadpan tone): \"Wow, that traffic was amazing\" after being stuck for an hour. What is implied?",
+            "options": [
+                "They genuinely loved the traffic experience",
+                "They are being sarcastic and mean it was terrible",
+                "They are praising the city's roads overall",
+                "They want to drive the same route again soon"
+            ],
+            "correct": 1,
+            "explanation": "Deadpan praise of a bad experience is verbal irony; the intended meaning is that the traffic was awful.",
+            "question": "Friend (deadpan tone): \"Wow, that traffic was amazing\" after being stuck for an hour. What is implied?"
+        },
+        {
+            "id": "pt-15",
+            "level": "B2",
+            "stem": "Student emails professor: \"If it's not too much trouble, could I submit on Monday instead?\" What makes this polite?",
+            "options": [
+                "It avoids mentioning the word \"late\"",
+                "It uses hedging and gives the professor an easy option to refuse",
+                "It hides the request in a long sentence",
+                "It demands action immediately"
+            ],
+            "correct": 1,
+            "explanation": "Hedging (\"if it's not too much trouble\", \"could I\") softens the imposition and offers an out, showing negative politeness.",
+            "question": "Student emails professor: \"If it's not too much trouble, could I submit on Monday instead?\" What makes this polite?"
+        },
+        {
+            "id": "pt-2",
+            "question": "\"I'm feeling blue today\" means:",
+            "options": [
+                "I painted myself blue",
+                "I'm very cold",
+                "I'm sad or depressed",
+                "I like the color blue"
+            ],
+            "correct": 2,
+            "level": "A1-A2",
+            "explanation": "\"Feeling blue\" is an idiom meaning sad. The literal interpretation (being the color blue) would be absurd.",
+            "stem": "\"I'm feeling blue today\" means:"
+        },
+        {
+            "id": "pt-3",
+            "question": "An actor's friend says \"Break a leg!\" before a performance. This means:",
+            "options": [
+                "Be careful, the stage is dangerous",
+                "Good luck!",
+                "The performance will be painful",
+                "Please injure yourself"
+            ],
+            "correct": 1,
+            "level": "A1-A2",
+            "explanation": "\"Break a leg\" is a theatrical idiom meaning \"good luck.\" Taking it literally would be alarming!",
+            "stem": "An actor's friend says \"Break a leg!\" before a performance. This means:"
+        },
+        {
+            "id": "pt-4",
+            "question": "\"Why did the student eat his homework? Because the teacher said it was a piece of cake!\" The joke works because:",
+            "options": [
+                "Students are hungry",
+                "Homework tastes good",
+                "\"Piece of cake\" means both easy AND actual cake",
+                "Teachers give strange advice"
+            ],
+            "correct": 2,
+            "level": "A1-A2",
+            "explanation": "\"Piece of cake\" is an idiom meaning \"very easy.\" The student interprets it literally as food.",
+            "stem": "\"Why did the student eat his homework? Because the teacher said it was a piece of cake!\" The joke works because:"
+        },
+        {
+            "id": "pt-5",
+            "question": "Your colleague says \"It's getting quite late...\" during a long meeting. They probably mean:",
+            "options": [
+                "They want to know the exact time",
+                "They think the meeting should end soon",
+                "They are tired and will fall asleep",
+                "The clock in the room is wrong"
+            ],
+            "correct": 1,
+            "level": "B1",
+            "explanation": "This is an indirect speech act. Instead of directly saying \"Let's end the meeting,\" the speaker hints at it politely.",
+            "stem": "Your colleague says \"It's getting quite late...\" during a long meeting. They probably mean:"
+        },
+        {
+            "id": "pt-6",
+            "question": "\"Can you pass the salt?\" at dinner is:",
+            "options": [
+                "A genuine question about your physical ability",
+                "A polite indirect request",
+                "An insult about your strength",
+                "A test of your knowledge"
+            ],
+            "correct": 1,
+            "level": "B1",
+            "explanation": "\"Can you...?\" is conventionally used as a polite request, not a question about ability. This is an indirect speech act.",
+            "stem": "\"Can you pass the salt?\" at dinner is:"
+        },
+        {
+            "id": "pt-7",
+            "question": "You invite a friend to a party. They say \"I'm a bit busy right now.\" This is probably:",
+            "options": [
+                "A request for you to help them",
+                "A literal statement about their current activity",
+                "An indirect way of declining your invitation",
+                "A question about the party timing"
+            ],
+            "correct": 2,
+            "level": "B1",
+            "explanation": "This is an indirect refusal. The speaker avoids saying \"no\" directly to protect both parties' feelings (face-saving).",
+            "stem": "You invite a friend to a party. They say \"I'm a bit busy right now.\" This is probably:"
+        },
+        {
+            "id": "pt-8",
+            "question": "After watching a terrible movie, your friend says \"Well, THAT was a masterpiece!\" with a flat tone. They mean:",
+            "options": [
+                "They genuinely loved the movie",
+                "They thought it was awful (sarcasm)",
+                "They are confused about the movie",
+                "They want to watch it again"
+            ],
+            "correct": 1,
+            "level": "B2",
+            "explanation": "This is sarcasm - saying the opposite of what you mean. Tone and context signal that \"masterpiece\" is ironic.",
+            "stem": "After watching a terrible movie, your friend says \"Well, THAT was a masterpiece!\" with a flat tone. They mean:"
+        },
+        {
+            "id": "pt-9",
+            "question": "A student emails their professor: \"Hey Prof, I need that extension lol send it when u can thx.\" This is problematic because:",
+            "options": [
+                "The email is too long",
+                "It's too informal and sounds demanding for the power relationship",
+                "Extensions are never allowed",
+                "The spelling is incorrect"
+            ],
+            "correct": 1,
+            "level": "B2",
+            "explanation": "Multiple pragmatic failures: too informal register (Hey, lol, u, thx), too direct (I need), no justification, ignores power asymmetry between student and professor.",
+            "stem": "A student emails their professor: \"Hey Prof, I need that extension lol send it when u can thx.\" This is problematic because:"
+        }
+    ],
+    "scoring": {
+        "module-1": {
+            "label": "A1-A2 Beginner",
+            "description": "Module 1: First Steps in Pragmatics - Master 4 skill strands: Meaning, Speech, Polite, Culture",
+            "min": 0,
+            "max": 5
+        },
+        "module-2": {
+            "label": "B1 Intermediate",
+            "description": "Module 2: Building Pragmatic Skills - Develop all 4 skill strands at B1 level",
+            "min": 6,
+            "max": 9
+        },
+        "module-3": {
+            "label": "B2 Upper-Intermediate",
+            "description": "Module 3: Sharpening Your Pragmatic Edge - Advanced practice in 4 skill strands",
+            "min": 10,
+            "max": 12
+        },
+        "module-4": {
+            "label": "C1 Advanced",
+            "description": "Module 4: Pragmatic Mastery - Complete mastery of 4 skill strands",
+            "min": 13,
+            "max": 15
+        }
+    }
+}

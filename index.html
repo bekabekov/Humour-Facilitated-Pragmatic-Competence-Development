@@ -1,0 +1,2604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Pragmatic Competence Through Humor</title>
+    <link rel="icon" href="data:,">
+
+    <!-- Modular CSS Architecture - Load in order -->
+    <link rel="stylesheet" href="css/variables.css?v=3">
+    <link rel="stylesheet" href="css/base.css?v=3">
+    <link rel="stylesheet" href="css/layout.css?v=3">
+    <link rel="stylesheet" href="css/components.css?v=3">
+    <link rel="stylesheet" href="css/modules.css?v=3">
+    <link rel="stylesheet" href="css/theory-compact.css?v=3">
+    <link rel="stylesheet" href="css/pragmatics-scaffold.css?v=3">
+    <link rel="stylesheet" href="css/complete-styles.css?v=3">
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co;">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle Dark Mode">
+        <span id="theme-icon">🌙</span>
+    </button>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle" id="language-toggle">
+        <button class="lang-btn active" data-lang="en" aria-label="Switch to English">ENG</button>
+        <button class="lang-btn" data-lang="uz" aria-label="Switch to Uzbek">UZB</button>
+    </div>
+
+    <!-- Onboarding Modal -->
+    <div class="modal-overlay" id="onboarding-modal" role="presentation" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="onboarding-title" aria-describedby="onboarding-desc" tabindex="-1">
+            <!-- Skip Button -->
+            <button data-action="onboarding-complete" class="modal-skip-btn">Skip Tutorial</button>
+
+            <!-- Step 1: Welcome & Preview -->
+            <div class="modal-step active" id="step1">
+                <div class="modal-header">
+                    <div class="modal-emoji-large" aria-hidden="true">👋</div>
+                    <h2 class="modal-title" id="onboarding-title">Welcome to Pragmatic Competence!</h2>
+                    <p class="modal-subtitle" id="onboarding-desc">Learn the hidden rules of communication through humor</p>
+                </div>
+
+                <div class="modal-example-box">
+                    <h4 class="modal-example-title"><span aria-hidden="true">💡</span> <span class="visually-hidden">Quick Example</span>Quick Example</h4>
+                    <p class="modal-example-joke">"How did you find your steak, sir?" <br>"I just looked next to the potatoes!"</p>
+                    <p class="modal-example-explanation">This joke works because the customer takes "find" literally (locate), when the waiter meant it idiomatically (opinion). <strong>That's pragmatics!</strong></p>
+                </div>
+
+                <div class="modal-features-grid">
+                    <div class="modal-feature-card">
+                        <div class="modal-emoji-icon" aria-hidden="true">😂</div>
+                        <div class="modal-feature-title">50+ Examples</div>
+                        <div class="modal-feature-desc">Jokes, dialogues & situations</div>
+                    </div>
+                    <div class="modal-feature-card">
+                        <div class="modal-emoji-icon" aria-hidden="true">🎯</div>
+                        <div class="modal-feature-title">30+ Activities</div>
+                        <div class="modal-feature-desc">Practice real-world skills</div>
+                    </div>
+                    <div class="modal-feature-card">
+                        <div class="modal-emoji-icon">✅</div>
+                        <div class="modal-feature-title">Interactive Quizzes</div>
+                        <div class="modal-feature-desc">Test your understanding</div>
+                    </div>
+                    <div class="modal-feature-card">
+                        <div class="modal-emoji-icon">📊</div>
+                        <div class="modal-feature-title">Track Progress</div>
+                        <div class="modal-feature-desc">See your growth over time</div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="nav-btn modal-btn-large" data-action="onboarding-next" aria-label="Continue to next step">Continue</button>
+                    <p class="modal-caption">3 More steps · 2 minutes</p>
+                </div>
+            </div>
+
+            <!-- Step 2: Quick Tour -->
+            <div class="modal-step" id="step2">
+                <div class="modal-header">
+                    <h2 class="modal-title">🗺️ Quick Tour</h2>
+                    <p class="modal-subtitle-small">Here's what you can do in this learning platform</p>
+                </div>
+
+                <div class="modal-tour-box">
+                    <div class="modal-tour-content">
+                        <div class="modal-tour-item">
+                            <span class="modal-emoji-tour">😂</span>
+                            <div>
+                                <strong class="modal-tour-item-title">Joke Collection:</strong>
+                                <span class="modal-tour-item-desc"> Read jokes, see pragmatic analysis, take notes</span>
+                            </div>
+                        </div>
+                        <div class="modal-tour-item">
+                            <span class="modal-emoji-tour">📖</span>
+                            <div>
+                                <strong class="modal-tour-item-title">Theory Reference:</strong>
+                                <span class="modal-tour-item-desc"> Learn about GTVH and linguistic frameworks</span>
+                            </div>
+                        </div>
+                        <div class="modal-tour-item">
+                            <span class="modal-emoji-tour">🎯</span>
+                            <div>
+                                <strong class="modal-tour-item-title">Activities:</strong>
+                                <span class="modal-tour-item-desc"> Practice with real scenarios and exercises</span>
+                            </div>
+                        </div>
+                        <div class="modal-tour-item">
+                            <span class="modal-emoji-tour">✅</span>
+                            <div>
+                                <strong class="modal-tour-item-title">Quizzes:</strong>
+                                <span class="modal-tour-item-desc"> Test yourself and track your scores</span>
+                            </div>
+                        </div>
+                        <div class="modal-tour-item">
+                            <span class="modal-emoji-tour">📈</span>
+                            <div>
+                                <strong class="modal-tour-item-title">Progress Dashboard:</strong>
+                                <span class="modal-tour-item-desc"> View stats, achievements, and personalized insights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-tips-box">
+                    <h4 class="modal-tips-title">💡 Pro Tips:</h4>
+                    <ul class="modal-tips-list">
+                        <li>Spend 10-15 minutes daily for best results</li>
+                        <li>Your progress is saved automatically</li>
+                        <li>Click the ❤️ to save your favorite examples</li>
+                        <li>Use the 🔊 button to hear content read aloud</li>
+                    </ul>
+                </div>
+
+                <div class="modal-footer-compact">
+                    <button class="nav-btn modal-btn-back" data-action="onboarding-prev" aria-label="Go back to previous step">← Back</button>
+                    <button class="nav-btn modal-btn-large" data-action="onboarding-next" aria-label="Continue to placement test">Continue →</button>
+                    <p class="modal-step-indicator">Step 2 of 4</p>
+                </div>
+            </div>
+
+            <!-- Step 3: Placement Test -->
+            <div class="modal-step" id="step3">
+                <div class="modal-header">
+                    <div class="modal-emoji-medium">📝</div>
+                    <h2 class="modal-title">Quick Placement Test</h2>
+                    <p class="modal-subtitle-small">Let's find your starting level (5 minutes)</p>
+                </div>
+
+                <div class="modal-example-box">
+                    <h4 class="modal-example-title"><span aria-hidden="true">🎯</span> Why take this test?</h4>
+                    <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+                        <li>Start at the right level for you</li>
+                        <li>Skip material you already know</li>
+                        <li>Get personalized learning recommendations</li>
+                        <li>Track your progress from day one</li>
+                    </ul>
+                </div>
+
+                <div class="modal-tour-box">
+                    <h4 class="modal-tour-title">
+                        <span class="modal-emoji-feature">📋</span> What to Expect
+                    </h4>
+                    <div class="modal-tour-content">
+                        <div class="modal-tour-item">
+                            <span class="modal-emoji-tour">❓</span>
+                            <div>
+                                <strong class="modal-tour-item-title">12 Questions:</strong>
+                                <span class="modal-tour-item-desc"> Multiple choice questions about humor and pragmatics</span>
+                            </div>
+                        </div>
+                        <div class="modal-tour-item">
+                            <span class="modal-emoji-tour">⏱️</span>
+                            <div>
+                                <strong class="modal-tour-item-title">5 Minutes:</strong>
+                                <span class="modal-tour-item-desc"> Quick assessment, no time pressure</span>
+                            </div>
+                        </div>
+                        <div class="modal-tour-item">
+                            <span class="modal-emoji-tour">📊</span>
+                            <div>
+                                <strong class="modal-tour-item-title">Instant Results:</strong>
+                                <span class="modal-tour-item-desc"> See your level and recommended starting module</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer-compact">
+                    <button class="nav-btn modal-btn-back" data-action="onboarding-prev" aria-label="Go back to previous step">← Back</button>
+                    <button class="nav-btn modal-btn-large" data-action="onboarding-start-placement" aria-label="Start placement test">Take Placement Test →</button>
+                    <p class="modal-step-indicator">Step 3 of 4</p>
+                    <p class="modal-caption" style="margin-top: 8px;"><a href="#" data-action="skip-placement-test" style="color: var(--text-tertiary); text-decoration: underline;">Skip and explore freely</a></p>
+                </div>
+            </div>
+
+            <!-- Step 4: Dashboard/Ready to Start -->
+            <div class="modal-step" id="step4">
+                <div class="modal-header">
+                    <div class="modal-emoji-medium">🎉</div>
+                    <h2 class="modal-title">You're All Set!</h2>
+                    <p class="modal-subtitle-small" id="placement-result-summary"></p>
+                </div>
+
+                <div class="modal-example-box" id="recommended-path-box">
+                    <h4 class="modal-example-title"><span aria-hidden="true">🎯</span> Your Recommended Path</h4>
+                    <div id="path-recommendations"></div>
+                </div>
+
+                <div class="modal-tips-box">
+                    <h4 class="modal-tips-title">💡 Remember:</h4>
+                    <ul class="modal-tips-list">
+                        <li>Your progress is saved automatically</li>
+                        <li>You can change your learning path anytime</li>
+                        <li>Use the Progress Dashboard to track your growth</li>
+                        <li>Practice daily for best results (10-15 minutes)</li>
+                    </ul>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="nav-btn modal-btn-xl" data-action="onboarding-complete" aria-label="Complete onboarding and start learning">
+                        🚀 Go to Dashboard
+                    </button>
+                    <p class="modal-caption">You can restart this tutorial anytime from the footer</p>
+                </div>
+            </div>
+
+            <div class="step-indicator">
+                <span class="step-dot active" data-step="1"></span>
+                <span class="step-dot" data-step="2"></span>
+                <span class="step-dot" data-step="3"></span>
+                <span class="step-dot" data-step="4"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="header-inner">
+                <div class="header-top">
+                    <div class="header-branding">
+                        <h1> Pragmatic Competence Through Humor</h1>
+                        <p class="subtitle">Master language use in context through humor-based learning</p>
+                    </div>
+                    <div id="streak-counter" class="header-streak-counter" style="display: none;">
+                        🔥 0 day streak!
+                    </div>
+                </div>
+
+                <nav class="primary-nav">
+                    <a href="#home" class="nav-link" aria-label="Go to home dashboard">🏠 Home</a>
+                    <a href="#guide" class="nav-link" aria-label="Go to learning path">📚 Learn</a>
+                    <a href="#progress" class="nav-link" aria-label="Go to progress tracking">📊 Progress</a>
+                    <a href="#resources" class="nav-link" aria-label="Go to resources">📖 Resources</a>
+                    <a href="#about" class="nav-link" aria-label="Go to about section">ℹ️ About</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <button id="placement-btn" class="cta-primary" data-action="placement-start" aria-label="Take placement test">Take Placement Test</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Unified Navigation Bar -->
+        <div class="breadcrumb-container hidden" id="breadcrumb-nav">
+            <div class="breadcrumb-inner">
+                <div class="nav-context" id="breadcrumb-content">
+                    <span class="breadcrumb-item" role="button" tabindex="0" data-action="nav-section" data-section="home">Home</span>
+                </div>
+                <div class="nav-progress" id="nav-progress-area" style="display: none;">
+                    <div class="progress-dots" id="progress-dots-content"></div>
+                </div>
+                <div class="breadcrumb-actions">
+                    <button class="breadcrumb-link" type="button" data-action="nav-section" data-section="guide" aria-label="Return to learning path">↩ Back to Learning Path</button>
+                </div>
+            </div>
+        </div>
+
+        <main id="main-content">
+            <!-- Landing / Welcome Section -->
+            <section id="home" class="content-section active" role="region" aria-labelledby="home-heading">
+                <div class="home-hero">
+                    <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between;">
+                        <div>
+                            <p style="color:#6366f1; font-weight:700; letter-spacing:0.05em;">Welcome</p>
+                            <h2 id="home-heading" style="margin-bottom:8px;">Let's get you started in 3 steps</h2>
+                            <p style="color:var(--text-secondary); max-width:620px;">New here? Follow the quick path below. Returning? Skip straight to your dashboard.</p>
+                        </div>
+                        <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+                            <button class="cta-primary cta-pulse" id="cta-placement" data-action="placement-start" aria-label="Take the 5-minute placement test to assess your level">Take the 5-min Placement Test</button>
+                            <button class="cta-secondary" data-action="skip-welcome" aria-label="Skip welcome section for returning users">Skip — I'm returning</button>
+                        </div>
+                    </div>
+                    <div class="welcome-steps">
+                        <div class="step-card">
+                            <h3 style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">1️⃣ Quick Placement Test</h3>
+                            <p style="color:var(--text-secondary); margin-bottom:12px;">Discover your pragmatic competence level in minutes.</p>
+                            <button class="nav-btn" data-action="placement-start" aria-label="Start placement test assessment">Start Assessment</button>
+                        </div>
+                        <div class="step-card">
+                            <h3 style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">2️⃣ Get Your Path</h3>
+                            <p style="color:var(--text-secondary); margin-bottom:12px;">We recommend modules and activities based on your results.</p>
+                            <button class="nav-btn secondary-btn" type="button" data-action="nav-section" data-section="guide" aria-label="View your personalized learning path">View Learning Path</button>
+                        </div>
+                        <div class="step-card">
+                            <h3 style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">3️⃣ Start Learning</h3>
+                            <p style="color:var(--text-secondary); margin-bottom:12px;">Jump into jokes, theory, and practice tailored to you.</p>
+                            <button class="nav-btn secondary-btn" type="button" data-action="nav-section" data-section="activities" aria-label="Open activities section to start learning">Open Activities</button>
+                        </div>
+                    </div>
+
+                    <!-- Value Proposition -->
+                    <div class="value-props">
+                        <h3 style="margin-bottom: 20px; font-size: 1.4em; display: flex; align-items: center; gap: 10px;">
+                            🎯 What You'll Master:
+                        </h3>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 24px 0;">
+                            <li style="padding: 12px 0; display: flex; align-items: start; gap: 12px; border-bottom: 1px solid #86efac33;">
+                                <span style="color: #10b981; font-size: 1.2em; flex-shrink: 0;">✓</span>
+                                <span style="color: #065f46;"><strong>Understand British humor and jokes</strong> — decode sarcasm, irony, and understatement</span>
+                            </li>
+                            <li style="padding: 12px 0; display: flex; align-items: start; gap: 12px; border-bottom: 1px solid #86efac33;">
+                                <span style="color: #10b981; font-size: 1.2em; flex-shrink: 0;">✓</span>
+                                <span style="color: #065f46;"><strong>Recognize when speakers are being polite, sarcastic, or ironic</strong> — read between the lines</span>
+                            </li>
+                            <li style="padding: 12px 0; display: flex; align-items: start; gap: 12px; border-bottom: 1px solid #86efac33;">
+                                <span style="color: #10b981; font-size: 1.2em; flex-shrink: 0;">✓</span>
+                                <span style="color: #065f46;"><strong>Use appropriate language in social and professional contexts</strong> — avoid awkward mistakes</span>
+                            </li>
+                            <li style="padding: 12px 0; display: flex; align-items: start; gap: 12px;">
+                                <span style="color: #10b981; font-size: 1.2em; flex-shrink: 0;">✓</span>
+                                <span style="color: #065f46;"><strong>Avoid embarrassing cultural misunderstandings</strong> — communicate with confidence</span>
+                            </li>
+                        </ul>
+                        <div style="background: white; border-radius: 12px; padding: 16px; border-left: 4px solid #10b981;">
+                            <p style="margin: 0; color: #065f46;">
+                                <strong>⏱️ Time to complete:</strong> 6 modules × 20 minutes = ~2 hours total (self-paced)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Dashboard (for returning users) -->
+                <div id="progress-dashboard" style="display: none; margin-top: 32px;">
+                    <div style="background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%); border-radius: 20px; padding: 32px; margin-bottom: 24px; border: 1px solid #c7d2fe; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);">
+                        <div style="margin-bottom: 24px;">
+                            <h2 style="font-size: 1.5rem; margin-bottom: 8px; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">📊 Your Learning Dashboard</h2>
+                            <p style="color: var(--text-secondary);">Track your progress and continue your pragmatic competence journey</p>
+                        </div>
+
+                        <!-- Overall Progress -->
+                        <div style="background: white; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <span style="font-weight: 600; color: #1f2937;">Overall Progress</span>
+                                <span id="overall-progress-text" style="font-weight: 700; font-size: 1.25rem; color: #6366f1;">0%</span>
+                            </div>
+                            <div style="height: 12px; background: #e5e7eb; border-radius: 999px; overflow: hidden;">
+                                <div id="overall-progress-bar" style="height: 100%; background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%); width: 0%; transition: width 0.5s ease;"></div>
+                            </div>
+                            <p id="progress-summary" style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 8px;">Loading your progress...</p>
+                        </div>
+
+                        <!-- Module Completion Cards -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px;">
+                            <div class="module-progress-card" data-module="module-1">
+                                <div class="module-progress-icon">1</div>
+                                <div class="module-progress-title">Module 1</div>
+                                <div class="module-progress-status">Not Started</div>
+                                <div class="module-progress-bar-mini">
+                                    <div class="module-progress-fill-mini" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="module-progress-card" data-module="module-2">
+                                <div class="module-progress-icon">2</div>
+                                <div class="module-progress-title">Module 2</div>
+                                <div class="module-progress-status">Not Started</div>
+                                <div class="module-progress-bar-mini">
+                                    <div class="module-progress-fill-mini" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="module-progress-card" data-module="module-3">
+                                <div class="module-progress-icon">3</div>
+                                <div class="module-progress-title">Module 3</div>
+                                <div class="module-progress-status">Not Started</div>
+                                <div class="module-progress-bar-mini">
+                                    <div class="module-progress-fill-mini" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="module-progress-card" data-module="module-4">
+                                <div class="module-progress-icon">4</div>
+                                <div class="module-progress-title">Module 4</div>
+                                <div class="module-progress-status">Not Started</div>
+                                <div class="module-progress-bar-mini">
+                                    <div class="module-progress-fill-mini" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="module-progress-card" data-module="module-5">
+                                <div class="module-progress-icon">5</div>
+                                <div class="module-progress-title">Module 5</div>
+                                <div class="module-progress-status">Not Started</div>
+                                <div class="module-progress-bar-mini">
+                                    <div class="module-progress-fill-mini" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="module-progress-card" data-module="module-6">
+                                <div class="module-progress-icon">6</div>
+                                <div class="module-progress-title">Module 6</div>
+                                <div class="module-progress-status">Not Started</div>
+                                <div class="module-progress-bar-mini">
+                                    <div class="module-progress-fill-mini" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Continue Learning CTA -->
+                        <div id="continue-learning-section" style="background: white; border-radius: 16px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); text-align: center; margin-bottom: 24px;">
+                            <div style="font-size: 2rem; margin-bottom: 12px;">🎯</div>
+                            <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Next Recommended</h3>
+                            <p id="next-step-text" style="color: var(--text-secondary); margin-bottom: 16px;">Start your first module to begin learning!</p>
+                            <button id="continue-learning-btn" class="cta-primary" style="padding: 14px 32px;" data-action="continue-learning">
+                                Continue Learning →
+                            </button>
+                        </div>
+
+                        <!-- Progress Backup Section -->
+                        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 16px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid #fbbf24;">
+                            <div style="display: flex; align-items: start; gap: 16px; margin-bottom: 16px;">
+                                <div style="font-size: 2rem;">💾</div>
+                                <div style="flex: 1;">
+                                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; color: #78350f;">Protect Your Progress</h3>
+                                    <p style="color: #92400e; font-size: 0.9rem; margin-bottom: 16px; line-height: 1.5;">
+                                        <strong>Important:</strong> Your progress is saved in your browser. If you clear browser data or switch devices, all progress will be lost. Download a backup to keep your data safe!
+                                    </p>
+                                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                                        <button type="button" data-action="storage-export" class="nav-btn" style="padding: 12px 24px; background: #10b981; color: white; border: none; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                            <span>⬇️</span>
+                                            <span>Download Backup</span>
+                                        </button>
+                                        <button type="button" data-action="storage-import" class="nav-btn" style="padding: 12px 24px; background: #6366f1; color: white; border: none; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                            <span>⬆️</span>
+                                            <span>Restore from Backup</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.5); border-radius: 8px; padding: 12px; font-size: 0.85rem; color: #92400e;">
+                                <strong>💡 Tip:</strong> Download a backup after completing each module to ensure you never lose progress!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Placement Test Section -->
+            <section id="placement" class="content-section">
+                <h2>🎯 Find Your Level</h2>
+
+                <!-- Intro screen -->
+                <div id="placement-intro">
+                    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); padding: 48px 32px; border-radius: 18px; text-align: center; margin-bottom: 32px;">
+                        <div style="font-size: 64px; margin-bottom: 20px;">🎯</div>
+                        <h3 style="font-size: 1.5em; margin-bottom: 16px; color: #1f2937;">Discover Your Starting Point</h3>
+                        <p style="color: #6b7280; max-width: 500px; margin: 0 auto 24px;">
+                            Answer 15 questions to find your current pragmatic competence level. This personalizes your learning path.
+                        </p>
+
+                        <!-- Reassurance Box -->
+                        <div style="background: #f0fdf4; border: 2px solid #86efac; border-radius: 12px; padding: 20px; max-width: 550px; margin: 0 auto; text-align: left;">
+                            <h4 style="color: #065f46; margin: 0 0 12px 0; font-size: 1.1em; display: flex; align-items: center; gap: 8px;">
+                                <span style="font-size: 1.3em;">🌟</span> Friendly Reminder
+                            </h4>
+                            <p style="color: #065f46; margin: 0 0 12px 0; line-height: 1.6;">
+                                <strong>This is not a pass/fail test!</strong> We're simply finding where you are now so we can:
+                            </p>
+                            <ul style="color: #065f46; margin: 0 0 12px 0; padding-left: 20px; line-height: 1.7;">
+                                <li>Skip content you already know</li>
+                                <li>Give you just-right challenges</li>
+                                <li>Track your amazing progress</li>
+                            </ul>
+                            <div style="background: white; border-radius: 8px; padding: 12px; margin-top: 12px;">
+                                <p style="color: #065f46; margin: 0; font-size: 0.95em;">
+                                    <strong>🔒 Private:</strong> Your results are only visible to you<br>
+                                    <strong>♻️ Flexible:</strong> You can retake this anytime
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; max-width: 500px; margin: 0 auto 32px;">
+                        <div style="background: #f9fafb; padding: 20px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 24px;">⏱️</div>
+                            <strong style="color: #6366f1;">5-7 min</strong>
+                            <div style="font-size: 0.85em; color: #6b7280;">Quick test</div>
+                        </div>
+                        <div style="background: #f9fafb; padding: 20px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 24px;">📝</div>
+                            <strong style="color: #6366f1;">15 questions</strong>
+                            <div style="font-size: 0.85em; color: #6b7280;">All levels</div>
+                        </div>
+                        <div style="background: #f9fafb; padding: 20px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 24px;">🗺️</div>
+                            <strong style="color: #6366f1;">Personal path</strong>
+                            <div style="font-size: 0.85em; color: #6b7280;">Just for you</div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button class="nav-btn" id="start-placement-btn" type="button" data-action="placement-start" style="padding: 16px 48px; font-size: 1.1em;">
+                            Start Assessment →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz screen (hidden initially) -->
+                <div id="placement-quiz" style="display: none;">
+                    <div style="text-align: center; margin-bottom: 24px;">
+                        <span style="color: #6b7280; font-weight: 600;">Question <span id="placement-current">1</span> of 15</span>
+                        <div class="progress-bar" style="margin-top: 12px;">
+                            <div class="progress-fill" id="placement-progress-bar" style="width: 8.33%;"></div>
+                        </div>
+                    </div>
+
+                    <div style="background: white; border: 2px solid #e5e7eb; border-radius: 18px; padding: 32px; box-shadow: 0 4px 6px rgba(0,0,0,0.07);">
+                        <span id="placement-level-badge" class="level-badge level-a1" style="margin-bottom: 16px;">A1-A2</span>
+                        <div id="placement-question-text" style="font-size: 1.15em; line-height: 1.7; margin-bottom: 24px; font-weight: 500;">
+                            Loading question...
+                        </div>
+                        <div id="placement-options" role="radiogroup" aria-labelledby="placement-question-text"></div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button class="nav-btn" id="placement-next-btn" type="button" data-action="placement-next" disabled style="padding: 14px 40px; background: #6366f1; color: white; font-weight: 600; font-size: 1.05em;">
+                            Next →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results screen (hidden initially) -->
+                <div id="placement-results" style="display: none;">
+                    <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-radius: 18px; padding: 48px 32px; max-width: 600px; margin: 0 auto; border: 2px solid #10b981; text-align: center;">
+                        <div style="font-size: 64px; margin-bottom: 16px;">🎉</div>
+                        <h3 style="font-size: 1.8em; margin-bottom: 24px; color: #1f2937;">Assessment Complete!</h3>
+
+                        <div style="margin: 32px 0;">
+                            <div id="placement-score" style="font-size: 4em; font-weight: 700; color: #10b981; line-height: 1;">0</div>
+                            <div style="color: #6b7280; font-size: 1.1em;">out of 12 correct</div>
+                        </div>
+
+                        <div style="background: white; border-radius: 12px; padding: 24px; margin: 24px 0;">
+                            <h4 style="color: #6b7280; margin-bottom: 12px;">🎯 Your Recommended Level:</h4>
+                            <div id="placement-level-result" style="font-size: 1.5em; font-weight: 700; color: #6366f1; margin-bottom: 8px;">B1 Intermediate</div>
+                            <p id="placement-level-description" style="color: #6b7280; margin-bottom: 16px;">Focus on indirect speech and polite requests</p>
+
+                            <!-- Encouraging interpretation -->
+                            <div id="placement-encouragement" style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 16px; border-radius: 8px; text-align: left; margin-top: 16px;">
+                                <p style="color: #065f46; margin: 0; line-height: 1.6;">
+                                    <strong>Great start!</strong> <span id="encouragement-text">Based on your results, we'll recommend the perfect starting point for you.</span>
+                                </p>
+                                <p style="color: #065f46; margin: 8px 0 0 0; font-size: 0.95em;">
+                                    💡 <strong>What this means:</strong> <span id="meaning-text">You'll skip content you've mastered and focus on areas where you'll grow the most!</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="placement-breakdown" style="text-align: left; margin-top: 24px;"></div>
+
+                        <div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px; flex-wrap: wrap;">
+                            <button class="nav-btn" id="start-learning-btn" type="button" data-action="placement-start-learning" style="padding: 14px 32px; background: linear-gradient(135deg, #10b981, #059669);">
+                                🚀 Start Learning
+                            </button>
+                            <button class="nav-btn" id="retake-placement-btn" type="button" data-action="placement-retake" style="padding: 14px 32px; background: #6366f1; color: white;">
+                                🔄 Retake Test
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- IMPROVED: Learning Dashboard -->
+            <section id="guide" class="content-section" role="region" aria-labelledby="guide-heading">
+                <!-- Clean Hero Section -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 40px 32px; text-align: center; margin-bottom: 40px; color: white; box-shadow: 0 8px 24px rgba(102, 126, 234, 0.25);">
+                    <h2 id="guide-heading" style="color: white; font-size: 2.5rem; margin-bottom: 12px;">📚 Learning Modules</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.95; max-width: 600px; margin: 0 auto;">Progress through 6 modules to master pragmatic competence with humor</p>
+                </div>
+
+                <!-- Local progress warning (shown on first run; dismissible) -->
+<div id="local-progress-warning-banner" class="theory-box no-print"
+    style="max-width: 900px; margin: 0 auto 24px auto;
+           background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+           border-left: 4px solid #f59e0b;">
+
+    <div style="display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap;">
+        
+        <!-- Left side text -->
+        <div style="min-width: 260px; flex: 1;">
+            <h3 style="margin: 0 0 8px 0; color: #78350f;">
+                ⚠️ Important: your progress is stored in this browser
+            </h3>
+
+            <p style="margin: 0; color: #78350f; line-height: 1.5;">
+                If you clear browser data or switch devices, your progress can be lost.
+                To safely move it to another device, use the <strong>QR Backup</strong> feature
+                in the <strong>Progress</strong> section.
+            </p>
+        </div>
+
+        <!-- Removed buttons (Generate Code / Restore Code / Dismiss) -->
+        <!-- EMPTY RIGHT SIDE → keeps layout stable without legacy actions -->
+        <div style="width: 1px;"></div>
+
+    </div>
+</div>
+
+
+                <!-- Progress Overview -->
+                <div id="progress-summary" style="background: white; border: 2px solid #e5e7eb; border-radius: 16px; padding: 24px; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    <div style="display: flex; justify-content: space-around; text-align: center; flex-wrap: wrap; gap: 20px;">
+                        <div>
+                            <div style="font-size: 2.5rem; font-weight: 700; color: #6366f1;" id="modules-completed-count">0</div>
+                            <div style="color: #6b7280; font-size: 0.9rem; margin-top: 4px;">Modules Completed</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2.5rem; font-weight: 700; color: #10b981;" id="modules-in-progress-count">0</div>
+                            <div style="color: #6b7280; font-size: 0.9rem; margin-top: 4px;">In Progress</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2.5rem; font-weight: 700; color: #f59e0b;" id="overall-progress-percent">0%</div>
+                            <div style="color: #6b7280; font-size: 0.9rem; margin-top: 4px;">Overall Progress</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module Cards Section -->
+                <div style="margin-bottom: 48px;">
+                    <div style="text-align: center; margin-bottom: 24px;">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 8px; color: #1f2937;">Your Learning Path</h3>
+                        <p style="color: #6b7280; font-size: 1rem;">Click any module to begin or continue learning</p>
+                    </div>
+
+                    <!-- Enhanced Module Cards -->
+                    <div id="learning-path" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto;">
+                        <div class="model-box" role="button" tabindex="0" data-action="module-modal-show" data-module-id="module-1" style="background: #ffffff; border: 1px solid #e5e7eb; border-left: 4px solid #10b981; border-radius: 8px; padding: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <div style="margin-bottom: 12px;">
+                                <span style="background: #f0fdf4; color: #065f46; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">A1–A2</span>
+                            </div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin-bottom: 6px;">First Steps in Pragmatics</h4>
+                            <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 14px;">Beginner</p>
+                            <div class="module-progress" data-module-progress="module-1"></div>
+                        </div>
+
+                        <div class="model-box" role="button" tabindex="0" data-action="module-modal-show" data-module-id="module-2" style="background: #ffffff; border: 1px solid #e5e7eb; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <div style="margin-bottom: 12px;">
+                                <span style="background: #eff6ff; color: #1e3a8a; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">B1</span>
+                            </div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin-bottom: 6px;">Building Pragmatic Skills</h4>
+                            <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 14px;">Intermediate</p>
+                            <div class="module-progress" data-module-progress="module-2"></div>
+                        </div>
+
+                        <div class="model-box" role="button" tabindex="0" data-action="module-modal-show" data-module-id="module-3" style="background: #ffffff; border: 1px solid #e5e7eb; border-left: 4px solid #f97316; border-radius: 8px; padding: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <div style="margin-bottom: 12px;">
+                                <span style="background: #fff7ed; color: #7c2d12; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">B2</span>
+                            </div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin-bottom: 6px;">Sharpening Your Pragmatic Edge</h4>
+                            <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 14px;">Upper-Intermediate</p>
+                            <div class="module-progress" data-module-progress="module-3"></div>
+                        </div>
+
+                        <div class="model-box" role="button" tabindex="0" data-action="module-modal-show" data-module-id="module-4" style="background: #ffffff; border: 1px solid #e5e7eb; border-left: 4px solid #a855f7; border-radius: 8px; padding: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <div style="margin-bottom: 12px;">
+                                <span style="background: #faf5ff; color: #581c87; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">C1</span>
+                            </div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin-bottom: 6px;">Pragmatic Mastery</h4>
+                            <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 14px;">Advanced</p>
+                            <div class="module-progress" data-module-progress="module-4"></div>
+                        </div>
+
+                        <div class="model-box" role="button" tabindex="0" data-action="module-modal-show" data-module-id="module-5" style="background: #ffffff; border: 1px solid #e5e7eb; border-left: 4px solid #ec4899; border-radius: 8px; padding: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <div style="margin-bottom: 12px;">
+                                <span style="background: #fdf2f8; color: #831843; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">B2-C1</span>
+                            </div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin-bottom: 6px;">Bridging Cultures</h4>
+                            <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 14px;">Cross-Cultural</p>
+                            <div class="module-progress" data-module-progress="module-5"></div>
+                        </div>
+
+                        <div class="model-box" role="button" tabindex="0" data-action="module-modal-show" data-module-id="module-6" style="background: #ffffff; border: 1px solid #e5e7eb; border-left: 4px solid #eab308; border-radius: 8px; padding: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <div style="margin-bottom: 12px;">
+                                <span style="background: #fefce8; color: #713f12; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">B2-C1</span>
+                            </div>
+                            <h4 style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin-bottom: 6px;">Analysing Humour: GTVH</h4>
+                            <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 14px;">Specialized</p>
+                            <div class="module-progress" data-module-progress="module-6"></div>
+                        </div>
+                    </div>
+
+                    <p id="current-module-label" style="text-align: center; font-weight: 600; margin-top: 32px; color: #4b5563; font-size: 1.1rem;">
+                        <span style="color: #6366f1;">Take the placement test to discover your recommended starting point</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- ENHANCED: Joke Collection -->
+            <section id="joke" class="content-section" role="region" aria-labelledby="joke-heading">
+                <h2 id="joke-heading">😂 Humor Collection</h2>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" type="button" data-joke-type="all" aria-label="Filter jokes to show all types">All Types</button>
+                    <button class="filter-btn" type="button" data-joke-type="riddle" aria-label="Filter jokes to show only riddles">Riddles</button>
+                    <button class="filter-btn" type="button" data-joke-type="pun" aria-label="Filter jokes to show only puns">Puns</button>
+                    <button class="filter-btn" type="button" data-joke-type="dialogue" aria-label="Filter jokes to show only dialogues">Dialogues</button>
+                    <button class="filter-btn" type="button" data-joke-type="anecdote" aria-label="Filter jokes to show only anecdotes">Anecdotes</button>
+                    <button class="filter-btn" type="button" data-joke-type="cultural" aria-label="Filter jokes to show only cultural jokes">Cultural</button>
+                </div>
+
+                <div class="joke-card">
+                    <button class="joke-favorite" id="joke-favorite-btn" aria-label="Add joke to favorites">?</button>
+                    <div class="joke-text" id="joke-text" aria-live="polite">Loading joke...</div>
+                    <div class="badge-container">
+                        <span class="level-badge" id="joke-level-tag"></span>
+                        <span class="category-badge" id="joke-category-tag"></span>
+                    </div>
+                    <button class="audio-btn" id="read-joke-btn" aria-label="Listen to joke audio">🔊 Listen</button>
+
+                    <div class="joke-explanation">
+                        <h3>🔍 Pragmatic Analysis:</h3>
+                        <p id="joke-analysis">Loading analysis...</p>
+
+                        <h4 style="margin-top: 15px;">💡 Key Learning Points:</h4>
+                        <ul id="joke-learning-points"></ul>
+                    </div>
+
+                    <!-- Pragmatics Scaffold (research-grade analysis) -->
+                    <div id="joke-scaffold-container"></div>
+
+                    <div class="notes-section">
+                        <h4>📝 My Notes:</h4>
+                        <textarea class="notes-textarea" id="joke-notes" placeholder="What did you learn? How could you use this in conversation?"></textarea>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="joke-checkbox">
+                        <label for="joke-checkbox">I've analyzed and understood this example</label>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button class="nav-btn no-print" type="button" id="prev-joke-btn">⬅️ Previous</button>
+                    <button class="nav-btn no-print" type="button" id="next-joke-btn">➡️ Next</button>
+                    <button class="nav-btn no-print" type="button" id="random-joke-btn">🎲 Random</button>
+                    <button class="nav-btn no-print" type="button" id="view-favorites-btn" style="background: #ff6b6b;">❤️ Favorites</button>
+                </div>
+            </section>
+
+            <!-- ENHANCED: Theory Section with Deep Content -->
+            <section id="theory" class="content-section" role="region" aria-labelledby="theory-heading">
+                <h2 id="theory-heading">📖 Comprehensive Pragmatic Competence Theory</h2>
+
+                <div class="recommendation-box">
+                    <p><strong>💡 Learning Tip:</strong> Don't rush through theory! Each concept builds on the previous one. Take time to understand before moving forward.</p>
+                </div>
+
+                <!-- Visual Model -->
+                <div class="visual-model">
+                    <h3>The Complete Pragmatic Competence Framework</h3>
+                    <div class="model-diagram">
+                        <div class="model-box">
+                            <strong>PRAGMALINGUISTIC</strong>
+                            <p style="font-size: 0.9em; margin-top: 10px;">Linguistic Forms</p>
+                        </div>
+                        <div class="model-arrow">+</div>
+                        <div class="model-box">
+                            <strong>SOCIOPRAGMATIC</strong>
+                            <p style="font-size: 0.9em; margin-top: 10px;">Social Context</p>
+                        </div>
+                        <div class="model-arrow">?</div>
+                        <div class="model-box" style="background: var(--success);">
+                            <strong>PRAGMATIC COMPETENCE</strong>
+                            <p style="font-size: 0.9em; margin-top: 10px;">Appropriate Communication</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px; font-style: italic; color: #666;">Humor requires mastery of BOTH components - that's why it's perfect for teaching pragmatics!</p>
+                </div>
+
+                <div class="theory-controls" aria-label="Theory accordion controls">
+                    <button class="nav-btn" type="button" id="theory-toggle-all" data-state="closed">Expand all</button>
+                    <div class="theory-progress" id="theory-progress-text">Theory 0/5 completed</div>
+                </div>
+
+                <div class="theory-accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="theory-intro-body" aria-expanded="false" aria-controls="theory-intro-body" aria-label="What is Pragmatic Competence? Toggle to expand or collapse">
+                        <span>🎯 What is Pragmatic Competence? (Start Here!) <span class="section-time-estimate">⏱️ 3 min</span></span>
+                        <span>?</span>
+                    </button>
+                    <div class="accordion-body" id="theory-intro-body">
+    <div class="theory-content-enhanced">
+                        <p><strong>Definition:</strong> Pragmatic competence is the ability to use language appropriately in different social contexts, understanding not just WHAT words mean, but HOW and WHEN to use them.</p>
+                        
+                        <h4 style="margin-top: 20px;">Why Grammar Alone Isn't Enough:</h4>
+                        <div class="theory-box">
+                            <p><strong>Example 1:</strong></p>
+                            <p>? <em>"Give me water."</em> (Grammatically correct, pragmatically rude in most contexts)</p>
+                            <p>? <em>"Could I have some water, please?"</em> (Grammatically correct AND pragmatically appropriate)</p>
+                            
+                            <p style="margin-top: 15px;"><strong>Example 2:</strong></p>
+                            <p>Student to teacher: <em>"Hey, you got a pen?"</em></p>
+                            <p><strong>Problem:</strong> Too informal for the power relationship (student-teacher)</p>
+                            <p><strong>Better:</strong> <em>"Excuse me, do you have a pen I could borrow?"</em></p>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">The Three Pillars of Pragmatic Competence:</h4>
+                        <ol>
+                            <li><strong>Understanding context:</strong> Who, where, when, why</li>
+                            <li><strong>Choosing appropriate forms:</strong> Formal vs. informal, direct vs. indirect</li>
+                            <li><strong>Recognizing implied meaning:</strong> What's said vs. what's meant</li>
+                        </ol>
+
+                        <div class="key-concept-box">
+                            <h5>🔑 Key Concept: Context is Everything</h5>
+                            <p class="simple">The same words can be polite or rude depending on WHO says them, WHERE, and WHEN.</p>
+                            <div class="example">
+                                <strong>Example:</strong> "Thanks a lot!"<br>
+                                ✓ <strong>Genuine gratitude:</strong> Said with a smile when someone helps you<br>
+                                ✗ <strong>Sarcasm:</strong> Said with an eye-roll when someone makes things worse
+                            </div>
+                        </div>
+                    
+        <div class="theory-continue-row">
+            <button class="nav-btn theory-continue-btn" data-next="pragmalinguistic-body">Continue ></button>
+        </div>
+    </div>
+</div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="pragmalinguistic-body" aria-expanded="false" aria-controls="pragmalinguistic-body" aria-label="Pragmalinguistic Knowledge: The Linguistic Tools. Toggle to expand or collapse">
+                        <span>🔤 Pragmalinguistic Knowledge: The Linguistic Tools <span class="section-time-estimate">⏱️ 5 min</span></span>
+                        <span>?</span>
+                    </button>
+                    <div class="accordion-body" id="pragmalinguistic-body">
+    <div class="theory-content-enhanced">
+                        <p><strong>This is WHAT linguistic forms you can use to express meanings.</strong></p>
+
+                        <h4 style="margin-top: 20px;">1. Speech Acts (Austin & Searle)</h4>
+                        <div class="theory-box">
+                            <p><strong>Concept:</strong> When we speak, we perform actions - we don't just say things, we DO things with words.</p>
+                            
+                            <p style="margin-top: 15px;"><strong>Major Speech Acts:</strong></p>
+                            <ul>
+                                <li><strong>Requests:</strong> Getting someone to do something
+                                    <ul style="margin-top: 5px;">
+                                        <li>Direct: "Close the door."</li>
+                                        <li>Indirect: "It's cold in here." (implies: please close the door)</li>
+                                        <li>Very indirect: "I wonder if the door is open..." (requires inference)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Apologies:</strong> "I'm sorry" + acknowledgment + remedy</li>
+                                <li><strong>Compliments:</strong> Must be sincere, culturally appropriate</li>
+                                <li><strong>Refusals:</strong> Often require softening (reason, alternative, apology)</li>
+                                <li><strong>Complaints:</strong> Direct vs. indirect strategies</li>
+                            </ul>
+
+                            <h4 style="margin-top: 20px;">😂 Humor Example:</h4>
+                            <p><em>"Doctor, I think I'm a dog." / "How long have you felt this way?" / "Ever since I was a puppy."</em></p>
+                            <p><strong>Analysis:</strong> The patient's response violates the speech act expectation. The doctor expects a TIME reference ("for three weeks"), but gets a response that treats the false premise as true - creating humor through pragmatic violation.</p>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">2. Conversational Implicature (Grice's Maxims)</h4>
+                        <div class="theory-box">
+                            <p><strong>Concept:</strong> We communicate more than we say. We follow unspoken rules (maxims) that allow listeners to infer meaning.</p>
+                            
+                            <p style="margin-top: 15px;"><strong>Grice's Four Maxims:</strong></p>
+                            <ul>
+                                <li><strong>Quantity:</strong> Say enough, but not too much
+                                    <ul style="margin-top: 5px;">
+                                        <li>Violation example: "How was the movie?" / "It had seats." (too little info)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Quality:</strong> Be truthful
+                                    <ul style="margin-top: 5px;">
+                                        <li>Violation example: Sarcasm - "Oh great, more rain." (says opposite of what's meant)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Relation:</strong> Be relevant
+                                    <ul style="margin-top: 5px;">
+                                        <li>Example: "Are you coming to the party?" / "I have an exam tomorrow." (implies: no, I can't come)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Manner:</strong> Be clear, brief, orderly
+                                    <ul style="margin-top: 5px;">
+                                        <li>Violation example: Being intentionally vague to avoid directness</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h4 style="margin-top: 20px;">😂 Humor Example:</h4>
+                            <p><em>"Are you coming to the party?" / "I have an exam tomorrow."</em></p>
+                            <p><strong>Analysis:</strong> This demonstrates the Maxim of Relation - the response seems unrelated but is actually RELEVANT. The speaker implicates "No, I can't come" by providing a related reason instead of answering directly.</p>
+                        </div>
+
+                        <div class="comprehension-check">
+                            <h4>✋ Before we continue, let's check your understanding...</h4>
+                            <div class="comprehension-check-question">
+                                <strong>Question:</strong> Your friend says "Nice weather!" during a rainstorm. Which maxim are they violating?
+                            </div>
+                            <button class="comprehension-reveal-btn" type="button" data-action="reveal-answer">Show Answer</button>
+                            <div class="comprehension-check-answer">
+                                <strong>Answer:</strong> The Maxim of <strong>Quality</strong> (be truthful). Your friend is using sarcasm by saying the opposite of what they mean. This intentional violation creates the sarcastic humor!
+                            </div>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">3. Politeness Strategies (Brown & Levinson)</h4>
+                        <div class="theory-box">
+                            <p><strong>Concept:</strong> We protect each other's "face" (public self-image) through politeness.</p>
+                            
+                            <p style="margin-top: 15px;"><strong>Two Types of Face:</strong></p>
+                            <ul>
+                                <li><strong>Positive Face:</strong> The desire to be liked, approved of, appreciated
+                                    <ul style="margin-top: 5px;">
+                                        <li>Threat: Criticism, disagreement, interruption</li>
+                                        <li>Protection: Compliments, agreement, showing interest</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Negative Face:</strong> The desire to be unimpeded, to have freedom
+                                    <ul style="margin-top: 5px;">
+                                        <li>Threat: Requests, suggestions, advice, orders</li>
+                                        <li>Protection: Indirectness, apologies, hedges ("maybe," "possibly")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p style="margin-top: 15px;"><strong>Five Politeness Strategies (from most direct to most indirect):</strong></p>
+                            <ol>
+                                <li><strong>Bald on-record:</strong> "Give me that." (used in emergencies or with intimates)</li>
+                                <li><strong>Positive politeness:</strong> "Hey friend, could you pass that?" (emphasizes solidarity)</li>
+                                <li><strong>Negative politeness:</strong> "I'm sorry to bother you, but could you possibly..." (most common)</li>
+                                <li><strong>Off-record indirect:</strong> "I can't find the salt..." (implies: please pass it)</li>
+                                <li><strong>Don't do the FTA:</strong> Say nothing (avoid the face-threatening act entirely)</li>
+                            </ol>
+
+                            <h4 style="margin-top: 20px;">😂 Humor Example:</h4>
+                            <p><em>"You're early again!" / "Yes, only thirty minutes late this time."</em></p>
+                            <p><strong>Analysis:</strong> Friend 1 uses IRONY (positive politeness through teasing) to criticize face-threateningly. Friend 2 uses SELF-DEPRECATING humor (accepting the criticism) to maintain social harmony.</p>
+                        </div>
+
+                        <div class="real-world-box">
+                            <h4>🌍 Use This In Real Life:</h4>
+                            <ul>
+                                <li><strong>At work:</strong> When asking your boss for time off, use negative politeness: "I'm sorry to ask, but would it be possible to take Friday off?" (protects their negative face)</li>
+                                <li><strong>With friends:</strong> You can use positive politeness or even bald on-record: "Hey, pass the remote!" (intimacy allows directness)</li>
+                                <li><strong>British communication:</strong> Notice how Brits often use off-record hints: "The door's still open..." means "Please close it" (indirect = polite)</li>
+                                <li><strong>In emails:</strong> "Would you possibly be able to..." is more polite than "Can you..." especially with people you don't know well</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">4. Deixis and Reference</h4>
+                        <div class="theory-box">
+                            <p><strong>Concept:</strong> Words whose meaning depends on context: who's speaking, when, where.</p>
+                            <ul>
+                                <li><strong>Person deixis:</strong> I, you, we, they</li>
+                                <li><strong>Time deixis:</strong> now, then, yesterday, tomorrow</li>
+                                <li><strong>Place deixis:</strong> here, there, this, that</li>
+                                <li><strong>Social deixis:</strong> formal vs. informal "you" (in many languages). English lacks grammatical social deixis (no formal 'you'), so speakers must use other strategies like titles, hedging, and indirect forms.</li>
+                            </ul>
+                            <p style="margin-top: 10px;"><strong>Pragmatic joke:</strong> A sign says "Free tomorrow." Tomorrow never comes - the deixis keeps shifting!</p>
+                        </div>
+
+                        <div class="learn-more-section">
+                            <button class="learn-more-toggle" type="button" aria-expanded="false" data-action="learn-more-toggle">
+                                <span>📚 Learn More: Advanced Politeness Theory</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="learn-more-content">
+                                <p><strong>For advanced learners:</strong> Brown & Levinson's politeness theory has been critiqued for being too Western-centric. Not all cultures value negative face (autonomy) as highly as positive face (belonging).</p>
+                                <p style="margin-top:12px;"><strong>Cross-cultural variation:</strong></p>
+                                <ul style="margin-left:20px; margin-top:8px;">
+                                    <li>Collectivist cultures (e.g., Japan, Korea) may prioritize group harmony over individual freedom</li>
+                                    <li>Direct communication styles (e.g., German, Dutch) may not use as much hedging</li>
+                                    <li>Some cultures have unique politeness systems not captured by the framework (e.g., Korean honorifics)</li>
+                                </ul>
+                                <p style="margin-top:12px;"><em>Already familiar with cross-cultural pragmatics? <a href="#" data-action="accordion-open" data-target="sociopragmatic-body" style="color:#6366f1;">Skip to Sociopragmatic Knowledge →</a></em></p>
+                            </div>
+                        </div>
+                    
+        <div class="theory-continue-row">
+            <button class="nav-btn theory-continue-btn" data-next="sociopragmatic-body">Continue ></button>
+        </div>
+    </div>
+</div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="sociopragmatic-body" aria-expanded="false" aria-controls="sociopragmatic-body" aria-label="Sociopragmatic Knowledge: Reading Social Context. Toggle to expand or collapse">
+                        <span>🌍 Sociopragmatic Knowledge: Reading Social Context <span class="section-time-estimate">⏱️ 4 min</span></span>
+                        <span>?</span>
+                    </button>
+                    <div class="accordion-body" id="sociopragmatic-body">
+    <div class="theory-content-enhanced">
+                        <p><strong>This is WHEN and HOW to use those linguistic forms appropriately in social situations.</strong></p>
+
+                        <h4 style="margin-top: 20px;">1. Social Distance (Close vs. Distant)</h4>
+                        <div class="theory-box">
+                            <p><strong>Close relationships:</strong> Friends, family, intimate partners</p>
+                            <ul>
+                                <li>more direct language</li>
+                                <li>Teasing and sarcasm acceptable</li>
+                                <li>Can make bigger requests</li>
+                                <li>Informal vocabulary</li>
+                            </ul>
+
+                            <p style="margin-top: 15px;"><strong>Distant relationships:</strong> Strangers, acquaintances, service interactions</p>
+                            <ul>
+                                <li>more indirect, polite forms</li>
+                                <li>Careful with humor</li>
+                                <li>Smaller requests only</li>
+                                <li>Formal vocabulary</li>
+                            </ul>
+
+                            <h4 style="margin-top: 20px;">🌍 Cultural Example:</h4>
+                            <p><strong>Uzbek Context:</strong> In Uzbekistan, even distant acquaintances may use warmer, more personal language than in individualistic Western cultures. Understanding YOUR cultural norms is crucial!</p>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">2. Power Relations (Equal vs. Unequal)</h4>
+                        <div class="theory-box">
+                            <p><strong>Higher power:</strong> Boss, teacher, parent, older person (in hierarchical cultures)</p>
+                            <ul>
+                                <li>Can use more direct language</li>
+                                <li>Can give orders</li>
+                                <li>Can interrupt more freely</li>
+                            </ul>
+
+                            <p style="margin-top: 15px;"><strong>Lower power:</strong> Employee, student, child</p>
+                            <ul>
+                                <li>Must use polite, indirect forms</li>
+                                <li>Should make requests, not demands</li>
+                                <li>Should wait for turn to speak</li>
+                            </ul>
+
+                            <p style="margin-top: 15px;"><strong>⚠️ Pragmatic Failure Example:</strong></p>
+                            <p>Student to professor: <em>"Hey, what's the homework?"</em></p>
+                            <p><strong>Problem:</strong> Too informal for power asymmetry</p>
+                            <p><strong>Better:</strong> <em>"Excuse me, Professor, could you remind me what the assignment is?"</em></p>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">3. Imposition (Small vs. Large Requests)</h4>
+                        <div class="theory-box">
+                            <p><strong>Low imposition:</strong> "Could you pass the salt?" (small, easy, quick)</p>
+                            <p><strong>High imposition:</strong> "Could you help me move apartments this weekend?" (big, effortful, time-consuming)</p>
+                            
+                            <p style="margin-top: 15px;"><strong>Rule:</strong> Higher imposition = more politeness needed</p>
+                            <ul>
+                                <li>Provide reasons</li>
+                                <li>Offer compensation</li>
+                                <li>Accept refusal gracefully</li>
+                                <li>Use very indirect language</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">4. Cultural Context Variables</h4>
+                        <div class="theory-box">
+                            <p><strong>Directness:</strong> Some cultures value directness (Dutch, German), others value indirectness (Japanese, Uzbek in certain contexts)</p>
+                            
+                            <p style="margin-top: 15px;"><strong>Example of Cultural Difference:</strong></p>
+                            <ul>
+                                <li><strong>American:</strong> "I disagree" (direct, individual-focused)</li>
+                                <li><strong>Japanese:</strong> "That's an interesting perspective..." (indirect, harmony-focused)</li>
+                                <li><strong>Uzbek:</strong> Often depends on context - direct with close relationships, indirect with distant or hierarchical ones</li>
+                            </ul>
+
+                            <h4 style="margin-top: 20px;">🌍 Cross-Cultural Humor Failure:</h4>
+                            <p>An American jokes with a new Uzbek colleague: <em>"Your presentation was terrible!"</em> (said with a smile, intending teasing compliment)</p>
+                            <p><strong>Problem:</strong> The Uzbek colleague doesn't know the speaker well enough to interpret this as teasing. Result: offense or confusion.</p>
+                        </div>
+                    
+        <div class="theory-continue-row">
+            <button class="nav-btn theory-continue-btn" data-next="humor-theory-body">Continue ></button>
+        </div>
+    </div>
+</div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="humor-theory-body">
+                        <span>💡 Why Humor Works for Teaching Pragmatics</span>
+                        <span>?</span>
+                    </button>
+                    <div class="accordion-body" id="humor-theory-body">
+    <div class="theory-content-enhanced">
+                        <h4>The Humor-Pragmatics Connection</h4>
+                        <div class="theory-box">
+                            <p><strong>Humor REQUIRES pragmatic competence to understand:</strong></p>
+                            <ul>
+                                <li>You must understand BOTH literal meaning AND intended meaning</li>
+                                <li>You must recognize when expectations are violated</li>
+                                <li>You must have cultural/contextual knowledge</li>
+                                <li>You must infer implied meanings</li>
+                            </ul>
+
+                            <p style="margin-top: 20px;"><strong>Three Major Theories of Humor (All Pragmatic!):</strong></p>
+                            
+                            <h4 style="margin-top: 15px;">1. Incongruity Theory</h4>
+                            <p>Humor arises from violated expectations - something unexpected in the context.</p>
+                            <p><em>Example: "I used to be a banker, but I lost interest."</em></p>
+                            <p><strong>Pragmatic element:</strong> "Lost interest" has two meanings - context makes you expect one, but you get the other.</p>
+
+                            <h4 style="margin-top: 15px;">2. Superiority Theory</h4>
+                            <p>Humor comes from feeling superior to someone else's misfortune or mistake.</p>
+                            <p><em>Example: Someone slipping on a banana peel (slapstick)</em></p>
+                            <p><strong>Pragmatic element:</strong> Only funny if the situation is LOW-STAKES and the person isn't seriously hurt - requires social judgment.</p>
+
+                            <h4 style="margin-top: 15px;">3. Relief Theory</h4>
+                            <p>Humor releases tension about taboo or serious topics.</p>
+                            <p><em>Example: Jokes about difficult experiences (illness, stress, aging)</em></p>
+                            <p><strong>Pragmatic element:</strong> Must judge WHEN and WITH WHOM such jokes are appropriate - timing and audience matter immensely.</p>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">Types of Pragmatic Humor</h4>
+                        <div class="theory-box">
+                            <ul>
+                                <li><strong>Wordplay (Puns):</strong> Multiple meanings, homophones
+                                    <ul><li>"Why did the bicycle fall over? It was two-tired."</li></ul>
+                                </li>
+                                <li><strong>Sarcasm/Irony:</strong> Saying opposite of what you mean
+                                    <ul><li>"Oh perfect, it's raining again." (when you hate rain)</li></ul>
+                                </li>
+                                <li><strong>Pragmatic Failure Jokes:</strong> Someone misses implied meaning
+                                    <ul><li>"How did you find the steak?" / "I looked next to the potatoes."</li></ul>
+                                </li>
+                                <li><strong>Cultural References:</strong> Require shared background knowledge
+                                    <ul><li>Jokes about local celebrities, events, idioms</li></ul>
+                                </li>
+                                <li><strong>Absurdist Humor:</strong> Violates logical expectations
+                                    <ul><li>"I used to play piano by ear, but now I use my hands."</li></ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">Pedagogical Benefits of Using Humor</h4>
+                        <div class="theory-box" style="background: #e8f5e9;">
+                            <p><strong>Research-backed benefits:</strong></p>
+                            <ol>
+                                <li><strong>Motivation:</strong> Humor makes learning enjoyable, increasing engagement</li>
+                                <li><strong>Memory:</strong> Emotional content (like humor) is remembered better</li>
+                                <li><strong>Anxiety Reduction:</strong> Laughing lowers affective filter</li>
+                                <li><strong>Authentic Input:</strong> Jokes are real language use, not textbook examples</li>
+                                <li><strong>Cultural Insight:</strong> Humor reveals cultural values and norms</li>
+                                <li><strong>Metalinguistic Awareness:</strong> Analyzing why something is funny develops deeper language understanding</li>
+                                <li><strong>Safe Practice:</strong> Mistakes with humor are low-stakes</li>
+                            </ol>
+                        </div>
+                    
+        <div class="theory-continue-row">
+            <button class="nav-btn theory-continue-btn" data-next="pragmatic-failure-body">Continue ></button>
+        </div>
+    </div>
+</div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" data-target="pragmatic-failure-body">
+                        <span>⚠️ Pragmatic Failure: When Communication Breaks Down</span>
+                        <span>?</span>
+                    </button>
+                    <div class="accordion-body" id="pragmatic-failure-body">
+    <div class="theory-content-enhanced">
+                        <h4>Understanding Pragmatic Failure</h4>
+                        <div class="theory-box">
+                            <p><strong>Definition:</strong> When communication fails NOT because of grammar errors, but because of inappropriate language use for the social context.</p>
+                            
+                            <p style="margin-top: 20px;"><strong>Two Types (Thomas, 1983):</strong></p>
+                            
+                            <h4 style="margin-top: 15px;">1. Pragmalinguistic Failure</h4>
+                            <p>Using the WRONG LINGUISTIC FORM for your intended meaning.</p>
+                            <p><strong>Example:</strong> Non-native speaker says "I want water" to a waiter.</p>
+                            <ul style="margin-top: 10px;">
+                                <li><strong>Intention:</strong> Polite request</li>
+                                <li><strong>Reception:</strong> Rude demand</li>
+                                <li><strong>Problem:</strong> Should use modal + politeness: "Could I have some water, please?"</li>
+                            </ul>
+
+                            <h4 style="margin-top: 20px;">2. Sociopragmatic Failure</h4>
+                            <p>Misjudging the SOCIAL CONTEXT - wrong level of formality, directness, or imposition.</p>
+                            <p><strong>Example:</strong> Student emails professor: "Hey Prof, I need an extension lol"</p>
+                            <ul style="margin-top: 10px;">
+                                <li><strong>Problems:</strong></li>
+                                <ul>
+                                    <li>Too informal ("Hey," "lol")</li>
+                                    <li>Too direct ("I need")</li>
+                                    <li>No reason given</li>
+                                    <li>Doesn't acknowledge imposition</li>
+                                </ul>
+                                <li><strong>Better:</strong> "Dear Professor [Name], I'm writing to respectfully request an extension on the assignment due Friday. [Reason]. I understand this is an imposition. Would it be possible to submit it by Monday? Thank you for considering my request."</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">Common Sources of Pragmatic Failure</h4>
+                        <div class="theory-box">
+                            <ul>
+                                <li><strong>L1 Transfer:</strong> Using your native culture's norms in the target language
+                                    <ul><li>Example: Very direct refusals in cultures where indirectness is expected</li></ul>
+                                </li>
+                                <li><strong>Overgeneralization:</strong> Applying one rule too broadly
+                                    <ul><li>Example: Using "please" makes everything polite (not always true!)</li></ul>
+                                </li>
+                                <li><strong>Teaching Materials:</strong> Textbooks don't always show authentic pragmatic use
+                                    <ul><li>Example: Learning "How do you do?" as a greeting (outdated/formal)</li></ul>
+                                </li>
+                                <li><strong>Lack of Input:</strong> Not enough exposure to real language use in context</li>
+                                <li><strong>Fossilization:</strong> Incorrect pragmatic patterns become habitual</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="margin-top: 20px;">😂 Humor Examples of Pragmatic Failure</h4>
+                        <div class="theory-box" style="background: #fff3cd;">
+                            <p><strong>Example 1: Literal interpretation</strong></p>
+                            <p>"Does this bus go to Tashkent?" / "No, it goes by itself."</p>
+                            <p><strong>Analysis:</strong> Speaker B misses that this is an INDIRECT SPEECH ACT (request for information, not a question about the bus's autonomy).</p>
+
+                            <p style="margin-top: 20px;"><strong>Example 2: Missing implicature</strong></p>
+                            <p>"How did you find the steak?" / "I just looked next to the potatoes."</p>
+                            <p><strong>Analysis:</strong> "Find" is used idiomatically to mean "What did you think of it?" The customer responds to literal meaning only.</p>
+
+                            <p style="margin-top: 20px;"><strong>Example 3: Power violation</strong></p>
+                            <p>Employee to CEO: "Yo boss, that meeting was boring."</p>
+                            <p><strong>Analysis:</strong> Too informal for the power asymmetry + face-threatening to superior.</p>
+                        </div>
+                    
+        <div class="theory-continue-row">
+            <button class="nav-btn theory-continue-btn" data-next="">Collapse</button>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="theory-box" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); border-left: 5px solid var(--success); margin-top: 30px;">
+                    <h3 style="text-align: center; color: var(--success);">You've Completed the Core Theory!</h3>
+                    <p style="text-align: center; margin-top: 10px;">Now it's time to see these concepts in action. Move to the <strong>Joke Collection</strong> or <strong>Activities</strong> to apply what you've learned!</p>
+                </div>
+            </section>
+
+            <!-- Activities Section (keeping existing structure, enhanced) -->
+            <section id="activities" class="content-section" role="region" aria-labelledby="activities-heading">
+                <h2 id="activities-heading">Learning Activities by Level</h2>
+
+                <div class="recommendation-box">
+                    <p><strong>Study Tip:</strong> 1) Pick your level and difficulty, 2) Read the pragmatic focus, 3) Write your response/notes, 4) Mark complete before moving up.</p>
+                </div>
+
+                <div class="search-container">
+                    <input type="search" class="search-input" id="activity-search" placeholder="🔍 Search activities by keyword..." aria-label="Search activities by keyword">
+                </div>
+
+                <div class="filter-buttons" id="level-filters">
+                    <button class="filter-btn active" data-level="all" aria-label="Filter activities to show all levels">All Levels</button>
+                    <button class="filter-btn" data-level="A1" aria-label="Filter activities for A1 beginner level">A1 - Beginner</button>
+                    <button class="filter-btn" data-level="A2" aria-label="Filter activities for A2 elementary level">A2 - Elementary</button>
+                    <button class="filter-btn" data-level="B1" aria-label="Filter activities for B1 intermediate level">B1 - Intermediate</button>
+                    <button class="filter-btn" data-level="B2" aria-label="Filter activities for B2 upper-intermediate level">B2 - Upper-Intermediate</button>
+                    <button class="filter-btn" data-level="C1" aria-label="Filter activities for C1 advanced level">C1 - Advanced</button>
+                </div>
+
+                <div class="filter-buttons" id="difficulty-filters">
+                    <button class="filter-btn active" data-difficulty="all" aria-label="Filter activities to show all difficulty levels">All Difficulties</button>
+                    <button class="filter-btn" data-difficulty="easy" aria-label="Filter activities to show only easy difficulty">Easy</button>
+                    <button class="filter-btn" data-difficulty="medium" aria-label="Filter activities to show only medium difficulty">Medium</button>
+                    <button class="filter-btn" data-difficulty="hard" aria-label="Filter activities to show only hard difficulty">Hard</button>
+                </div>
+
+                <button class="print-btn no-print" id="print-activities-btn">Print Worksheet</button>
+
+                <div id="activities-container"></div>
+            </section>
+
+            <!-- Quiz Section (keeping existing) -->
+            <section id="quiz" class="content-section" role="region" aria-labelledby="quiz-heading">
+                <h2 id="quiz-heading">Interactive Quizzes</h2>
+
+                <div class="recommendation-box">
+                    <p><strong>Quiz Strategy:</strong> Read the stem twice, pick the best pragmatic fit, then review the feedback before moving on.</p>
+                </div>
+
+                <div class="filter-buttons" id="quiz-level-filters">
+                    <button class="filter-btn active" data-quiz-level="all">Mixed Levels</button>
+                    <button class="filter-btn" data-quiz-level="beginner">Beginner (A1-A2)</button>
+                    <button class="filter-btn" data-quiz-level="intermediate">Intermediate (B1-B2)</button>
+                    <button class="filter-btn" data-quiz-level="advanced">Advanced (C1+)</button>
+                </div>
+
+                <div id="quiz-container"></div>
+                <p style="margin-top:12px; color: var(--text-secondary);">Tip: Advanced learners—try Intermediate first to warm up, then retake at Advanced to check mastery.</p>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="nav-btn" id="check-quiz-btn" style="display: none; background: #10b981; color: white; font-weight: 600; font-size: 1.05em;">✓ Check Answers</button>
+                    <button class="nav-btn" id="retry-quiz-btn" style="display: none;">Try Another Quiz</button>
+                </div>
+            </section>
+
+            <!-- Progress Section (keeping existing) -->
+            <section id="progress" class="content-section" role="region" aria-labelledby="progress-heading">
+                <h2 id="progress-heading">📊 My Learning Progress</h2>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Examples Analyzed</div>
+                        <div class="stat-number" id="stat-jokes-read">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Activities Completed</div>
+                        <div class="stat-number" id="stat-activities-completed">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Quizzes Taken</div>
+                        <div class="stat-number" id="stat-quizzes-taken">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Average Score</div>
+                        <div class="stat-number" id="stat-avg-score">0%</div>
+                    </div>
+                </div>
+
+                <h3>🏆 Achievement Badges</h3>
+                <div id="achievement-container" style="text-align: center;"></div>
+
+                <h3>Progress by Level</h3>
+                <div id="level-progress-container"></div>
+
+                <h3>Learning Insights</h3>
+                <div class="theory-box" id="learning-insights">
+                    <p>Complete more activities to unlock personalized insights about your learning journey!</p>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="nav-btn no-print" id="reset-progress-btn" style="background: var(--danger); color: white;">🔄 Reset All Progress</button>
+                    <p style="margin-top: 16px; color: var(--text-secondary); font-size: 0.9em;">
+                        💡 Your progress is saved securely in your browser. Use browser sync to access your progress across devices!
+                    </p>
+                </div>
+                <!-- Progress Backup (Optional) -->
+                <div class="progress-backup-box" style="margin-top: 28px; padding: 20px; border: 1px solid #e5e7eb; border-radius: 12px; background: #f8fafc;">
+                    <h3 style="margin: 0 0 10px 0; color: var(--text-primary);">Progress Backup (Optional)</h3>
+                    <p style="margin: 0 0 12px 0; color: var(--text-secondary);">Your learning progress is stored only in this browser. You can optionally create a QR backup to move it to another device.</p>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <button type="button" id="qr-backup-btn" class="nav-btn" style="background: #0ea5e9; color: white; font-weight: 600; padding: 10px 18px; cursor: pointer; transition: all 0.2s;" aria-label="Generate QR code backup of your learning progress">Show QR Backup</button>
+                        <button type="button" id="qr-restore-btn" class="nav-btn" style="background: #10b981; color: white; font-weight: 600; padding: 10px 18px; cursor: pointer; transition: all 0.2s;" aria-label="Scan QR code to restore your learning progress">Scan QR to Restore</button>
+                    </div>
+                    <div id="qr-backup-modal" class="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-backup-title" aria-hidden="true" style="display:none; position:fixed; inset:0; background: rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index: 9999;">
+                        <div class="qr-modal-content" style="background: var(--bg-primary, white); padding: 24px; border-radius: 12px; max-width: 420px; width: 90%; box-shadow: 0 10px 40px rgba(0,0,0,0.3); text-align: center;">
+                            <h4 id="qr-backup-title" style="margin: 0 0 12px 0; color: var(--text-primary); font-size: 1.25rem;">QR Backup</h4>
+                            <p id="qr-backup-status" style="margin-bottom: 16px; color: var(--text-secondary); min-height: 20px;"></p>
+                            <div id="qr-backup-code" style="margin: 16px auto; min-height: 260px; display: flex; align-items: center; justify-content: center;"></div>
+                           <div style="margin-top: 12px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+            <button type="button" id="qr-backup-download" class="nav-btn"
+                    style="background: #0ea5e9; color: white; padding: 10px 20px; font-weight: 600; cursor: pointer;">
+                Download QR as PNG
+            </button>
+            <button type="button" id="qr-backup-close" class="nav-btn"
+                    style="background: #6b7280; color: white; padding: 10px 24px; font-weight: 600; cursor: pointer;"
+                    aria-label="Close QR backup modal">
+                Close
+            </button>
+                                    </div>
+                    </div>
+                    </div>
+                    <div id="qr-restore-modal" class="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-restore-title" aria-hidden="true" style="display:none; position:fixed; inset:0; background: rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index: 9999;">
+                        <div class="qr-modal-content" style="background: var(--bg-primary, white); padding: 24px; border-radius: 12px; max-width: 520px; width: 90%; box-shadow: 0 10px 40px rgba(0,0,0,0.3); text-align: center;">
+                            <h4 id="qr-restore-title" style="margin: 0 0 12px 0; color: var(--text-primary); font-size: 1.25rem;">Scan QR to Restore</h4>
+                            <div id="qr-restore-reader" style="width: 100%; min-height: 280px; margin: 16px auto; background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center;"></div>
+                            <p id="qr-restore-status" style="margin-top: 12px; color: var(--text-secondary); min-height: 20px; font-size: 0.95rem;"></p>
+                                                        <button type="button" id="qr-restore-close" class="nav-btn" style="background: #6b7280; color: white; margin-top: 16px; padding: 10px 24px; font-weight: 600; cursor: pointer;" aria-label="Close QR restore modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Access Information -->
+                <div class="theory-box" style="margin-top: 32px; background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border-left: 4px solid var(--primary);">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 12px; font-size: 1.125rem;">
+    Access Your Progress on Multiple Devices
+</h3>
+
+                    <p style="color: #4338ca; margin-bottom: 12px; line-height: 1.6;">Your learning progress is stored locally in your browser on this device. It is not synced automatically through browser accounts or cloud services.</p>
+                    <p style="color: #4338ca; margin-bottom: 12px; line-height: 1.6;">If you want to move your progress to another device, you can use the optional QR backup feature:</p>
+                    <ul style="color: #1e3a8a; margin: 0 0 12px 20px; padding: 0; line-height: 1.6;">
+                        <li><strong>On the original device:</strong> Open the platform and click "Show QR Backup" to generate a QR code with your current progress.</li>
+                        <li><strong>On the new device:</strong> Open the platform, click "Scan QR to Restore", and point the camera at the QR code from your original device.</li>
+                    </ul>
+                    <p style="color: #4338ca; margin: 0; line-height: 1.6;">If you do nothing, your progress simply stays on this device and remains private to this browser.</p>
+                </div>
+            </section>
+
+            <!-- Graduation Section -->
+            <section id="graduation" class="content-section" role="region" aria-labelledby="graduation-heading">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <!-- Celebration Header -->
+                    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 40px; border-radius: 20px; margin-bottom: 32px; box-shadow: var(--shadow-xl);">
+                        <div style="font-size: 4rem; margin-bottom: 16px; animation: bounce 1s ease infinite;">🎓</div>
+                        <h2 id="graduation-heading" style="font-size: 2.5rem; color: #78350f; margin-bottom: 12px;">Congratulations!</h2>
+                        <p style="font-size: 1.25rem; color: #92400e; margin-bottom: 0;">
+                            You've completed all modules and mastered pragmatic competence through humor!
+                        </p>
+                    </div>
+
+                    <!-- Certificate -->
+                    <div id="certificate-container" class="theory-box" style="background: white; border: 8px double var(--primary); padding: 48px; margin-bottom: 32px; box-shadow: var(--shadow-2xl); position: relative;">
+                        <div style="position: absolute; top: 16px; right: 16px; font-size: 2rem; opacity: 0.1;">🎓</div>
+                        <div style="position: absolute; top: 16px; left: 16px; font-size: 2rem; opacity: 0.1;">🎓</div>
+                        <div style="position: absolute; bottom: 16px; right: 16px; font-size: 2rem; opacity: 0.1;">🎓</div>
+                        <div style="position: absolute; bottom: 16px; left: 16px; font-size: 2rem; opacity: 0.1;">🎓</div>
+
+                        <h3 style="font-family: 'Georgia', serif; font-size: 2rem; color: var(--primary-dark); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px;">
+                            Certificate of Completion
+                        </h3>
+
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px; font-style: italic;">
+                            This is to certify that
+                        </p>
+
+                        <div id="certificate-name" style="font-family: 'Georgia', serif; font-size: 2.5rem; color: var(--text-primary); margin-bottom: 24px; border-bottom: 2px solid var(--border); padding-bottom: 8px; font-weight: bold;">
+                            Pragmatics Student
+                        </div>
+
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.8;">
+                            has successfully completed all six modules of<br>
+                            <strong style="color: var(--primary-dark);">Teaching Pragmatic Competence Through Humor</strong>
+                        </p>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0; padding: 24px; background: var(--bg-secondary); border-radius: 12px;">
+                            <div>
+                                <div style="color: var(--text-tertiary); font-size: 0.9rem; margin-bottom: 4px;">Completion Date</div>
+                                <div id="certificate-date" style="color: var(--text-primary); font-weight: 600;">-</div>
+                            </div>
+                            <div>
+                                <div style="color: var(--text-tertiary); font-size: 0.9rem; margin-bottom: 4px;">Overall Mastery</div>
+                                <div id="certificate-score" style="color: var(--success); font-weight: 600; font-size: 1.5rem;">-</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 32px; padding-top: 24px; border-top: 2px solid var(--border);">
+                            <p style="font-size: 0.9rem; color: var(--text-tertiary); font-style: italic;">
+                                Certificate ID: <span id="certificate-id">-</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Achievement Stats -->
+                    <div class="theory-box" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border-left: 4px solid var(--primary); margin-bottom: 32px;">
+                        <h3 style="color: var(--primary-dark); margin-bottom: 20px; font-size: 1.5rem;">🏆 Your Achievement Summary</h3>
+                        <div id="graduation-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                            <!-- Stats will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="theory-box" style="margin-bottom: 32px;">
+                        <h3 style="color: var(--text-primary); margin-bottom: 20px; font-size: 1.5rem;">🎯 What's Next?</h3>
+
+                        <div style="display: grid; gap: 16px; text-align: left;">
+                            <!-- Share Achievement -->
+                            <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 12px; border-left: 4px solid var(--warning);">
+                                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                    <span style="font-size: 2rem; margin-right: 12px;">📢</span>
+                                    <h4 style="color: #78350f; margin: 0; font-size: 1.1rem;">Share Your Achievement</h4>
+                                </div>
+                                <p style="color: #92400e; margin-bottom: 12px; line-height: 1.6;">
+                                    Let others know about your accomplishment! Download your certificate or share your progress.
+                                </p>
+                                <button class="cta-primary" type="button" data-action="certificate-download" style="margin-right: 8px;">
+                                    📥 Download Certificate
+                                </button>
+                                <button class="nav-btn" type="button" data-action="certificate-share">
+                                    📤 Share
+                                </button>
+                            </div>
+
+                            <!-- Review Modules -->
+                            <div style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); padding: 20px; border-radius: 12px; border-left: 4px solid var(--primary);">
+                                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                    <span style="font-size: 2rem; margin-right: 12px;">📚</span>
+                                    <h4 style="color: #075985; margin: 0; font-size: 1.1rem;">Review & Reinforce</h4>
+                                </div>
+                                <p style="color: #0c4a6e; margin-bottom: 12px; line-height: 1.6;">
+                                    Revisit any module to strengthen your understanding and practice applying concepts.
+                                </p>
+                                <button class="nav-btn" type="button" data-action="nav-section" data-section="guide">
+                                    📖 Review Modules
+                                </button>
+                            </div>
+
+                            <!-- Provide Feedback -->
+                            <div style="background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); padding: 20px; border-radius: 12px; border-left: 4px solid var(--secondary);">
+                                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                    <span style="font-size: 2rem; margin-right: 12px;">💬</span>
+                                    <h4 style="color: #6b21a8; margin: 0; font-size: 1.1rem;">Help Us Improve</h4>
+                                </div>
+                                <p style="color: #7c3aed; margin-bottom: 12px; line-height: 1.6;">
+                                    Your feedback helps us make this learning experience better for future students.
+                                </p>
+                                <button class="nav-btn" type="button" data-action="feedback-form">
+                                    ✍️ Provide Feedback
+                                </button>
+                            </div>
+
+                            <!-- Continue Learning -->
+                            <div style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); padding: 20px; border-radius: 12px; border-left: 4px solid var(--success);">
+                                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                    <span style="font-size: 2rem; margin-right: 12px;">🚀</span>
+                                    <h4 style="color: #065f46; margin: 0; font-size: 1.1rem;">Keep Learning</h4>
+                                </div>
+                                <p style="color: #047857; margin-bottom: 12px; line-height: 1.6;">
+                                    Explore additional resources, jokes, and activities to continue developing your pragmatic skills.
+                                </p>
+                                <button class="nav-btn" type="button" data-action="nav-section" data-section="resources">
+                                    🎯 Explore Resources
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Back to Dashboard -->
+                    <div style="margin-top: 32px;">
+                        <button class="nav-btn" type="button" data-action="nav-section" data-section="home" style="font-size: 1.1rem; padding: 16px 32px;">
+                            🏠 Back to Dashboard
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Section with Tabs -->
+            <section id="resources" class="content-section" role="region" aria-labelledby="resources-heading">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 id="resources-heading" style="margin-bottom: 12px;">📖 Learning Resources</h2>
+                    <p style="color: var(--text-secondary); font-size: var(--font-lg); max-width: 800px;">Everything you need to master pragmatic competence through humor</p>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="resource-tabs" role="tablist" aria-label="Resource navigation tabs">
+                    <button class="resource-tab active" role="tab" aria-selected="true" aria-controls="tab-joke" id="tab-btn-joke" type="button" data-action="resource-tab" data-tab="joke">
+                        😂 Joke Library
+                    </button>
+                    <button class="resource-tab" role="tab" aria-selected="false" aria-controls="tab-theory" id="tab-btn-theory" type="button" data-action="resource-tab" data-tab="theory">
+                        📖 Learning Theories
+                    </button>
+                    <button class="resource-tab" role="tab" aria-selected="false" aria-controls="tab-humor" id="tab-btn-humor" type="button" data-action="resource-tab" data-tab="humor">
+                        🎭 Humor Analysis
+                    </button>
+                    <button class="resource-tab" role="tab" aria-selected="false" aria-controls="tab-activities" id="tab-btn-activities" type="button" data-action="resource-tab" data-tab="activities">
+                        🎯 Activities
+                    </button>
+                    <button class="resource-tab" role="tab" aria-selected="false" aria-controls="tab-quiz" id="tab-btn-quiz" type="button" data-action="resource-tab" data-tab="quiz">
+                        ✅ Quizzes
+                    </button>
+                </div>
+
+                <!-- Tab Content: Joke Library -->
+                <div id="tab-joke" class="tab-content active" role="tabpanel" aria-labelledby="tab-btn-joke">
+                    <div class="theory-box" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 4px solid #f59e0b; padding: 24px;">
+                        <h3 style="color: #92400e; margin-bottom: 16px; font-size: 1.25rem;">🎭 Joke Library</h3>
+                        <p style="color: #78350f; margin-bottom: 20px; line-height: 1.7;">Explore curated jokes organized by pragmatic concepts. Each joke includes detailed analysis of the linguistic and social features that make it funny.</p>
+
+                        <div style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                            <h4 style="color: #1f2937; margin-bottom: 12px;">What You'll Find:</h4>
+                            <ul style="color: #4b5563; margin-left: 20px; line-height: 1.8;">
+                                <li>Jokes organized by pragmatic concept (implicature, politeness, speech acts)</li>
+                                <li>British humor examples with cultural context</li>
+                                <li>Detailed breakdowns of why each joke works</li>
+                                <li>Level-appropriate content (A1 to C1)</li>
+                            </ul>
+                        </div>
+
+                        <button class="cta-primary" type="button" data-action="nav-section" data-section="joke" aria-label="Go to full joke library">
+                            Open Full Joke Library →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Learning Theories -->
+                <div id="tab-theory" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-theory">
+                    <div class="theory-box" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border-left: 4px solid #0284c7; padding: 24px;">
+                        <h3 style="color: #075985; margin-bottom: 16px; font-size: 1.25rem;">📚 Learning Theories</h3>
+                        <p style="color: #0c4a6e; margin-bottom: 20px; line-height: 1.7;">Comprehensive guide to the linguistic theories behind pragmatic competence.</p>
+
+                        <div style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                            <h4 style="color: #1f2937; margin-bottom: 12px;">Core Theories Covered:</h4>
+                            <ul style="color: #4b5563; margin-left: 20px; line-height: 1.8;">
+                                <li><strong>Grice's Maxims:</strong> Cooperative principle and conversational implicature</li>
+                                <li><strong>Speech Act Theory:</strong> Austin & Searle's framework for understanding language as action</li>
+                                <li><strong>Politeness Theory:</strong> Brown & Levinson's face-saving strategies</li>
+                                <li><strong>Relevance Theory:</strong> Sperber & Wilson's cognitive approach</li>
+                                <li><strong>GTVH:</strong> General Theory of Verbal Humor for analyzing jokes</li>
+                            </ul>
+                        </div>
+
+                        <button class="cta-primary" type="button" data-action="nav-section" data-section="theory" aria-label="Go to full theory reference">
+                            Open Full Theory Reference →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Humor Analysis -->
+                <div id="tab-humor" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-humor">
+                    <div class="theory-box" style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); border-left: 4px solid #ec4899; padding: 24px;">
+                        <h3 style="color: #831843; margin-bottom: 16px; font-size: 1.25rem;">🎭 Humor Analysis Framework</h3>
+                        <p style="color: #9f1239; margin-bottom: 20px; line-height: 1.7;">Learn to analyze humor systematically using the General Theory of Verbal Humor (GTVH).</p>
+
+                        <div style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                            <h4 style="color: #1f2937; margin-bottom: 12px;">GTVH Six Knowledge Resources:</h4>
+                            <ul style="color: #4b5563; margin-left: 20px; line-height: 1.8;">
+                                <li><strong>Script Opposition:</strong> Overlapping but incompatible interpretations</li>
+                                <li><strong>Logical Mechanism:</strong> How the punchline resolves ambiguity</li>
+                                <li><strong>Situation:</strong> Context and participants</li>
+                                <li><strong>Target:</strong> Who or what is being made fun of</li>
+                                <li><strong>Narrative Strategy:</strong> How the joke is told</li>
+                                <li><strong>Language:</strong> Wordplay, ambiguity, register</li>
+                            </ul>
+                        </div>
+
+                        <p style="color: #9f1239; font-style: italic;">This framework is covered in Module 6: Analyzing Humour</p>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Activities -->
+                <div id="tab-activities" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-activities">
+                    <div class="theory-box" style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); border-left: 4px solid #10b981; padding: 24px;">
+                        <h3 style="color: #065f46; margin-bottom: 16px; font-size: 1.25rem;">🎯 Practice Activities</h3>
+                        <p style="color: #064e3b; margin-bottom: 20px; line-height: 1.7;">Interactive exercises to apply your pragmatic knowledge in realistic scenarios.</p>
+
+                        <div style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                            <h4 style="color: #1f2937; margin-bottom: 12px;">Activity Types:</h4>
+                            <ul style="color: #4b5563; margin-left: 20px; line-height: 1.8;">
+                                <li><strong>Scenario Response:</strong> Choose the most appropriate response in social situations</li>
+                                <li><strong>Joke Creation:</strong> Write your own jokes using pragmatic principles</li>
+                                <li><strong>Cultural Analysis:</strong> Compare humor across different cultures</li>
+                                <li><strong>Implicature Detection:</strong> Identify implied meanings in conversations</li>
+                            </ul>
+                        </div>
+
+                        <button class="cta-primary" type="button" data-action="nav-section" data-section="activities" aria-label="Go to full activities section">
+                            Open Full Activities →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Quizzes -->
+                <div id="tab-quiz" class="tab-content" role="tabpanel" aria-labelledby="tab-btn-quiz">
+                    <div class="theory-box" style="background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); border-left: 4px solid #9333ea; padding: 24px;">
+                        <h3 style="color: #581c87; margin-bottom: 16px; font-size: 1.25rem;">✅ Assessment Quizzes</h3>
+                        <p style="color: #6b21a8; margin-bottom: 20px; line-height: 1.7;">Test your understanding with quizzes designed to assess your pragmatic competence across different levels.</p>
+
+                        <div style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                            <h4 style="color: #1f2937; margin-bottom: 12px;">Quiz Features:</h4>
+                            <ul style="color: #4b5563; margin-left: 20px; line-height: 1.8;">
+                                <li>Level-appropriate questions (A1-A2, B1-B2, C1+)</li>
+                                <li>Immediate feedback with explanations</li>
+                                <li>Progress tracking and score history</li>
+                                <li>Retake quizzes to improve mastery</li>
+                            </ul>
+                        </div>
+
+                        <button class="cta-primary" type="button" data-action="nav-section" data-section="quiz" aria-label="Go to full quiz section">
+                            Open Full Quizzes →
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section (enhanced) -->
+            <!-- Settings Section -->
+            <section id="settings" class="content-section" role="region" aria-labelledby="settings-heading">
+                <h2 id="settings-heading">⚙️ Settings</h2>
+
+                <div class="theory-box" style="background: #f0f9ff;">
+                    <h3>Display Options</h3>
+                    <div style="margin-top: 16px;">
+                        <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; font-weight: 500;">
+                            <input type="checkbox" id="teacher-mode-toggle" style="width: 20px; height: 20px; cursor: pointer;">
+                            <span>👩‍🏫 Enable Teacher Resources</span>
+                        </label>
+                        <p style="color: var(--text-secondary); font-size: var(--font-sm); margin-top: 8px; margin-left: 32px;">
+                            Show teacher-specific resources and pedagogy guides in the navigation menu.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="content-section" role="region" aria-labelledby="about-heading">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <h2 id="about-heading" lang="en" style="font-size: 2rem; color: #1f2937; margin-bottom: 32px; text-align: center;">About This Platform</h2>
+                    <h2 lang="uz" style="font-size: 2rem; color: #1f2937; margin-bottom: 32px; text-align: center; display: none;">Platforma Haqida</h2>
+
+                    <!-- Welcome & Platform Introduction -->
+                    <!-- English Version -->
+                    <div lang="en" style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border: 1px solid #a78bfa; border-radius: 8px; padding: 32px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <h3 style="font-size: 1.5rem; color: #5b21b6; margin-bottom: 16px;">Welcome to Your Pragmatic Competence Learning Journey!</h3>
+                        <p style="color: #6b21a8; line-height: 1.8; margin-bottom: 16px;">
+                            This is an interactive learning platform designed to help you master <strong>pragmatic competence</strong> - the ability to use language appropriately in different social contexts - through the engaging medium of humor.
+                        </p>
+
+                        <h4 style="color: #5b21b6; margin-top: 20px; margin-bottom: 12px; font-size: 1.1rem;">What Can You Do Here?</h4>
+                        <ul style="color: #6b21a8; line-height: 1.8; margin-left: 20px;">
+                            <li><strong>Learn through Jokes:</strong> Explore 50+ carefully selected jokes with detailed pragmatic analysis</li>
+                            <li><strong>Practice with Activities:</strong> Complete interactive exercises at your level (A1 to C1)</li>
+                            <li><strong>Test Your Understanding:</strong> Take placement tests and quizzes to track progress</li>
+                            <li><strong>Explore Theory:</strong> Deep dive into pragmatic concepts with comprehensive guides</li>
+                            <li><strong>Track Your Progress:</strong> Save your learning journey and export/import data</li>
+                            <li><strong>Bridge Cultures:</strong> Compare Uzbek and British humor patterns (advanced module)</li>
+                        </ul>
+
+                        <p style="color: #6b21a8; line-height: 1.8; margin-top: 16px; font-style: italic;">
+                            This platform offers a variety of activities designed to support the development of your pragmatic competence. It should be noted that these materials are intended to complement the learning process rather than serve as an exhaustive guide to total mastery. As this is a beta version currently undergoing refinement, we aim to evolve the content based on ongoing research. Your insights are welcome, and we invite you to share any suggestions through the feedback form below as we work to enhance the user experience.
+                        </p>
+                    </div>
+
+                    <!-- Uzbek Version -->
+                    <div lang="uz" style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border: 1px solid #a78bfa; border-radius: 8px; padding: 32px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: none;">
+                        <h3 style="font-size: 1.5rem; color: #5b21b6; margin-bottom: 16px;">Platforma Haqida</h3>
+                        <p style="color: #6b21a8; line-height: 1.8; margin-bottom: 16px;">
+                            Pragmatik kompetensiyani o'rganish olamiga xush kelibsiz! Ushbu interfaol ta'lim platformasi Sizga yumoristik matnlar mutolaasi va tahlili orqali pragmatik kompetensiyani-turli ijtimoiy vaziyatlarda tildan o'rinli va samarali foydalanish mahoratini-egallashda ko'maklashish uchun yaratilgan.
+                        </p>
+
+                        <h4 style="color: #5b21b6; margin-top: 20px; margin-bottom: 12px; font-size: 1.1rem;">Platforma imkoniyatlari:</h4>
+                        <ul style="color: #6b21a8; line-height: 1.8; margin-left: 20px;">
+                            <li><strong>Mutolaa va tahlil:</strong> 50 dan ortiq sara yumoristik matnlarni batafsil pragmatik tahlil asosida o'rganing.</li>
+                            <li><strong>Amaliy mashg'ulotlar:</strong> O'z darajangizga (A1 dan C1 gacha) mos interfaol mashqlarni bajaring.</li>
+                            <li><strong>Bilimni tekshirish:</strong> Daraja aniqlovchi test topshirib, har bir modul bo'yicha berilgan mashqlarni bajarib, modul yakunida yakuniy testlardan o'ting.</li>
+                            <li><strong>Nazariy asoslar:</strong> Pragmatika sohasiga oid tushunchalar bilan maxsus qo'llanmalar orqali yaqindan tanishing.</li>
+                            <li><strong>Natijalarni kuzatish:</strong> Shaxsiy o'quv jarayoningizni saqlang hamda ma'lumotlarni eksport/import qiling.</li>
+                            <li><strong>Madaniyatlararo muloqot:</strong> O'zbek va Britaniya yumoristik an'analarini qiyoslang.</li>
+                        </ul>
+
+                        <p style="color: #6b21a8; line-height: 1.8; margin-top: 16px; font-style: italic;">
+                            Mazkur platforma Sizning pragmatik kompetensiyangizni rivojlantirishga ko‘maklashuvchi turli amaliy mashg‘ulotlarni taqdim etadi. Shuni qayd etish joizki, ushbu manba sohani mukammal egallash uchun yagona qo‘llanma emas, balki o‘quv jarayonini boyitishga qaratilgan yordamchi vosita sifatida qaralishi so'raladi. Platforma hozirda sinov (beta) rejimida bo‘lib, kelgusida uni bosqichma-bosqich takomillashtirish ko‘zda tutilgan. Sizning fikr va mulohazalaringiz loyiha rivoji uchun foydali bo‘lishi mumkin; takliflaringizni quyidagi shakl orqali yuborishingizni mamnuniyat bilan qarshi olamiz.
+                        </p>
+                    </div>
+
+                    <!-- Community Guidelines - English Version -->
+                    <div lang="en" style="margin-bottom: 24px; padding: 28px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 8px; border-left: 4px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <h3 style="color: #78350f; margin-bottom: 20px; font-size: 1.5rem; display: flex; align-items: center; gap: 8px; font-weight: 700;">
+                            <span>📋</span> Community Guidelines
+                        </h3>
+
+                        <p style="line-height: 1.8; color: #78350f; margin-bottom: 20px;">
+                            This platform is designed as a learning space focused on language, communication, and pragmatic competence. To keep it useful, respectful, and appropriate for academic contexts, we kindly ask all users to follow a few simple principles.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">Focus on Learning</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 6px;">
+                            Please keep your contributions (including feedback and messages) focused on the educational purpose of the platform. Constructive suggestions, reflections, and learning-related comments are always welcome.
+                        </p>
+                        <p style="line-height: 1.7; color: #92400e; font-size: 0.95rem; font-style: italic; margin-bottom: 14px;">
+                            These guidelines are intended to support learning, not to restrict expression unnecessarily.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">Respectful Communication</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 14px;">
+                            We ask users to communicate in a respectful and professional manner, suitable for a university or classroom environment. Language should be clear, polite, and free from expressions that could be considered offensive or inappropriate in an academic setting.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">Appropriateness of Content</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 6px;">
+                            This platform is intended for public educational use. Please avoid submitting content that may be sensitive, controversial, or unrelated to learning.
+                        </p>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 14px;">
+                            In general, content should feel appropriate for an open classroom discussion involving students, teachers, and academic staff.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">Cultural Awareness</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 14px;">
+                            Language and humor can vary across cultures. Users are encouraged to be mindful of cultural differences and to communicate in a way that respects local traditions and shared social norms.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">Legal and Ethical Use</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 14px;">
+                            By using this platform, users agree to engage responsibly and in line with applicable laws and accepted standards of public educational practice.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">Moderation & Feedback</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 0;">
+                            To support a positive learning environment, the platform team may review submissions and, when needed, decide not to display or respond to content that does not align with these principles. Feedback is highly valued and helps improve the platform - please keep it constructive, relevant, and focused on learning and usability.
+                        </p>
+                    </div>
+
+                    <!-- Community Guidelines - Uzbek Version -->
+                    <div lang="uz" style="margin-bottom: 24px; padding: 28px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 8px; border-left: 4px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: none;">
+                        <h3 style="color: #78350f; margin-bottom: 20px; font-size: 1.5rem; display: flex; align-items: center; gap: 8px; font-weight: 700;">
+                            <span>📋</span> Foydalanish odobi va tamoyillari
+                        </h3>
+
+                        <p style="line-height: 1.8; color: #78350f; margin-bottom: 20px;">
+                            Ushbu platforma til, muloqot va pragmatik salohiyatni rivojlantirishga qaratilgan akademik muhitdir. Uni barcha uchun foydali va hurmatga asoslangan maydon sifatida saqlash maqsadida quyidagi tamoyillarga rioya qilishingizni so'raymiz:
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">1. Ta'limga yo'naltirilganlik</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 6px;">
+                            Barcha fikr-mulohazalar va xabarlar platformaning o'quv maqsadlariga xizmat qilishi lozim. Konstruktiv taklif va ilmiy mulohazalar doimo rag'batlantiriladi.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">2. O'zaro hurmat</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 14px;">
+                            Universitet yoki akademik auditoriyaga xos bo'lgan professional muloqot madaniyatiga amal qiling. Nutqingiz aniq, odobli va haqoratli iboralardan xoli bo'lishi shart.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">3. Mazmuniy muvofiqlik</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 6px;">
+                            Platforma ommaviy ta'lim uchun mo'ljallangan. Iltimos, mavzuga aloqador bo'lmagan, bahsli yoki nozik xarakterdagi materiallarni yubormang.
+                        </p>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 14px;">
+                            Umuman olganda, kontent talabalar, o'qituvchilar va akademik xodimlar ishtirokidagi ochiq sinf muhokamasi uchun mos bo'lishi kerak.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">4. Madaniy xabardorlik</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 14px;">
+                            Yumoristik matnlar va til me'yorlari madaniyatlararo farq qilishi mumkin. Mahalliy an'analar va umumiy ijtimoiy qadriyatlarni hurmat qilgan holda fikr almashish tavsiya etiladi.
+                        </p>
+
+                        <h4 style="color: #78350f; margin-top: 20px; margin-bottom: 10px; font-size: 1.05rem; font-weight: 600;">5. Huquqiy va axloqiy mas'uliyat</h4>
+                        <p style="line-height: 1.7; color: #92400e; margin-bottom: 14px;">
+                            Foydalanuvchilar platformadan foydalanish jarayonida amaldagi qonunchilik va ommaviy ta'lim standartlariga rioya qilish mas'uliyatini o'z zimmalariga oladilar.
+                        </p>
+                    </div>
+
+                    <!-- Quick Start Guide - English -->
+                    <div lang="en" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 32px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <h3 style="font-size: 1.5rem; color: #1f2937; margin-bottom: 16px;">🚀 Quick Start Guide</h3>
+
+                        <div style="display: grid; gap: 20px;">
+                            <div style="border-left: 3px solid #10b981; padding-left: 20px;">
+                                <h4 style="color: #065f46; margin-bottom: 8px; font-size: 1.1rem;">Beginners (A1-A2)</h4>
+                                <p style="color: #4b5563; line-height: 1.6; margin-bottom: 6px;">Start with simple jokes about word meanings, complete A1 activities, and take beginner quizzes to build foundational understanding.</p>
+                            </div>
+
+                            <div style="border-left: 3px solid #3b82f6; padding-left: 20px;">
+                                <h4 style="color: #1e3a8a; margin-bottom: 8px; font-size: 1.1rem;">Intermediate (B1-B2)</h4>
+                                <p style="color: #4b5563; line-height: 1.6; margin-bottom: 6px;">Explore sarcasm and indirect speech, practice refusals and requests, and test your understanding with context-based scenarios.</p>
+                            </div>
+
+                            <div style="border-left: 3px solid #a855f7; padding-left: 20px;">
+                                <h4 style="color: #581c87; margin-bottom: 8px; font-size: 1.1rem;">Advanced (C1+)</h4>
+                                <p style="color: #4b5563; line-height: 1.6; margin-bottom: 6px;">Analyze pragmatic failures, compare cross-cultural differences, and master complex implicatures in various social contexts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Start Guide - Uzbek -->
+                    <div lang="uz" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 32px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: none;">
+                        <h3 style="font-size: 1.5rem; color: #1f2937; margin-bottom: 16px;">🚀 Tezkor boshlash qo'llanmasi</h3>
+
+                        <div style="display: grid; gap: 20px;">
+                            <div style="border-left: 3px solid #10b981; padding-left: 20px;">
+                                <h4 style="color: #065f46; margin-bottom: 8px; font-size: 1.1rem;">Boshlang'ich (A1-A2)</h4>
+                                <p style="color: #4b5563; line-height: 1.6; margin-bottom: 6px;">So'z o'yinlariga asoslangan sodda yumoristik matnlardan boshlang va poydevor yaratish uchun boshlang'ich testlarni topshiring.</p>
+                            </div>
+
+                            <div style="border-left: 3px solid #3b82f6; padding-left: 20px;">
+                                <h4 style="color: #1e3a8a; margin-bottom: 8px; font-size: 1.1rem;">O'rta (B1-B2)</h4>
+                                <p style="color: #4b5563; line-height: 1.6; margin-bottom: 6px;">Istehzo (ironiya), bilvosita nutq va turli ijtimoiy vaziyatlardagi muloqot usullarini (rad javobi, iltimos va h.k.) o'rganing.</p>
+                            </div>
+
+                            <div style="border-left: 3px solid #a855f7; padding-left: 20px;">
+                                <h4 style="color: #581c87; margin-bottom: 8px; font-size: 1.1rem;">Yuqori (C1+)</h4>
+                                <p style="color: #4b5563; line-height: 1.6; margin-bottom: 6px;">Pragmatik muvaffaqiyatsizliklarni tahlil qiling, madaniyatlararo farqlarni qiyoslang va murakkab implikaturalarni o'zlashtiring.</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 24px; padding: 20px; background: #f9fafb; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                            <h4 style="color: #1e3a8a; margin-bottom: 12px; font-size: 1.05rem;">Muvaffaqiyat kaliti:</h4>
+                            <ul style="color: #4b5563; line-height: 1.7; margin-left: 20px;">
+                                <li><strong>Tahliliy yondashuv:</strong> Yumoristik matnni shunchaki o'qimang, u nima uchun kulgili ekanligi va qaysi pragmatik tamoyilga asoslanganini o'ylang.</li>
+                                <li><strong>Muntazamlik:</strong> Kuniga 10-15 daqiqa shug'ullanish vaqti-vaqti bilan qilinadigan uzoq mashg'ulotdan samaraliroqdir.</li>
+                                <li><strong>Savol bering:</strong> "Nima uchun bu gap ma'lum bir vaziyatda o'rinli yoki nomaqbul?" degan savolni doimo o'rtaga tashlang.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Platform Information - English -->
+                    <div class="theory-accordion" lang="en" style="margin-top: 20px;">
+                        <div class="accordion-item">
+                            <button lang="en" class="accordion-header" data-target="how-to-use-body" aria-expanded="false" aria-controls="how-to-use-body">
+                                <span>💡 How to Use This Platform Effectively</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="en" class="accordion-body" id="how-to-use-body">
+                                <div class="theory-content-enhanced">
+                                    <ol>
+                                        <li><strong>Follow Your Path:</strong> Use the Learning Guide to choose a study approach that matches your learning style</li>
+                                        <li><strong>Build Foundations:</strong> Start with the Theory section to understand core concepts</li>
+                                        <li><strong>Analyze Examples:</strong> Don't just read jokes - think deeply about WHY they're funny and what pragmatic principles they illustrate</li>
+                                        <li><strong>Practice Actively:</strong> Complete activities at your level to apply concepts</li>
+                                        <li><strong>Test Understanding:</strong> Take quizzes to assess your pragmatic competence</li>
+                                        <li><strong>Reflect Regularly:</strong> Use the notes sections to capture insights and track growth</li>
+                                        <li><strong>Be Patient:</strong> Pragmatic competence develops gradually through repeated exposure and practice</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button lang="en" class="accordion-header" data-target="learning-tips-body" aria-expanded="false" aria-controls="learning-tips-body">
+                                <span>⭐ Learning Tips for Success</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="en" class="accordion-body" id="learning-tips-body">
+                                <div class="theory-content-enhanced">
+                                    <ul>
+                                        <li><strong>Daily Practice:</strong> 10-15 minutes per day is better than occasional long sessions</li>
+                                        <li><strong>Real-World Application:</strong> Try to notice pragmatic patterns in your daily conversations</li>
+                                        <li><strong>Cultural Awareness:</strong> Compare English pragmatic norms with your native language - what's different?</li>
+                                        <li><strong>Ask "Why?":</strong> Always ask "Why is this appropriate/inappropriate?" rather than just memorizing rules</li>
+                                        <li><strong>Embrace Mistakes:</strong> Pragmatic failures are learning opportunities, not disasters</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button lang="en" class="accordion-header" data-target="pragmatic-comp-body" aria-expanded="false" aria-controls="pragmatic-comp-body">
+                                <span>🎯 What is Pragmatic Competence? (Theory)</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="en" class="accordion-body" id="pragmatic-comp-body">
+                                <div class="theory-content-enhanced">
+                                    <p>Pragmatic competence is the ability to understand and use language appropriately in different social contexts. It goes beyond grammar and vocabulary to include:</p>
+                                    <ul style="margin-top: 12px;">
+                                        <li>Understanding implied meanings and indirect speech</li>
+                                        <li>Recognizing appropriate vs. inappropriate language for different situations</li>
+                                        <li>Mastering politeness strategies and face-saving techniques</li>
+                                        <li>Navigating cultural norms and expectations in communication</li>
+                                        <li>Performing speech acts effectively (requests, apologies, refusals, etc.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button lang="en" class="accordion-header" data-target="humor-pragmatics-body" aria-expanded="false" aria-controls="humor-pragmatics-body">
+                                <span>😄 Why Use Humor to Teach Pragmatics? (Theory)</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="en" class="accordion-body" id="humor-pragmatics-body">
+                                <div class="theory-content-enhanced">
+                                    <p>Humor is the perfect vehicle for developing pragmatic competence because:</p>
+                                    <ul style="margin-top: 12px;">
+                                        <li><strong>Context-Rich:</strong> Jokes only work when you understand the social and linguistic context</li>
+                                        <li><strong>Authentic:</strong> Real examples of language in use, not artificial textbook sentences</li>
+                                        <li><strong>Engaging:</strong> Memorable and motivating - you'll actually enjoy learning</li>
+                                        <li><strong>Safe Practice:</strong> Mistakes with humor are low-stakes and educational</li>
+                                        <li><strong>Cultural Windows:</strong> Humor reveals underlying cultural values and norms</li>
+                                        <li><strong>Metacognitive:</strong> Analyzing why something is funny develops deeper language awareness</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button lang="en" class="accordion-header" data-target="theoretical-foundation-body" aria-expanded="false" aria-controls="theoretical-foundation-body">
+                                <span>🔬 Theoretical Foundation & Research Basis</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="en" class="accordion-body" id="theoretical-foundation-body">
+                                <div class="theory-content-enhanced">
+                                    <p style="margin-bottom: 12px;">This platform was developed as part of a PhD research project to make pragmatic competence instruction accessible, engaging, and effective through research-based pedagogical approaches combined with the motivational power of humor.</p>
+                                    <p style="margin-bottom: 12px; font-style: italic; color: #6b7280;">
+                                        <strong>Status:</strong> This version is released in test (beta) mode and continues to evolve through iterative refinement and user feedback.
+                                    </p>
+                                    <p style="margin-bottom: 12px;">This learning platform is designed on the basis of well-established research in pragmatics, humor theory, and second language acquisition.</p>
+
+                                    <h4 style="margin-top: 20px; margin-bottom: 6px; color: #374151;">Pragmatic Framework</h4>
+                                    <p style="color: #6b7280; font-style: italic; font-size: 0.95em;">The platform's pragmatic framework draws on:</p>
+                                    <ul style="margin-top: 8px; margin-left: 20px;">
+                                        <li>H. P. Grice's theory of conversational implicature</li>
+                                        <li>J. L. Austin's and John Searle's Speech Act Theory</li>
+                                        <li>Brown and Levinson's Politeness Theory</li>
+                                        <li>Jenny Thomas's work on pragmatic failure</li>
+                                    </ul>
+
+                                    <h4 style="margin-top: 20px; margin-bottom: 6px; color: #374151;">Humor Theory</h4>
+                                    <p style="color: #6b7280; font-style: italic; margin-top: 8px;">The humor component is grounded in Attardo and Raskin's <em>General Theory of Verbal Humor</em>, as developed in their foundational work on script-based humor and later systematized by Attardo.</p>
+
+                                    <h4 style="margin-top: 20px; margin-bottom: 6px; color: #374151;">Pedagogical Research</h4>
+                                    <p style="color: #6b7280; font-style: italic; margin-top: 8px;">The platform is informed by research on humor in language learning, particularly studies by Nancy Bell and Anne Pomerantz, and by Martínez-Flor Fernández and Fernández-Fontecha (2008) on using sitcoms to promote pragmatic competence development in second language learning.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Platform Information - Uzbek -->
+                    <div class="theory-accordion" lang="uz" style="margin-top: 20px; display: none;">
+                        <div class="accordion-item">
+                            <button lang="uz" class="accordion-header" data-target="how-to-use-body-uz" aria-expanded="false" aria-controls="how-to-use-body-uz">
+                                <span>💡 Platformadan Samarali Foydalanish</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="uz" class="accordion-body" id="how-to-use-body-uz">
+                                <div class="theory-content-enhanced">
+                                    <ol>
+                                        <li><strong>O'z Yo'lingizni Tanlang:</strong> O'rganish uslubingizga mos o'quv yondashuvini tanlash uchun O'rganish Qo'llanmasidan foydalaning</li>
+                                        <li><strong>Asos Yarating:</strong> Asosiy tushunchalarni tushunish uchun Nazariya bo'limidan boshlang</li>
+                                        <li><strong>Misollarni Tahlil Qiling:</strong> Faqat yumoristik matnlarni o'qimang - ular nima uchun kulgili va qanday pragmatik tamoyillarni ko'rsatishini chuqur o'ylab ko'ring</li>
+                                        <li><strong>Faol Mashq Qiling:</strong> Tushunchalarni qo'llash uchun o'z darajangizga mos mashqlarni bajaring</li>
+                                        <li><strong>Tushunishni Sinab Ko'ring:</strong> Pragmatik kompetensiyangizni baholash uchun viktorinalarni topshiring</li>
+                                        <li><strong>Muntazam Mulohaza Yuriting:</strong> Tushunchalarni qo'lga kiritish va rivojlanishni kuzatish uchun eslatmalar bo'limidan foydalaning</li>
+                                        <li><strong>Sabr Qiling:</strong> Pragmatik kompetensiya takroriy ta'sir va mashq orqali asta-sekin rivojlanadi</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button lang="uz" class="accordion-header" data-target="learning-tips-body-uz" aria-expanded="false" aria-controls="learning-tips-body-uz">
+                                <span>⭐ Muvaffaqiyat Uchun Maslahatlar</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="uz" class="accordion-body" id="learning-tips-body-uz">
+                                <div class="theory-content-enhanced">
+                                    <ul>
+                                        <li><strong>Kundalik Mashq:</strong> Kuniga 10-15 daqiqa vaqti-vaqti bilan uzoq mashg'ulotlardan yaxshiroqdir</li>
+                                        <li><strong>Haqiqiy Hayotda Qo'llash:</strong> Kundalik suhbatlaringizda pragmatik naqshlarni sezishga harakat qiling</li>
+                                        <li><strong>Madaniy Xabardorlik:</strong> Ingliz tili pragmatik me'yorlarini ona tilingiz bilan solishtiring - farqi nimada?</li>
+                                        <li><strong>"Nima Uchun?" Deb So'rang:</strong> Faqat qoidalarni yodlashdan ko'ra, doimo "Bu nima uchun mos/nomaqbul?" deb so'rang</li>
+                                        <li><strong>Xatolarni Qabul Qiling:</strong> Pragmatik xatolar o'rganish imkoniyati, falokatlar emas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button lang="uz" class="accordion-header" data-target="pragmatic-comp-body-uz" aria-expanded="false" aria-controls="pragmatic-comp-body-uz">
+                                <span>🎯 Pragmatik Kompetensiya Nima? (Nazariya)</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="uz" class="accordion-body" id="pragmatic-comp-body-uz">
+                                <div class="theory-content-enhanced">
+                                    <p style="color: #6b7280; font-style: italic;">Pragmatik kompetensiya o'zi nima?</p>
+                                    <p style="color: #6b7280; font-style: italic;">Bu tildan shunchaki grammatik to'g'ri foydalanish emas, balki ijtimoiy kontekstni his etish mahoratidir. U quyidagilarni o'z ichiga oladi:</p>
+                                    <ul style="margin-top: 12px;">
+                                        <li>Yashirin ma'no va ko'chma ma'nolarni anglash;</li>
+                                        <li>Vaziyatga qarab nutq uslubini tanlash;</li>
+                                        <li>Xushmuomalalik strategiyalari va "obro'ni saqlash" (face-saving) usullarini qo'llash;</li>
+                                        <li>Nutqiy aktlarni (uzr so'rash, taklif, rad etish) samarali bajarish.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button lang="uz" class="accordion-header" data-target="humor-pragmatics-body-uz" aria-expanded="false" aria-controls="humor-pragmatics-body-uz">
+                                <span>😄 Pragmatikani O'rgatishda Nima Uchun Yumoristik Matnlardan Foydalanish? (Nazariya)</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="uz" class="accordion-body" id="humor-pragmatics-body-uz">
+                                <div class="theory-content-enhanced">
+                                    <p style="color: #6b7280; font-style: italic;">Nima uchun aynan yumor?</p>
+                                    <ul style="margin-top: 12px;">
+                                        <li><strong>Kontekstga boyligi:</strong> Yumoristik matn faqat ijtimoiy va lingvistik vaziyat to'g'ri anglanganda "ishlaydi".</li>
+                                        <li><strong>Haqiqiylik:</strong> Darsliklardagi sun'iy jumlalardan farqli o'laroq, yumoristik matnlarda jonli til aks etadi.</li>
+                                        <li><strong>Madaniyat ko'zgusi:</strong> Yumoristik matn orqali millatning o'ziga xos qadriyatlari va ijtimoiy me'yorlarini tushunish osonroq.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button lang="uz" class="accordion-header" data-target="theoretical-foundation-body-uz" aria-expanded="false" aria-controls="theoretical-foundation-body-uz">
+                                <span>🔬 Nazariy Asos va Tadqiqot Bazasi</span>
+                                <span>▼</span>
+                            </button>
+                            <div lang="uz" class="accordion-body" id="theoretical-foundation-body-uz">
+                                <div class="theory-content-enhanced">
+                                    <p style="margin-bottom: 16px; color: #6b7280; font-style: italic;">Ilmiy asoslar</p>
+                                    <p style="margin-bottom: 16px; color: #6b7280; font-style: italic;">Ushbu platforma zamonaviy pragmatika va til o'rgatish metodikasi asosida ishlab chiqilgan:</p>
+
+                                    <h4 style="margin-top: 20px; margin-bottom: 6px; color: #374151;">Pragmatika</h4>
+                                    <ul style="margin-top: 8px; margin-left: 20px;">
+                                        <li>H.P. Grays (Muloqot implikaturalari), J. Ostin va J. Syorl (Nutqiy aktlar), Braun va Levinson (Xushmuomalalik nazariyasi), J. Tomas (Pragmatik muvaffaqiyatsizlik).</li>
+                                    </ul>
+
+                                    <h4 style="margin-top: 20px; margin-bottom: 6px; color: #374151;">Humor nazariyasi</h4>
+                                    <p style="color: #6b7280; font-style: italic; margin-top: 8px;">V. Raskin va S. Attardoning "Verbal yumoristik matnlarning umumiy nazariyasi" (GTVH).</p>
+
+                                    <h4 style="margin-top: 20px; margin-bottom: 6px; color: #374151;">Pedagogika</h4>
+                                    <p style="color: #6b7280; font-style: italic; margin-top: 8px;">N. Bell va E. Pomeransning til ta'limida yumor bo'yicha tadqiqotlari.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- About the Developer - English -->
+                    <div lang="en" style="margin-top: 32px; padding: 24px; background: linear-gradient(135deg, #e8f5e9 0%, #f0fdf4 100%); border-radius: 12px; border: 1px solid #d1fae5;">
+                        <h3 style="color: #047857; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                            <span>👤</span> About the Developer
+                        </h3>
+                        <p style="line-height: 1.8; color: #1f2937; font-size: 1.05em; margin-bottom: 0;">
+                            <strong>Aziz Kholmatov</strong> has received his BA in English Philology from Samarkand State Institute of Foreign Languages and MA in Language Technology and Teaching Foreign Languages (<em>Sprachtechnologie und Fremdsprachendidaktik</em>) from Giessen University in Germany. Currently, he is conducting PhD research at the Uzbekistan State World Languages University.
+                        </p>
+                    </div>
+
+                    <!-- About the Developer - Uzbek -->
+                    <div lang="uz" style="margin-top: 32px; padding: 24px; background: linear-gradient(135deg, #e8f5e9 0%, #f0fdf4 100%); border-radius: 12px; border: 1px solid #d1fae5; display: none;">
+                        <h3 style="color: #059669; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                            <span>👤</span> Ishlab chiquvchi haqida
+                        </h3>
+                        <p style="line-height: 1.8; color: #047857; font-size: 1.0em; font-style: italic; opacity: 0.95; margin-bottom: 0;">
+                            Aziz Xolmatov — Samarqand davlat chet tillar instituti bakalavri va Germaniyaning Gissen universiteti magistri (Til texnologiyalari va chet tillarini o'qitish metodikasi). Hozirda u O'zbekiston davlat jahon tillari universitetida PhD dissertatsiyasi ustida ilmiy tadqiqot olib bormoqda
+                    </div>
+
+                    <!-- Feedback Form Section -->
+                    <div class="theory-box" style="margin-top: 32px; background: #f0f9ff;">
+                        <h3 lang="en">📝 Share Your Feedback</h3>
+                        <h3 lang="uz" style="color: #6b7280; font-style: italic; opacity: 0.9; margin-top: 8px; display: none;">Fikr va mulohazalaringiz bilan bo'lishing</h3>
+                        <p lang="en" style="margin-top: 8px; color: #6b7280; margin-bottom: 4px;">We value your input! Please share your thoughts, suggestions, or report any issues you encounter.</p>
+                        <p lang="uz" style="color: #6b7280; font-style: italic; opacity: 0.9; display: none;">Sizning fikr va mulohazalaringiz platformani yanada takomillashtirishda biz uchun katta ahamiyatga ega! Loyiha bo'yicha o'z takliflaringizni bildiring yoki foydalanish jarayonida duch kelgan texnik muammolar va kamchiliklar haqida bizga xabar bering.</p>
+
+                        <!-- Result Messages -->
+                        <div id="feedback-result" style="margin-top: 16px; display: none;"></div>
+
+                        <!-- Professional Feedback Form -->
+                        <form id="feedback-form" lang="uz" style="margin-top: 20px;">
+                            <div style="margin-bottom: 16px;">
+                                <label for="feedback-name" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Ismingiz *</label>
+                                <input type="text" id="feedback-name" name="name" required
+                                       style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;"
+                                       placeholder="Ismingizni kiriting">
+                            </div>
+
+                            <div style="margin-bottom: 16px;">
+                                <label for="feedback-email" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Elektron pochtangiz (javob uchun ixtiyoriy)</label>
+                                <input type="email" id="feedback-email" name="email"
+                                       style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;"
+                                       placeholder="sizning.emailingiz@example.com">
+                            </div>
+
+                            <div style="margin-bottom: 16px;">
+                                <label for="feedback-type" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Fikr-mulohaza turi *</label>
+                                <select id="feedback-type" name="feedback_type" required
+                                        style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;">
+                                    <option value="">Mavzuni tanlang...</option>
+                                    <option value="Bug Report">🐛 Xatolik haqida xabar</option>
+                                    <option value="Feature Request">💡 Yangi funksiya so'rovi</option>
+                                    <option value="Content Suggestion">📚 Kontent taklifi</option>
+                                    <option value="General Feedback">💬 Umumiy fikr-mulohaza</option>
+                                    <option value="Technical Issue">⚙️ Texnik muammo</option>
+                                    <option value="Other">📝 Boshqa</option>
+                                </select>
+                            </div>
+
+                            <div style="margin-bottom: 16px;">
+                                <label for="feedback-message" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Xabaringiz *</label>
+                                <textarea id="feedback-message" name="message" required rows="6"
+                                          style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; resize: vertical;"
+                                          placeholder="Bu yerda batafsil fikr-mulohazalaringizni yozing..."></textarea>
+                                <p style="margin-top: 8px; color: #6b7280; font-size: 0.875rem; line-height: 1.5;">
+                                    <em>Ushbu platforma ta'lim maqsadlarida foydalanish uchun mo'ljallangan. Iltimos, fikr-mulohazalaringizni hurmatli, akademik muhitga mos va o'rganishga qaratilgan holda saqlang.</em>
+                                </p>
+                            </div>
+
+                            <!-- Honeypot field for spam protection (hidden from users) -->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" id="feedback-honeypot" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                                <button type="submit" id="feedback-submit-btn" class="btn btn-primary" style="padding: 10px 24px; cursor: pointer;">
+                                    📤 Fikr-mulohazani yuborish
+                                </button>
+                                <span id="feedback-status" style="color: #6b7280; font-size: 13px;"></span>
+                            </div>
+                        </form>
+
+                        <script src="js/feedback.js"></script>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Teacher Resources Section (enhanced) -->
+            <!-- Teacher Resources Section (enhanced) -->
+            <section id="teacherResources" class="content-section" role="region" aria-labelledby="teacher-heading">
+                <h2 id="teacher-heading">👩‍🏫 Teacher Resources & Pedagogy</h2>
+
+                <div class="teacher-block">
+                    <h3>📚 Teaching Pragmatic Competence Through Humor: Step-by-Step Guide</h3>
+                    <ol>
+                        <li><strong>EXPOSURE (Input Phase):</strong>
+                            <ul>
+                                <li>Present the joke, meme, dialogue, or anecdote WITHOUT explanation</li>
+                                <li>Ask: "Do you understand this? What makes it funny?"</li>
+                                <li>Let learners struggle productively - don't rush to explain</li>
+                            </ul>
+                        </li>
+                        <li><strong>AWARENESS (Noticing Phase):</strong>
+                            <ul>
+                                <li>Guide analysis: "Which words/phrases are key to the humor?"</li>
+                                <li>Identify pragmatic mechanism: "Which maxim is violated? What implicature exists?"</li>
+                                <li>Highlight form-meaning relationship: "How does the grammar create this effect?"</li>
+                            </ul>
+                        </li>
+                        <li><strong>SOCIAL FRAMING (Contextualization Phase):</strong>
+                            <ul>
+                                <li>Discuss appropriateness: "Can you say this to your teacher? To a friend? To your boss?"</li>
+                                <li>Explore power/distance: "Why would this be appropriate/inappropriate in different contexts?"</li>
+                                <li>Compare cultures: "Would this joke work in your language/culture? Why or why not?"</li>
+                            </ul>
+                        </li>
+                        <li><strong>PRODUCTION (Practice Phase):</strong>
+                            <ul>
+                                <li>Controlled practice: Students adapt the joke to new contexts</li>
+                                <li>Guided production: Create similar examples following the pattern</li>
+                                <li>Free production: Write original dialogues demonstrating the pragmatic feature</li>
+                            </ul>
+                        </li>
+                        <li><strong>REFLECTION (Metacognitive Phase):</strong>
+                            <ul>
+                                <li>Students articulate what they learned: "What pragmatic rule did you discover?"</li>
+                                <li>Connect to L1: "How is this different in your language?"</li>
+                                <li>Plan application: "When might you need to use this in real life?"</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p style="margin-top: 15px; font-size: 0.95em; background: #fff3cd; border-left: 4px solid var(--warning); padding: 12px; border-radius: 6px;">
+                        <strong>Critical Point:</strong> The goal is NOT to make students laugh. The goal is to develop <strong>pragmatic awareness</strong> - recognizing how language functions in social contexts. Laughter is a bonus, not the objective!
+                    </p>
+                </div>
+
+                <div class="teacher-block">
+                    <h3>🎯 Classroom Activities & Extensions</h3>
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="act-comparison">
+                            <span>Activity 1: Cross-Cultural Pragmatic Comparison</span>
+                            <span>?</span>
+                        </button>
+                        <div class="accordion-body" id="act-comparison">
+                            <p><strong>Level:</strong> B2-C1</p>
+                            <p><strong>Objective:</strong> Develop awareness of pragmatic differences across cultures</p>
+                            <p><strong>Instructions:</strong></p>
+                            <ol>
+                                <li>Present a pragmatic scenario (e.g., refusing an invitation from a superior)</li>
+                                <li>Students discuss: How would you do this in English? In your L1? In another language you know?</li>
+                                <li>Identify differences in directness, formality, explanation strategies</li>
+                                <li>Students write sample dialogues for each cultural context</li>
+                                <li>Class discusses which elements are transferable and which cause pragmatic failure</li>
+                            </ol>
+                            <p><strong>Assessment:</strong> Students demonstrate understanding by explaining why certain strategies work in some cultures but not others.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="act-roleplay">
+                            <span>Activity 2: Pragmatic Role-Play Scenarios</span>
+                            <span>?</span>
+                        </button>
+                        <div class="accordion-body" id="act-roleplay">
+                            <p><strong>Level:</strong> B1-C1</p>
+                            <p><strong>Objective:</strong> Practice appropriate language use in different power/distance contexts</p>
+                            <p><strong>Instructions:</strong></p>
+                            <ol>
+                                <li>Assign roles with different power/distance relationships (boss-employee, friends, student-teacher)</li>
+                                <li>Give speech act to perform (request, complaint, refusal, apology)</li>
+                                <li>Students perform WITHOUT scripts - must navigate appropriately in real-time</li>
+                                <li>Class observes and notes: Was it appropriate? Too direct? Too indirect?</li>
+                                <li>Discuss alternative strategies that would also work</li>
+                            </ol>
+                            <p><strong>Variations:</strong> Change one variable (power, distance, imposition) and replay - students notice how language must adapt.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="act-failure">
+                            <span>Activity 3: Pragmatic Failure Analysis</span>
+                            <span>?</span>
+                        </button>
+                        <div class="accordion-body" id="act-failure">
+                            <p><strong>Level:</strong> B2-C1</p>
+                            <p><strong>Objective:</strong> Recognize and diagnose pragmatic failures</p>
+                            <p><strong>Instructions:</strong></p>
+                            <ol>
+                                <li>Present examples of pragmatic failures (from jokes, real learner errors, or constructed examples)</li>
+                                <li>Students identify: What went wrong? Was it pragmalinguistic or sociopragmatic failure?</li>
+                                <li>Students propose corrections with justification</li>
+                                <li>Discuss: How would a native speaker interpret this? What impression does it create?</li>
+                            </ol>
+                            <p><strong>Extension:</strong> Students collect pragmatic failures from their own experience or media and share with class.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="act-humor">
+                            <span>Activity 4: Create Your Own Pragmatic Humor</span>
+                            <span>?</span>
+                        </button>
+                        <div class="accordion-body" id="act-humor">
+                            <p><strong>Level:</strong> B1-C1</p>
+                            <p><strong>Objective:</strong> Demonstrate deep understanding by creating original pragmatic humor</p>
+                            <p><strong>Instructions:</strong></p>
+                            <ol>
+                                <li>Review a specific pragmatic concept (e.g., conversational implicature, speech act misunderstanding)</li>
+                                <li>Students create original jokes, dialogues, or scenarios that illustrate this concept</li>
+                                <li>Share with class - others must identify the pragmatic mechanism</li>
+                                <li>Discuss what makes some attempts work better than others</li>
+                            </ol>
+                            <p><strong>Note:</strong> This is ADVANCED - requires full understanding of the pragmatic principle. Success demonstrates mastery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-block">
+                    <h3>📝 Assessment Rubrics & Answer Guidance</h3>
+                    
+                    <h4>Pragmatic Competence Rubric</h4>
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th>Level</th>
+                                <th>Understanding</th>
+                                <th>Production</th>
+                                <th>Cultural Awareness</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Excellent</strong></td>
+                                <td>Understands implied meaning in complex humor; explains pragmatic mechanisms clearly</td>
+                                <td>Produces contextually appropriate language consistently; adapts register effectively</td>
+                                <td>Recognizes cultural differences; avoids pragmatic transfer errors</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Good</strong></td>
+                                <td>Understands most implied meanings with occasional support; identifies key pragmatic features</td>
+                                <td>Usually appropriate; may be overly formal/informal but corrects when pointed out</td>
+                                <td>Aware of some cultural differences; occasionally transfers L1 norms inappropriately</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Developing</strong></td>
+                                <td>Grasps literal meaning but struggles with implicature; needs guidance to see pragmatic play</td>
+                                <td>Attempts appropriate language but makes frequent pragmalinguistic errors</td>
+                                <td>Limited awareness of cultural differences in pragmatics</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Needs Support</strong></td>
+                                <td>Takes everything literally; doesn't recognize implied meanings or violations</td>
+                                <td>Uses inappropriate directness/formality regardless of context</td>
+                                <td>Assumes L1 pragmatic norms apply universally</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="margin-top: 25px;">Activity Answer Keys & Teaching Notes</h4>
+                    <div id="answer-keys-container"></div>
+                </div>
+
+                <div class="teacher-block">
+                    <h3>📚 Additional Teaching Resources</h3>
+                    <div class="theory-box">
+                        <h4>Recommended Reading for Teachers:</h4>
+                        <ul>
+                            <li>Bardovi-Harlig, K. & Mahan-Taylor, R. (2003). <em>Teaching Pragmatics</em>. Washington, DC: U.S. Department of State.</li>
+                            <li>Cohen, A. D. (2008). <em>Teaching and Assessing L2 Pragmatics: What Can We Expect From Learners?</em> Language Teaching, 41(2), 213-235.</li>
+                            <li>Martínez-Flor, A. & Usó-Juan, E. (2010). <em>Speech Act Performance: Theoretical, Empirical and Methodological Issues</em>. John Benjamins.</li>
+                            <li>Bell, N. D. (2009). <em>Learning About and Through Humor in the Second Language Classroom</em>. Language Teaching Research, 13(3), 241-258.</li>
+                        </ul>
+                    </div>
+
+                    <div class="theory-box">
+                        <h4>Online Resources:</h4>
+                        <ul>
+                            <li><strong>CARLA (Center for Advanced Research on Language Acquisition):</strong> Extensive pragmatics teaching materials</li>
+                            <li><strong>Speech Acts Sets:</strong> Videos and activities for teaching pragmatics</li>
+                            <li><strong>Pragmatics Online Resources:</strong> Corpora of authentic pragmatic language use</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teacher-block" style="background: #e8f5e9; border-left-color: var(--success);">
+                    <h3>💭 Teaching Philosophy</h3>
+                    <p>Effective pragmatic instruction requires:</p>
+                    <ul>
+                        <li><strong>Explicitness:</strong> Don't assume students will "pick it up" - teach pragmatic rules directly</li>
+                        <li><strong>Authenticity:</strong> Use real examples from actual communication, not constructed textbook dialogues</li>
+                        <li><strong>Consciousness-Raising:</strong> Help students notice pragmatic features before requiring production</li>
+                        <li><strong>Practice Opportunities:</strong> Provide low-stakes environments to experiment with pragmatic variation</li>
+                        <li><strong>Feedback:</strong> Explain WHY something is inappropriate, not just that it is</li>
+                        <li><strong>Cultural Respect:</strong> Present target language pragmatic norms without devaluing students' L1 norms</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-style: italic;">Remember: Pragmatic competence develops slowly. Be patient, provide extensive input, and create safe spaces for experimentation!</p>
+                </div>
+            </section>
+
+            <!-- MODULE LEARNING SECTION -->
+            <section id="module-learning" class="content-section" role="region" aria-labelledby="module-learning-heading">
+                <div id="module-learning-header" style="background: linear-gradient(135deg, #eef2ff 0%, #f9fafb 100%); border-radius: 16px; padding: 24px; margin-bottom: 24px; border: 1px solid #e0e7ff; box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);">
+                    <button id="exit-module-btn" type="button" data-action="module-exit" style="background: white; border: 1px solid #e5e7eb; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-size: 0.875rem; color: #6b7280; font-weight: 500; transition: all 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                        ← Back to Learning Path
+                    </button>
+                    <h2 id="module-learning-heading" style="margin-top: 16px; font-size: 1.75rem; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">Module Title</h2>
+                    <p id="module-learning-subtitle" style="color: #6b7280; font-size: 0.95rem; margin-top: 4px;"></p>
+                    <div id="module-total-time" style="display: inline-block; background: white; border: 2px solid #818cf8; border-radius: 8px; padding: 8px 16px; margin-top: 12px; font-size: 0.9rem; color: #312e81; font-weight: 600;">
+                        ⏱️ Total time: ~22 minutes (6 steps)
+                    </div>
+                </div>
+
+                <!-- Progress Steps -->
+                <div class="module-progress-subheader">
+                    <div class="module-progress-header">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div>
+                                <div id="module-current-step-label" class="module-step-label" style="font-size: 0.75rem; color: #6366f1; font-weight: 600; letter-spacing: 0.05em;">STEP 1 OF 5</div>
+                                <div id="module-current-step-name" class="module-step-name" style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-top: 2px;">📖 Theory</div>
+                            </div>
+                            <div id="module-time-estimate" style="text-align: right; color: #6b7280; font-size: 0.9rem;">
+                                <div style="font-size: 1.5rem; margin-bottom: 2px;">⏱️</div>
+                                <div style="font-weight: 600;">~5 min</div>
+                            </div>
+                        </div>
+
+                        <!-- Enhanced Progress Indicator Bar -->
+                        <div class="enhanced-progress-bar">
+                            <div class="progress-text-info">
+                                <span class="progress-step-indicator" id="enhanced-step-text">
+                                    Step 1 of 5: Theory
+                                </span>
+                                <span class="progress-time-remaining" id="enhanced-time-text">
+                                    ⏱️ <span id="enhanced-time-value">~19 min remaining</span>
+                                </span>
+                            </div>
+                            <div class="progress-visual-bar">
+                                <div class="progress-visual-fill" id="enhanced-progress-fill" style="width: 20%;">
+                                    <span class="progress-percentage-text" id="enhanced-percentage-text">20%</span>
+                                </div>
+                                <span class="progress-percentage-outside" id="enhanced-percentage-outside" style="display: none;">0%</span>
+                            </div>
+                        </div>
+
+                        <!-- Compact Step List -->
+                        <div id="module-steps-compact" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+                            <span class="compact-step" data-compact-step="0">
+                                📖 Theory
+                            </span>
+                            <span class="compact-step" data-compact-step="1">
+                                💡 Examples
+                            </span>
+                            <span class="compact-step" data-compact-step="2">
+                                ✍️ Practice
+                            </span>
+                            <span class="compact-step" data-compact-step="3">
+                                📝 Post-Test
+                            </span>
+                            <span class="compact-step" data-compact-step="4">
+                                🤔 Reflection
+                            </span>
+                        </div>
+                    </div>
+
+                    <div id="module-steps">
+                        <div class="step-item" data-step="theory" style="position: relative; z-index: 2;">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">📖</div>
+                            <div class="step-label">Theory</div>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step-item" data-step="jokes" style="position: relative; z-index: 2;">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">💡</div>
+                            <div class="step-label">Examples</div>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step-item" data-step="activities" style="position: relative; z-index: 2;">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">✍️</div>
+                            <div class="step-label">Practice</div>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step-item" data-step="postTest" style="position: relative; z-index: 2;">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">📝</div>
+                            <div class="step-label">Post-Test</div>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step-item" data-step="reflection" style="position: relative; z-index: 2;">
+                            <div class="step-number">5</div>
+                            <div class="step-icon">🤔</div>
+                            <div class="step-label">Reflect</div>
+                        </div>
+                    </div>
+
+                    <div id="module-progress-bar" style="height: 6px; background: #e5e7eb; border-radius: 999px; overflow: hidden; margin-top: 16px;">
+                        <div id="module-progress-fill" style="height: 100%; background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%); width: 20%; transition: width 0.3s ease;"></div>
+                    </div>
+                </div>
+
+                <!-- Step Content Container -->
+                <div id="module-step-content"></div>
+
+                <!-- Navigation Buttons -->
+                <div id="module-nav-buttons" style="display:flex; justify-content:space-between; margin-top:32px; padding-top:24px; border-top:1px solid #e5e7eb;">
+                    <button id="module-prev-btn" type="button" class="nav-btn" data-action="module-prev" style="background:#6b7280; color: white;">← Previous</button>
+                    <div class="nav-btn-tooltip-wrapper">
+                        <button id="module-next-btn" type="button" class="nav-btn" style="background:#6366f1; color: white; font-weight: 600;">Next →</button>
+                        <div id="module-next-tooltip" class="nav-btn-tooltip"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+        </main>
+
+        <footer style="text-align: center; padding: 20px; color: rgba(255,255,255,0.8); font-size: 0.85em;">
+            <p>This site uses analytics to improve learning experience. No personal data is collected.</p>
+            <p>© 2025 Pragmatic Competence Through Humor | Educational Resource</p>
+            <p style="margin-top: 10px;">
+                <button class="nav-btn" type="button" data-action="show-onboarding" style="font-size: 0.85em; padding: 6px 12px;">🔄 Restart Tutorial</button>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Quick Review Modal -->
+    <div id="quick-review-modal" class="quick-review-modal">
+        <!-- Modal content will be dynamically inserted here -->
+    </div>
+
+    <!-- Modular JavaScript Architecture - Load in specific order -->
+
+    <!-- 0. SECURITY AND BOOTSTRAP -->
+    <script src="js/security.js"></script>
+    <script src="js/dev-bootstrap.js"></script>
+
+    <!-- LANGUAGE TOGGLE (handles language switching) -->
+    <script src="js/language.js"></script>
+
+    <!-- 1. STATE MANAGEMENT (manages app state and localStorage) -->
+    <script src="js/state.js"></script>
+
+    <!-- 2. DATA LOADER (loads JSON data files) -->
+    <script src="js/data.js"></script>
+
+    <!-- 3. ROUTER (handles navigation and routing) -->
+    <script src="js/router.js"></script>
+
+    <!-- 4. UI (handles DOM rendering) -->
+    <script src="js/ui.js"></script>
+
+    <!-- 4.5 PRAGMATICS SCAFFOLD (research-grade analysis component) -->
+    <script src="js/pragmatics-scaffold.js"></script>
+
+    <!-- 5. ASSESSMENT (handles quizzes and tests) -->
+    <script src="js/assessment.js"></script>
+
+    <!-- 5.5. QR CODE LIBRARIES (must load before module-learning.js) -->
+    <script src="js/vendor/qrious.min.js"></script>
+    <script src="js/vendor/html5-qrcode.min.js"></script>
+
+    <!-- 6. MODULE LEARNING (handles module progression and mastery) -->
+    <script src="js/module-learning.js"></script>
+
+    <!-- 7. APP INITIALIZATION (coordinates all modules) -->
+    <script src="js/app.js"></script>
+
+    <!-- 8. INITIALIZATION AND FIXES -->
+    <script src="js/index-init.js"></script>
+    
+    <script src="js/actions.js"></script>
+
+    <!-- 9. UI BRIDGE (must load AFTER all modules are defined) -->
+    <script src="js/legacy-ui-bridge.js"></script>
+    
+
+    <!-- 10. MODULE VERIFICATION (debug helper) -->
+    <script src="js/module-verification.js"></script>
+
+    <!-- 11. EMERGENCY CLICK FIX -->
+    <script>
+        // Force the app to be 'Ready' regardless of background errors
+        window.APP_READY = true;
+        window.APP_INIT_FAILED = false;
+        
+        // Ensure every module card triggers the Modal
+        document.addEventListener('click', function(e) {
+            const card = e.target.closest('[data-module-id]');
+            if (card) {
+                const moduleId = card.getAttribute('data-module-id');
+                if (window.ModuleModal && typeof window.ModuleModal.show === 'function') {
+                    window.ModuleModal.show(moduleId);
+                }
+            }
+        });
+        console.log('🚀 Launch Clicks Activated');
+    </script>
+    <script>
+    // Force the app to be ready so buttons work
+    window.APP_READY = true;
+    window.APP_INIT_FAILED = false;
+    
+    // Ensure clicks on modules always work
+    document.addEventListener('click', function(e) {
+        const card = e.target.closest('[data-module-id]');
+        if (card) {
+            const moduleId = card.getAttribute('data-module-id');
+            if (window.ModuleModal && typeof window.ModuleModal.show === 'function') {
+                window.ModuleModal.show(moduleId);
+            }
+        }
+    });
+</script>
+</body>
+</html>
+

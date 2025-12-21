@@ -1,0 +1,195 @@
+{
+  "beginner": [
+    {
+      "question": "What makes this funny? 'What has hands but cannot clap? A clock.'",
+      "options": [
+        "The word 'hands' has two meanings",
+        "Clocks are funny objects",
+        "It rhymes nicely",
+        "It's about telling time"
+      ],
+      "correct": 0,
+      "explanation": "Double meaning of 'hands': human body parts that clap vs. clock hands that point to numbers. Context determines which meaning applies."
+    },
+    {
+      "question": "When someone tells you a joke, what's the appropriate response if you understand it?",
+      "options": [
+        "Say nothing and walk away",
+        "Smile or say 'That's funny!'",
+        "Criticize the joke immediately",
+        "Tell them a better joke"
+      ],
+      "correct": 1,
+      "explanation": "Appropriate backchanneling shows you're engaged in the interaction. Even if not hilarious, acknowledge the attempt."
+    },
+    {
+      "question": "If you don't understand a joke, what should you say?",
+      "options": [
+        "Pretend to laugh",
+        "Say 'I don't get it' with a smile",
+        "Change the subject quickly",
+        "Leave the conversation"
+      ],
+      "correct": 1,
+      "explanation": "Asking for clarification is appropriate and shows genuine interest. It's better than fake laughter."
+    },
+    {
+      "question": "Which is more polite when asking for water?",
+      "options": [
+        "Give me water",
+        "I want water",
+        "Could I have some water, please?",
+        "Water!"
+      ],
+      "correct": 2,
+      "explanation": "Modal 'could' + 'please' + questioning form shows deference and politeness. Direct commands are rude except in emergencies or with intimates."
+    },
+    {
+      "question": "'Please' always makes everything polite. Is this true?",
+      "options": [
+        "Yes, always",
+        "No, sometimes it's still rude",
+        "Only in English",
+        "Only with strangers"
+      ],
+      "correct": 1,
+      "explanation": "Example: 'Shut up, please' is still rude despite 'please.' Politeness requires appropriate overall structure, not just magic words."
+    }
+  ],
+  "intermediate": [
+    {
+      "question": "Which maxim is violated? 'Doctor: How long have you felt like a dog? Patient: Ever since I was a puppy.'",
+      "options": [
+        "Quantity (enough info)",
+        "Quality (truthfulness)",
+        "Relation (relevance)",
+        "Manner (clarity)"
+      ],
+      "correct": 1,
+      "explanation": "The patient ACCEPTS the false premise rather than correcting it, creating absurdist humor through pragmatic cooperation with an impossible scenario."
+    },
+    {
+      "question": "Your friend says 'I'm a bit busy right now' when you suggest hanging out. What do they really mean?",
+      "options": [
+        "They're literally working at this moment only",
+        "They don't want to hang out (polite refusal)",
+        "They want you to wait 5 minutes",
+        "They hate you"
+      ],
+      "correct": 1,
+      "explanation": "This is an indirect refusal using a reason. The implicature is 'I can't/don't want to hang out' softened through indirection."
+    },
+    {
+      "question": "What is the implicature in: 'I got fired from the calendar factory for taking a day off'?",
+      "options": [
+        "Calendar factories are bad workplaces",
+        "The irony: making calendars but can't take days off",
+        "The person is lazy",
+        "Factories have strict rules"
+      ],
+      "correct": 1,
+      "explanation": "The humor comes from the IRONIC connection between job (calendar-making) and action (taking a day off). It implicates absurd hypocrisy."
+    },
+    {
+      "question": "'Oh great, it's raining again' (said with flat tone). Does the speaker like rain?",
+      "options": [
+        "Yes, they love rain",
+        "No, they're being sarcastic",
+        "They're neutral about rain",
+        "They're confused"
+      ],
+      "correct": 1,
+      "explanation": "Sarcasm: saying opposite of what you mean. Context clues (tone, 'again') signal this isn't genuine enthusiasm."
+    },
+    {
+      "question": "Student to professor: 'Hey, what's the homework?' What's wrong pragmatically?",
+      "options": [
+        "Nothing, it's fine",
+        "Too informal for power relationship",
+        "Too long",
+        "Too polite"
+      ],
+      "correct": 1,
+      "explanation": "Violates sociopragmatic norms: 'Hey' is too casual for hierarchical relationship. Should use title + formal request structure."
+    },
+    {
+      "question": "'How did you find the steak?' / 'I looked next to the potatoes.' What's the problem?",
+      "options": [
+        "Customer is rude",
+        "Customer takes question literally",
+        "Waiter asked wrong question",
+        "Nothing, good answer"
+      ],
+      "correct": 1,
+      "explanation": "Pragmatic failure: 'find' is idiomatically 'What did you think?' but customer interprets literally as 'locate physically.'"
+    }
+  ],
+  "advanced": [
+    {
+      "question": "'I hate people who use big words to sound perspicacious.' What makes this work?",
+      "options": [
+        "It uses a fancy word",
+        "Performative contradiction - it does what it criticizes",
+        "Perspicacious means smart",
+        "It's very sarcastic"
+      ],
+      "correct": 1,
+      "explanation": "Meta-humor: The utterance demonstrates the exact behavior it criticizes (using 'perspicacious' to sound intelligent). Self-referential irony."
+    },
+    {
+      "question": "Why might a joke fail to translate across cultures?",
+      "options": [
+        "Different grammar systems",
+        "Different cultural scripts and background knowledge",
+        "Different senses of humor",
+        "Translation is always hard"
+      ],
+      "correct": 1,
+      "explanation": "Humor relies heavily on shared cultural knowledge, values, and scripts. What's funny depends on what violations are recognizable."
+    },
+    {
+      "question": "What makes absurdist humor work pragmatically?",
+      "options": [
+        "It makes perfect logical sense",
+        "It violates logical expectations and norms",
+        "It's always offensive",
+        "It requires no context at all"
+      ],
+      "correct": 1,
+      "explanation": "Absurdist humor derives from violating our expectations of how the world works, creating incongruity through pragmatic/logical violation."
+    },
+    {
+      "question": "An American says 'I'll think about it' vs. a Japanese person says it. What's different?",
+      "options": [
+        "Nothing, same meaning",
+        "Different illocutionary force: maybe vs. polite no",
+        "Different languages",
+        "Different grammar"
+      ],
+      "correct": 1,
+      "explanation": "Same WORDS, different PRAGMATIC MEANING. Cross-cultural pragmatics shows identical forms can have different speech act force."
+    },
+    {
+      "question": "Student emails: 'Hey Prof, I need an extension lol'. What are ALL the pragmatic failures?",
+      "options": [
+        "Just the 'lol'",
+        "Too informal register, wrong speech act (demand not request), no justification, power asymmetry ignored",
+        "Too short",
+        "No grammar errors"
+      ],
+      "correct": 1,
+      "explanation": "Multiple overlapping failures: register mismatch, inappropriate directness, lacking justification/acknowledgment, power relationship not respected."
+    },
+    {
+      "question": "What distinguishes pragmalinguistic from sociopragmatic failure?",
+      "options": [
+        "They're the same thing",
+        "Pragmalinguistic = wrong form; Sociopragmatic = wrong context judgment",
+        "One is serious, one is not",
+        "One is grammar, one is vocabulary"
+      ],
+      "correct": 1,
+      "explanation": "Thomas (1983): Pragmalinguistic = using wrong linguistic form for intended meaning. Sociopragmatic = misjudging social variables (power, distance, imposition)."
+    }
+  ]
+}

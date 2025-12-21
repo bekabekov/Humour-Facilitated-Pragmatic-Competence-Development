@@ -1,0 +1,189 @@
+/* ========================================
+   CSS VARIABLES - Design System Tokens
+   ======================================== */
+
+:root {
+    /* Enhanced Color Palette */
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --primary-dark: #4f46e5;
+    --secondary: #8b5cf6;
+    --secondary-light: #a78bfa;
+    --secondary-dark: #7c3aed;
+    --success: #10b981;
+    --success-light: #34d399;
+    --warning: #f59e0b;
+    --warning-light: #fbbf24;
+    --danger: #ef4444;
+    --danger-light: #f87171;
+
+    /* Neutral Colors - WCAG AA compliant (4.5:1 contrast ratio) */
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-tertiary: #6b7280; /* Updated from #9ca3af for WCAG AA compliance */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --bg-muted: #f1f5f9;
+    --border: #e5e7eb;
+    --border-light: #f3f4f6;
+    --border-strong: #cbd5e1;
+    --ink-strong: #0f172a;
+    --ink: #334155;
+    --ink-muted: #475569;
+    --ink-subtle: #94a3b8;
+    --brand-info: #3b82f6;
+    --brand-info-weak: #eef2ff;
+    --brand-accent: #eab308;
+    --brand-accent-weak: #fef3c7;
+    --brand-rose: #ec4899;
+    --brand-rose-weak: #fdf2f8;
+
+    /* Shadows - Layered Depth System */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+    --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+    /* Border Radius Scale */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 18px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+
+    /* Spacing Scale */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+
+    /* Typography Scale */
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 1.875rem;
+    --font-4xl: 2.25rem;
+    --font-5xl: 3rem;
+
+    /* Transitions - Optimized for smooth UX (0.2s ease standard) */
+    --transition-fast: 150ms ease;
+    --transition-base: 0.2s ease;  /* Standard 200ms for interactive elements */
+    --transition-slow: 350ms ease;
+    --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Z-Index Layers - Simplified 5-Level System */
+    --z-base: 1;          /* Normal content */
+    --z-dropdown: 10;     /* Dropdowns, tooltips, popovers */
+    --z-sticky: 50;       /* Sticky elements (breadcrumbs, floating buttons) */
+    --z-header: 100;      /* Main header navigation */
+    --z-modal: 1000;      /* Modals, overlays, dialogs */
+
+    /* Dynamic Layout Variables */
+    --header-height: 80px;  /* Default, calculated by JS */
+}
+
+/* ========================================
+   DARK MODE COLOR SCHEME
+   ======================================== */
+
+[data-theme="dark"] {
+    --primary: #818cf8;
+    --primary-light: #a5b4fc;
+    --primary-dark: #6366f1;
+    --secondary: #a78bfa;
+    --secondary-light: #c4b5fd;
+    --secondary-dark: #8b5cf6;
+    --success: #34d399;
+    --success-light: #6ee7b7;
+    --warning: #fbbf24;
+    --warning-light: #fcd34d;
+    --danger: #f87171;
+    --danger-light: #fca5a5;
+
+    --text-primary: #f3f4f6;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #9ca3af;
+    --bg-primary: #1f2937;
+    --bg-secondary: #111827;
+    --bg-tertiary: #0f172a;
+    --bg-muted: #0b1220;
+    --border: #374151;
+    --border-light: #4b5563;
+    --border-strong: #1f2937;
+    --ink-strong: #f8fafc;
+    --ink: #e5e7eb;
+    --ink-muted: #cbd5e1;
+    --ink-subtle: #9ca3af;
+    --brand-info: #60a5fa;
+    --brand-info-weak: #1e293b;
+    --brand-accent: #facc15;
+    --brand-accent-weak: #422006;
+    --brand-rose: #f472b6;
+    --brand-rose-weak: #3b0d1a;
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.7);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Dark mode component-specific overrides */
+[data-theme="dark"] body {
+    background: #111827;
+    color: #f3f4f6;
+}
+
+[data-theme="dark"] .content-section {
+    background: #1f2937;
+}
+
+[data-theme="dark"] .joke-card {
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+}
+
+[data-theme="dark"] .activity-card {
+    background: #1f2937;
+    border-color: #6366f1;
+}
+
+[data-theme="dark"] .code-example {
+    background: #0f172a;
+    border-color: #1f2937;
+}
+
+/* ========================================
+   RESPONSIVE VARIABLE ADJUSTMENTS
+   ======================================== */
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+    :root {
+        --space-2xl: 40px;
+        --space-3xl: 56px;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    :root {
+        --space-lg: 20px;
+        --space-xl: 28px;
+        --space-2xl: 36px;
+        --space-3xl: 48px;
+        --font-3xl: 1.75rem;
+        --font-4xl: 2rem;
+    }
+}

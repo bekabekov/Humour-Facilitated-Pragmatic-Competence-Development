@@ -1,0 +1,628 @@
+[
+    {
+        "text": "What has hands but cannot clap? — A clock!",
+        "analysis": "Simple polysemy: 'hands' means both human body parts and clock pointers. This teaches learners that words can have multiple meanings depending on context.",
+        "type": "riddle",
+        "level": "A1",
+        "learningPoints": [
+            "Polysemy (multiple meanings)",
+            "Context determines meaning",
+            "Literal vs. figurative interpretation"
+        ],
+        "id": "joke-1"
+    },
+    {
+        "text": "What gets wetter as it dries? — A towel!",
+        "analysis": "Paradox created through dual meaning of 'dries': the towel dries things (makes them dry) while becoming wet itself.",
+        "type": "riddle",
+        "level": "A1",
+        "learningPoints": [
+            "Paradox resolution",
+            "Process vs. state distinction",
+            "Logical inference"
+        ],
+        "id": "joke-2"
+    },
+    {
+        "text": "Why did the pencil go to bed? Because it was feeling dull.",
+        "analysis": "Literal vs. figurative meaning: 'dull' means both 'not sharp' (literal, for pencils) and 'boring/tired' (figurative, for people).",
+        "type": "pun",
+        "level": "A2",
+        "learningPoints": [
+            "Dual meanings",
+            "Literal vs. figurative",
+            "Anthropomorphism in humor"
+        ],
+        "id": "joke-3"
+    },
+    {
+        "text": "Why did the math book look sad? Because it had too many problems.",
+        "analysis": "Polysemy of 'problems': mathematical exercises vs. difficulties/troubles. Personification adds to humor.",
+        "type": "pun",
+        "level": "A2",
+        "learningPoints": [
+            "Word polysemy",
+            "Personification",
+            "Emotional vocabulary"
+        ],
+        "id": "joke-4"
+    },
+    {
+        "text": "I used to be a banker, but I lost interest.",
+        "analysis": "Idiomatic double meaning: 'lost interest' means both 'became bored' and 'lost bank interest' (financial term).",
+        "type": "pun",
+        "level": "B1",
+        "learningPoints": [
+            "Idiomatic expressions",
+            "Professional terminology",
+            "Economic vocabulary"
+        ],
+        "id": "joke-5"
+    },
+    {
+        "text": "I got fired from the calendar factory. I took a day off.",
+        "analysis": "Pragmatic implicature and irony. The connection between 'calendar factory' (makes calendars showing days) and 'took a day off' creates ironic incongruity.",
+        "type": "pun",
+        "level": "B1",
+        "learningPoints": [
+            "Irony recognition",
+            "Cause-effect implicature",
+            "Workplace vocabulary"
+        ],
+        "id": "joke-6"
+    },
+    {
+        "text": "Parallel lines have so much in common — it's a shame they'll never meet.",
+        "analysis": "Anthropomorphism and category violation. Human emotional concepts (having things in common, meeting socially) are applied to mathematical entities.",
+        "type": "pun",
+        "level": "B2",
+        "learningPoints": [
+            "Anthropomorphism",
+            "Category violations",
+            "Mathematical metaphors"
+        ],
+        "id": "joke-7"
+    },
+    {
+        "text": "Waiter: 'How did you find your steak, sir?' Customer: 'I just looked next to the potatoes and there it was.'",
+        "analysis": "Pragmatic failure through literal interpretation. The waiter's 'find' is an idiom meaning 'What did you think of it?' but the customer interprets it literally as 'locate physically'.",
+        "type": "dialogue",
+        "level": "B1",
+        "learningPoints": [
+            "Idiomatic speech acts",
+            "Literal vs. intended meaning",
+            "Service interaction norms"
+        ],
+        "id": "joke-8"
+    },
+    {
+        "text": "A: 'Excuse me, does this bus go to Tashkent?' B: 'No, it goes by itself.'",
+        "analysis": "Misunderstanding of intended speech act. Speaker A performs an indirect request for information about the bus route, but Speaker B responds to the literal (absurd) meaning about the bus's autonomy.",
+        "type": "dialogue",
+        "level": "B1",
+        "learningPoints": [
+            "Indirect speech acts",
+            "Information requests",
+            "Transportation vocabulary"
+        ],
+        "id": "joke-9"
+    },
+    {
+        "text": "Teacher: 'If I give you 2 cats and another 2 cats and another 2, how many do you have?' Student: 'Seven.' Teacher: 'How?' Student: 'Because I already have one cat!'",
+        "analysis": "Pragmatic frame misalignment. The teacher establishes a hypothetical mathematical frame, but the student responds with real-world context, violating the Maxim of Relation by being irrelevantly accurate.",
+        "type": "dialogue",
+        "level": "B2",
+        "learningPoints": [
+            "Frame shifting",
+            "Hypothetical vs. real context",
+            "Educational discourse"
+        ],
+        "id": "joke-10"
+    },
+    {
+        "text": "Friend 1: 'You're early again!' Friend 2: 'Yes, only thirty minutes late this time.'",
+        "analysis": "Sarcasm as face-saving strategy. Friend 1 uses irony to criticize politely (saying 'early' when meaning 'late'). Friend 2 uses self-deprecating humor to acknowledge the criticism and maintain social harmony.",
+        "type": "dialogue",
+        "level": "B1",
+        "learningPoints": [
+            "Sarcasm recognition",
+            "Face-saving strategies",
+            "Self-deprecation",
+            "Friendship register"
+        ],
+        "id": "joke-11"
+    },
+    {
+        "text": "A: 'How was the movie?' B: 'Well, the seats were comfortable.'",
+        "analysis": "Violates Maxim of Quantity and Relation. By not directly answering and focusing on irrelevant detail, B implicates the movie was bad (if it were good, they'd say so).",
+        "type": "dialogue",
+        "level": "B2",
+        "learningPoints": [
+            "Conversational implicature",
+            "Indirect criticism",
+            "Grice's Maxims"
+        ],
+        "id": "joke-12"
+    },
+    {
+        "text": "Patient: 'Doctor, I think I'm a dog.' Doctor: 'How long have you felt this way?' Patient: 'Ever since I was a puppy.'",
+        "analysis": "Violates Grice's Maxim of Quality (truthfulness). The patient treats a false premise as true, creating humor through pragmatic violation. The doctor's question also treats the delusion seriously, compounding the absurdity.",
+        "type": "anecdote",
+        "level": "B2",
+        "learningPoints": [
+            "Maxim of Quality",
+            "Absurdist humor",
+            "Medical discourse",
+            "Premise violation"
+        ],
+        "id": "joke-13"
+    },
+    {
+        "text": "My wife told me to take the spider out instead of killing it. We went for a few drinks. Nice guy — wants to be a web developer.",
+        "analysis": "Deliberate misinterpretation of idiom: 'take out' means 'remove from the house' vs. 'go on a date'. Extended through 'web developer' pun (spider webs + tech job).",
+        "type": "anecdote",
+        "level": "B2",
+        "learningPoints": [
+            "Idiomatic misinterpretation",
+            "Extended wordplay",
+            "Domestic discourse"
+        ],
+        "id": "joke-14"
+    },
+    {
+        "text": "I hate people who use big words to make themselves sound perspicacious.",
+        "analysis": "Performative contradiction. The speaker criticizes the very behavior they perform - using a big word ('perspicacious' = intelligent) to sound intelligent. Meta-humor about language use itself.",
+        "type": "anecdote",
+        "level": "C1",
+        "learningPoints": [
+            "Performative contradiction",
+            "Meta-linguistic humor",
+            "Self-referential irony"
+        ],
+        "id": "joke-15"
+    },
+    {
+        "text": "An Englishman, even if he is alone, forms an orderly queue of one. — George Mikes",
+        "analysis": "Cultural stereotype humor about British obsession with queuing/orderliness. Requires cultural knowledge to understand the exaggeration for comic effect.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Cultural stereotypes",
+            "Hyperbole",
+            "National characteristics"
+        ],
+        "id": "joke-16"
+    },
+    {
+        "text": "In Uzbekistan, when grandmother says 'You look thin,' she means 'I'm about to force-feed you for three hours.' When she says 'You look healthy,' you're actually thin and she's worried.",
+        "analysis": "Cultural script about Uzbek hospitality and indirect communication. 'Thin' is culturally negative (implies not being well-fed/cared for), so it's expressed indirectly through opposite comment.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Cultural communication scripts",
+            "Indirect criticism",
+            "Hospitality norms",
+            "Uzbek cultural context"
+        ],
+        "id": "joke-17"
+    },
+    {
+        "text": "An American says 'I'll think about it' = Maybe. An Uzbek says 'I'll think about it' = Polite no. A German says 'I'll think about it' = I actually will think about it and give you a detailed answer later.",
+        "analysis": "Cross-cultural pragmatic differences in the same phrase. Different cultures use identical words with completely different illocutionary force.",
+        "type": "cultural",
+        "level": "C1",
+        "learningPoints": [
+            "Cross-cultural pragmatics",
+            "Indirect refusals",
+            "Speech act variation"
+        ],
+        "id": "joke-18"
+    },
+    {
+        "text": "I'm reading a book about anti-gravity. It's impossible to put down!",
+        "analysis": "Dual meaning: 'put down' as 'stop reading' (idiomatic) vs. 'place downward' (literal). The anti-gravity theme reinforces both meanings.",
+        "type": "pun",
+        "level": "B1",
+        "learningPoints": [
+            "Phrasal verb meanings",
+            "Thematic coherence",
+            "Book-related idioms"
+        ],
+        "id": "joke-19"
+    },
+    {
+        "text": "I used to play piano by ear, but now I use my hands.",
+        "analysis": "Idiom literalization: 'play by ear' means 'play without sheet music' (idiomatically), treated as literal body part usage.",
+        "type": "pun",
+        "level": "B1",
+        "learningPoints": [
+            "Idiom literalization",
+            "Musical vocabulary",
+            "Body parts"
+        ],
+        "id": "joke-20"
+    },
+    {
+        "text": "Time flies like an arrow. Fruit flies like a banana.",
+        "analysis": "Syntactic ambiguity: First sentence = time passes quickly (flies=verb). Second sentence reinterprets: fruit flies (noun) + like (verb) + banana (object). Requires reanalysis of grammatical structure.",
+        "type": "pun",
+        "level": "C1",
+        "learningPoints": [
+            "Syntactic ambiguity",
+            "Garden path sentences",
+            "Grammatical reanalysis"
+        ],
+        "id": "joke-21"
+    },
+    {
+        "text": "Email from student: 'Hey Prof, I need an extension lol send it to me when u can thx' — Professor's internal reaction: *blocks student*",
+        "analysis": "Multiple pragmatic failures: too informal register ('Hey', 'lol', 'u', 'thx'), inappropriate directness ('I need'), wrong speech act (demanding not requesting), no justification, no acknowledgment of imposition. Power asymmetry completely ignored.",
+        "type": "anecdote",
+        "level": "B2",
+        "learningPoints": [
+            "Email register",
+            "Power asymmetry",
+            "Request formulation",
+            "Academic discourse"
+        ],
+        "id": "joke-22"
+    },
+    {
+        "text": "Foreigner at Uzbek wedding reception refuses food: 'No thanks, I'm full.' Host's face shows deep offense. Guide whispers: 'Just take it. You're rejecting their hospitality!'",
+        "analysis": "Sociopragmatic failure: Direct refusal is pragmatically inappropriate in Uzbek hospitality culture. Must use indirect strategies: accept small portion, praise the food, give elaborate reason. Direct 'no' threatens host's positive face.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Hospitality culture",
+            "Indirect refusals",
+            "Positive face threat",
+            "Cultural scripts"
+        ],
+        "id": "joke-23"
+    },
+    {
+        "text": "I went to buy camouflage pants but couldn't find any.",
+        "analysis": "Absurdist humor from literal interpretation of camouflage function (military concealment) applied to shopping context.",
+        "type": "anecdote",
+        "level": "B1",
+        "learningPoints": [
+            "Absurdist logic",
+            "Literal interpretation",
+            "Shopping vocabulary"
+        ],
+        "id": "joke-24"
+    },
+    {
+        "text": "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+        "analysis": "Visual pun: 'surprised' facial expression involves raised eyebrows, so overly-high drawn eyebrows create permanent surprised look.",
+        "type": "anecdote",
+        "level": "B2",
+        "learningPoints": [
+            "Visual-linguistic pun",
+            "Facial expressions",
+            "Beauty/appearance vocabulary"
+        ],
+        "id": "joke-25"
+    },
+    {
+        "text": "Early to bed and early to rise makes a man healthy, wealthy, and wise. But nobody wants to hang out with him because he's always asleep.",
+        "analysis": "Proverb subversion: Takes traditional wisdom literally to expose its social pragmatic failure - following the advice creates social isolation.",
+        "type": "anecdote",
+        "level": "C1",
+        "learningPoints": [
+            "Proverb subversion",
+            "Literal vs. practical wisdom",
+            "Social consequences"
+        ],
+        "id": "joke-26"
+    },
+    {
+        "text": "Oh great, another meeting that could have been an email.",
+        "analysis": "Sarcasm violating Maxim of Quality: 'great' means opposite (terrible). Expresses frustration with workplace inefficiency through ironic enthusiasm.",
+        "type": "anecdote",
+        "level": "B2",
+        "learningPoints": [
+            "Workplace sarcasm",
+            "Ironic enthusiasm",
+            "Meeting culture"
+        ],
+        "id": "joke-27"
+    },
+    {
+        "text": "Friend posts obvious fact on social media. Comment: 'Wow, what groundbreaking insight.'",
+        "analysis": "Sarcastic compliment meaning opposite: not groundbreaking at all. Online sarcasm is harder to detect without tone, making pragmatic competence crucial.",
+        "type": "dialogue",
+        "level": "B2",
+        "learningPoints": [
+            "Online sarcasm",
+            "Written tone",
+            "Social media pragmatics"
+        ],
+        "id": "joke-28"
+    },
+    {
+        "text": "Uzbek mother: 'Have you eaten?' Translation: 'I love you, I care about you, you're probably starving, let me feed you immediately regardless of your answer.'",
+        "analysis": "Culturally-specific formulaic expression. 'Have you eaten?' is not information-seeking (violates Maxim of Quantity) but relationship-maintaining. Expected answer: always accept food offer to show appreciation.",
+        "type": "cultural",
+        "level": "B1",
+        "learningPoints": [
+            "Formulaic expressions",
+            "Phatic communion",
+            "Uzbek cultural scripts",
+            "Hospitality speech acts"
+        ],
+        "id": "joke-29"
+    },
+    {
+        "text": "When Uzbek says 'Come visit us!' to someone they just met, Foreigner thinks: 'Wow, new friend!' Reality: It's formulaic politeness, like 'Have a nice day' - not literal invitation.",
+        "analysis": "Pragmatic transfer problem: Literal interpretation of culturally conventional politeness formula. In Uzbek culture, this is positive face work, not binding invitation.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Formulaic politeness",
+            "Invitation sincerity",
+            "Cultural interpretation differences"
+        ],
+        "id": "joke-30"
+    },
+    {
+        "text": "A: 'Do you know what time it is?' B: 'Yes.' [walks away]",
+        "analysis": "Violates cooperative principle by being hyper-literal. The question is an indirect request (tell me the time), not yes/no question (do you possess this knowledge). B's response is pragmatically inappropriate despite being truthful.",
+        "type": "dialogue",
+        "level": "B2",
+        "learningPoints": [
+            "Indirect requests",
+            "Cooperative principle",
+            "Over-literal responses"
+        ],
+        "id": "joke-31"
+    },
+    {
+        "text": "A: 'Can you pass the salt?' B: 'Yes, I can.' [doesn't pass it]",
+        "analysis": "Similar violation: 'Can you' is conventionally an indirect request, not ability question. B treats it as literal question about capability.",
+        "type": "dialogue",
+        "level": "B1",
+        "learningPoints": [
+            "Indirect requests",
+            "Conventionalized forms",
+            "Modal verbs in requests"
+        ],
+        "id": "joke-32"
+    },
+    {
+        "text": "Two antennas met on a roof, fell in love and got married. The ceremony wasn't much, but the reception was excellent.",
+        "analysis": "Technical pun: 'reception' means both 'wedding party' and 'signal reception' (antennas receive signals). Requires knowledge of both social and technical domains.",
+        "type": "pun",
+        "level": "B2",
+        "learningPoints": [
+            "Technical vocabulary",
+            "Domain crossover",
+            "Wedding vocabulary"
+        ],
+        "id": "joke-33"
+    },
+    {
+        "text": "I'm reading a book on the history of glue. I just can't seem to put it down.",
+        "analysis": "Multiple meanings: 'put down' = stop reading OR place downward. Glue theme adds literal adhesive meaning. Meta-joke about addictive reading.",
+        "type": "pun",
+        "level": "B1",
+        "learningPoints": [
+            "Idiomatic vs. literal",
+            "Thematic integration",
+            "Reading vocabulary"
+        ],
+        "id": "joke-34"
+    },
+    {
+        "text": "Descartes walks into a bar. Bartender asks 'Would you like a drink?' Descartes replies 'I think not' — and disappears.",
+        "analysis": "Philosophical humor requiring knowledge of Descartes' 'I think, therefore I am.' If he thinks not, he doesn't exist. Very high pragmatic load requiring external knowledge.",
+        "type": "anecdote",
+        "level": "C1",
+        "learningPoints": [
+            "Intertextuality",
+            "Philosophical references",
+            "Existential logic"
+        ],
+        "id": "joke-35"
+    },
+    {
+        "text": "Why did the student eat his homework? Because the teacher said it was a piece of cake!",
+        "analysis": "Idiom literalization: 'piece of cake' means 'very easy' (idiomatically), treated literally as actual cake. Common in children's humor but teaches pragmatic principles.",
+        "type": "anecdote",
+        "level": "A2",
+        "learningPoints": [
+            "Idiom meanings",
+            "Literal vs. figurative",
+            "School vocabulary"
+        ],
+        "id": "joke-36"
+    },
+    {
+        "text": "Let's eat, Grandma! vs. Let's eat Grandma! — Punctuation saves lives.",
+        "analysis": "Demonstrates how pragmatic meaning depends on more than words - punctuation changes grammatical structure and thus meaning entirely (invitation to eat together vs. cannibalism).",
+        "type": "anecdote",
+        "level": "B2",
+        "learningPoints": [
+            "Punctuation importance",
+            "Grammatical structure",
+            "Ambiguity resolution"
+        ],
+        "id": "joke-37"
+    },
+    {
+        "text": "Tourist in London: 'Where's the bathroom?' British person, slightly offended: 'You mean the toilet?' Tourist: 'No, I want to take a bath.' British: '...We call it the loo.'",
+        "analysis": "Register and vocabulary pragmatic failure: 'Bathroom' in American English = toilet, in British English = room with bath. Tourist's literal interpretation creates confusion. Shows regional pragmatic variation.",
+        "type": "dialogue",
+        "level": "B2",
+        "learningPoints": [
+            "Regional vocabulary differences",
+            "Euphemisms",
+            "British vs. American English"
+        ],
+        "id": "joke-38"
+    },
+    {
+        "text": "Never trust atoms. They make up everything.",
+        "analysis": "Scientific pun: 'make up' means both 'constitute/compose' (atoms make up matter) and 'lie/fabricate' (slang). Meta-humor about language itself.",
+        "type": "pun",
+        "level": "B1",
+        "learningPoints": [
+            "Scientific vocabulary",
+            "Phrasal verb meanings",
+            "Multiple meanings"
+        ],
+        "id": "joke-39"
+    },
+    {
+        "text": "I'm great at multitasking. I can waste time, be unproductive, and procrastinate all at once.",
+        "analysis": "Self-deprecating humor with semantic play: lists three ways of saying the same thing (not real multitasking). Subverts boasting expectation.",
+        "type": "anecdote",
+        "level": "B2",
+        "learningPoints": [
+            "Self-deprecation",
+            "Semantic fields",
+            "Expectation violation"
+        ],
+        "id": "joke-40"
+    },
+    {
+        "text": "Nasriddin Afandi was asked: 'Which is more useful, the sun or the moon?' He replied: 'The moon, of course! It shines when it's dark. The sun only shines when it's already light!'",
+        "analysis": "Classic 'wise fool' humour from Central Asian tradition. The absurd logic (moon more useful because it shines in darkness) actually inverts normal thinking. Similar mechanism to British absurdist humour but with warmer, more direct delivery.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Wise fool archetype",
+            "Absurd logic",
+            "Central Asian humour tradition",
+            "Warmth in delivery"
+        ],
+        "id": "joke-41"
+    },
+    {
+        "text": "Uzbek grandmother: 'Have you eaten?' (Translation: 'I love you and am about to feed you for three hours regardless of your answer.')",
+        "analysis": "This formulaic question is NOT an information request - it's a hospitality ritual and expression of care. The humour comes from recognizing the gap between literal meaning and pragmatic function.",
+        "type": "cultural",
+        "level": "B1",
+        "learningPoints": [
+            "Formulaic expressions",
+            "Hospitality culture",
+            "Pragmatic vs literal meaning",
+            "Uzbek cultural scripts"
+        ],
+        "id": "joke-42"
+    },
+    {
+        "text": "At an Uzbek wedding, guest says 'I'm full.' Host hears: 'Please convince me more enthusiastically to eat.'",
+        "analysis": "Cultural script mismatch played for humour. In Uzbek hospitality, initial refusals are part of a ritual - the host is expected to insist. 'I'm full' is round one of negotiation, not a final answer.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Hospitality scripts",
+            "Refusal rituals",
+            "Cultural expectations",
+            "Indirect communication"
+        ],
+        "id": "joke-43"
+    },
+    {
+        "text": "British weather report: 'Not exactly tropical today, is it?' (Said during a blizzard)",
+        "analysis": "Classic British understatement. The enormous gap between 'not exactly tropical' and 'severe blizzard' creates humour. Requires recognizing that mild language = strong meaning.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "British understatement",
+            "Weather humour",
+            "Mild language for strong meaning"
+        ],
+        "id": "joke-44"
+    },
+    {
+        "text": "British person: 'I'm not saying my cooking is bad, but the smoke alarm cheers when I order takeaway.'",
+        "analysis": "Self-deprecating humour - the speaker mocks their own inability. This is a bonding mechanism, not genuine self-criticism. Expected response: sympathetic laughter, not cooking lessons.",
+        "type": "cultural",
+        "level": "B1",
+        "learningPoints": [
+            "Self-deprecation",
+            "Bonding through humour",
+            "Expected responses"
+        ],
+        "id": "joke-45"
+    },
+    {
+        "text": "British boss to employee who made a mistake: 'Well, that's certainly ONE way to approach it.'",
+        "analysis": "Indirect criticism through understatement. 'One way' implies there are BETTER ways. The politeness is surface-level; the criticism is real but softened. An Uzbek boss might be more direct.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Indirect criticism",
+            "Professional understatement",
+            "Face-saving",
+            "Power dynamics"
+        ],
+        "id": "joke-46"
+    },
+    {
+        "text": "[Heavy rain outside] British person: 'Lovely day for a picnic, isn't it?' (Said with completely straight face)",
+        "analysis": "Deadpan sarcasm - no smile, no tone change, just words that obviously contradict reality. The humour requires the listener to recognize the content mismatch without any delivery signals.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Deadpan delivery",
+            "Sarcasm recognition",
+            "Content vs reality mismatch"
+        ],
+        "id": "joke-47"
+    },
+    {
+        "text": "Uzbek student in UK: 'The host family never offered me more food! So unwelcoming!' British host family: 'We said help yourself. They never took any more. They must not have liked it.'",
+        "analysis": "Classic cross-cultural pragmatic failure. Uzbek expectation: multiple insistent offers. British norm: one sincere offer, then assume autonomy. Neither side understood the other's cultural script.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Cross-cultural pragmatic failure",
+            "Hospitality norms",
+            "Autonomy vs insistence",
+            "Cultural scripts"
+        ],
+        "id": "joke-48"
+    },
+    {
+        "text": "Uzbek hears British 'We should do this again sometime' and waits by the phone. Phone never rings. Pragmatic failure: British vague politeness vs Uzbek expectation of concrete follow-through.",
+        "analysis": "'We should do this again' in British English is often warm but NON-BINDING. It expresses positive feeling but not commitment. In Uzbek culture, such statements might be taken more literally as actual plans.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Vague politeness",
+            "Non-binding statements",
+            "Follow-through expectations",
+            "Cultural interpretation"
+        ],
+        "id": "joke-49"
+    },
+    {
+        "text": "British colleague says 'That's very brave' about a decision. Uzbek thinks: 'They called me brave! How nice!' Actual meaning: 'That's a risky/possibly stupid decision.'",
+        "analysis": "British understatement trap. 'Brave' and 'interesting' are often NEGATIVE in British professional context. They're polite ways to express doubt or disagreement without direct confrontation.",
+        "type": "cultural",
+        "level": "C1",
+        "learningPoints": [
+            "Professional understatement",
+            "Hidden criticism",
+            "Brave/interesting trap",
+            "Decoding feedback"
+        ],
+        "id": "joke-50"
+    },
+    {
+        "text": "British response to terrible news: 'Oh dear. That's a bit unfortunate.' American response to same news: 'OH MY GOD THAT'S TERRIBLE!'",
+        "analysis": "Contrast in emotional expression across English-speaking cultures. British restraint ('a bit unfortunate') can mask strong feelings. Neither is more honest' - they're different cultural codes.",
+        "type": "cultural",
+        "level": "C1",
+        "learningPoints": [
+            "Cross-cultural English variation",
+            "Emotional expression",
+            "Understatement",
+            "Cultural codes"
+        ],
+        "id": "joke-51"
+    }
+]

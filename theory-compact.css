@@ -1,0 +1,520 @@
+/* ========================================
+   COMPACT THEORY LAYOUT OPTIMIZATION
+   Keeps beautiful accordion design, reduces spacing
+   ======================================== */
+
+/* Single-column accordion - keep original beautiful design */
+#module-content-container .accordion {
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+}
+
+/* Accordion items - slightly more compact */
+#module-content-container .accordion-item {
+    margin-bottom: 0.875rem;
+}
+
+/* Compact accordion headers - keep beautiful gradient */
+#module-content-container .accordion-header {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+}
+
+/* Compact accordion bodies */
+#module-content-container .accordion-body {
+    padding: 1.25rem;
+}
+
+/* Compact theory boxes - keep beautiful styling */
+#module-content-container .theory-box,
+#module-content-container .theory-content-enhanced .theory-box {
+    padding: 1rem 1.25rem;
+    margin: 0.875rem 0;
+}
+
+/* Keep headings readable, just slightly tighter spacing */
+#module-content-container .theory-content-enhanced h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.875rem;
+}
+
+#module-content-container .theory-content-enhanced h4 {
+    margin: 1rem 0 0.625rem 0;
+}
+
+#module-content-container .theory-content-enhanced h5 {
+    margin: 0.875rem 0 0.5rem 0;
+}
+
+/* Keep example boxes beautiful, slightly tighter */
+#module-content-container .theory-content-enhanced .example-box,
+#module-content-container .theory-content-enhanced .simple-explanation {
+    padding: 0.875rem 1rem;
+    margin: 0.875rem 0;
+}
+
+/* Tables - keep readable */
+#module-content-container .rubric-table {
+    margin: 0.875rem 0;
+}
+
+#module-content-container .rubric-table th,
+#module-content-container .rubric-table td {
+    padding: 0.625rem 0.75rem;
+}
+
+/* Lists - keep readable */
+#module-content-container .theory-content-enhanced ul,
+#module-content-container .theory-content-enhanced ol {
+    margin: 0.75rem 0;
+}
+
+#module-content-container .theory-content-enhanced ul li,
+#module-content-container .theory-content-enhanced ol li {
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraphs - tighter spacing */
+#module-content-container .theory-content-enhanced p {
+    margin-bottom: 0.875rem;
+}
+
+/* Reduce excessive spacing slightly */
+#module-content-container .theory-content-enhanced .breathing-space {
+    height: 1.25rem;
+}
+
+#module-content-container .theory-content-enhanced .visual-break {
+    margin: 1.25rem 0;
+}
+
+/* Expand buttons */
+#module-content-container .theory-content-enhanced .expand-btn {
+    padding: 0.625rem 1rem;
+    margin: 0.75rem 0;
+}
+
+/* Expandable details */
+#module-content-container .theory-content-enhanced .expandable-detail {
+    padding: 1rem;
+    margin-top: 0.75rem;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    #module-content-container .accordion {
+        max-width: 100%;
+    }
+
+    #module-content-container .accordion-header {
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    #module-content-container .accordion-body {
+        padding: 1rem;
+    }
+
+    #module-content-container .theory-box {
+        padding: 0.875rem 1rem;
+    }
+}
+
+/* Alternative Compact View: Tabbed Interface */
+.theory-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+}
+
+.theory-tab-btn {
+    padding: 0.5rem 1rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem 0.5rem 0 0;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    transition: all 0.2s ease;
+}
+
+.theory-tab-btn:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.theory-tab-btn.active {
+    background: #6366f1;
+    color: white;
+    border-color: #6366f1;
+}
+
+.theory-tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.theory-tab-content.active {
+    display: block;
+}
+
+/* Compact summary view */
+.theory-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.theory-summary-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 1px solid #bae6fd;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theory-summary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+    border-color: #6366f1;
+}
+
+.theory-summary-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.theory-summary-preview {
+    font-size: 0.825rem;
+    color: #475569;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Quick navigation sidebar */
+.theory-quick-nav {
+    position: sticky;
+    top: 80px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-left: 1rem;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.theory-quick-nav h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 0.75rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.theory-quick-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.theory-quick-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.theory-quick-nav a {
+    display: block;
+    padding: 0.375rem 0.625rem;
+    font-size: 0.825rem;
+    color: #6b7280;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+.theory-quick-nav a:hover {
+    background: #f3f4f6;
+    color: #6366f1;
+    padding-left: 0.875rem;
+}
+
+.theory-quick-nav a.active {
+    background: #eef2ff;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* Two-column layout with sidebar */
+.theory-layout-with-nav {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .theory-layout-with-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .theory-quick-nav {
+        position: static;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Collapsible sections with compact preview */
+.theory-section-compact {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.theory-section-compact:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.theory-section-header-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #f9fafb;
+    cursor: pointer;
+    user-select: none;
+}
+
+.theory-section-header-compact h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.theory-section-toggle {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.theory-section-compact.expanded .theory-section-toggle {
+    transform: rotate(180deg);
+}
+
+.theory-section-content-compact {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.theory-section-compact.expanded .theory-section-content-compact {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.theory-section-body-compact {
+    padding: 1rem;
+}
+
+/* ========================================
+   Core Theory Page Styling (matches visual reference)
+   ======================================== */
+.theory-core {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.theory-core-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.theory-core-accent {
+    width: 6px;
+    height: 48px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+}
+
+.theory-core-subtitle {
+    color: #475569;
+    margin: 4px 0 0 0;
+    font-weight: 500;
+}
+
+.theory-tip-card {
+    background: #fef3c7;
+    border: 2px solid #f59e0b;
+    border-radius: 14px;
+    padding: 14px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    box-shadow: 0 8px 20px rgba(247, 161, 10, 0.15);
+    margin-bottom: 20px;
+}
+
+.theory-tip-title {
+    font-weight: 700;
+    color: #92400e;
+}
+
+.theory-tip-content p {
+    margin: 4px 0 0 0;
+    color: #92400e;
+    line-height: 1.6;
+}
+
+.core-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.core-accordion-item {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.core-accordion-header {
+    margin: 0;
+    border-radius: 16px;
+    padding: 16px 20px;
+    font-size: 1.05rem;
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.2);
+}
+
+.core-accordion-header .accordion-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.core-accordion-header .chevron {
+    transition: transform 0.2s ease;
+}
+
+.core-accordion-header[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+}
+
+.core-accordion-body {
+    margin: 8px 0 0 0;
+    border-radius: 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.core-accordion-body .core-lead {
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.core-points {
+    margin: 0 0 14px 0;
+    padding-left: 18px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.core-points li {
+    margin-bottom: 6px;
+}
+
+.learn-more-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 12px;
+    color: #4338ca;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.learn-more-toggle:hover {
+    background: #e0e7ff;
+    box-shadow: 0 6px 12px rgba(67, 56, 202, 0.15);
+}
+
+.learn-more-panel {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    color: #312e81;
+    line-height: 1.7;
+}
+
+.learn-more-panel[hidden] {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .theory-core {
+        max-width: 100%;
+    }
+
+    .theory-core-header {
+        align-items: flex-start;
+    }
+
+    .core-accordion-header {
+        padding: 14px 16px;
+        font-size: 1rem;
+    }
+}
+
+/* Theory controls and progress */
+.theory-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.theory-progress {
+    font-weight: 600;
+    color: #4338ca;
+}
+
+.theory-continue-row {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.theory-continue-btn {
+    font-weight: 700;
+}

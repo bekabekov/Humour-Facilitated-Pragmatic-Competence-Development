@@ -1,0 +1,634 @@
+[
+    {
+        "level":  "A1",
+        "difficulty":  "easy",
+        "title":  "Understanding Context Clues",
+        "description":  "Learn to ask for clarification",
+        "task":  "You do not understand a joke. Select two or more clarification phrases you could say to keep the conversation friendly.",
+        "pragmaticFocus":  "Clarification requests",
+        "tags":  [
+                     "communication-strategies",
+                     "questions"
+                 ],
+        "id":  "act-1",
+        "responseType":  "multi",
+        "responseLabel":  "Select two or more phrases",
+        "responseHint":  "Pick phrases you would actually use.",
+        "choices":  [
+                        "I don\u0027t get it. Can you explain?",
+                        "What do you mean?",
+                        "Sorry, I\u0027m confused about that.",
+                        "Could you say that again?",
+                        "Wait, I didn\u0027t understand that part.",
+                        "Could you explain the joke to me?"
+                    ],
+        "minSelections":  2
+    },
+    {
+        "level":  "A1",
+        "difficulty":  "easy",
+        "title":  "Showing You Understand",
+        "description":  "Appropriate listener responses",
+        "task":  "When someone tells a joke, which responses show you are listening or understand? Select all that fit.",
+        "pragmaticFocus":  "Backchannel responses",
+        "tags":  [
+                     "listening-skills",
+                     "social-interaction"
+                 ],
+        "id":  "act-2",
+        "responseType":  "multi",
+        "responseLabel":  "Select all appropriate responses",
+        "responseHint":  "Choose the responses that sound natural in conversation.",
+        "choices":  [
+                        "I see.",
+                        "Oh, right.",
+                        "That\u0027s funny!",
+                        "Ha, I get it now.",
+                        "Oh!",
+                        "Really?"
+                    ],
+        "minSelections":  2
+    },
+    {
+        "level":  "A1",
+        "difficulty":  "easy",
+        "title":  "Polite vs. Direct Speech",
+        "description":  "Recognizing softened requests",
+        "task":  "Select the more polite ways to ask a stranger for water.",
+        "pragmaticFocus":  "Politeness markers",
+        "tags":  [
+                     "requests",
+                     "politeness"
+                 ],
+        "id":  "act-3",
+        "responseType":  "multi",
+        "responseLabel":  "Select the polite requests",
+        "responseHint":  "Pick the options that sound polite to a stranger.",
+        "choices":  [
+                        "Give me water.",
+                        "Could I have some water, please?",
+                        "Water, please.",
+                        "I would like some water, please.",
+                        "Hey, water!",
+                        "Pass me water."
+                    ],
+        "minSelections":  2
+    },
+    {
+        "level":  "A1",
+        "difficulty":  "easy",
+        "title":  "Words with Two Meanings",
+        "description":  "Understanding polysemy",
+        "task":  "Pick one word with two meanings and write a simple example. Use this format: Word: ___; Meaning 1: ___; Meaning 2: ___; Sentence: ___.",
+        "pragmaticFocus":  "Lexical ambiguity",
+        "tags":  [
+                     "vocabulary",
+                     "wordplay"
+                 ],
+        "id":  "act-4",
+        "responseType":  "text-short",
+        "responseLabel":  "Write a short, guided answer",
+        "responseHint":  "Use the exact format shown in the task.",
+        "exampleAnswer":  "Word: bank; Meaning 1: money place; Meaning 2: river side; Sentence: I sat on the bank near the bank.",
+        "minWords":  6,
+        "minChars":  25
+    },
+    {
+        "level":  "A2",
+        "difficulty":  "easy",
+        "title":  "Formal or Friendly?",
+        "description":  "Adjusting language for relationships",
+        "task":  "Write three short apologies, one for each person. Format: Boss: ___ Teacher: ___ Friend: ___. Use one short sentence each.",
+        "pragmaticFocus":  "Register variation",
+        "tags":  [
+                     "apologies",
+                     "formality",
+                     "social-distance"
+                 ],
+        "id":  "act-5",
+        "responseType":  "text-short",
+        "responseLabel":  "Write three short lines",
+        "responseHint":  "Keep each line short and clear.",
+        "exampleAnswer":  "Boss: I sincerely apologize for being late. Teacher: I\u0027m sorry I missed class. Friend: My bad!",
+        "minWords":  8,
+        "minChars":  35
+    },
+    {
+        "level":  "A2",
+        "difficulty":  "easy",
+        "title":  "Reading Between the Lines",
+        "description":  "Understanding implied meaning",
+        "task":  "Your friend says \"I\u0027m a bit busy right now\" when you ask to hang out. Choose the best implied meaning.",
+        "pragmaticFocus":  "Conversational implicature",
+        "tags":  [
+                     "indirect-speech",
+                     "interpretation"
+                 ],
+        "id":  "act-6",
+        "responseType":  "choice",
+        "responseLabel":  "Choose one option",
+        "choices":  [
+                        "They cannot hang out right now.",
+                        "They never want to hang out again.",
+                        "They are only stating a fact with no other meaning."
+                    ]
+    },
+    {
+        "level":  "A2",
+        "difficulty":  "medium",
+        "title":  "Polite Interruptions",
+        "description":  "How to interrupt appropriately",
+        "task":  "In a meeting with your teacher, which interruption is most appropriate?",
+        "pragmaticFocus":  "Turn-taking",
+        "tags":  [
+                     "conversation-management",
+                     "politeness"
+                 ],
+        "id":  "act-7",
+        "responseType":  "choice",
+        "responseLabel":  "Choose the best option",
+        "choices":  [
+                        "Excuse me, may I add something?",
+                        "Wait!",
+                        "Hey, listen!",
+                        "Sorry to interrupt, but..."
+                    ]
+    },
+    {
+        "level":  "A2",
+        "difficulty":  "medium",
+        "title":  "Compliment Responses",
+        "description":  "Cultural differences in accepting praise",
+        "task":  "Write two responses to \"Nice shirt!\" Format: English: ___ My culture: ___.",
+        "pragmaticFocus":  "Compliment responses",
+        "tags":  [
+                     "cultural-differences",
+                     "face-work"
+                 ],
+        "id":  "act-8",
+        "responseType":  "text-short",
+        "responseLabel":  "Write two short responses",
+        "responseHint":  "One for English, one for your culture.",
+        "exampleAnswer":  "English: Thanks! My culture: Oh, it\u0027s old, but thank you.",
+        "minWords":  6,
+        "minChars":  30
+    },
+    {
+        "level":  "B1",
+        "difficulty":  "easy",
+        "title":  "Direct vs. Indirect Requests",
+        "description":  "Recognizing politeness strategies",
+        "task":  "Rank by politeness: \"Open the window\" / \"Can you open the window?\" / \"Could you open the window?\" / \"It\u0027s hot in here\" / \"Would you mind opening the window?\" Then write: Most polite: ___ Least polite: ___ Reason: ___.",
+        "pragmaticFocus":  "Indirect speech acts",
+        "tags":  [
+                     "requests",
+                     "politeness-strategies"
+                 ],
+        "id":  "act-9",
+        "responseType":  "text-short",
+        "responseLabel":  "Write a short comparison",
+        "responseHint":  "1 sentence for the reason is enough.",
+        "exampleAnswer":  "Most polite: Would you mind opening the window? Least polite: Open the window. Reason: the polite one softens the request.",
+        "minWords":  10,
+        "minChars":  50
+    },
+    {
+        "level":  "B1",
+        "difficulty":  "medium",
+        "title":  "Recognizing Sarcasm",
+        "description":  "Literal vs. intended meaning",
+        "task":  "Statement: \"Oh great, it\u0027s raining again\" (flat tone). Write two sentences: (1) the real meaning, (2) one clue that shows sarcasm.",
+        "pragmaticFocus":  "Irony recognition",
+        "tags":  [
+                     "sarcasm",
+                     "tone",
+                     "implied-meaning"
+                 ],
+        "id":  "act-10",
+        "responseType":  "text-short",
+        "responseLabel":  "Write two short sentences",
+        "responseHint":  "Keep each sentence short.",
+        "exampleAnswer":  "Meaning: The speaker is annoyed about the rain. Clue: the flat tone conflicts with the word great.",
+        "minWords":  12,
+        "minChars":  60
+    },
+    {
+        "level":  "B1",
+        "difficulty":  "medium",
+        "title":  "Giving Advice Politely",
+        "description":  "Softening face-threatening acts",
+        "task":  "Your friend has bad breath. Options: \"Your breath stinks!\" / \"Have you tried mints?\" / \"Would you like some gum?\" Choose the most polite option, then write a gentle suggestion to a friend. Format: Best option: ___ Your suggestion: ___.",
+        "pragmaticFocus":  "Face-saving strategies",
+        "tags":  [
+                     "advice",
+                     "face-work",
+                     "criticism"
+                 ],
+        "id":  "act-11",
+        "responseType":  "text-short",
+        "responseLabel":  "Write two short lines",
+        "responseHint":  "Your suggestion should sound kind.",
+        "exampleAnswer":  "Best option: Would you like some gum? Your suggestion: You might try mints before class.",
+        "minWords":  10,
+        "minChars":  55
+    },
+    {
+        "level":  "B1",
+        "difficulty":  "hard",
+        "title":  "Refusal Without Offense",
+        "description":  "Saying no to authority",
+        "task":  "Write 3 lines: (1) Reason, (2) Alternative, (3) Appreciation. Keep each line short.",
+        "pragmaticFocus":  "Refusals",
+        "tags":  [
+                     "power-dynamics",
+                     "face-work",
+                     "workplace"
+                 ],
+        "id":  "act-12",
+        "responseType":  "text-short",
+        "responseLabel":  "Write three short lines",
+        "responseHint":  "Use the numbered format: 1) Reason 2) Alternative 3) Appreciation.",
+        "exampleAnswer":  "1) I already have a family commitment. 2) I can help on Monday instead. 3) Thanks for understanding.",
+        "minWords":  12,
+        "minChars":  70
+    },
+    {
+        "level":  "B1",
+        "difficulty":  "hard",
+        "title":  "Email Register",
+        "description":  "Appropriate formality in writing",
+        "task":  "Fix this email to your professor: \"hey can u extend the deadline lol\". Rewrite it with greeting, reason, polite request, thanks, and closing. Aim for 4-6 sentences.",
+        "pragmaticFocus":  "Written register",
+        "tags":  [
+                     "email",
+                     "formality",
+                     "academic-discourse"
+                 ],
+        "id":  "act-13",
+        "responseType":  "text-long",
+        "responseLabel":  "Write a short email",
+        "responseHint":  "Include all five parts listed in the task.",
+        "exampleAnswer":  "Dear Professor [Name], I hope you are well. I am writing because I had a medical appointment and could not finish the essay. Could I please have a two-day extension? Thank you for your time. Sincerely, [Your Name].",
+        "minWords":  35,
+        "minChars":  180
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Building Solidarity",
+        "description":  "Creating in-group bonds",
+        "task":  "List two ways close friends speak differently than acquaintances and give one example each. Format: Feature: Example.",
+        "pragmaticFocus":  "Solidarity strategies",
+        "tags":  [
+                     "friendship",
+                     "informal-speech",
+                     "teasing"
+                 ],
+        "id":  "act-14",
+        "responseType":  "text-short",
+        "responseLabel":  "Write two feature-example pairs",
+        "responseHint":  "Keep each example to one short sentence.",
+        "exampleAnswer":  "Teasing: You are late again, as usual. Shared slang: That movie was so mid.",
+        "minWords":  14,
+        "minChars":  80
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Disagreeing Politely",
+        "description":  "Challenging ideas without offending",
+        "task":  "Use one of these starters: \"I see your point, but...\" / \"That\u0027s interesting, however...\" / \"Have you considered...?\" / \"I respectfully disagree because...\" Write a one-sentence disagreement for a class discussion.",
+        "pragmaticFocus":  "Disagreement strategies",
+        "tags":  [
+                     "argumentation",
+                     "face-work",
+                     "academic-discussion"
+                 ],
+        "id":  "act-15",
+        "responseType":  "text-short",
+        "responseLabel":  "Write one sentence",
+        "responseHint":  "Use one of the starters in your sentence.",
+        "exampleAnswer":  "I see your point, but I think the data suggests a different conclusion.",
+        "minWords":  10,
+        "minChars":  60
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "hard",
+        "title":  "Cross-Cultural Misunderstanding",
+        "description":  "Recognizing pragmatic failure",
+        "task":  "Choose two examples (A-D) and explain why misunderstanding happens in 1-2 sentences each. A) American jokes about boss, B) Uzbek indirect refusals, C) German directness, D) Japanese vagueness.",
+        "pragmaticFocus":  "Pragmatic transfer",
+        "tags":  [
+                     "cultural-comparison",
+                     "pragmatic-failure"
+                 ],
+        "id":  "act-16",
+        "responseType":  "text-long",
+        "responseLabel":  "Write two short explanations",
+        "responseHint":  "Label your answers with A/B/C/D.",
+        "exampleAnswer":  "A: In some cultures, joking about a boss sounds disrespectful. C: Directness can sound rude to listeners who expect softening.",
+        "minWords":  20,
+        "minChars":  120
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "hard",
+        "title":  "Understanding Implicature",
+        "description":  "Grice\u0027s Maxims in action",
+        "task":  "Friend says \"Nice weather!\" during a rainstorm. Write: Maxim: ___ (Quality, Quantity, Relation, Manner); Implied meaning: ___.",
+        "pragmaticFocus":  "Conversational implicature",
+        "tags":  [
+                     "Grice",
+                     "implied-meaning",
+                     "maxims"
+                 ],
+        "id":  "act-17",
+        "responseType":  "text-short",
+        "responseLabel":  "Write maxim + implied meaning",
+        "responseHint":  "Use the exact labels from the task.",
+        "exampleAnswer":  "Maxim: Quality. Implied meaning: The weather is bad and they are being ironic.",
+        "minWords":  12,
+        "minChars":  70
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "hard",
+        "title":  "Humor Appropriateness",
+        "description":  "When is humor appropriate?",
+        "task":  "Choose one situation (funeral, job interview, or with your boss). Write two short rules: Do ___ and Don\u0027t ___.",
+        "pragmaticFocus":  "Context appropriateness",
+        "tags":  [
+                     "humor",
+                     "social-situations",
+                     "judgment"
+                 ],
+        "id":  "act-18",
+        "responseType":  "text-short",
+        "responseLabel":  "Write two short rules",
+        "responseHint":  "Keep each rule to one short sentence.",
+        "exampleAnswer":  "Do: keep humor mild and respectful. Don\u0027t: make jokes about death at a funeral.",
+        "minWords":  12,
+        "minChars":  70
+    },
+    {
+        "level":  "C1",
+        "difficulty":  "hard",
+        "title":  "Pragmatic Failure Analysis",
+        "description":  "When communication breaks down",
+        "task":  "Collect 3 real examples of pragmatic failure. For each, write: Situation, Type (pragmalinguistic or sociopragmatic), and a Fix.",
+        "pragmaticFocus":  "Pragmatic failure",
+        "tags":  [
+                     "analysis",
+                     "error-correction",
+                     "metalinguistic"
+                 ],
+        "id":  "act-19",
+        "responseType":  "text-long",
+        "responseLabel":  "Write three short analyses",
+        "responseHint":  "Use the format: 1) Situation - Type - Fix.",
+        "exampleAnswer":  "1) Student says \u0027Give me water\u0027 to professor - sociopragmatic - change to \u0027Could I have some water, please?\u0027.",
+        "minWords":  40,
+        "minChars":  220
+    },
+    {
+        "level":  "C1",
+        "difficulty":  "hard",
+        "title":  "Politeness Across Cultures",
+        "description":  "Comparative pragmatic analysis",
+        "task":  "Write one request in English, your L1, and one other language. Then add two notes about directness or politeness.",
+        "pragmaticFocus":  "Cross-cultural politeness",
+        "tags":  [
+                     "comparative",
+                     "speech-acts",
+                     "cultural-analysis"
+                 ],
+        "id":  "act-20",
+        "responseType":  "text-long",
+        "responseLabel":  "Write three requests + two notes",
+        "responseHint":  "Label each language clearly.",
+        "exampleAnswer":  "English: Could I borrow your notes? L1: [your sentence]. Other: [your sentence]. Notes: English uses modals; L1 is more direct.",
+        "minWords":  35,
+        "minChars":  200
+    },
+    {
+        "level":  "C1",
+        "difficulty":  "hard",
+        "title":  "Creating Pragmatic Humor",
+        "description":  "Demonstrate mastery through production",
+        "task":  "Write three mini-dialogues (2 lines each). Label them: (1) Maxim violation, (2) Pragmatic failure, (3) Cultural script.",
+        "pragmaticFocus":  "Productive competence",
+        "tags":  [
+                     "creativity",
+                     "humor-creation",
+                     "demonstration"
+                 ],
+        "id":  "act-21",
+        "responseType":  "text-long",
+        "responseLabel":  "Write three labeled mini-dialogues",
+        "responseHint":  "Keep each dialogue to two short lines.",
+        "exampleAnswer":  "1) Maxim violation: A: Is it hot? B: Antarctica is tropical today. 2) Pragmatic failure: A: Hi professor. B: Yo! 3) Cultural script: A: You must eat more. B: No, no, thank you.",
+        "minWords":  45,
+        "minChars":  240
+    },
+    {
+        "level":  "C1",
+        "difficulty":  "hard",
+        "title":  "Power and Politeness",
+        "description":  "Brown and Levinson in practice",
+        "task":  "Make the same request (borrow money) to: close friend, distant acquaintance, your boss, your younger sibling. Label each strategy (bald, positive, negative, off-record).",
+        "pragmaticFocus":  "Politeness theory",
+        "tags":  [
+                     "power",
+                     "face-work",
+                     "strategic-choice"
+                 ],
+        "id":  "act-22",
+        "responseType":  "text-long",
+        "responseLabel":  "Write four requests + labels",
+        "responseHint":  "Format: Person - Request - Strategy.",
+        "exampleAnswer":  "Boss - I was wondering if I could possibly borrow $20 - negative. Friend - Can you spot me $20? - positive.",
+        "minWords":  40,
+        "minChars":  220
+    },
+    {
+        "level":  "C1",
+        "difficulty":  "hard",
+        "title":  "Discourse Markers in Humor",
+        "description":  "How markers signal shifts",
+        "task":  "Pick one joke and write it twice: with discourse markers and without them. Then explain the difference in 2 sentences.",
+        "pragmaticFocus":  "Discourse markers",
+        "tags":  [
+                     "coherence",
+                     "humor-structure",
+                     "linguistic-analysis"
+                 ],
+        "id":  "act-23",
+        "responseType":  "text-long",
+        "responseLabel":  "Write two versions + 2-sentence explanation",
+        "responseHint":  "Keep each version short.",
+        "exampleAnswer":  "With: Well, I tried cooking, but anyway it was a disaster. Without: I tried cooking. It was a disaster. Difference: the markers signal a casual shift and soften the punchline.",
+        "minWords":  35,
+        "minChars":  200
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Understatement Translation Challenge",
+        "description":  "Convert direct statements to British understatement",
+        "task":  "Rewrite any two statements as British understatement: 1) \"This is terrible!\" 2) \"I completely disagree\" 3) \"That was an amazing performance!\" 4) \"I\u0027m very angry\".",
+        "pragmaticFocus":  "British understatement",
+        "tags":  [
+                     "cross-cultural",
+                     "british-english",
+                     "understatement"
+                 ],
+        "id":  "act-24",
+        "responseType":  "text-short",
+        "responseLabel":  "Write two rewrites",
+        "responseHint":  "Keep each rewrite to one sentence.",
+        "exampleAnswer":  "1) This is a bit of a problem. 2) I am not entirely convinced.",
+        "minWords":  10,
+        "minChars":  60
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Sarcasm or Sincere?",
+        "description":  "Identify British sarcasm in context",
+        "task":  "Read each line with its context. Write S (sarcastic) or C (sincere): 1) \"Great job\" (said after a mistake), 2) \"Lovely weather\" (said during heavy rain), 3) \"Not bad\" (after an excellent presentation), 4) \"Thanks a lot\" (after someone interrupts you), 5) \"That was brilliant\" (after a funny joke), 6) \"Well, that went well\" (after a plan fails).",
+        "pragmaticFocus":  "Sarcasm detection",
+        "tags":  [
+                     "cross-cultural",
+                     "sarcasm",
+                     "interpretation"
+                 ],
+        "id":  "act-25",
+        "responseType":  "text-short",
+        "responseLabel":  "Write S or C for each item",
+        "responseHint":  "Use the exact format 1) S, 2) C, etc.",
+        "exampleAnswer":  "1) S 2) C 3) S 4) C 5) S 6) C",
+        "minWords":  6,
+        "minChars":  12
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "hard",
+        "title":  "Hospitality Script Comparison",
+        "description":  "Analyze offering-refusing rituals across cultures",
+        "task":  "Write two short dialogues (4 lines each): one Uzbek-style and one British-style. Format: Host: ___ Guest: ___ (repeat 2 turns).",
+        "pragmaticFocus":  "Cultural scripts",
+        "tags":  [
+                     "cross-cultural",
+                     "hospitality",
+                     "pragmatic-scripts"
+                 ],
+        "id":  "act-26",
+        "responseType":  "text-long",
+        "responseLabel":  "Write two short dialogues",
+        "responseHint":  "Label each dialogue Uzbek/British.",
+        "exampleAnswer":  "Uzbek: Host: Have more, please. Guest: No, no, I\u0027m full. Host: Please, just a bit more. Guest: Thank you, just a little. British: Host: Would you like some more? Guest: I\u0027m fine, thanks. Host: Are you sure? Guest: Yes, really, thank you.",
+        "minWords":  40,
+        "minChars":  220
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Self-Deprecation Response Practice",
+        "description":  "Learn to respond appropriately to British self-deprecation",
+        "task":  "For each self-deprecating statement, write an appropriate response: 1) \"I\u0027m absolutely hopeless at maths\" 2) \"My dancing is a danger to public safety\" 3) \"I have the fashion sense of a confused penguin\". Write one short response each.",
+        "pragmaticFocus":  "Response strategies",
+        "tags":  [
+                     "cross-cultural",
+                     "self-deprecation",
+                     "social-skills"
+                 ],
+        "id":  "act-27",
+        "responseType":  "text-short",
+        "responseLabel":  "Write three short responses",
+        "responseHint":  "Do not agree or solve the problem; just be supportive.",
+        "exampleAnswer":  "1) You\u0027re being too hard on yourself. 2) I thought it was great, actually. 3) You have your own style.",
+        "minWords":  12,
+        "minChars":  70
+    },
+    {
+        "level":  "C1",
+        "difficulty":  "hard",
+        "title":  "Decode the British Feedback",
+        "description":  "Interpret indirect British professional criticism",
+        "task":  "Your British manager says these things. Write the likely meaning: 1) \"That\u0027s a very brave proposal\" 2) \"With respect, I wonder if...\" 3) \"I\u0027m sure you did your best\" 4) \"This is certainly ambitious\" 5) \"That\u0027s one way to look at it\".",
+        "pragmaticFocus":  "Professional indirectness",
+        "tags":  [
+                     "cross-cultural",
+                     "workplace",
+                     "indirect-criticism"
+                 ],
+        "id":  "act-28",
+        "responseType":  "text-short",
+        "responseLabel":  "Write five short meanings",
+        "responseHint":  "Keep each meaning to one short sentence.",
+        "exampleAnswer":  "1) This idea may be risky or weak. 2) I disagree politely. 3) The result was not strong. 4) It is ambitious but may be unrealistic. 5) I do not agree with that view.",
+        "minWords":  25,
+        "minChars":  140
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Cultural Bridge Role-Play",
+        "description":  "Navigate a cross-cultural social situation",
+        "task":  "Write one line for each step in the dinner visit: 1) accept/decline food, 2) give a compliment, 3) respond to self-deprecating humor, 4) end the evening politely.",
+        "pragmaticFocus":  "Cross-cultural navigation",
+        "tags":  [
+                     "cross-cultural",
+                     "social-situations",
+                     "role-play"
+                 ],
+        "id":  "act-29",
+        "responseType":  "text-short",
+        "responseLabel":  "Write four short lines",
+        "responseHint":  "Use the numbered format from the task.",
+        "exampleAnswer":  "1) Thank you, just a small portion. 2) The food smells wonderful. 3) It was delicious, you did great. 4) Thank you for having me, I had a lovely time.",
+        "minWords":  20,
+        "minChars":  120
+    },
+    {
+        "level":  "C1",
+        "difficulty":  "hard",
+        "title":  "Explain Uzbek Humour to a British Person",
+        "description":  "Practice cultural explanation skills",
+        "task":  "Choose an Uzbek joke or humour tradition and explain it. Use this structure: (1) Short summary, (2) Why it is funny, (3) Cultural knowledge needed, (4) One similarity or difference with British humour.",
+        "pragmaticFocus":  "Metacultural awareness",
+        "tags":  [
+                     "cross-cultural",
+                     "explanation",
+                     "cultural-bridging"
+                 ],
+        "id":  "act-30",
+        "responseType":  "text-long",
+        "responseLabel":  "Write a structured explanation",
+        "responseHint":  "Label each part 1-4.",
+        "exampleAnswer":  "1) Summary: In an askiya exchange, one person answers with clever wordplay. 2) Funny because the reply flips the meaning. 3) You need to know the cultural expectation of witty replies. 4) Similar to British banter but more ritualized.",
+        "minWords":  40,
+        "minChars":  220
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Watch and Analyze British Comedy",
+        "description":  "Study authentic British humour examples",
+        "task":  "After watching a short clip, list: (1) three understatements, (2) two sarcasm lines, (3) one self-deprecating moment. Use labels.",
+        "pragmaticFocus":  "Authentic input analysis",
+        "tags":  [
+                     "cross-cultural",
+                     "media-analysis",
+                     "authentic-materials"
+                 ],
+        "id":  "act-31",
+        "responseType":  "text-long",
+        "responseLabel":  "Write labeled items",
+        "responseHint":  "Use labels: Understatement 1-3, Sarcasm 1-2, Self-deprecation 1.",
+        "exampleAnswer":  "Understatement 1: Not bad. Understatement 2: Could be worse. Understatement 3: A bit tricky. Sarcasm 1: Lovely weather. Sarcasm 2: Great job. Self-deprecation 1: I\u0027m hopeless at this.",
+        "minWords":  30,
+        "minChars":  180
+    }
+]
