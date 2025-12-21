@@ -100,14 +100,13 @@
 
             try {
                 // Load all JSON files in parallel
-                const [jokes, activities, quizzes, modules, placementTest] = await Promise.all([
-                    this.loadJSON('data/jokes.json'),
-                    this.loadJSON('data/activities.json'),
-                    this.loadJSON('data/quizzes.json'),
-                    this.loadJSON('data/modules.json'),
-                    this.loadJSON('data/placement-test.json')
-                ]);
-
+              const [jokes, activities, quizzes, modules, placementTest] = await Promise.all([
+    this.loadJSON('data/jokes.json'),
+    this.loadJSON('data/activities.json'),
+    this.loadJSON('data/quizzes.json'),
+    this.loadJSON('data/modules.json'),
+    this.loadJSON('data/placement-test.json')
+]);
                 // Expose data globally
                 window.DATA = {
                     jokes: jokes,
