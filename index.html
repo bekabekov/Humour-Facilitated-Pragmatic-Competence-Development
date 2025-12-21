@@ -2561,22 +2561,22 @@ this my whole index file:
     <!-- 10. MODULE VERIFICATION (debug helper) -->
    <script src="./module-verification.js"></script>
     <!-- 11. EMERGENCY CLICK FIX -->
-   <script>
-        // Force the app to be 'Ready' regardless of background errors
-        window.APP_READY = true;
-        window.APP_INIT_FAILED = false;
-        
-        // Ensure every module card triggers the Modal
-        document.addEventListener('click', function(e) {
-            const card = e.target.closest('[data-module-id]');
-            if (card) {
-                const moduleId = card.getAttribute('data-module-id');
-                if (window.ModuleModal && typeof window.ModuleModal.show === 'function') {
-                    window.ModuleModal.show(moduleId);
-                }
+  <script>
+    // Force the app to be ready so buttons work
+    window.APP_READY = true;
+    window.APP_INIT_FAILED = false;
+    
+    // Ensure clicks on modules always work
+    document.addEventListener('click', function(e) {
+        const card = e.target.closest('[data-module-id]');
+        if (card) {
+            const moduleId = card.getAttribute('data-module-id');
+            if (window.ModuleModal && typeof window.ModuleModal.show === 'function') {
+                window.ModuleModal.show(moduleId);
             }
-        });
-        console.log('🚀 Launch Clicks Activated');
+        }
+    });
+    console.log('🚀 Launch Clicks Activated');
     </script>
 </body>
 </html>
