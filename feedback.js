@@ -23,7 +23,13 @@
     const typeInput = document.getElementById('feedback-type');
     const messageInput = document.getElementById('feedback-message');
     const honeypotInput = document.getElementById('feedback-honeypot');
-
+// -------------------------------
+// 🌐 Global language state (ADD HERE)
+// -------------------------------
+let currentLanguage = localStorage.getItem('preferredLanguage') || 'en';
+function isUzbekLanguage() {
+    return currentLanguage === 'uz';
+}
     if (!submitBtn || !statusSpan || !resultDiv || !nameInput || !messageInput || !typeInput) {
         console.error('[Feedback] Required form elements not found');
         return;
