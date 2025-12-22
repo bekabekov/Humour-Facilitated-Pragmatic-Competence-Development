@@ -36,6 +36,20 @@
     // -------------------------------
     const preferredLanguage = (localStorage.getItem('preferredLanguage') || 'en');
     applyFeedbackLanguage(preferredLanguage);
+        // React when the user clicks ENG / UZB buttons
+    const languageToggle = document.getElementById('language-toggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', (e) => {
+            const btn = e.target.closest('.lang-btn');
+            if (!btn) return;
+
+            const lang = btn.dataset.lang || 'en';
+
+            // Update the form texts immediately
+            applyFeedbackLanguage(lang);
+        });
+    }
+
 
     function applyFeedbackLanguage(lang) {
         const isUzbek = lang === 'uz';
