@@ -23,6 +23,20 @@
     const typeInput = document.getElementById('feedback-type');
     const messageInput = document.getElementById('feedback-message');
     const honeypotInput = document.getElementById('feedback-honeypot');
+    // ===== Language detection helper =====
+    function isUzbekLanguage() {
+        // Prefer the actual active button in the language toggle
+        const toggle = document.getElementById('language-toggle');
+        if (toggle) {
+            const activeBtn = toggle.querySelector('.lang-btn.active');
+            if (activeBtn && activeBtn.dataset.lang) {
+                return activeBtn.dataset.lang === 'uz';
+            }
+        }
+
+        // Fallback to localStorage (old behavior) if toggle not found
+        return (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+    }
 // -------------------------------
     // 🌐 Global language state
     // -------------------------------
@@ -185,7 +199,7 @@
 
         // Validate required fields
         if (!name || !feedbackType || !message) {
-            const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+            const isUzbek = isUzbekLanguage();
             const errorMsg = isUzbek
                 ? 'Iltimos, barcha majburiy maydonlarni to\'ldiring.'
                 : 'Please fill in all required fields.';
@@ -195,7 +209,7 @@
 
         // Validate email if provided
         if (email && !isValidEmail(email)) {
-            const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+            const isUzbek = isUzbekLanguage();
             const errorMsg = isUzbek
                 ? 'Iltimos, to\'g\'ri elektron pochta manzilini kiriting yoki bo\'sh qoldiring.'
                 : 'Please enter a valid email address or leave it blank.';
@@ -345,7 +359,7 @@
      * Set submit button and status state
      */
     function setSubmitState(state) {
-        const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+        const isUzbek = isUzbekLanguage();
         switch (state) {
             case 'sending':
                 submitBtn.disabled = true;
