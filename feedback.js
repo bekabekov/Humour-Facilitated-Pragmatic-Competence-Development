@@ -1,81 +1,91 @@
-(function () {
+(function() {
     'use strict';
 
-    // ====== CONFIG ======
+    // Constants
     const FORMSUBMIT_TOKEN = 'e608f0edcc5416702821e0cb7129580e';
     const FORM_SUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${FORMSUBMIT_TOKEN}`;
     const MAX_NAME_LENGTH = 100;
     const MAX_EMAIL_LENGTH = 254;
     const MAX_MESSAGE_LENGTH = 5000;
 
-    // ====== DOM ELEMENTS ======
+    // DOM Elements
     const form = document.getElementById('feedback-form');
     if (!form) {
         console.warn('[Feedback] Form not found');
         return;
     }
 
-    const submitBtn    = document.getElementById('feedback-submit-btn');
-    const statusSpan   = document.getElementById('feedback-status');
-    const resultDiv    = document.getElementById('feedback-result');
-    const nameInput    = document.getElementById('feedback-name');
-    const emailInput   = document.getElementById('feedback-email');
-    const typeInput    = document.getElementById('feedback-type');
+    const submitBtn = document.getElementById('feedback-submit-btn');
+    const statusSpan = document.getElementById('feedback-status');
+    const resultDiv = document.getElementById('feedback-result');
+    const nameInput = document.getElementById('feedback-name');
+    const emailInput = document.getElementById('feedback-email');
+    const typeInput = document.getElementById('feedback-type');
     const messageInput = document.getElementById('feedback-message');
     const honeypotInput = document.getElementById('feedback-honeypot');
-
-    if (!submitBtn || !statusSpan || !resultDiv || !nameInput || !messageInput || !typeInput) {
-        console.error('[Feedback] Required form elements not found');
-        return;
-    }
-
-    const originalButtonText = submitBtn.textContent;
-
-    // === feedback card (заголовок + синий параграф) ===
-    const feedbackBox = form.closest('.theory-box');
-    const feedbackHeading = feedbackBox
-        ? (feedbackBox.querySelector('h3[lang="en"]') ||
-           feedbackBox.querySelector('h3[lang="uz"]') ||
-           feedbackBox.querySelector('h3'))
-        : null;
-
-    const feedbackIntro = feedbackBox
-        ? (feedbackBox.querySelector('p[lang="en"]') ||
-           feedbackBox.querySelector('p[lang="uz"]') ||
-           feedbackBox.querySelector('p'))
-        : null;
-
-    // ====== GLOBAL LANGUAGE STATE ======
+// -------------------------------
+    // 🌐 Global language state
+    // -------------------------------
     let currentLanguage = localStorage.getItem('preferredLanguage') || 'en';
     function isUzbekLanguage() {
         return currentLanguage === 'uz';
     }
 
-    console.info('[Feedback] Form initialized. FormSubmit is activated and ready.');
+    // -------------------------------
+    // Feedback card heading & intro texts
+    // -------------------------------
+    const feedbackBox = form.closest('.theory-box');
+    const headingEn  = feedbackBox ? feedbackBox.querySelector('h3[lang="en"]') : null;
+    const headingUz  = feedbackBox ? feedbackBox.querySelector('h3[lang="uz"]') : null;
+    const introEn    = feedbackBox ? feedbackBox.querySelector('p[lang="en"]') : null;
+    const introUz    = feedbackBox ? feedbackBox.querySelector('p[lang="uz"]') : null;
 
-    // ====== LANGUAGE APPLY ======
+    // Store original button text
+    const originalButtonText = submitBtn.textContent;
+    // -------------------------------
+    // Language adaptation for the form
+    // -------------------------------
+    const preferredLanguage = (localStorage.getItem('preferredLanguage') || 'en');
+    applyFeedbackLanguage(preferredLanguage);
+        // React when the user clicks ENG / UZB buttons
+    const languageToggle = document.getElementById('language-toggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', (e) => {
+            const btn = e.target.closest('.lang-btn');
+            if (!btn) return;
+
+            const lang = btn.dataset.lang || 'en';
+
+            // Update the form texts immediately
+            applyFeedbackLanguage(lang);
+        });
+    }
+
+
     function applyFeedbackLanguage(lang) {
+                // Keep language state in sync
         currentLanguage = lang || 'en';
         localStorage.setItem('preferredLanguage', currentLanguage);
-
         const isUzbek = isUzbekLanguage();
-        form.setAttribute('lang', isUzbek ? 'uz' : 'en');
 
-        // --- Заголовок и синий текст ---
-        if (feedbackHeading && feedbackIntro) {
+        // 🔵 1) Toggle heading + intro paragraph
+        if (headingEn && headingUz && introEn && introUz) {
             if (isUzbek) {
-                feedbackHeading.textContent = "📝 Fikr va mulohazalaringiz bilan bo'lishing";
-                feedbackIntro.textContent =
-                    "Sizning fikr va mulohazalaringiz platformani yanada takomillashtirishda biz uchun katta ahamiyatga ega. " +
-                    "Loyiha bo'yicha o'z takliflaringizni bildiring yoki foydalanish jarayonida duch kelgan texnik muammolar va kamchiliklar haqida bizga xabar bering.";
+                headingEn.style.display = 'none';
+                introEn.style.display   = 'none';
+                headingUz.style.display = '';
+                introUz.style.display   = '';
             } else {
-                feedbackHeading.textContent = "📝 Share Your Feedback";
-                feedbackIntro.textContent =
-                    "We value your input! Please share your thoughts, suggestions, or report any issues you encounter.";
+                headingEn.style.display = '';
+                introEn.style.display   = '';
+                headingUz.style.display = 'none';
+                introUz.style.display   = 'none';
             }
         }
+        
 
-        // --- Лейблы и плейсхолдеры формы ---
+        form.setAttribute('lang', isUzbek ? 'uz' : 'en');
+
         const nameLabel    = form.querySelector('label[for="feedback-name"]');
         const emailLabel   = form.querySelector('label[for="feedback-email"]');
         const typeLabel    = form.querySelector('label[for="feedback-type"]');
@@ -83,19 +93,23 @@
         const helperEm     = form.querySelector('p em');
 
         if (!nameLabel || !emailLabel || !typeLabel || !messageLabel) {
-            console.warn('[Feedback] Some labels not found for i18n');
+            console.warn('[Feedback] Could not find some labels for i18n');
+            return;
         }
 
         if (isUzbek) {
-            if (nameLabel)    nameLabel.textContent    = "Ismingiz *";
-            nameInput.placeholder = "Ismingizni kiriting";
+            // UZBEK TEXTS (your current ones)
+            nameLabel.textContent    = "Ismingiz *";
+            nameInput.placeholder    = "Ismingizni kiriting";
 
-            if (emailLabel)   emailLabel.textContent   = "Elektron pochtangiz (javob uchun ixtiyoriy)";
-            if (emailInput)   emailInput.placeholder   = "sizning.emailingiz@example.com";
+            emailLabel.textContent   = "Elektron pochtangiz (javob uchun ixtiyoriy)";
+            if (emailInput) {
+                emailInput.placeholder = "sizning.emailingiz@example.com";
+            }
 
-            if (typeLabel)    typeLabel.textContent    = "Fikr-mulohaza turi *";
+            typeLabel.textContent    = "Fikr-mulohaza turi *";
             if (typeInput && typeInput.options.length >= 7) {
-                typeInput.options[0].textContent = "Mavzuni tanlang...";
+                typeInput.options[0].textContent = "Mavzuni tanlang.";
                 typeInput.options[1].textContent = "🐛 Xatolik haqida xabar";
                 typeInput.options[2].textContent = "💡 Yangi funksiya so'rovi";
                 typeInput.options[3].textContent = "📚 Kontent taklifi";
@@ -104,9 +118,8 @@
                 typeInput.options[6].textContent = "📝 Boshqa";
             }
 
-            if (messageLabel) messageLabel.textContent = "Xabaringiz *";
-            messageInput.placeholder =
-                "Bu yerda batafsil fikr-mulohazalaringizni yozing...";
+            messageLabel.textContent = "Xabaringiz *";
+            messageInput.placeholder = "Bu yerda batafsil fikr-mulohazalaringizni yozing.";
 
             if (helperEm) {
                 helperEm.textContent =
@@ -115,14 +128,18 @@
             }
 
             submitBtn.textContent = "📤 Fikr-mulohazani yuborish";
+
         } else {
-            if (nameLabel)    nameLabel.textContent    = "Your name *";
-            nameInput.placeholder = "Enter your name";
+            // ENGLISH TEXTS
+            nameLabel.textContent    = "Your name *";
+            nameInput.placeholder    = "Enter your name";
 
-            if (emailLabel)   emailLabel.textContent   = "Email address (optional, for reply)";
-            if (emailInput)   emailInput.placeholder   = "your.email@example.com";
+            emailLabel.textContent   = "Email address (optional, for reply)";
+            if (emailInput) {
+                emailInput.placeholder = "your.email@example.com";
+            }
 
-            if (typeLabel)    typeLabel.textContent    = "Feedback type *";
+            typeLabel.textContent    = "Feedback type *";
             if (typeInput && typeInput.options.length >= 7) {
                 typeInput.options[0].textContent = "Select a topic...";
                 typeInput.options[1].textContent = "🐛 Bug report";
@@ -133,9 +150,8 @@
                 typeInput.options[6].textContent = "📝 Other";
             }
 
-            if (messageLabel) messageLabel.textContent = "Your message *";
-            messageInput.placeholder =
-                "Write your feedback here in as much detail as possible.";
+            messageLabel.textContent = "Your message *";
+            messageInput.placeholder = "Write your feedback here in as much detail as possible.";
 
             if (helperEm) {
                 helperEm.textContent =
@@ -145,32 +161,15 @@
 
             submitBtn.textContent = "📤 Send feedback";
         }
-
-        // Если сейчас уже показано успешное сообщение – перерисовать его на новом языке
-        if (resultDiv && resultDiv.style.display === 'block' && resultDiv.dataset.type === 'success') {
-            showSuccess(); // переиспользуем функцию ниже
-        }
     }
 
-    // применяем язык при загрузке
-    applyFeedbackLanguage(currentLanguage);
+    console.info('[Feedback] Form initialized. FormSubmit is activated and ready.');
 
-    // слушаем переключатель языка
-    const languageToggle = document.getElementById('language-toggle');
-    if (languageToggle) {
-        languageToggle.addEventListener('click', (e) => {
-            const btn = e.target.closest('.lang-btn');
-            if (!btn) return;
-            const lang = btn.dataset.lang || 'en';
-            applyFeedbackLanguage(lang);
-        });
-    }
-
-    // ====== FORM SUBMIT ======
-    form.addEventListener('submit', async function (e) {
+    // Form submission handler
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
 
-        // honeypot
+        // Check honeypot (spam protection)
         if (honeypotInput && honeypotInput.value.trim() !== '') {
             console.warn('[Feedback] Honeypot triggered - bot submission blocked');
             showSuccess();
@@ -178,47 +177,60 @@
             return;
         }
 
-        const name  = sanitizeInput(nameInput.value, MAX_NAME_LENGTH);
+        // Get and sanitize inputs
+        const name = sanitizeInput(nameInput.value, MAX_NAME_LENGTH);
         const email = emailInput ? sanitizeInput(emailInput.value, MAX_EMAIL_LENGTH) : '';
-        const type  = typeInput.value;
-        const msg   = sanitizeInput(messageInput.value, MAX_MESSAGE_LENGTH);
+        const feedbackType = typeInput.value;
+        const message = sanitizeInput(messageInput.value, MAX_MESSAGE_LENGTH);
 
-        if (!name || !type || !msg) {
-            const isUzbek = isUzbekLanguage();
+        // Validate required fields
+        if (!name || !feedbackType || !message) {
+            const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
             const errorMsg = isUzbek
-                ? "Iltimos, barcha majburiy maydonlarni to'ldiring."
-                : "Please fill in all required fields.";
+                ? 'Iltimos, barcha majburiy maydonlarni to\'ldiring.'
+                : 'Please fill in all required fields.';
             showMessage('error', errorMsg);
             return;
         }
 
+        // Validate email if provided
         if (email && !isValidEmail(email)) {
-            const isUzbek = isUzbekLanguage();
+            const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
             const errorMsg = isUzbek
-                ? "Iltimos, to'g'ri elektron pochta manzilini kiriting."
-                : "Please enter a valid email address.";
+                ? 'Iltimos, to\'g\'ri elektron pochta manzilini kiriting yoki bo\'sh qoldiring.'
+                : 'Please enter a valid email address or leave it blank.';
             showMessage('error', errorMsg);
             return;
         }
 
-        const payload = {
-            name,
-            email,
-            type,
-            message: msg,
-            _subject: 'New feedback from LearnWithHumour platform',
-            _template: 'box'
-        };
-
-        await submitFeedback(payload);
-    });
-
-    // ====== SUBMIT & MESSAGES ======
-    async function submitFeedback(payload) {
+        // Start submission
         setSubmitState('sending');
 
         try {
-            const res = await fetch(FORM_SUBMIT_ENDPOINT, {
+            const payload = buildPayload({ name, email, feedbackType, message });
+            console.info('[FormSubmit] Sending to:', FORM_SUBMIT_ENDPOINT);
+            const success = await sendToFormSubmit(payload);
+
+            if (success) {
+                showSuccess();
+                form.reset();
+            } else {
+                showError(message);
+            }
+        } catch (error) {
+            console.error('[Feedback] Unexpected error:', error);
+            showError(message);
+        } finally {
+            setSubmitState('idle');
+        }
+    });
+
+    /**
+     * Send form data to FormSubmit AJAX endpoint
+     */
+    async function sendToFormSubmit(payload) {
+        try {
+            const response = await fetch(FORM_SUBMIT_ENDPOINT, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -227,95 +239,255 @@
                 body: JSON.stringify(payload)
             });
 
-            if (!res.ok) {
-                throw new Error('Network response was not ok');
+            // Get response text for diagnostics
+            const responseText = await response.text();
+            let result;
+            try {
+                result = JSON.parse(responseText);
+            } catch (parseError) {
+                console.error('[FormSubmit] JSON parse error:', parseError);
+                result = null;
             }
 
-            showSuccess();
-            form.reset();
-        } catch (err) {
-            console.error('[Feedback] Submission error:', err);
-            const isUzbek = isUzbekLanguage();
-            const errorMsg = isUzbek
-                ? "Kutilmagan xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring."
-                : "An unexpected error occurred. Please try again later.";
-            showMessage('error', errorMsg);
-        } finally {
-            setSubmitState('idle');
+            // Log full response for diagnostics
+            console.info('[FormSubmit] Response received:', {
+                status: response.status,
+                statusText: response.statusText,
+                ok: response.ok,
+                result: result,
+                responseText: responseText.substring(0, 500)
+            });
+
+            // Check for errors first
+            if (!response.ok) {
+                console.error('[FormSubmit] Request failed:', {
+                    status: response.status,
+                    statusText: response.statusText,
+                    responseText: responseText,
+                    headers: Object.fromEntries(response.headers.entries())
+                });
+                return false;
+            }
+
+            // Check FormSubmit success response
+            // FormSubmit returns: {"success": "true", "message": "..."}
+            if (result && (result.success === 'true' || result.success === true)) {
+                console.info('[FormSubmit] ✅ Submission successful!');
+                return true;
+            }
+
+            // Fallback: if status is 2xx and we got valid JSON, assume success
+            if (response.ok && result !== null) {
+                console.warn('[FormSubmit] Assuming success based on 2xx status (response format may have changed)');
+                return true;
+            }
+
+            console.error('[FormSubmit] Unexpected response format:', {
+                status: response.status,
+                result: result,
+                responseText: responseText
+            });
+            return false;
+
+        } catch (error) {
+            console.error('[FormSubmit] Network or fetch error:', {
+                error: error.message,
+                name: error.name,
+                stack: error.stack
+            });
+            return false;
         }
     }
 
-    function setSubmitState(state) {
-        const isUzbek = isUzbekLanguage();
-        if (state === 'sending') {
-            submitBtn.disabled = true;
-            submitBtn.textContent = isUzbek ? 'Yuborilmoqda...' : 'Sending...';
-            statusSpan.textContent = isUzbek
-                ? 'Sizning fikringiz yuborilmoqda...'
-                : 'Submitting your feedback...';
-            statusSpan.style.color = '#3b82f6';
-            clearResult();
-        } else {
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalButtonText;
-            statusSpan.textContent = '';
-        }
-    }
+    /**
+     * Build FormSubmit payload
+     */
+    function buildPayload(data) {
+        const payload = {
+            name: data.name,
+            message: data.message,
+            feedback_type: data.feedbackType,
+            page: window.location.href,
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent,
+            _subject: 'Platform Feedback',
+            _template: 'table',
+            _captcha: 'false'
+        };
 
-    function showSuccess() {
-        const isUzbek = isUzbekLanguage();
-        const msg = isUzbek
-            ? "Rahmat! Sizning fikringiz muvaffaqiyatli yuborildi. ✅"
-            : "Thank you! Your feedback has been sent successfully. ✅";
-        showMessage('success', msg);
-    }
-
-    function showMessage(type, text) {
-        if (!resultDiv) return;
-
-        resultDiv.dataset.type = type;
-        resultDiv.style.display = 'block';
-        resultDiv.innerHTML = '';
-
-        const p = document.createElement('p');
-        p.textContent = text;
-        p.style.margin = '0';
-        p.style.padding = '12px 16px';
-        p.style.borderRadius = '8px';
-        p.style.fontSize = '0.95rem';
-        p.style.lineHeight = '1.5';
-
-        if (type === 'success') {
-            p.style.backgroundColor = '#dcfce7';
-            p.style.color = '#166534';
-            p.style.border = '1px solid #22c55e';
-        } else {
-            p.style.backgroundColor = '#fee2e2';
-            p.style.color = '#b91c1c';
-            p.style.border = '1px solid #f97373';
+        // Add optional email if provided
+        if (data.email) {
+            payload.email = data.email;
+            payload._replyto = data.email;
         }
 
-        resultDiv.appendChild(p);
+        return payload;
     }
 
-    // ====== UTILS ======
+    /**
+     * Sanitize user input: trim and limit length
+     */
     function sanitizeInput(value, maxLength) {
         if (!value) return '';
-        let cleaned = value.replace(/<[^>]*>/g, '');
-        cleaned = cleaned.substring(0, maxLength);
-        return cleaned.trim();
+        return value.trim().substring(0, maxLength);
     }
 
+    /**
+     * Simple email validation
+     */
     function isValidEmail(email) {
-        if (!email) return true;
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
+        if (!email) return false;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
 
+    /**
+     * Set submit button and status state
+     */
+    function setSubmitState(state) {
+        const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+        switch (state) {
+            case 'sending':
+                submitBtn.disabled = true;
+                submitBtn.textContent = isUzbek ? 'Yuborilmoqda...' : 'Sending...';
+                statusSpan.textContent = isUzbek ? 'Sizning fikringiz yuborilmoqda...' : 'Submitting your feedback...';
+                statusSpan.style.color = '#3b82f6';
+                clearResult();
+                break;
+            case 'idle':
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalButtonText;
+                statusSpan.textContent = '';
+                break;
+        }
+    }
+
+    /**
+     * Show success message
+     */
+    function showSuccess() {
+        const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+        const message = isUzbek 
+            ? 'Rahmat! Sizning fikringiz muvaffaqiyatli yuborildi. ✅'
+            : 'Thank you! Your feedback has been sent successfully. ✅';
+        showMessage('success', message);
+    }
+
+    /**
+     * Show error message with copy button
+     */
+    function showError(originalMessage) {
+        const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+        const messageText = isUzbek
+            ? 'Hozir yuborib bo\'lmadi. Iltimos, qayta urinib ko\'ring.'
+            : "Couldn't send right now. Please try again.";
+        showMessage('error', messageText, {
+            showCopyButton: true,
+            messageToCopy: originalMessage
+        });
+    }
+
+    /**
+     * Display message with optional copy button
+     */
+    function showMessage(type, text, options = {}) {
+        const colors = {
+            success: { bg: '#d1fae5', border: '#10b981', text: '#047857' },
+            error: { bg: '#fee2e2', border: '#ef4444', text: '#991b1b' },
+            info: { bg: '#dbeafe', border: '#3b82f6', text: '#1e40af' }
+        };
+
+        const style = colors[type] || colors.info;
+
+        // Clear and style result div
+        resultDiv.innerHTML = '';
+        resultDiv.style.cssText = `
+            padding: 16px;
+            background: ${style.bg};
+            border: 1px solid ${style.border};
+            border-radius: 8px;
+            margin-top: 16px;
+            display: block;
+        `;
+
+        // Create message paragraph
+        const messagePara = document.createElement('p');
+        messagePara.style.cssText = 'margin: 0; color: ' + style.text + '; font-weight: 500;';
+        messagePara.textContent = text;
+        resultDiv.appendChild(messagePara);
+
+        // Add copy button if requested
+        if (options.showCopyButton && options.messageToCopy) {
+            const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+            const copyBtn = document.createElement('button');
+            copyBtn.type = 'button';
+            copyBtn.textContent = isUzbek ? '📋 Xabarni nusxalash' : '📋 Copy Message';
+            copyBtn.style.cssText = `
+                margin-top: 12px;
+                padding: 8px 16px;
+                background: white;
+                border: 1px solid ${style.border};
+                border-radius: 6px;
+                color: ${style.text};
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 500;
+            `;
+
+            copyBtn.addEventListener('click', function() {
+                copyToClipboard(options.messageToCopy);
+                const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+                copyBtn.textContent = isUzbek ? '✅ Nusxalandi!' : '✅ Copied!';
+                setTimeout(function() {
+                    const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+                    copyBtn.textContent = isUzbek ? '📋 Xabarni nusxalash' : '📋 Copy Message';
+                }, 2000);
+            });
+
+            resultDiv.appendChild(copyBtn);
+        }
+
+        resultDiv.style.display = 'block';
+        resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    /**
+     * Copy text to clipboard
+     */
+    function copyToClipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).catch(function(err) {
+                console.error('[Feedback] Clipboard copy failed:', err);
+                fallbackCopy(text);
+            });
+        } else {
+            fallbackCopy(text);
+        }
+    }
+
+    /**
+     * Fallback clipboard copy using textarea
+     */
+    function fallbackCopy(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+        } catch (err) {
+            console.error('[Feedback] Fallback copy failed:', err);
+        }
+        document.body.removeChild(textarea);
+    }
+
+    /**
+     * Clear result div
+     */
     function clearResult() {
-        if (!resultDiv) return;
         resultDiv.style.display = 'none';
         resultDiv.innerHTML = '';
-        delete resultDiv.dataset.type;
     }
 })();
