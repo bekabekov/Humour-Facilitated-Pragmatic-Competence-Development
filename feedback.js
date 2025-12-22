@@ -31,6 +31,93 @@
 
     // Store original button text
     const originalButtonText = submitBtn.textContent;
+    // -------------------------------
+    // Language adaptation for the form
+    // -------------------------------
+    const preferredLanguage = (localStorage.getItem('preferredLanguage') || 'en');
+    applyFeedbackLanguage(preferredLanguage);
+
+    function applyFeedbackLanguage(lang) {
+        const isUzbek = lang === 'uz';
+
+        form.setAttribute('lang', isUzbek ? 'uz' : 'en');
+
+        const nameLabel    = form.querySelector('label[for="feedback-name"]');
+        const emailLabel   = form.querySelector('label[for="feedback-email"]');
+        const typeLabel    = form.querySelector('label[for="feedback-type"]');
+        const messageLabel = form.querySelector('label[for="feedback-message"]');
+        const helperEm     = form.querySelector('p em');
+
+        if (!nameLabel || !emailLabel || !typeLabel || !messageLabel) {
+            console.warn('[Feedback] Could not find some labels for i18n');
+            return;
+        }
+
+        if (isUzbek) {
+            // UZBEK TEXTS (your current ones)
+            nameLabel.textContent    = "Ismingiz *";
+            nameInput.placeholder    = "Ismingizni kiriting";
+
+            emailLabel.textContent   = "Elektron pochtangiz (javob uchun ixtiyoriy)";
+            if (emailInput) {
+                emailInput.placeholder = "sizning.emailingiz@example.com";
+            }
+
+            typeLabel.textContent    = "Fikr-mulohaza turi *";
+            if (typeInput && typeInput.options.length >= 7) {
+                typeInput.options[0].textContent = "Mavzuni tanlang.";
+                typeInput.options[1].textContent = "🐛 Xatolik haqida xabar";
+                typeInput.options[2].textContent = "💡 Yangi funksiya so'rovi";
+                typeInput.options[3].textContent = "📚 Kontent taklifi";
+                typeInput.options[4].textContent = "💬 Umumiy fikr-mulohaza";
+                typeInput.options[5].textContent = "⚙️ Texnik muammo";
+                typeInput.options[6].textContent = "📝 Boshqa";
+            }
+
+            messageLabel.textContent = "Xabaringiz *";
+            messageInput.placeholder = "Bu yerda batafsil fikr-mulohazalaringizni yozing.";
+
+            if (helperEm) {
+                helperEm.textContent =
+                    "Ushbu platforma ta'lim maqsadlarida foydalanish uchun mo'ljallangan. " +
+                    "Iltimos, fikr-mulohazalaringizni hurmatli, akademik muhitga mos va o'rganishga qaratilgan holda saqlang.";
+            }
+
+            submitBtn.textContent = "📤 Fikr-mulohazani yuborish";
+
+        } else {
+            // ENGLISH TEXTS
+            nameLabel.textContent    = "Your name *";
+            nameInput.placeholder    = "Enter your name";
+
+            emailLabel.textContent   = "Email address (optional, for reply)";
+            if (emailInput) {
+                emailInput.placeholder = "your.email@example.com";
+            }
+
+            typeLabel.textContent    = "Feedback type *";
+            if (typeInput && typeInput.options.length >= 7) {
+                typeInput.options[0].textContent = "Select a topic...";
+                typeInput.options[1].textContent = "🐛 Bug report";
+                typeInput.options[2].textContent = "💡 Feature request";
+                typeInput.options[3].textContent = "📚 Content suggestion";
+                typeInput.options[4].textContent = "💬 General feedback";
+                typeInput.options[5].textContent = "⚙️ Technical issue";
+                typeInput.options[6].textContent = "📝 Other";
+            }
+
+            messageLabel.textContent = "Your message *";
+            messageInput.placeholder = "Write your feedback here in as much detail as possible.";
+
+            if (helperEm) {
+                helperEm.textContent =
+                    "This platform is intended for educational use. Please keep your feedback " +
+                    "respectful, appropriate for an academic environment, and focused on learning.";
+            }
+
+            submitBtn.textContent = "📤 Send feedback";
+        }
+    }
 
     console.info('[Feedback] Form initialized. FormSubmit is activated and ready.');
 
