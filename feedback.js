@@ -23,20 +23,26 @@
     const typeInput = document.getElementById('feedback-type');
     const messageInput = document.getElementById('feedback-message');
     const honeypotInput = document.getElementById('feedback-honeypot');
-    // ===== Language detection helper =====
-    function isUzbekLanguage() {
-        // Prefer the actual active button in the language toggle
-        const toggle = document.getElementById('language-toggle');
-        if (toggle) {
-            const activeBtn = toggle.querySelector('.lang-btn.active');
-            if (activeBtn && activeBtn.dataset.lang) {
-                return activeBtn.dataset.lang === 'uz';
-            }
-        }
+    // Helper: detect current language based on the active ENG/UZB button
+function getCurrentLanguage() {
+    const toggle = document.getElementById('language-toggle');
+    if (toggle) {
+        const btnUz = toggle.querySelector('.lang-btn[data-lang="uz"]');
+        const btnEn = toggle.querySelector('.lang-btn[data-lang="en"]');
 
-        // Fallback to localStorage (old behavior) if toggle not found
-        return (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+        if (btnUz && btnUz.classList.contains('active')) return 'uz';
+        if (btnEn && btnEn.classList.contains('active')) return 'en';
     }
+
+    // Fallback to localStorage if toggle not found
+    const stored = localStorage.getItem('preferredLanguage');
+    if (stored === 'uz' || stored === 'en') return stored;
+
+    return 'en';
+}
+
+    
+    
 // -------------------------------
     // 🌐 Global language state
     // -------------------------------
@@ -380,7 +386,7 @@
      * Show success message
      */
     function showSuccess() {
-        const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+        const isUzbek = getCurrentLanguage() === 'uz';
         const message = isUzbek 
             ? 'Rahmat! Sizning fikringiz muvaffaqiyatli yuborildi. ✅'
             : 'Thank you! Your feedback has been sent successfully. ✅';
@@ -391,7 +397,7 @@
      * Show error message with copy button
      */
     function showError(originalMessage) {
-        const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+        const isUzbek = getCurrentLanguage() === 'uz';
         const messageText = isUzbek
             ? 'Hozir yuborib bo\'lmadi. Iltimos, qayta urinib ko\'ring.'
             : "Couldn't send right now. Please try again.";
@@ -432,7 +438,7 @@
 
         // Add copy button if requested
         if (options.showCopyButton && options.messageToCopy) {
-            const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+            const isUzbek = getCurrentLanguage() === 'uz';
             const copyBtn = document.createElement('button');
             copyBtn.type = 'button';
             copyBtn.textContent = isUzbek ? '📋 Xabarni nusxalash' : '📋 Copy Message';
@@ -450,10 +456,10 @@
 
             copyBtn.addEventListener('click', function() {
                 copyToClipboard(options.messageToCopy);
-                const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+                const isUzbek = getCurrentLanguage() === 'uz';
                 copyBtn.textContent = isUzbek ? '✅ Nusxalandi!' : '✅ Copied!';
                 setTimeout(function() {
-                    const isUzbek = (localStorage.getItem('preferredLanguage') || 'en') === 'uz';
+                    const isUzbek = getCurrentLanguage() === 'uz';
                     copyBtn.textContent = isUzbek ? '📋 Xabarni nusxalash' : '📋 Copy Message';
                 }, 2000);
             });
