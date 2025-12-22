@@ -2556,27 +2556,10 @@ this my whole index file:
 <script src="./actions.js"></script>
     <!-- 9. UI BRIDGE (must load AFTER all modules are defined) -->
    <script src="./legacy-ui-bridge.js"></script>
-    
+        <!-- 10. MODULE VERIFICATION (debug helper) -->
+    <script src="./module-verification.js"></script>
+  </body>
+</html>
 
-    <!-- 10. MODULE VERIFICATION (debug helper) -->
-   <script src="./module-verification.js"></script>
-    <!-- 11. EMERGENCY CLICK FIX (safe version) -->
-<script>
-  // Force the app to be ready so buttons work
-  window.APP_READY = true;
-  window.APP_INIT_FAILED = false;
 
-  // Only trigger module modal when clicking the MODULE CARD in the learning path
-  document.addEventListener('click', function (e) {
-    // Look only for elements that OPEN the modal (cards), not every data-module-id
-    const card = e.target.closest('[data-action="module-modal-show"]');
-    if (!card) return;
-
-    const moduleId = card.getAttribute('data-module-id');
-    if (window.ModuleModal && typeof window.ModuleModal.show === 'function') {
-      window.ModuleModal.show(moduleId);
-    }
-  });
-
-  console.log('🚀 Launch Clicks Activated (card-only)');
-</script>
+   
