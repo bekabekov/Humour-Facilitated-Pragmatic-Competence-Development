@@ -89,19 +89,19 @@ function getCurrentLanguage() {
         const isUzbek = isUzbekLanguage();
 
         // 🔵 1) Toggle heading + intro paragraph
-if (headingEn && headingUz && introEn && introUz) {
-    if (isUzbek) {
-        headingEn.style.display = 'none';
-        introEn.style.display   = 'none';
-        headingUz.style.display = 'block';
-        introUz.style.display   = 'block';
-    } else {
-        headingEn.style.display = 'block';
-        introEn.style.display   = 'block';
-        headingUz.style.display = 'none';
-        introUz.style.display   = 'none';
-    }
-}
+        if (headingEn && headingUz && introEn && introUz) {
+            if (isUzbek) {
+                headingEn.style.display = 'none';
+                introEn.style.display   = 'none';
+                headingUz.style.display = '';
+                introUz.style.display   = '';
+            } else {
+                headingEn.style.display = '';
+                introEn.style.display   = '';
+                headingUz.style.display = 'none';
+                introUz.style.display   = 'none';
+            }
+        }
         
 
         form.setAttribute('lang', isUzbek ? 'uz' : 'en');
