@@ -24,16 +24,21 @@
     const messageInput = document.getElementById('feedback-message');
     const honeypotInput = document.getElementById('feedback-honeypot');
 // -------------------------------
-// 🌐 Global language state (ADD HERE)
-// -------------------------------
-let currentLanguage = localStorage.getItem('preferredLanguage') || 'en';
-function isUzbekLanguage() {
-    return currentLanguage === 'uz';
-}
-    if (!submitBtn || !statusSpan || !resultDiv || !nameInput || !messageInput || !typeInput) {
-        console.error('[Feedback] Required form elements not found');
-        return;
+    // 🌐 Global language state
+    // -------------------------------
+    let currentLanguage = localStorage.getItem('preferredLanguage') || 'en';
+    function isUzbekLanguage() {
+        return currentLanguage === 'uz';
     }
+
+    // -------------------------------
+    // Feedback card heading & intro texts
+    // -------------------------------
+    const feedbackBox = form.closest('.theory-box');
+    const headingEn  = feedbackBox ? feedbackBox.querySelector('h3[lang="en"]') : null;
+    const headingUz  = feedbackBox ? feedbackBox.querySelector('h3[lang="uz"]') : null;
+    const introEn    = feedbackBox ? feedbackBox.querySelector('p[lang="en"]') : null;
+    const introUz    = feedbackBox ? feedbackBox.querySelector('p[lang="uz"]') : null;
 
     // Store original button text
     const originalButtonText = submitBtn.textContent;
@@ -58,7 +63,26 @@ function isUzbekLanguage() {
 
 
     function applyFeedbackLanguage(lang) {
-        const isUzbek = lang === 'uz';
+                // Keep language state in sync
+        currentLanguage = lang || 'en';
+        localStorage.setItem('preferredLanguage', currentLanguage);
+        const isUzbek = isUzbekLanguage();
+
+        // 🔵 1) Toggle heading + intro paragraph
+        if (headingEn && headingUz && introEn && introUz) {
+            if (isUzbek) {
+                headingEn.style.display = 'none';
+                introEn.style.display   = 'none';
+                headingUz.style.display = '';
+                introUz.style.display   = '';
+            } else {
+                headingEn.style.display = '';
+                introEn.style.display   = '';
+                headingUz.style.display = 'none';
+                introUz.style.display   = 'none';
+            }
+        }
+        
 
         form.setAttribute('lang', isUzbek ? 'uz' : 'en');
 
