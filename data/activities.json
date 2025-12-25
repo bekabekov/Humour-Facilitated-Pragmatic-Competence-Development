@@ -630,5 +630,106 @@
         "exampleAnswer":  "Understatement 1: Not bad. Understatement 2: Could be worse. Understatement 3: A bit tricky. Sarcasm 1: Lovely weather. Sarcasm 2: Great job. Self-deprecation 1: I\u0027m hopeless at this.",
         "minWords":  30,
         "minChars":  180
+        
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Askiya Payrov Recognition",
+        "description":  "Identify traditional askiya formats",
+        "task":  "Match each askiya exchange to its payrov (theme) type: A) Okhshatdim (comparison), B) Qofiya (rhyme), C) Laqab (nickname), D) Bolasizmi (yes/no trap). Write A, B, C, or D for each:\n\n1) 'Sizni eshakka o'xshatdim!' - 'Nega?' - 'Og'ir yuk ko'tarasiz, lekin tez yurmaysiz!'\n2) 'Yoshmisiz?' - 'Ha' - 'Unda nega qariyalar kabi shikoyat qilasiz?'\n3) 'Laqabingiz Kalit!' - 'Nega?' - 'Chunki siz har eshikni ochasiz - lekin hech birida qolmaysiz!'\n4) 'Bog'da gul, Tog'da...' (opponent must rhyme)",
+        "pragmaticFocus":  "Askiya genre recognition",
+        "tags":  [
+                     "askiya",
+                     "uzbek-tradition",
+                     "genre-identification"
+                 ],
+        "id":  "act-32",
+        "responseType":  "text-short",
+        "responseLabel":  "Write 1-A/B/C/D format for each",
+        "responseHint":  "Think about the structure: comparison, rhyme, nickname, or trap question",
+        "exampleAnswer":  "1-A (comparison to donkey), 2-D (yes/no trap about age), 3-C (nickname Key), 4-B (rhyme pattern)",
+        "minWords":  8,
+        "minChars":  30
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Askiya Response Practice",
+        "description":  "Create witty askiya-style responses",
+        "task":  "In askiya, you must respond cleverly to comparisons. Read this challenge:\n\nOpponent: 'Sizni oyga o'xshatdim!' (I compared you to the moon!)\nYou: 'Nega?' (Why?)\nOpponent: 'Chunki siz faqat kechasi chiqasiz - kunduzi uxlaysiz!' (You only come out at night - you sleep during the day!)\n\nNow YOU must compare the opponent to something clever. Write in English, following askiya style. Remember: subtle, light and kind - not mean!",
+        "pragmaticFocus":  "Creative face-work in humor",
+        "tags":  [
+                     "askiya",
+                     "okhshatdim",
+                     "creative-response"
+                 ],
+        "id":  "act-33",
+        "responseType":  "text-short",
+        "responseLabel":  "Write your askiya comparison and explanation",
+        "responseHint":  "Compare them to an object with double meaning - one side positive, one a gentle tease",
+        "exampleAnswer":  "I compare YOU to a mirror! Why? Because you only show others their flaws - never your own!",
+        "minWords":  15,
+        "minChars":  80
+    },
+    {
+        "level":  "B2-C1",
+        "difficulty":  "hard",
+        "title":  "Askiya vs British Banter",
+        "description":  "Compare Uzbek and British verbal humor",
+        "task":  "Read both exchanges:\n\nUZBEK ASKIYA:\nA: 'Sizni kitobga o'xshatdim!' (I compared you to a book!)\nB: 'Nega?'\nA: 'Muqovangiz chiroyli, lekin ichingizni hech kim o'qimaydi!' (Beautiful cover, but nobody reads inside!)\n\nBRITISH BANTER:\nA: 'Nice presentation, mate.'\nB: 'Cheers!'\nA: 'No really, I almost stayed awake.'\n\nAnswer: 1) How is criticism delivered in each? 2) What role does timing play? 3) Which requires faster thinking? 4) How would each translate to the other culture?",
+        "pragmaticFocus":  "Cross-cultural humor analysis",
+        "tags":  [
+                     "askiya",
+                     "british-humor",
+                     "cross-cultural"
+                 ],
+        "id":  "act-34",
+        "responseType":  "text-long",
+        "responseLabel":  "Answer all four questions",
+        "responseHint":  "Consider: metaphor vs understatement, audience role, response requirements",
+        "exampleAnswer":  "1) Askiya uses elaborate metaphor; British uses understatement then reversal. 2) Askiya requires immediate response; British allows pause for deadpan effect. 3) Askiya demands faster thinking - you must create a counter-comparison instantly. 4) Direct askiya translation loses metaphorical richness; British sarcasm might seem rude in Uzbek without tonal cues.",
+        "minWords":  60,
+        "minChars":  350
+    },
+    {
+        "level":  "C1",
+        "difficulty":  "hard",
+        "title":  "Create Your Own Askiya",
+        "description":  "Write an original askiya dialogue",
+        "task":  "Create a complete askiya exchange using OKHSHATDIM format: 1) Person A makes a comparison 2) Person B asks Why? 3) Person A gives witty explanation 4) Person B responds with own comparison 5) Person A asks Why? 6) Person B explains. Choose topic: Technology, University Life, or Social Media. Write in English, keep it subtle and kind.",
+        "pragmaticFocus":  "Productive cross-cultural humor creation",
+        "tags":  [
+                     "askiya",
+                     "creative-writing",
+                     "cultural-bridging"
+                 ],
+        "id":  "act-35",
+        "responseType":  "text-long",
+        "responseLabel":  "Write your complete askiya exchange",
+        "responseHint":  "Structure: comparison - why - explanation - counter-comparison - why - explanation",
+        "exampleAnswer":  "Topic: University Life. A: I compare you to a library book! B: Why? A: Everyone needs you during exams, but nobody visits you the rest of the year! B: Well, I compare YOU to WiFi! A: Why? B: Everyone depends on you, but you disappear at the worst moments!",
+        "minWords":  50,
+        "minChars":  280
+    },
+    {
+        "level":  "B2",
+        "difficulty":  "medium",
+        "title":  "Askiya Pragmatic Principles",
+        "description":  "Connect askiya rules to pragmatic theory",
+        "task":  "Match each askiya rule to the pragmatic concept it demonstrates (Face Theory, Grice's Maxims, Politeness Strategies):\n\n1) Mockery should be subtle, light and kind\n2) Never damage the honor and dignity of a rival\n3) Each response must relate to the theme (payrov)\n4) The goal is to make the audience laugh, not to hurt\n5) Quick, relevant responses are valued\n\nWrite the number and matching concept with brief explanation.",
+        "pragmaticFocus":  "Theoretical application to cultural practice",
+        "tags":  [
+                     "askiya",
+                     "pragmatics-theory",
+                     "face-work"
+                 ],
+        "id":  "act-36",
+        "responseType":  "text-short",
+        "responseLabel":  "Match each rule (1-5) to a concept",
+        "responseHint":  "Think: Which rules protect face? Which ensure relevance?",
+        "exampleAnswer":  "1) Politeness Strategies - softening face-threatening acts. 2) Face Theory - protecting positive face. 3) Grice's Relevance Maxim. 4) Positive politeness - building solidarity. 5) Grice's Manner - being clear and prompt.",
+        "minWords":  25,
+        "minChars":  150
     }
 ]
