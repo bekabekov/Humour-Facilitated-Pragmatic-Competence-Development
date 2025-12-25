@@ -2115,57 +2115,57 @@
                         <div id="feedback-result" style="margin-top: 16px; display: none;"></div>
 
                         <!-- Professional Feedback Form -->
-                       <form id="feedback-form" style="margin-top: 20px;"></form>
-                            <div style="margin-bottom: 16px;">
-                                <label for="feedback-name" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Ismingiz *</label>
-                                <input type="text" id="feedback-name" name="name" required
-                                       style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;"
-                                       placeholder="Ismingizni kiriting">
-                            </div>
+<form id="feedback-form" style="margin-top: 20px;">
+    <div style="margin-bottom: 16px;">
+        <label for="feedback-name" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Your name *</label>
+        <input type="text" id="feedback-name" name="name" required
+               style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;"
+               placeholder="Enter your name">
+    </div>
 
-                            <div style="margin-bottom: 16px;">
-                                <label for="feedback-email" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Elektron pochtangiz (javob uchun ixtiyoriy)</label>
-                                <input type="email" id="feedback-email" name="email"
-                                       style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;"
-                                       placeholder="sizning.emailingiz@example.com">
-                            </div>
+    <div style="margin-bottom: 16px;">
+        <label for="feedback-email" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Email address (optional, for reply)</label>
+        <input type="email" id="feedback-email" name="email"
+               style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;"
+               placeholder="your.email@example.com">
+    </div>
 
-                            <div style="margin-bottom: 16px;">
-                                <label for="feedback-type" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Fikr-mulohaza turi *</label>
-                                <select id="feedback-type" name="feedback_type" required
-                                        style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;">
-                                    <option value="">Mavzuni tanlang...</option>
-                                    <option value="Bug Report">🐛 Xatolik haqida xabar</option>
-                                    <option value="Feature Request">💡 Yangi funksiya so'rovi</option>
-                                    <option value="Content Suggestion">📚 Kontent taklifi</option>
-                                    <option value="General Feedback">💬 Umumiy fikr-mulohaza</option>
-                                    <option value="Technical Issue">⚙️ Texnik muammo</option>
-                                    <option value="Other">📝 Boshqa</option>
-                                </select>
-                            </div>
+    <div style="margin-bottom: 16px;">
+        <label for="feedback-type" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Feedback type *</label>
+        <select id="feedback-type" name="feedback_type" required
+                style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;">
+            <option value="">Select a topic...</option>
+            <option value="Bug Report">🐛 Bug report</option>
+            <option value="Feature Request">💡 Feature request</option>
+            <option value="Content Suggestion">📚 Content suggestion</option>
+            <option value="General Feedback">💬 General feedback</option>
+            <option value="Technical Issue">⚙️ Technical issue</option>
+            <option value="Other">📝 Other</option>
+        </select>
+    </div>
 
-                            <div style="margin-bottom: 16px;">
-                                <label for="feedback-message" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Xabaringiz *</label>
-                                <textarea id="feedback-message" name="message" required rows="6"
-                                          style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; resize: vertical;"
-                                          placeholder="Bu yerda batafsil fikr-mulohazalaringizni yozing..."></textarea>
-                                <p style="margin-top: 8px; color: #6b7280; font-size: 0.875rem; line-height: 1.5;">
-                                    <em>Ushbu platforma ta'lim maqsadlarida foydalanish uchun mo'ljallangan. Iltimos, fikr-mulohazalaringizni hurmatli, akademik muhitga mos va o'rganishga qaratilgan holda saqlang.</em>
-                                </p>
-                            </div>
+    <div style="margin-bottom: 16px;">
+        <label for="feedback-message" style="display: block; font-weight: 500; margin-bottom: 6px; color: #374151;">Your message *</label>
+        <textarea id="feedback-message" name="message" required rows="6"
+                  style="width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; resize: vertical;"
+                  placeholder="Write your feedback here in as much detail as possible..."></textarea>
+        <p style="margin-top: 8px; color: #6b7280; font-size: 0.875rem; line-height: 1.5;">
+            <em>This platform is intended for educational use. Please keep your feedback respectful, appropriate for an academic environment, and focused on learning.</em>
+        </p>
+    </div>
 
-                            <!-- Honeypot field for spam protection (hidden from users) -->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                <input type="text" id="feedback-honeypot" name="website" tabindex="-1" autocomplete="off">
-                            </div>
+    <!-- Honeypot field for spam protection (hidden from users) -->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" id="feedback-honeypot" name="website" tabindex="-1" autocomplete="off">
+    </div>
 
-                            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-                                <button type="submit" id="feedback-submit-btn" class="btn btn-primary" style="padding: 10px 24px; cursor: pointer;">
-                                    📤 Fikr-mulohazani yuborish
-                                </button>
-                                <span id="feedback-status" style="color: #6b7280; font-size: 13px;"></span>
-                            </div>
-                        </form>
+    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+        <button type="submit" id="feedback-submit-btn" class="btn btn-primary" style="padding: 10px 24px; cursor: pointer;">
+            📤 Send feedback
+        </button>
+        <span id="feedback-status" style="color: #6b7280; font-size: 13px;"></span>
+    </div>
+</form>
 
                        <script src="./feedback.js"></script>
                     </div>
