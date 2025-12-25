@@ -104,7 +104,7 @@ function getCurrentLanguage() {
         }
         
 
-        form.setAttribute('lang', isUzbek ? 'uz' : 'en');
+        
 
         const nameLabel    = form.querySelector('label[for="feedback-name"]');
         const emailLabel   = form.querySelector('label[for="feedback-email"]');
