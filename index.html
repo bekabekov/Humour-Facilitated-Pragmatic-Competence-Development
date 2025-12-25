@@ -2576,25 +2576,35 @@
     
     function goToJoke() {
         const jokeNum = parseInt(gotoInput.value, 10);
+        const totalJokes = window.DATA && window.DATA.jokes ? window.DATA.jokes.length : 57;
         
-        if (isNaN(jokeNum) || jokeNum < 1 || jokeNum > 57) {
-            alert('Please enter a joke number between 1 and 57');
+        if (isNaN(jokeNum) || jokeNum < 1 || jokeNum > totalJokes) {
+            alert('Please enter a joke number between 1 and ' + totalJokes);
             return;
         }
         
+        // Convert to 0-based index
         const jokeIndex = jokeNum - 1;
         
-        if (typeof jokes !== 'undefined' && typeof displayJoke === 'function') {
-            displayJoke(jokeIndex);
-        } else if (typeof window.currentJokeIndex !== 'undefined') {
-            window.currentJokeIndex = jokeIndex;
+        // Use JokeModule.renderJoke
+        if (window.JokeModule && typeof window.JokeModule.renderJoke === 'function') {
+            window.JokeModule.renderJoke(jokeIndex);
+            
+            // Scroll to joke section
+            const jokeSection = document.getElementById('joke');
+            if (jokeSection) {
+                jokeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
         
+        // Clear input
         gotoInput.value = '';
     }
     
+    // Click button
     gotoBtn.addEventListener('click', goToJoke);
     
+    // Press Enter
     gotoInput.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
             e.preventDefault();
