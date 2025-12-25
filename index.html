@@ -2568,53 +2568,56 @@
     <script src="./module-verification.js"></script>
     <script>
 // Go to specific joke by number
-(function() {
-    const gotoInput = document.getElementById('joke-goto-input');
-    const gotoBtn = document.getElementById('joke-goto-btn');
+document.addEventListener('DOMContentLoaded', function() {
+    var gotoInput = document.getElementById('joke-goto-input');
+    var gotoBtn = document.getElementById('joke-goto-btn');
     
-    if (!gotoInput || !gotoBtn) return;
+    if (!gotoInput || !gotoBtn) {
+        console.warn('[JokeGoto] Input or button not found');
+        return;
+    }
     
     function goToJoke() {
-        const jokeNum = parseInt(gotoInput.value, 10);
-        const totalJokes = window.DATA && window.DATA.jokes ? window.DATA.jokes.length : 57;
+        var jokeNum = parseInt(gotoInput.value, 10);
+        var totalJokes = (window.DATA && window.DATA.jokes) ? window.DATA.jokes.length : 57;
         
         if (isNaN(jokeNum) || jokeNum < 1 || jokeNum > totalJokes) {
             alert('Please enter a joke number between 1 and ' + totalJokes);
             return;
         }
         
-        // Convert to 0-based index
-        const jokeIndex = jokeNum - 1;
+        var jokeIndex = jokeNum - 1;
         
-        // Use JokeModule.renderJoke
         if (window.JokeModule && typeof window.JokeModule.renderJoke === 'function') {
             window.JokeModule.renderJoke(jokeIndex);
             
-            // Scroll to joke section
-            const jokeSection = document.getElementById('joke');
+            // Scroll to top of joke section (same as Next/Previous buttons)
+            var jokeSection = document.getElementById('joke');
             if (jokeSection) {
                 jokeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
+        } else {
+            console.error('[JokeGoto] JokeModule not available');
+            alert('Please wait for the page to fully load');
         }
         
-        // Clear input
         gotoInput.value = '';
     }
     
-    // Click button
     gotoBtn.addEventListener('click', goToJoke);
     
-    // Press Enter
     gotoInput.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
             e.preventDefault();
             goToJoke();
         }
     });
-})();
+    
+    console.log('[JokeGoto] Initialized');
+});
 </script>
-</body>
-</html>
   </body>
 </html>
 
