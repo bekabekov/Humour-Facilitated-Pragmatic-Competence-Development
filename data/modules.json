@@ -770,7 +770,7 @@
         ],
         "subUnits": [
             {
-                "id": "module-5-uzbek",
+                 "id": "module-5-uzbek",
                 "title": "Uzbek Humour Patterns",
                 "focus": "Understanding Your L1 Humour",
                 "skills": [
@@ -781,12 +781,23 @@
                 "jokeIndices": [
                     29,
                     30,
-                    31
+                    31,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57
                 ],
                 "activityIndices": [
                     21,
                     22,
-                    23
+                    23,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36
                 ]
             },
             {
