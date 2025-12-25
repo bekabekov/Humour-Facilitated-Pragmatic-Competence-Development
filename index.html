@@ -2567,59 +2567,53 @@
         <!-- 10. MODULE VERIFICATION (debug helper) -->
     <script src="./module-verification.js"></script>
     <script>
-// Go to specific joke by number
-document.addEventListener('DOMContentLoaded', function() {
-    var gotoInput = document.getElementById('joke-goto-input');
-    var gotoBtn = document.getElementById('joke-goto-btn');
-    
-    if (!gotoInput || !gotoBtn) {
-        console.warn('[JokeGoto] Input or button not found');
-        return;
-    }
-    
-    function goToJoke() {
-        var jokeNum = parseInt(gotoInput.value, 10);
-        var totalJokes = (window.DATA && window.DATA.jokes) ? window.DATA.jokes.length : 57;
-        
-        if (isNaN(jokeNum) || jokeNum < 1 || jokeNum > totalJokes) {
+// Add goToJoke method to JokeModule (same pattern as nextJoke/previousJoke)
+if (window.JokeModule) {
+    window.JokeModule.goToJoke = function(jokeNumber) {
+        var totalJokes = window.DATA ? window.DATA.jokes.length : 0;
+        if (jokeNumber < 1 || jokeNumber > totalJokes) {
             alert('Please enter a joke number between 1 and ' + totalJokes);
             return;
         }
-        
-        var jokeIndex = jokeNum - 1;
-        
-        if (window.JokeModule && typeof window.JokeModule.renderJoke === 'function') {
-            window.JokeModule.renderJoke(jokeIndex);
-            
-            // Scroll to top of joke section (same as Next/Previous buttons)
-            var jokeSection = document.getElementById('joke');
-            if (jokeSection) {
-                jokeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+        var jokeIndex = jokeNumber - 1;
+        this.renderJoke(jokeIndex);
+        var jokeSection = document.getElementById('joke');
+        if (jokeSection) {
+            jokeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
-            console.error('[JokeGoto] JokeModule not available');
-            alert('Please wait for the page to fully load');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        
+    };
+}
+
+// Bind button and input
+(function() {
+    var gotoInput = document.getElementById('joke-goto-input');
+    var gotoBtn = document.getElementById('joke-goto-btn');
+    
+    if (!gotoInput || !gotoBtn) return;
+    
+    function handleGoToJoke() {
+        var jokeNum = parseInt(gotoInput.value, 10);
+        if (isNaN(jokeNum)) {
+            alert('Please enter a valid number');
+            return;
+        }
+        if (window.JokeModule && window.JokeModule.goToJoke) {
+            window.JokeModule.goToJoke.call(window.JokeModule, jokeNum);
+        }
         gotoInput.value = '';
     }
     
-    gotoBtn.addEventListener('click', goToJoke);
-    
-    gotoInput.addEventListener('keydown', function(e) {
+    gotoBtn.onclick = handleGoToJoke;
+    gotoInput.onkeydown = function(e) {
         if (e.key === 'Enter') {
             e.preventDefault();
-            goToJoke();
+            handleGoToJoke();
         }
-    });
-    
-    console.log('[JokeGoto] Initialized');
-});
+    };
+})();
 </script>
-</body>
-</html>
   </body>
 </html>
 
