@@ -623,75 +623,83 @@
             "Understatement",
             "Cultural codes"
         ],
-        "id": "joke-51",
-        "type": "askiya-dialogue",
-        "title": "Okhshatdim: Melon Comparison",
-        "setup": "A: Sizni qovunga o'xshatdim! (I compared you to a melon!)\nB: Nega? (Why?)",
-        "punchline": "A: Ichingiz bo'sh, lekin tashqaringiz chiroyli! (Empty inside, but beautiful outside!)",
-        "explanation": "This is 'Okhshatdim' - the classic askiya format where performers compare each other to objects. The comparison seems like a compliment (beautiful) but contains gentle criticism (empty). The opponent must now respond with an even cleverer comparison.",
-        "pragmaticNote": "Unlike Western 'roast' comedy, askiya mockery must be 'subtle, light and kind' - showing wit without humiliation. This demonstrates pragmatic face-work.",
-        "uzbekContext": "Okhshatdim is one of the oldest payrovs (themes), practiced in Fergana Valley tea houses for centuries.",
+        "id": "joke-51"
+        },
+        {
+        "text": "Askiya Okhshatdim: A: 'Sizni qovunga o'xshatdim!' (I compared you to a melon!) B: 'Nega?' (Why?) A: 'Ichingiz bo'sh, lekin tashqaringiz chiroyli!' (Empty inside, but beautiful outside!)",
+        "analysis": "Okhshatdim is the classic askiya format where performers compare each other to objects. The comparison seems like a compliment (beautiful) but contains gentle criticism (empty). Unlike Western roast comedy, askiya mockery must be 'subtle, light and kind' - showing wit without humiliation.",
+        "type": "cultural",
         "level": "B2",
-        "tags": ["askiya", "okhshatdim", "uzbek-tradition", "face-work", "wordplay"]
+        "learningPoints": [
+            "Askiya tradition",
+            "Okhshatdim format",
+            "Face-work through humor",
+            "Indirect criticism"
+        ],
+        "id": "joke-52"
     },
     {
-        "id": "joke-52",
-        "type": "askiya-dialogue",
-        "title": "Qofiya: Rhyme Battle",
-        "setup": "A: Tog'da qor (Snow on mountain)\nB: Ko'lda nor (Camel by lake)\nA: Uyda non (Bread in house)\nB: Bozorda... (At bazaar...)",
-        "punchline": "B hesitates: '...odam ko'p!' (many people!) — LOSES! The rhyme pattern (-or, -or, -on) was broken.",
-        "explanation": "Qofiya requires maintaining rhyme schemes under pressure. Breaking the pattern means losing that round. This tests vocabulary depth and quick thinking.",
-        "pragmaticNote": "This format shows cooperative competition - the goal is entertainment through linguistic skill, not destruction of the opponent.",
-        "uzbekContext": "Audiences actively participate by counting and judging. Qofiya battles can last for many rounds.",
+        "text": "Askiya Qofiya (Rhyme Battle): A: 'Tog'da qor' (Snow on mountain) B: 'Ko'lda nor' (Camel by lake) A: 'Uyda non' (Bread in house) B: 'Bozorda... odam ko'p!' (At bazaar... many people!) — B LOSES! The rhyme pattern was broken.",
+        "analysis": "Qofiya requires maintaining rhyme schemes under pressure. The pattern was -or, -or, -on, and B failed to continue it. This tests vocabulary depth and quick thinking. The goal is entertainment through linguistic skill, not humiliation.",
+        "type": "cultural",
         "level": "B2",
-        "tags": ["askiya", "qofiya", "rhyme", "uzbek-tradition", "linguistic-competition"]
+        "learningPoints": [
+            "Askiya tradition",
+            "Qofiya rhyme format",
+            "Linguistic competition",
+            "Cooperative humor"
+        ],
+        "id": "joke-53"
     },
     {
-        "id": "joke-53",
-        "type": "askiya-dialogue",
-        "title": "Laqab: The Lamp Nickname",
-        "setup": "A: Sizning laqabingiz 'Chiroq' bo'lsin! (Your nickname shall be 'Lamp'!)\nB: Nega? (Why?)",
-        "punchline": "A: Chunki siz qorong'ida ham ko'rinasiz - boshqa hech narsa yo'q bo'lsa ham! (Because you're visible even in darkness - when there's nothing else to see!)",
-        "explanation": "Laqab involves giving opponents humorous nicknames with elaborate justifications. The 'lamp' seems positive (visible, notable) but implies the person is only noticeable when nothing better is around.",
-        "pragmaticNote": "The nickname must be clever, not cruel. This is a face-threatening act softened by the performance context and creative framing.",
-        "uzbekContext": "In Uzbek culture, nicknames (laqab) carry social significance. Askiya nicknames are temporary and playful.",
+        "text": "Askiya Laqab (Nickname): A: 'Sizning laqabingiz Chiroq bo'lsin!' (Your nickname shall be Lamp!) B: 'Nega?' (Why?) A: 'Chunki siz qorong'ida ham ko'rinasiz - boshqa hech narsa yo'q bo'lsa ham!' (Because you're visible even in darkness - when there's nothing else to see!)",
+        "analysis": "Laqab involves giving opponents humorous nicknames with elaborate justifications. 'Lamp' seems positive (visible, notable) but implies the person is only noticeable when nothing better is around. The nickname must be clever, not cruel.",
+        "type": "cultural",
         "level": "B2-C1",
-        "tags": ["askiya", "laqab", "nickname", "uzbek-tradition", "creative-insult"]
+        "learningPoints": [
+            "Askiya tradition",
+            "Laqab nickname format",
+            "Creative face-work",
+            "Double meaning"
+        ],
+        "id": "joke-54"
     },
     {
-        "id": "joke-54",
-        "type": "askiya-dialogue",
-        "title": "Bolasizmi: The Age Trap",
-        "setup": "A: Bolasizmi? (Are you a child?)\nB: Yo'q, kattaman. (No, I'm an adult.)",
-        "punchline": "A: Unda nega kattalar kabi gaplashmaysiz? (Then why don't you speak like an adult?)",
-        "explanation": "Bolasizmi is a yes/no trap. Answering 'yes' admits childishness. Answering 'no' opens you to criticism about adult behavior. There's no safe answer!",
-        "pragmaticNote": "This teaches that in pragmatics, the literal answer isn't always safe. Questions can be setups, not genuine information requests.",
-        "uzbekContext": "Master askiyachi prepare responses for BOTH possible answers. The trap is in the question structure itself.",
+        "text": "Askiya Bolasizmi (Trap Question): A: 'Bolasizmi?' (Are you a child?) B: 'Yo'q, kattaman.' (No, I'm an adult.) A: 'Unda nega kattalar kabi gaplashmaysiz?' (Then why don't you speak like an adult?)",
+        "analysis": "Bolasizmi is a yes/no trap. Answering 'yes' admits childishness. Answering 'no' opens you to criticism about adult behavior. There's no safe answer! This teaches that literal answers aren't always safe - questions can be setups.",
+        "type": "cultural",
         "level": "B1-B2",
-        "tags": ["askiya", "bolasizmi", "trap-question", "uzbek-tradition", "pragmatic-trap"]
+        "learningPoints": [
+            "Askiya tradition",
+            "Pragmatic traps",
+            "Loaded questions",
+            "Strategic communication"
+        ],
+        "id": "joke-55"
     },
     {
-        "id": "joke-55",
-        "type": "askiya-dialogue",
-        "title": "Gulmisiz: Flower or Basil?",
-        "setup": "A: Gulmisiz, rayhonmisiz? (Are you a flower or basil?)\nB: Gulman! (I'm a flower!)",
-        "punchline": "A: Afsuski, gullar tez so'liydi... (Unfortunately, flowers wilt quickly...)\n[Had B chosen 'basil': 'Rayhon faqat sho'rvaga yaraydi!' (Basil is only good for soup!)]",
-        "explanation": "This payrov offers a choice, but BOTH options have prepared witty downsides. Beauty (flower) fades quickly. Utility (basil) is mundane. It's a beautiful trap.",
-        "pragmaticNote": "Loaded questions give an illusion of choice. This is common in many cultures' humor and in everyday pragmatic manipulation.",
-        "uzbekContext": "Flowers (gul) and herbs like basil (rayhon) have rich symbolic meaning in Uzbek poetry. Askiya plays with these cultural associations.",
+        "text": "Askiya Gulmisiz (False Choice): A: 'Gulmisiz, rayhonmisiz?' (Are you a flower or basil?) B: 'Gulman!' (I'm a flower!) A: 'Afsuski, gullar tez so'liydi...' (Unfortunately, flowers wilt quickly...) Had B chosen basil: 'Rayhon faqat sho'rvaga yaraydi!' (Basil is only good for soup!)",
+        "analysis": "This payrov offers a choice, but BOTH options have prepared witty downsides. Beauty (flower) fades quickly. Utility (basil) is mundane. Loaded questions give an illusion of choice - common in humor and everyday pragmatic manipulation.",
+        "type": "cultural",
         "level": "B2",
-        "tags": ["askiya", "gulmisiz", "loaded-question", "uzbek-tradition", "false-choice"]
+        "learningPoints": [
+            "Askiya tradition",
+            "False choice questions",
+            "Uzbek symbolism",
+            "Pragmatic traps"
+        ],
+        "id": "joke-56"
     },
     {
-        "id": "joke-56",
-        "type": "askiya-dialogue",
-        "title": "Modern Askiya: Smartphone",
-        "setup": "A: Telefoningiz qanday? (How's your phone?)\nB: Yangi, zo'r! (New, great!)",
-        "punchline": "A: Demak, telefoningiz sizdan aqlliroq - u hech bo'lmaganda yangilanadi! (So your phone is smarter than you - at least IT gets updates!)",
-        "explanation": "Modern askiya applies traditional wit to contemporary topics. The word 'yangilanadi' means both 'updates' (for phones) and 'renews/improves' (for people).",
-        "pragmaticNote": "This shows askiya is a living tradition that adapts while preserving core structures. Compare to how British humor also updates references.",
-        "uzbekContext": "Contemporary payrovs include Telefon, Futbol, Mashina (car), Kino (cinema). The tradition evolves with society.",
+        "text": "Modern Askiya - Telefon: A: 'Telefoningiz qanday?' (How's your phone?) B: 'Yangi, zo'r!' (New, great!) A: 'Demak, telefoningiz sizdan aqlliroq - u hech bo'lmaganda yangilanadi!' (So your phone is smarter than you - at least IT gets updates!)",
+        "analysis": "Modern askiya applies traditional wit to contemporary topics. 'Yangilanadi' means both 'updates' (phones) and 'renews/improves' (people). This shows askiya is a living UNESCO-recognized tradition that adapts while preserving core structures.",
+        "type": "cultural",
         "level": "B1-B2",
-        "tags": ["askiya", "modern", "technology", "wordplay", "adaptation"],
+        "learningPoints": [
+            "Modern askiya",
+            "Wordplay",
+            "Cultural adaptation",
+            "Technology humor"
+        ],
+        "id": "joke-57"
     }
-]
