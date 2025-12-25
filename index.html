@@ -756,14 +756,16 @@
     <button class="nav-btn no-print" type="button" id="random-joke-btn">🎲 Random</button>
     <button class="nav-btn no-print" type="button" id="view-favorites-btn" style="background: #ff6b6b;">❤️ Favorites</button>
     <div class="joke-goto-container" style="display: inline-flex; align-items: center; gap: 8px; margin-left: 12px;">
-        <label for="joke-goto-input" style="font-size: 14px; color: #4b5563;">Go to #</label>
-        <input type="number" id="joke-goto-input" min="1" max="57" placeholder="1-57"
-               style="width: 70px; padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px;">
-        <button type="button" id="joke-goto-btn" class="nav-btn"
-                style="padding: 8px 14px; background: #6366f1; color: white; border-radius: 8px; font-size: 14px;">
-            Go
-        </button>
-    </div>
+    <label for="joke-goto-input" style="font-size: 14px; color: #4b5563;">Go to #</label>
+    <input type="number" id="joke-goto-input" min="1" max="57" placeholder="1-57"
+           style="width: 70px; padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px;"
+           onkeydown="if(event.key==='Enter'){document.getElementById('joke-goto-btn').click();}">
+    <button type="button" id="joke-goto-btn" class="nav-btn"
+            style="padding: 8px 14px; background: #6366f1; color: white; border-radius: 8px; font-size: 14px;"
+            onclick="var n=parseInt(document.getElementById('joke-goto-input').value);if(n>=1&&n<=57){window.JokeModule.renderJoke(n-1);document.getElementById('joke').scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('joke-goto-input').value='';}else{alert('Enter 1-57');}">
+        Go
+    </button>
+</div>  
 </div>
             </section>
 
@@ -2566,55 +2568,7 @@
    <script src="./legacy-ui-bridge.js"></script>
         <!-- 10. MODULE VERIFICATION (debug helper) -->
     <script src="./module-verification.js"></script>
-    <script>
-// Add goToJoke method to JokeModule (same pattern as nextJoke/previousJoke)
-if (window.JokeModule) {
-    window.JokeModule.goToJoke = function(jokeNumber) {
-        var totalJokes = window.DATA ? window.DATA.jokes.length : 0;
-        if (jokeNumber < 1 || jokeNumber > totalJokes) {
-            alert('Please enter a joke number between 1 and ' + totalJokes);
-            return;
-        }
-        var jokeIndex = jokeNumber - 1;
-        this.renderJoke(jokeIndex);
-        var jokeSection = document.getElementById('joke');
-        if (jokeSection) {
-            jokeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    };
-}
-
-// Bind button and input
-(function() {
-    var gotoInput = document.getElementById('joke-goto-input');
-    var gotoBtn = document.getElementById('joke-goto-btn');
-    
-    if (!gotoInput || !gotoBtn) return;
-    
-    function handleGoToJoke() {
-        var jokeNum = parseInt(gotoInput.value, 10);
-        if (isNaN(jokeNum)) {
-            alert('Please enter a valid number');
-            return;
-        }
-        if (window.JokeModule && window.JokeModule.goToJoke) {
-            window.JokeModule.goToJoke.call(window.JokeModule, jokeNum);
-        }
-        gotoInput.value = '';
-    }
-    
-    gotoBtn.onclick = handleGoToJoke;
-    gotoInput.onkeydown = function(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            handleGoToJoke();
-        }
-    };
-})();
-</script>
-  </body>
+      </body>
 </html>
 
 
