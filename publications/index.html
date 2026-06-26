@@ -219,6 +219,11 @@ let pubs = [];
 let file = null;
 
 /* ── BOOT ── */
+const _viewParam = new URLSearchParams(window.location.search).get('view');
+if (_viewParam) {
+  const _raw = `https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/main/publications/${encodeURIComponent(_viewParam)}`;
+  window.location.replace(`https://docs.google.com/viewer?url=${encodeURIComponent(_raw)}`);
+}
 if (cfg.settings) document.getElementById('gear').style.display = 'block';
 if (cfg.upload)   document.getElementById('fab').style.display  = 'block';
 loadPubs();
@@ -248,8 +253,9 @@ function render(list) {
     return;
   }
   el.innerHTML = list.map(p => {
-    const rawUrl    = `${SITE_BASE}/${encodeURIComponent(p.filename)}`;
-    const viewUrl   = `https://docs.google.com/viewer?url=${encodeURIComponent(rawUrl)}`;
+    const rawUrl   = `https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/main/publications/${encodeURIComponent(p.filename)}`;
+    const viewUrl  = `https://docs.google.com/viewer?url=${encodeURIComponent(rawUrl)}`;
+    const shareUrl = `${SITE_BASE}/?view=${encodeURIComponent(p.filename)}`;
     const meta = [p.authors, p.year].filter(Boolean).join(' &middot; ');
     return `
     <div class="card">
@@ -260,7 +266,7 @@ function render(list) {
         <div class="card-acts">
           <a class="btn btn-blue" href="${viewUrl}" target="_blank" rel="noopener">Open PDF</a>
           <a class="btn btn-ghost" href="${rawUrl}" download>&#11015; Download</a>
-          <button class="btn btn-ghost" data-url="${x(rawUrl)}">&#128279; Copy Link</button>
+          <button class="btn btn-ghost" data-url="${x(shareUrl)}">&#128279; Copy Link</button>
         </div>
       </div>
     </div>`;
