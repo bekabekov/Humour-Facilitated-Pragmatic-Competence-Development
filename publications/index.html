@@ -248,7 +248,8 @@ function render(list) {
     return;
   }
   el.innerHTML = list.map(p => {
-    const pdfUrl = `${SITE_BASE}/${encodeURIComponent(p.filename)}`;
+    const rawUrl    = `${SITE_BASE}/${encodeURIComponent(p.filename)}`;
+    const viewUrl   = `https://docs.google.com/viewer?url=${encodeURIComponent(rawUrl)}`;
     const meta = [p.authors, p.year].filter(Boolean).join(' &middot; ');
     return `
     <div class="card">
@@ -257,9 +258,9 @@ function render(list) {
         <div class="card-title">${x(p.title)}</div>
         ${meta ? `<div class="card-sub">${meta}</div>` : ''}
         <div class="card-acts">
-          <a class="btn btn-blue" href="${pdfUrl}" target="_blank" rel="noopener">Open PDF</a>
-          <a class="btn btn-ghost" href="${pdfUrl}" download>&#11015; Download</a>
-          <button class="btn btn-ghost" data-url="${x(pdfUrl)}">&#128279; Copy Link</button>
+          <a class="btn btn-blue" href="${viewUrl}" target="_blank" rel="noopener">Open PDF</a>
+          <a class="btn btn-ghost" href="${rawUrl}" download>&#11015; Download</a>
+          <button class="btn btn-ghost" data-url="${x(rawUrl)}">&#128279; Copy Link</button>
         </div>
       </div>
     </div>`;
