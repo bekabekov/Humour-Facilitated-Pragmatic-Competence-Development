@@ -130,6 +130,21 @@
     .note.show { display: block; }
     .note.ok  { background: #e8f5e9; color: #2e7d32; }
     .note.err { background: #ffebee; color: #c62828; }
+
+    /* PDF VIEWER */
+    #pdf-viewer {
+      display: none; position: fixed; inset: 0; z-index: 300;
+      flex-direction: column; background: #111;
+    }
+    #pdf-viewer.open { display: flex; }
+    #pdf-viewer-bar {
+      display: flex; align-items: center; gap: 1rem;
+      padding: .7rem 1rem; background: #1a3a6b;
+      color: #fff; flex-shrink: 0;
+    }
+    #pdf-viewer-bar span { flex: 1; font-weight: 600; font-size: .95rem;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    #pdf-viewer iframe { flex: 1; border: none; width: 100%; }
   </style>
 </head>
 <body>
@@ -148,6 +163,15 @@
 
 <button class="fab" id="fab" onclick="openUpload()" style="display:none">&#xff0b; Upload PDF</button>
 <div id="toast"></div>
+
+<!-- PDF VIEWER -->
+<div id="pdf-viewer">
+  <div id="pdf-viewer-bar">
+    <button class="btn btn-ghost" onclick="closeViewer()">&#8592; Back</button>
+    <span id="pdf-viewer-name"></span>
+  </div>
+  <iframe id="pdf-viewer-frame" src=""></iframe>
+</div>
 
 <!-- UPLOAD MODAL -->
 <div class="overlay" id="up-ov">
@@ -219,14 +243,27 @@ let pubs = [];
 let file = null;
 
 /* ── BOOT ── */
-const _viewParam = new URLSearchParams(window.location.search).get('view');
-if (_viewParam) {
-  const _raw = `https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/main/publications/${encodeURIComponent(_viewParam)}`;
-  window.location.replace(`https://docs.google.com/viewer?url=${encodeURIComponent(_raw)}`);
-}
 if (cfg.settings) document.getElementById('gear').style.display = 'block';
 if (cfg.upload)   document.getElementById('fab').style.display  = 'block';
-loadPubs();
+loadPubs().then(() => {
+  const view = new URLSearchParams(window.location.search).get('view');
+  if (view) showViewer(view);
+});
+
+/* ── VIEWER ── */
+function showViewer(filename) {
+  const rawUrl   = `https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/main/publications/${encodeURIComponent(filename)}`;
+  const embedUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(rawUrl)}&embedded=true`;
+  document.getElementById('pdf-viewer-name').textContent = decodeURIComponent(filename).replace(/\.pdf$/i,'').replace(/[-_]+/g,' ');
+  document.getElementById('pdf-viewer-frame').src = embedUrl;
+  document.getElementById('pdf-viewer').classList.add('open');
+  history.pushState({}, '', `?view=${encodeURIComponent(filename)}`);
+}
+function closeViewer() {
+  document.getElementById('pdf-viewer').classList.remove('open');
+  document.getElementById('pdf-viewer-frame').src = '';
+  history.pushState({}, '', window.location.pathname);
+}
 
 /* ── LOAD ── */
 async function loadPubs() {
@@ -264,7 +301,7 @@ function render(list) {
         <div class="card-title">${x(p.title)}</div>
         ${meta ? `<div class="card-sub">${meta}</div>` : ''}
         <div class="card-acts">
-          <a class="btn btn-blue" href="${viewUrl}" target="_blank" rel="noopener">Open PDF</a>
+          <button class="btn btn-blue" onclick="showViewer('${x(p.filename)}')">Open PDF</button>
           <a class="btn btn-ghost" href="${rawUrl}" download>&#11015; Download</a>
           <button class="btn btn-ghost" data-url="${x(shareUrl)}">&#128279; Copy Link</button>
         </div>
