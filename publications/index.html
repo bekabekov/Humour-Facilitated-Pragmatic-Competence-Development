@@ -226,9 +226,16 @@ loadPubs();
 /* ── LOAD ── */
 async function loadPubs() {
   try {
-    const url = `https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/main/${JSON_PATH}?_=${Date.now()}`;
-    const res = await fetch(url);
-    pubs = res.ok ? await res.json() : [];
+    const url  = `https://api.github.com/repos/${REPO_USER}/${REPO_NAME}/contents/${JSON_PATH}`;
+    const hdrs = { Accept: 'application/vnd.github+json' };
+    if (cfg.token) hdrs.Authorization = `token ${cfg.token}`;
+    const res  = await fetch(url, { headers: hdrs });
+    if (res.ok) {
+      const data = await res.json();
+      pubs = JSON.parse(atob(data.content.replace(/\n/g, '')));
+    } else {
+      pubs = [];
+    }
   } catch { pubs = []; }
   render(pubs);
 }
