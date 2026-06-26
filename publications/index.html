@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Publications – Supreme Attestation Commission</title>
+  <title>Publications – Learn with Humour</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -130,46 +130,33 @@
     .note.show { display: block; }
     .note.ok  { background: #e8f5e9; color: #2e7d32; }
     .note.err { background: #ffebee; color: #c62828; }
-
-    /* SETUP BANNER */
-    .setup-banner {
-      background: #fff8e1; border: 1px solid #ffe082;
-      border-radius: 10px; padding: 1rem 1.2rem;
-      margin-bottom: 1.5rem; font-size: .9rem; color: #5a4000;
-    }
-    .setup-banner strong { display: block; margin-bottom: .3rem; }
-    .setup-banner a { color: #1a3a6b; font-weight: 600; cursor: pointer; }
   </style>
 </head>
 <body>
 
 <header>
   <h1 id="h-title" onclick="secretClick()" style="cursor:default;user-select:none">Publications</h1>
-  <button class="gear-btn" onclick="openSettings()" title="Settings">⚙</button>
+  <p>Learn with Humour Research</p>
+  <button class="gear-btn" id="gear" onclick="openSettings()" title="Settings" style="display:none">&#9881;</button>
 </header>
 
 <div class="wrap">
-  <div id="banner" class="setup-banner" style="display:none">
-    <strong>⚠ One-time setup required</strong>
-    Click <a onclick="openSettings()">Settings ⚙</a> (top right) and enter your GitHub username, repository name, and personal access token. After that, uploading PDFs will work automatically.
-  </div>
-
   <div id="list">
-    <div class="empty"><span>📂</span>Loading…</div>
+    <div class="empty"><span>&#128194;</span>Loading&hellip;</div>
   </div>
 </div>
 
-<button class="fab" onclick="openUpload()">＋ Upload PDF</button>
+<button class="fab" id="fab" onclick="openUpload()" style="display:none">&#xff0b; Upload PDF</button>
 <div id="toast"></div>
 
-<!-- ── UPLOAD MODAL ── -->
+<!-- UPLOAD MODAL -->
 <div class="overlay" id="up-ov">
   <div class="modal">
-    <h2>📄 Upload PDF</h2>
+    <h2>&#128196; Upload PDF</h2>
     <div class="note" id="up-note"></div>
 
     <div class="drop" id="drop" onclick="document.getElementById('fpick').click()">
-      <div style="font-size:2rem">📎</div>
+      <div style="font-size:2rem">&#128206;</div>
       <p>Click or drag &amp; drop a PDF here</p>
       <div class="ok" id="fname"></div>
     </div>
@@ -190,36 +177,24 @@
 
     <div class="mfoot">
       <button class="btn btn-ghost" onclick="closeUpload()">Cancel</button>
-      <button class="btn btn-blue" id="up-btn" onclick="doUpload()">⬆ Upload</button>
+      <button class="btn btn-blue" id="up-btn" onclick="doUpload()">&#11014; Upload</button>
     </div>
   </div>
 </div>
 
-<!-- ── SETTINGS MODAL ── -->
+<!-- SETTINGS MODAL -->
 <div class="overlay" id="set-ov">
   <div class="modal">
-    <h2>⚙ Settings</h2>
+    <h2>&#9881; Settings</h2>
     <p style="color:#666;font-size:.86rem;margin-bottom:1.2rem">
-      Enter your GitHub details once. Your token is saved only in this browser.
+      Enter your GitHub personal access token. It is saved only in this browser.
     </p>
 
     <div class="field">
-      <label>Site Title</label>
-      <input type="text" id="s-title" placeholder="Publications">
-    </div>
-    <div class="field">
-      <label>GitHub Username *</label>
-      <input type="text" id="s-user" placeholder="bright-day-lab">
-    </div>
-    <div class="field">
-      <label>Repository Name *</label>
-      <input type="text" id="s-repo" placeholder="publications">
-    </div>
-    <div class="field">
       <label>GitHub Personal Access Token *</label>
-      <input type="password" id="s-tok" placeholder="ghp_…">
-      <small>Needs <strong>Contents: Read &amp; Write</strong> scope.
-        <a href="https://github.com/settings/tokens/new?scopes=repo&description=Publications+site" target="_blank" rel="noopener">Create token ↗</a>
+      <input type="password" id="s-tok" placeholder="ghp_&hellip;">
+      <small>Needs <strong>Contents: Read &amp; Write</strong> scope on the <code>bekabekov/Humour-Facilitated-Pragmatic-Competence-Development</code> repo.
+        <a href="https://github.com/settings/tokens/new?scopes=repo&description=learnwithhumour+publications" target="_blank" rel="noopener">Create token &#8599;</a>
       </small>
     </div>
 
@@ -231,33 +206,27 @@
 </div>
 
 <script>
+/* ── HARDCODED REPO ── */
+const REPO_USER = 'bekabekov';
+const REPO_NAME = 'Humour-Facilitated-Pragmatic-Competence-Development';
+const SITE_BASE = 'https://learnwithhumour.uz/publications';
+const JSON_PATH = 'publications/publications.json';
+const PDF_DIR   = 'publications';
+
 /* ── STATE ── */
-let cfg  = JSON.parse(localStorage.getItem('pub-cfg') || '{}');
+let cfg  = JSON.parse(localStorage.getItem('lwh-pub-cfg') || '{}');
 let pubs = [];
 let file = null;
 
 /* ── BOOT ── */
-applyBranding();
-document.querySelector('.fab').style.display = cfg.upload ? 'block' : 'none';
-document.querySelector('.gear-btn').style.display = cfg.settings ? 'block' : 'none';
+if (cfg.settings) document.getElementById('gear').style.display = 'block';
+if (cfg.upload)   document.getElementById('fab').style.display  = 'block';
 loadPubs();
-
-function applyBranding() {
-  const t = cfg.title || 'Publications';
-  document.getElementById('h-title').textContent = t;
-  document.title = t;
-}
 
 /* ── LOAD ── */
 async function loadPubs() {
-  if (!cfg.user || !cfg.repo) {
-    document.getElementById('banner').style.display = 'block';
-    render([]);
-    return;
-  }
-  document.getElementById('banner').style.display = 'none';
   try {
-    const url = `https://raw.githubusercontent.com/${cfg.user}/${cfg.repo}/main/publications.json?_=${Date.now()}`;
+    const url = `https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/main/${JSON_PATH}?_=${Date.now()}`;
     const res = await fetch(url);
     pubs = res.ok ? await res.json() : [];
   } catch { pubs = []; }
@@ -268,41 +237,40 @@ async function loadPubs() {
 function render(list) {
   const el = document.getElementById('list');
   if (!list.length) {
-    el.innerHTML = `<div class="empty"><span>📭</span>No documents yet — upload your first PDF.</div>`;
+    el.innerHTML = `<div class="empty"><span>&#128237;</span>No publications yet.</div>`;
     return;
   }
-  const base = `https://${cfg.user}.github.io/${cfg.repo}`;
   el.innerHTML = list.map(p => {
-    const pdfUrl = `${base}/pdfs/${encodeURIComponent(p.filename)}`;
-    const meta = [p.authors, p.year].filter(Boolean).join(' · ');
+    const pdfUrl = `${SITE_BASE}/${encodeURIComponent(p.filename)}`;
+    const meta = [p.authors, p.year].filter(Boolean).join(' &middot; ');
     return `
     <div class="card">
-      <div class="card-icon">📄</div>
+      <div class="card-icon">&#128196;</div>
       <div class="card-body">
         <div class="card-title">${x(p.title)}</div>
-        ${meta ? `<div class="card-sub">${x(meta)}</div>` : ''}
+        ${meta ? `<div class="card-sub">${meta}</div>` : ''}
         <div class="card-acts">
           <a class="btn btn-blue" href="${pdfUrl}" target="_blank" rel="noopener">Open PDF</a>
-          <a class="btn btn-ghost" href="${pdfUrl}" download>⬇ Download</a>
-          <button class="btn btn-ghost" data-url="${x(pdfUrl)}">🔗 Copy Link</button>
+          <a class="btn btn-ghost" href="${pdfUrl}" download>&#11015; Download</a>
+          <button class="btn btn-ghost" data-url="${x(pdfUrl)}">&#128279; Copy Link</button>
         </div>
       </div>
     </div>`;
   }).join('');
 }
 
-/* ── COPY LINK (event delegation — no inline onclick) ── */
+/* ── COPY LINK ── */
 document.getElementById('list').addEventListener('click', e => {
   const btn = e.target.closest('[data-url]');
   if (!btn) return;
   navigator.clipboard.writeText(btn.dataset.url)
-    .then(() => toast('✓ Link copied!'))
+    .then(() => toast('Link copied!'))
     .catch(() => toast('Press Ctrl+C — clipboard blocked by browser.'));
 });
 
 /* ── UPLOAD ── */
 function openUpload() {
-  if (!cfg.user || !cfg.repo || !cfg.token) { openSettings(); return; }
+  if (!cfg.token) { openSettings(); return; }
   document.getElementById('up-ov').classList.add('open');
 }
 function closeUpload() {
@@ -346,36 +314,40 @@ async function doUpload() {
     const filename = sanitize(file.name);
     const b64      = await toB64(file);
 
-    await ghPut(`pdfs/${filename}`, b64, `Add: ${title}`);
+    /* Upload PDF to publications/ folder in the repo */
+    await ghPut(`${PDF_DIR}/${filename}`, b64, `Add publication: ${title}`);
 
     const entry = {
-      id:        'p' + Date.now(),
+      id:       'p' + Date.now(),
       title,
-      authors:   document.getElementById('u-authors').value.trim(),
-      year:      document.getElementById('u-year').value.trim(),
+      authors:  document.getElementById('u-authors').value.trim(),
+      year:     document.getElementById('u-year').value.trim(),
       filename,
-      addedAt:   new Date().toISOString()
+      addedAt:  new Date().toISOString()
     };
     const updated = [...pubs, entry];
-    await ghPut('publications.json',
+    await ghPut(JSON_PATH,
       btoa(unescape(encodeURIComponent(JSON.stringify(updated, null, 2)))),
-      `List update: ${title}`);
+      `Update publications list: ${title}`);
 
     pubs = updated;
     render(pubs);
-    note('up-note', '✅ Uploaded! Your unique link is ready.', 'ok');
-    setTimeout(closeUpload, 1800);
+    note('up-note', 'Uploaded! Link: ' + SITE_BASE + '/' + filename, 'ok');
+    setTimeout(closeUpload, 2500);
   } catch (e) {
-    note('up-note', '❌ ' + e.message, 'err');
+    note('up-note', 'Error: ' + e.message, 'err');
     btn.disabled = false; btn.textContent = '⬆ Upload';
   }
 }
 
 /* ── GITHUB API ── */
 async function ghPut(path, b64, msg) {
-  const url  = `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${path}`;
-  const hdrs = { Authorization: `token ${cfg.token}`, 'Content-Type': 'application/json',
-                 Accept: 'application/vnd.github+json' };
+  const url  = `https://api.github.com/repos/${REPO_USER}/${REPO_NAME}/contents/${path}`;
+  const hdrs = {
+    Authorization: `token ${cfg.token}`,
+    'Content-Type': 'application/json',
+    Accept: 'application/vnd.github+json'
+  };
   let sha;
   try {
     const r = await fetch(`${url}?ref=main`, { headers: hdrs });
@@ -389,46 +361,34 @@ async function ghPut(path, b64, msg) {
 
 /* ── SETTINGS ── */
 function openSettings() {
-  document.getElementById('s-title').value  = cfg.title  || '';
-  document.getElementById('s-user').value   = cfg.user   || '';
-  document.getElementById('s-repo').value   = cfg.repo   || '';
-  document.getElementById('s-tok').value    = cfg.token  || '';
+  document.getElementById('s-tok').value = cfg.token || '';
   document.getElementById('set-ov').classList.add('open');
 }
 function closeSettings() { document.getElementById('set-ov').classList.remove('open'); }
 function saveSettings() {
-  cfg = {
-    title:  document.getElementById('s-title').value.trim(),
-    user:   document.getElementById('s-user').value.trim(),
-    repo:   document.getElementById('s-repo').value.trim(),
-    token:  document.getElementById('s-tok').value.trim(),
-    upload: cfg.upload
-  };
-  localStorage.setItem('pub-cfg', JSON.stringify(cfg));
-  applyBranding();
-  document.querySelector('.fab').style.display = cfg.upload ? 'block' : 'none';
+  cfg.token = document.getElementById('s-tok').value.trim();
+  localStorage.setItem('lwh-pub-cfg', JSON.stringify(cfg));
   closeSettings();
-  loadPubs();
+  toast('Token saved.');
 }
 
-/* ── HELPERS ── */
-/* ── SECRET TOGGLE: 3× = settings, 5× = upload ── */
+/* ── SECRET TOGGLE: 3 clicks = settings gear, 5 clicks = upload button ── */
 let _clicks = 0, _ct;
 function secretClick() {
   clearTimeout(_ct);
   _clicks++;
   if (_clicks === 3) {
     cfg.settings = !cfg.settings;
-    localStorage.setItem('pub-cfg', JSON.stringify(cfg));
-    document.querySelector('.gear-btn').style.display = cfg.settings ? 'block' : 'none';
-    toast(cfg.settings ? '🔓 Settings visible' : '🔒 Settings hidden');
+    localStorage.setItem('lwh-pub-cfg', JSON.stringify(cfg));
+    document.getElementById('gear').style.display = cfg.settings ? 'block' : 'none';
+    toast(cfg.settings ? 'Settings visible' : 'Settings hidden');
   }
   if (_clicks >= 5) {
     _clicks = 0;
     cfg.upload = !cfg.upload;
-    localStorage.setItem('pub-cfg', JSON.stringify(cfg));
-    document.querySelector('.fab').style.display = cfg.upload ? 'block' : 'none';
-    toast(cfg.upload ? '🔓 Upload enabled' : '🔒 Upload hidden');
+    localStorage.setItem('lwh-pub-cfg', JSON.stringify(cfg));
+    document.getElementById('fab').style.display = cfg.upload ? 'block' : 'none';
+    toast(cfg.upload ? 'Upload enabled' : 'Upload hidden');
     return;
   }
   _ct = setTimeout(() => _clicks = 0, 1500);
@@ -438,7 +398,7 @@ function toast(msg) {
   const el = document.getElementById('toast');
   el.textContent = msg; el.style.opacity = '1';
   clearTimeout(el._t);
-  el._t = setTimeout(() => el.style.opacity = '0', 2200);
+  el._t = setTimeout(() => el.style.opacity = '0', 2500);
 }
 function note(id, msg, type) {
   const el = document.getElementById(id);
