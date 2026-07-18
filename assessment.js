@@ -379,6 +379,12 @@
             const questionText = document.getElementById('placement-question-text');
             if (questionText) {
                 questionText.textContent = (useUz && question.stemUz) ? question.stemUz : question.stem;
+                if (useUz && !question.stemUz) {
+                    const uzNote = document.createElement('div');
+                    uzNote.style.cssText = 'font-size:0.8em;color:#6b7280;font-weight:400;margin-top:8px;';
+                    uzNote.textContent = "ℹ️ Yuqori daraja (B2–C1) savollari inglizcha beriladi.";
+                    questionText.appendChild(uzNote);
+                }
             }
 
             // Create options
