@@ -702,6 +702,228 @@
             "Technology humor"
         ],
         "id": "joke-57"
+    },
+    {
+        "text": "Why is six afraid of seven? — Because seven eight nine! (seven ATE nine)",
+        "analysis": "Classic homophone joke: 'eight' (the number 8) sounds exactly like 'ate' (past tense of eat). Learners discover that English humor often lives in sound, not spelling — you must HEAR the joke, not read it.",
+        "type": "riddle",
+        "level": "A1",
+        "learningPoints": [
+            "Homophones (same sound, different meaning)",
+            "Numbers vocabulary",
+            "Listening for wordplay"
+        ],
+        "id": "joke-58"
+    },
+    {
+        "text": "What do you call a fish without eyes? — A fsh!",
+        "analysis": "Wordplay between 'eyes' (body part) and the letter 'i'. Remove the 'i' from 'fish' and you get 'fsh'. This teaches beginners that English speakers play with spelling and letters as a form of humor.",
+        "type": "riddle",
+        "level": "A1",
+        "learningPoints": [
+            "Letters vs. sounds",
+            "Spelling awareness",
+            "Simple wordplay"
+        ],
+        "id": "joke-59"
+    },
+    {
+        "text": "Waiter: 'Do you want your pizza cut into six slices or eight?' Customer: 'Six, please. I can't eat eight.'",
+        "analysis": "The customer treats the number of slices as the amount of food — but the pizza is the same size either way! The humor comes from a logical error, not language. Great for beginners: the vocabulary is simple, but you must think about MEANING, not just words.",
+        "type": "dialogue",
+        "level": "A2",
+        "learningPoints": [
+            "Restaurant vocabulary",
+            "Logical reasoning in humor",
+            "Quantity vs. amount"
+        ],
+        "id": "joke-60"
+    },
+    {
+        "text": "Teacher: 'Name two pronouns.' Student: 'Who, me?'",
+        "analysis": "The student accidentally answers correctly: 'who' and 'me' ARE both pronouns! The student meant 'Are you asking me?' (a real question), but the words themselves form the answer. This shows how the same sentence can work on two levels at once.",
+        "type": "dialogue",
+        "level": "A2",
+        "learningPoints": [
+            "Pronouns",
+            "Accidental double meaning",
+            "Classroom language"
+        ],
+        "id": "joke-61"
+    },
+    {
+        "text": "I told my suitcase there will be no holiday this year. Now I'm dealing with emotional baggage.",
+        "analysis": "'Emotional baggage' is an idiom meaning unresolved feelings from the past — but here it becomes literal: a suitcase (baggage) with emotions! Learners see how idioms can be 're-literalized' for comic effect, a very common pattern in English humor.",
+        "type": "pun",
+        "level": "A2",
+        "learningPoints": [
+            "Idiom: emotional baggage",
+            "Literal vs. idiomatic meaning",
+            "Travel vocabulary"
+        ],
+        "id": "joke-62"
+    },
+    {
+        "text": "A: 'Can you call me a taxi?' B: 'Sure. You're a taxi!'",
+        "analysis": "'Call me a taxi' has two readings: (1) telephone a taxi for me, or (2) name me 'taxi'. B deliberately chooses the wrong reading. This is a classic pragmatic failure joke — B ignores the obvious intended meaning to be funny. In real life, choosing the literal reading of a request is often a form of teasing among friends.",
+        "type": "dialogue",
+        "level": "B1",
+        "learningPoints": [
+            "Ambiguous requests",
+            "Indirect speech acts",
+            "Deliberate misunderstanding as teasing"
+        ],
+        "id": "joke-63"
+    },
+    {
+        "text": "Job interview. Interviewer: 'What's your biggest weakness?' Candidate: 'Honesty.' Interviewer: 'I don't think honesty is a weakness.' Candidate: 'I don't care what you think.'",
+        "analysis": "The candidate proves their 'weakness' by demonstrating it — brutal honesty — in the most inappropriate context possible. This joke teaches register: what counts as honesty among friends is rudeness in a job interview. The humor comes from violating politeness norms exactly when the stakes are highest.",
+        "type": "dialogue",
+        "level": "B1",
+        "learningPoints": [
+            "Register and formality",
+            "Politeness norms in interviews",
+            "Show, don't tell"
+        ],
+        "id": "joke-64"
+    },
+    {
+        "text": "My English teacher said, 'You can't use double negatives in English.' I replied, 'I ain't never gonna use no double negatives, then.'",
+        "analysis": "The student promises to avoid double negatives — using THREE of them. The joke also touches on real sociolinguistics: double negatives ('ain't never') are grammatical in many English dialects, just not in standard formal English. Learners see the difference between textbook rules and real speech.",
+        "type": "anecdote",
+        "level": "B1",
+        "learningPoints": [
+            "Double negatives",
+            "Standard vs. dialect English",
+            "Ironic self-contradiction"
+        ],
+        "id": "joke-65"
+    },
+    {
+        "text": "Text message exchange. Mom: 'What does IDK mean?' Son: 'I don't know.' Mom: 'Oh no, nobody knows!'",
+        "analysis": "The son gives the correct answer — IDK literally means 'I don't know' — but Mom hears it as an admission of ignorance. Texting abbreviations are modern pragmatics: the same words carry different meanings depending on whether you read them as an answer or as an abbreviation being explained.",
+        "type": "dialogue",
+        "level": "B1",
+        "learningPoints": [
+            "Texting abbreviations",
+            "Answer vs. explanation ambiguity",
+            "Digital communication norms"
+        ],
+        "id": "joke-66"
+    },
+    {
+        "text": "An Uzbek student in London asks for directions: 'Excuse me, how do I get to the British Museum?' Londoner: 'Well, you COULD take the number 8 bus...' The student waits for the rest. There is no rest.",
+        "analysis": "British speakers often soften advice with 'could' and a hesitant tone, which makes it sound incomplete or doubtful. The Londoner IS giving the answer — 'take the number 8 bus' — but wrapped in politeness padding. Uzbek directness expects a clear 'take bus 8'; British indirectness delivers the same information sideways. Neither is wrong: they are different politeness systems.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "British indirectness",
+            "Hedging with 'could'",
+            "Cross-cultural politeness styles",
+            "Asking for directions"
+        ],
+        "id": "joke-67"
+    },
+    {
+        "text": "British colleague reviewing your work: 'It's certainly... brave.' Translation: 'This is a terrible idea and I'm alarmed you suggested it.'",
+        "analysis": "'Brave' here is a famous British code word. Literally it's a compliment; pragmatically it means 'risky to the point of foolish'. The pause ('certainly...') signals the speaker is searching for a polite substitute for criticism. Learners must decode praise-shaped criticism — one of the hardest skills in professional English.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "British understatement codes",
+            "Praise-shaped criticism",
+            "Workplace English",
+            "Reading hesitation signals"
+        ],
+        "id": "joke-68"
+    },
+    {
+        "text": "A guest in an Uzbek home says 'No, thank you, I'm full' — and receives a third plate of plov. In England, a guest says 'I couldn't possibly' — and the host takes the plate away. Both guests go home confused. One is too full, one is still hungry.",
+        "analysis": "In Uzbek hospitality culture, the first refusal is often ritual politeness — the host insists, and accepting after refusing is normal. In British culture, a refusal is usually taken literally the first time. The SAME words ('no, thank you') perform different acts in different cultures: ritual modesty vs. final decision. This is pragmatic transfer — carrying your culture's rules into another language.",
+        "type": "cultural",
+        "level": "B2",
+        "learningPoints": [
+            "Ritual refusal vs. literal refusal",
+            "Uzbek and British hospitality norms",
+            "Pragmatic transfer",
+            "Offers and refusals"
+        ],
+        "id": "joke-69"
+    },
+    {
+        "text": "Doctor: 'I have some bad news and some very bad news.' Patient: 'Give me the bad news first.' Doctor: 'You have 24 hours to live.' Patient: 'That's the BAD news?! What's the very bad news?' Doctor: 'I've been trying to reach you since yesterday.'",
+        "analysis": "The punchline forces you to recalculate everything: if the doctor called yesterday, the 24 hours are already gone. The humor relies on implicature — the doctor never says 'you are about to die', but the timeline forces that conclusion. Dark humor like this tests whether learners can chain inferences: yesterday + 24 hours = now.",
+        "type": "anecdote",
+        "level": "B2",
+        "learningPoints": [
+            "Chained inference",
+            "Implicature",
+            "Dark humor conventions",
+            "Recalculating meaning at the punchline"
+        ],
+        "id": "joke-70"
+    },
+    {
+        "text": "'I'm not saying she's always late, but she once missed a meeting she scheduled, in her own office, with herself.'",
+        "analysis": "The opening 'I'm not saying...' is a classic pragmatic trick called apophasis — saying something while claiming not to say it. The speaker denies making an accusation, then delivers evidence so absurd the accusation makes itself. The exaggeration (missing a meeting with yourself) signals hyperbole, so listeners know not to take it factually.",
+        "type": "anecdote",
+        "level": "C1",
+        "learningPoints": [
+            "Apophasis ('I'm not saying...')",
+            "Hyperbole as evidence",
+            "Plausible deniability in criticism"
+        ],
+        "id": "joke-71"
+    },
+    {
+        "text": "Oscar Wilde reportedly said: 'I am so clever that sometimes I don't understand a single word of what I am saying.'",
+        "analysis": "This is self-deprecating boasting — or boastful self-deprecation. The sentence structure promises a compliment ('I am so clever that...') and delivers an absurdity. Wilde mocks both his own reputation for cleverness and people who confuse complexity with intelligence. C1 learners can discuss: is he insulting himself, his critics, or intellectuals in general? The answer is all three at once.",
+        "type": "anecdote",
+        "level": "C1",
+        "learningPoints": [
+            "Self-deprecating wit",
+            "Subverted sentence expectations",
+            "Multiple simultaneous targets",
+            "Wildean paradox"
+        ],
+        "id": "joke-72"
+    },
+    {
+        "text": "'How long will the next bus be?' — 'About twelve metres.'",
+        "analysis": "'How long' asks about time (how many minutes) but can grammatically ask about physical length. The answer picks the absurd reading. This question-word ambiguity ('long' = duration or distance) exists in many languages, including Uzbek ('uzoq' can cover both distance and duration) — a rare case where the joke translates well.",
+        "type": "riddle",
+        "level": "A2",
+        "learningPoints": [
+            "Question-word ambiguity",
+            "Time vs. distance vocabulary",
+            "Cross-language wordplay"
+        ],
+        "id": "joke-73"
+    },
+    {
+        "text": "First day at work. Boss: 'Don't think of me as your boss. Think of me as a friend who is always right and whom you can never contradict.'",
+        "analysis": "The boss performs friendliness while describing pure authority — the definition of a 'friend' collapses into the definition of a boss. This is irony through self-contradiction: the sentence cancels itself as it goes. It teaches learners to notice when someone's stated frame ('we're friends here!') conflicts with their actual behavior.",
+        "type": "dialogue",
+        "level": "B2",
+        "learningPoints": [
+            "Performed friendliness",
+            "Self-cancelling statements",
+            "Power and politeness at work"
+        ],
+        "id": "joke-74"
+    },
+    {
+        "text": "Why do we tell actors to 'break a leg'? — Because every play needs a cast!",
+        "analysis": "Two idioms collide: 'break a leg' (good luck in theater) and 'cast', which means both the actors in a play and the plaster support for a broken bone. The joke rewards learners who know BOTH meanings — and teaches that theater English has its own superstitious politeness: saying 'good luck' directly is considered bad luck backstage.",
+        "type": "pun",
+        "level": "B1",
+        "learningPoints": [
+            "Idiom: break a leg",
+            "Polysemy: cast",
+            "Superstition-based politeness",
+            "Theater vocabulary"
+        ],
+        "id": "joke-75"
     }
     ]
     
