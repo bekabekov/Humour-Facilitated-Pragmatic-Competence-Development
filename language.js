@@ -41,6 +41,13 @@
 
         // Update HTML lang attribute (for accessibility)
         document.documentElement.lang = lang;
+
+        // Re-render the current joke so translated analyses appear immediately
+        if (window.JokeModule && typeof window.JokeModule.renderJoke === 'function' &&
+            window.DATA && window.DATA.jokes) {
+            var idx = (window.State && window.State.currentJokeIndex) || 0;
+            window.JokeModule.renderJoke(idx);
+        }
     }
 
     // Update active state of language buttons
