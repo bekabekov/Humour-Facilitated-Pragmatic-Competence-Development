@@ -14,7 +14,14 @@
             "correct": 1,
             "level": "A1-A2",
             "explanation": "The word \"hands\" means both human body parts AND clock pointers. This double meaning creates the humor.",
-            "stem": "\"What has hands but cannot clap? A clock!\" This joke is funny because:"
+            "stem": "\"What has hands but cannot clap? A clock!\" This joke is funny because:",
+            "stemUz": "\"What has hands but cannot clap? A clock!\" (\"Qo'llari bor, lekin qarsak chala olmaydi — nima? Soat!\") Bu hazil kulgili, chunki:",
+            "optionsUz": [
+                "Soatlar g'alati narsalar",
+                "\"Hands\" so'zi ikki xil ma'noga ega",
+                "U qofiyalangan",
+                "Soatlar harakatlana olmaydi"
+            ]
         },
         {
             "id": "pt-10",
@@ -70,7 +77,14 @@
             ],
             "correct": 1,
             "explanation": "\"Maybe revisit next week\" is an indirect, face-saving delay rather than immediate agreement or total rejection.",
-            "question": "Coworker: \"Could we maybe revisit your proposal next week?\" said after a long meeting. What do they likely mean?"
+            "question": "Coworker: \"Could we maybe revisit your proposal next week?\" said after a long meeting. What do they likely mean?",
+            "stemUz": "Uzoq majlisdan so'ng hamkasbingiz: \"Could we maybe revisit your proposal next week?\" (\"Taklifingizga kelasi hafta qaytsak bo'ladimi?\") deydi. U ehtimol nimani nazarda tutyapti?",
+            "optionsUz": [
+                "Juda xursand, darhol ikkinchi uchrashuvni xohlaydi",
+                "Ko'proq vaqt kerak, qarorni muloyimlik bilan kechiktiryapti",
+                "Taklifni butunlay rad etyapti va hech qachon qaytmaydi",
+                "Taklifni umuman tushunmadi"
+            ]
         },
         {
             "id": "pt-14",
@@ -112,7 +126,14 @@
             "correct": 2,
             "level": "A1-A2",
             "explanation": "\"Feeling blue\" is an idiom meaning sad. The literal interpretation (being the color blue) would be absurd.",
-            "stem": "\"I'm feeling blue today\" means:"
+            "stem": "\"I'm feeling blue today\" means:",
+            "stemUz": "\"I'm feeling blue today\" degani:",
+            "optionsUz": [
+                "O'zimni ko'k rangga bo'yadim",
+                "Juda sovqotyapman",
+                "Xafaman, kayfiyatim yo'q",
+                "Ko'k rangni yaxshi ko'raman"
+            ]
         },
         {
             "id": "pt-3",
@@ -126,7 +147,14 @@
             "correct": 1,
             "level": "A1-A2",
             "explanation": "\"Break a leg\" is a theatrical idiom meaning \"good luck.\" Taking it literally would be alarming!",
-            "stem": "An actor's friend says \"Break a leg!\" before a performance. This means:"
+            "stem": "An actor's friend says \"Break a leg!\" before a performance. This means:",
+            "stemUz": "Aktyorning do'sti spektakl oldidan \"Break a leg!\" deydi. Bu degani:",
+            "optionsUz": [
+                "Ehtiyot bo'l, sahna xavfli",
+                "Omad tilayman!",
+                "Spektakl og'riqli bo'ladi",
+                "Iltimos, jarohat ol"
+            ]
         },
         {
             "id": "pt-4",
@@ -140,7 +168,14 @@
             "correct": 2,
             "level": "A1-A2",
             "explanation": "\"Piece of cake\" is an idiom meaning \"very easy.\" The student interprets it literally as food.",
-            "stem": "\"Why did the student eat his homework? Because the teacher said it was a piece of cake!\" The joke works because:"
+            "stem": "\"Why did the student eat his homework? Because the teacher said it was a piece of cake!\" The joke works because:",
+            "stemUz": "\"Why did the student eat his homework? Because the teacher said it was a piece of cake!\" (\"O'quvchi nega uy vazifasini yeb qo'ydi? Chunki o'qituvchi uni 'piece of cake' dedi!\") Hazil ishlaydi, chunki:",
+            "optionsUz": [
+                "O'quvchilar och bo'lishadi",
+                "Uy vazifasi mazali",
+                "\"Piece of cake\" ham \"oson\", ham haqiqiy tort degani",
+                "O'qituvchilar g'alati maslahat berishadi"
+            ]
         },
         {
             "id": "pt-5",
@@ -154,7 +189,14 @@
             "correct": 1,
             "level": "B1",
             "explanation": "This is an indirect speech act. Instead of directly saying \"Let's end the meeting,\" the speaker hints at it politely.",
-            "stem": "Your colleague says \"It's getting quite late...\" during a long meeting. They probably mean:"
+            "stem": "Your colleague says \"It's getting quite late...\" during a long meeting. They probably mean:",
+            "stemUz": "Uzoq majlisda hamkasbingiz \"It's getting quite late...\" (\"Ancha kech bo'lyapti...\") deydi. U ehtimol nimani nazarda tutyapti?",
+            "optionsUz": [
+                "Aniq vaqtni bilmoqchi",
+                "Majlisni tugatish kerak deb hisoblaydi",
+                "Charchagan va uxlab qoladi",
+                "Xonadagi soat noto'g'ri ishlayapti"
+            ]
         },
         {
             "id": "pt-6",
@@ -168,7 +210,14 @@
             "correct": 1,
             "level": "B1",
             "explanation": "\"Can you...?\" is conventionally used as a polite request, not a question about ability. This is an indirect speech act.",
-            "stem": "\"Can you pass the salt?\" at dinner is:"
+            "stem": "\"Can you pass the salt?\" at dinner is:",
+            "stemUz": "Dasturxonda \"Can you pass the salt?\" (\"Tuzni uzata olasizmi?\") deyish — bu:",
+            "optionsUz": [
+                "Jismoniy qobiliyatingiz haqidagi jiddiy savol",
+                "Muloyim, bilvosita iltimos",
+                "Kuchingiz haqidagi haqorat",
+                "Bilimingizni tekshirish"
+            ]
         },
         {
             "id": "pt-7",
@@ -182,7 +231,14 @@
             "correct": 2,
             "level": "B1",
             "explanation": "This is an indirect refusal. The speaker avoids saying \"no\" directly to protect both parties' feelings (face-saving).",
-            "stem": "You invite a friend to a party. They say \"I'm a bit busy right now.\" This is probably:"
+            "stem": "You invite a friend to a party. They say \"I'm a bit busy right now.\" This is probably:",
+            "stemUz": "Do'stingizni bazmga taklif qilasiz. U: \"I'm a bit busy right now\" (\"Hozir biroz bandman\") deydi. Bu ehtimol:",
+            "optionsUz": [
+                "Unga yordam berishingiz uchun iltimos",
+                "Hozirgi mashg'uloti haqidagi oddiy fakt",
+                "Taklifni rad etishning bilvosita yo'li",
+                "Bazm vaqti haqidagi savol"
+            ]
         },
         {
             "id": "pt-8",
