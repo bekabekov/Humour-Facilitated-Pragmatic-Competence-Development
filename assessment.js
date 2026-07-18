@@ -373,9 +373,13 @@
                 else if (question.level === 'C1') badge.classList.add('level-c1');
             }
 
-            // Update question text
+            // Update question text (Uzbek version when UZB is selected and a translation exists)
+            const prefLang = localStorage.getItem('preferredLanguage') || 'en';
+            const useUz = prefLang === 'uz';
             const questionText = document.getElementById('placement-question-text');
-            if (questionText) questionText.textContent = question.stem;
+            if (questionText) {
+                questionText.textContent = (useUz && question.stemUz) ? question.stemUz : question.stem;
+            }
 
             // Create options
             const optionsContainer = document.getElementById('placement-options');
@@ -386,7 +390,8 @@
                 // Store reference to PlacementModule for reliable binding
                 const self = this;
 
-                question.options.forEach((option, optIndex) => {
+                const displayOptions = (useUz && question.optionsUz) ? question.optionsUz : question.options;
+                displayOptions.forEach((option, optIndex) => {
                     const letter = String.fromCharCode(65 + optIndex);
                     const optionId = `placement_q${index}_opt${optIndex}`;
 
