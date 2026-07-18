@@ -1,7 +1,7 @@
 [
     {
         "text": "What has hands but cannot clap? — A clock!",
-        "analysis": "Simple polysemy: 'hands' means both human body parts and clock pointers. This teaches learners that words can have multiple meanings depending on context.",
+        "analysis": "'Hands' has two meanings: the hands on your body, and the hands of a clock (the parts that show the time). One word, two meanings — this is called polysemy. A clock has 'hands', but hands like that cannot clap!",
         "type": "riddle",
         "level": "A1",
         "learningPoints": [
@@ -9,11 +9,12 @@
             "Context determines meaning",
             "Literal vs. figurative interpretation"
         ],
-        "id": "joke-1"
+        "id": "joke-1",
+        "analysisUz": "'Hands' so'zi ikki ma'noga ega: odamning qo'llari va soat millari (inglizchada soat millari ham 'hands' deyiladi). Bitta so'z — ikki ma'no. Buni polisemiya deyishadi. Soatning 'qo'llari' bor, lekin ular qarsak chala olmaydi — hazil shunga qurilgan!"
     },
     {
         "text": "What gets wetter as it dries? — A towel!",
-        "analysis": "Paradox created through dual meaning of 'dries': the towel dries things (makes them dry) while becoming wet itself.",
+        "analysis": "A towel dries you — but the towel itself becomes wet. 'Dries' here means 'makes other things dry'. The riddle sounds impossible, but it is true. English riddles often play with words like this.",
         "type": "riddle",
         "level": "A1",
         "learningPoints": [
@@ -21,11 +22,12 @@
             "Process vs. state distinction",
             "Logical inference"
         ],
-        "id": "joke-2"
+        "id": "joke-2",
+        "analysisUz": "Sochiq sizni quritadi — lekin o'zi ho'l bo'ladi. Bu yerda 'dries' so'zi 'boshqa narsani quritadi' degan ma'noda. Topishmoq imkonsizdek eshitiladi, lekin aslida to'g'ri. Inglizcha topishmoqlar so'zlar bilan mana shunday o'ynaydi."
     },
     {
         "text": "Why did the pencil go to bed? Because it was feeling dull.",
-        "analysis": "Literal vs. figurative meaning: 'dull' means both 'not sharp' (literal, for pencils) and 'boring/tired' (figurative, for people).",
+        "analysis": "'Dull' has two meanings: not sharp (a pencil can be dull) and boring or tired (a person can feel dull). The joke gives the pencil human feelings. One word, two meanings — that is the trick.",
         "type": "pun",
         "level": "A2",
         "learningPoints": [
@@ -33,11 +35,12 @@
             "Literal vs. figurative",
             "Anthropomorphism in humor"
         ],
-        "id": "joke-3"
+        "id": "joke-3",
+        "analysisUz": "'Dull' so'zi ikki ma'noga ega: o'tmas (qalam haqida) va zerikkan yoki charchagan (odam haqida). Hazilda qalamga insoniy his beriladi. Bitta so'z — ikki ma'no. Sir mana shunda."
     },
     {
         "text": "Why did the math book look sad? Because it had too many problems.",
-        "analysis": "Polysemy of 'problems': mathematical exercises vs. difficulties/troubles. Personification adds to humor.",
+        "analysis": "'Problems' has two meanings: math exercises in a book, and troubles in life. A math book is full of exercises — so it is 'full of problems', like a sad person. One word, two meanings.",
         "type": "pun",
         "level": "A2",
         "learningPoints": [
@@ -45,7 +48,8 @@
             "Personification",
             "Emotional vocabulary"
         ],
-        "id": "joke-4"
+        "id": "joke-4",
+        "analysisUz": "'Problems' so'zi ikki ma'noga ega: darslikdagi masalalar va hayotdagi muammolar. Matematika kitobi masalalarga to'la — xuddi muammolari ko'p, xafa odamdek. Bitta so'z — ikki ma'no."
     },
     {
         "text": "I used to be a banker, but I lost interest.",
@@ -57,7 +61,8 @@
             "Professional terminology",
             "Economic vocabulary"
         ],
-        "id": "joke-5"
+        "id": "joke-5",
+        "analysisUz": "'Interest' ikki ma'noga ega: qiziqish va bank foizi. 'I lost interest' = 'qiziqishim yo'qoldi' HAMDA 'foizni yo'qotdim'. Sobiq bankir uchun ikkala ma'no ham to'g'ri — hazil shu yerda."
     },
     {
         "text": "I got fired from the calendar factory. I took a day off.",
@@ -69,7 +74,8 @@
             "Cause-effect implicature",
             "Workplace vocabulary"
         ],
-        "id": "joke-6"
+        "id": "joke-6",
+        "analysisUz": "'To take a day off' iborasi 'bir kun dam olmoq' degani. Lekin kalendar zavodida ishlasangiz, 'kunni olib tashlash' so'zma-so'z ham bo'lishi mumkin — kalendardan bir kunni yirtib oldi! Ibora va so'zma-so'z ma'no to'qnashganda hazil tug'iladi."
     },
     {
         "text": "Parallel lines have so much in common — it's a shame they'll never meet.",
@@ -93,7 +99,8 @@
             "Literal vs. intended meaning",
             "Service interaction norms"
         ],
-        "id": "joke-8"
+        "id": "joke-8",
+        "analysisUz": "Ofitsiant: 'How did you find your steak?' — 'Steyk qanday ekan?' (fikringiz qanday?). Mijoz esa 'find'ni 'topmoq' deb tushunadi: 'Kartoshka yonidan topdim!'. 'Find' so'zining ikki ma'nosi: topmoq va baholamoq. Restoranda bu savolni eshitsangiz — fikringizni so'rashyapti!"
     },
     {
         "text": "A: 'Excuse me, does this bus go to Tashkent?' B: 'No, it goes by itself.'",
@@ -338,7 +345,8 @@
             "Written tone",
             "Social media pragmatics"
         ],
-        "id": "joke-28"
+        "id": "joke-28",
+        "analysisUz": "'Wow, what groundbreaking insight' ('Voy, qanday buyuk kashfiyot') — bu kinoya (sarkazm): so'zlar maqtov, ma'no esa teskari — 'hamma biladigan gapni yozibsan'. Ijtimoiy tarmoqlarda ortiqcha maqtov ko'pincha kinoya bo'ladi. Ohang va vaziyatga qarang!"
     },
     {
         "text": "Uzbek mother: 'Have you eaten?' Translation: 'I love you, I care about you, you're probably starving, let me feed you immediately regardless of your answer.'",
@@ -351,7 +359,8 @@
             "Uzbek cultural scripts",
             "Hospitality speech acts"
         ],
-        "id": "joke-29"
+        "id": "joke-29",
+        "analysisUz": "O'zbek onasi 'Ovqat yedingmi?' deb so'raganda, bu shunchaki savol emas — bu g'amxo'rlik va mehr. Inglizchada 'Have you eaten?' bunday ma'no tashimaydi. Har bir tilda oddiy gaplar qo'shimcha 'yashirin' ma'no olib yurishi mumkin — buni pragmatika o'rganadi."
     },
     {
         "text": "When Uzbek says 'Come visit us!' to someone they just met, Foreigner thinks: 'Wow, new friend!' Reality: It's formulaic politeness, like 'Have a nice day' - not literal invitation.",
@@ -427,7 +436,7 @@
     },
     {
         "text": "Why did the student eat his homework? Because the teacher said it was a piece of cake!",
-        "analysis": "Idiom literalization: 'piece of cake' means 'very easy' (idiomatically), treated literally as actual cake. Common in children's humor but teaches pragmatic principles.",
+        "analysis": "'A piece of cake' is an idiom. It means 'very easy'. But the student understands it literally — as real cake — and eats the homework! Idioms do not mean what the words say. This is why we must learn them.",
         "type": "anecdote",
         "level": "A2",
         "learningPoints": [
@@ -435,7 +444,8 @@
             "Literal vs. figurative",
             "School vocabulary"
         ],
-        "id": "joke-36"
+        "id": "joke-36",
+        "analysisUz": "'A piece of cake' — bu ibora (idioma). Ma'nosi: 'juda oson'. Lekin o'quvchi uni so'zma-so'z tushunadi — haqiqiy tort deb — va uy vazifasini yeb qo'yadi! Iboralar so'zlarning to'g'ridan-to'g'ri ma'nosini bildirmaydi. Shuning uchun ularni alohida o'rganish kerak."
     },
     {
         "text": "Let's eat, Grandma! vs. Let's eat Grandma! — Punctuation saves lives.",
@@ -624,8 +634,8 @@
             "Cultural codes"
         ],
         "id": "joke-51"
-        },
-        {
+    },
+    {
         "text": "Askiya Okhshatdim: A: 'Sizni qovunga o'xshatdim!' (I compared you to a melon!) B: 'Nega?' (Why?) A: 'Ichingiz bo'sh, lekin tashqaringiz chiroyli!' (Empty inside, but beautiful outside!)",
         "analysis": "Okhshatdim is the classic askiya format where performers compare each other to objects. The comparison seems like a compliment (beautiful) but contains gentle criticism (empty). Unlike Western roast comedy, askiya mockery must be 'subtle, light and kind' - showing wit without humiliation.",
         "type": "cultural",
@@ -713,7 +723,8 @@
             "Numbers vocabulary",
             "Listening for wordplay"
         ],
-        "id": "joke-58"
+        "id": "joke-58",
+        "analysisUz": "'Eight' (8 raqami) va 'ate' ('yemoq' fe'lining o'tgan zamoni) bir xil eshitiladi: [eyt]. Shuning uchun 'seven eight nine' — 'yetti sakkiz to'qqiz' emas, 'yetti to'qqizni yeb qo'ydi' bo'lib eshitiladi! Inglizcha hazillarni ko'pincha o'qib emas, eshitib tushunish kerak."
     },
     {
         "text": "What do you call a fish without eyes? — A fsh!",
@@ -725,7 +736,8 @@
             "Spelling awareness",
             "Simple wordplay"
         ],
-        "id": "joke-59"
+        "id": "joke-59",
+        "analysisUz": "'Eyes' (ko'zlar) va 'i' harfi bir xil eshitiladi: [ay]. 'Fish' so'zidan 'i' harfini olib tashlasak — 'fsh' qoladi. Ya'ni 'ko'zsiz baliq' = 'i'siz fish. Inglizlar harflar va tovushlar bilan ham hazillashadi."
     },
     {
         "text": "Waiter: 'Do you want your pizza cut into six slices or eight?' Customer: 'Six, please. I can't eat eight.'",
@@ -737,7 +749,8 @@
             "Logical reasoning in humor",
             "Quantity vs. amount"
         ],
-        "id": "joke-60"
+        "id": "joke-60",
+        "analysisUz": "Mijoz bo'laklar sonini ovqat miqdori deb o'ylaydi — lekin pitsa baribir bir xil-ku! Bu hazilda qiyin so'z yo'q, mantiqiy xato bor. Hazilni tushunish uchun so'zlarni emas, MA'NOni o'ylash kerak."
     },
     {
         "text": "Teacher: 'Name two pronouns.' Student: 'Who, me?'",
@@ -749,7 +762,8 @@
             "Accidental double meaning",
             "Classroom language"
         ],
-        "id": "joke-61"
+        "id": "joke-61",
+        "analysisUz": "O'qituvchi: 'Ikkita olmosh ayting'. O'quvchi: 'Who, me?' ('Kim, menmi?'). O'quvchi savol berdi deb o'ylaydi — lekin 'who' va 'me' aynan olmoshlar! U bilmasdan to'g'ri javob berdi. Bitta gap bir vaqtda ikki vazifa bajarishi mumkin."
     },
     {
         "text": "I told my suitcase there will be no holiday this year. Now I'm dealing with emotional baggage.",
@@ -761,7 +775,8 @@
             "Literal vs. idiomatic meaning",
             "Travel vocabulary"
         ],
-        "id": "joke-62"
+        "id": "joke-62",
+        "analysisUz": "'Emotional baggage' iborasi 'o'tmishdagi og'ir xotiralar' degan ma'noni bildiradi. Lekin bu yerda u so'zma-so'z ishlaydi: his-tuyg'uli chamadon ('baggage' = yuk, chamadon)! Inglizcha hazillar iborani qaytadan 'jonlantirishni' yaxshi ko'radi."
     },
     {
         "text": "A: 'Can you call me a taxi?' B: 'Sure. You're a taxi!'",
@@ -898,7 +913,8 @@
             "Time vs. distance vocabulary",
             "Cross-language wordplay"
         ],
-        "id": "joke-73"
+        "id": "joke-73",
+        "analysisUz": "'How long' ikki narsani so'rashi mumkin: qancha VAQT va qancha UZUNLIK. Savol vaqt haqida edi ('avtobus qachon keladi?'), javob esa uzunlik haqida ('12 metr'). O'zbekchada ham 'uzoq' so'zi vaqtga ham, masofaga ham ishlatiladi — shuning uchun bu hazil bizga ham tanish!"
     },
     {
         "text": "First day at work. Boss: 'Don't think of me as your boss. Think of me as a friend who is always right and whom you can never contradict.'",
@@ -924,6 +940,70 @@
             "Theater vocabulary"
         ],
         "id": "joke-75"
+    },
+    {
+        "text": "A: 'Do you speak English?' B: 'Yes, a little.' A: 'What is your name?' B: 'A Little.'",
+        "analysis": "B thinks the second question is still about English, so he answers with his 'English name'. He connects the wrong question with the wrong answer. Understanding WHICH question you are answering is a real conversation skill.",
+        "analysisUz": "B ikkinchi savolni ham ingliz tili haqida deb o'ylaydi va 'A little'ni ism sifatida aytadi. Suhbatda QAYSI savolga javob berayotganingizni tushunish — muhim mahorat. Yangi til o'rganayotganda bunday chalkashliklar hammada bo'ladi!",
+        "type": "dialogue",
+        "level": "A1",
+        "learningPoints": [
+            "Question and answer matching",
+            "Introductions",
+            "Common learner mistakes"
+        ],
+        "id": "joke-76"
+    },
+    {
+        "text": "Which room has no walls and no door? — A mushroom!",
+        "analysis": "'Mushroom' ends with the sound 'room', but it is not a room at all — it is a small plant-like food. English riddles love hiding one word inside another word.",
+        "analysisUz": "'Mushroom' (qo'ziqorin) so'zi 'room' (xona) bilan tugaydi, lekin u umuman xona emas! Inglizcha topishmoqlar bir so'z ichiga boshqa so'zni 'yashirishni' yaxshi ko'radi. So'z ichidan so'z qidiring!",
+        "type": "riddle",
+        "level": "A1",
+        "learningPoints": [
+            "Words inside words",
+            "Rooms vocabulary",
+            "Sound patterns"
+        ],
+        "id": "joke-77"
+    },
+    {
+        "text": "Student: 'Teacher, my dog ate my homework.' Teacher: 'And where is your dog now?' Student: 'At the doctor. Too many math problems.'",
+        "analysis": "First, the classic excuse: 'my dog ate my homework'. Then the surprise: the dog is sick — because it 'ate too many math problems'! 'Problems' means both math exercises and troubles. The student's excuse becomes funnier than the truth.",
+        "analysisUz": "'Itim uy vazifamni yeb qo'ydi' — inglizzabon o'quvchilarning mashhur bahonasi. Kutilmagan davomi: it kasal bo'lib qolibdi — 'masalalar ko'p edi'! 'Problems' ham masala, ham muammo degani. Bahona haqiqatdan ham kulgiliroq chiqdi.",
+        "type": "dialogue",
+        "level": "A2",
+        "learningPoints": [
+            "Classic excuses in English culture",
+            "Polysemy: problems",
+            "Unexpected endings"
+        ],
+        "id": "joke-78"
+    },
+    {
+        "text": "Uzbek grandmother learning English: 'English is easy! Tea is \"chai\" — same! Bazaar is \"bazaar\" — same! But why is \"non\" not bread? In English, \"non\" means NO?! Who took my bread?!'",
+        "analysis": "In Uzbek, 'non' means bread. In English, 'non-' means 'not' (non-stop, non-smoking). Same sound, opposite feeling: for the grandmother 'non' is warm and delicious, for English it is a cold 'no'. False friends — words that look the same but mean different things — surprise every learner.",
+        "analysisUz": "O'zbekchada 'non' — eng shirin so'zlardan biri. Inglizchada esa 'non-' old qo'shimchasi 'yo'q, emas' degani (non-stop, non-smoking). Bir xil tovush — butunlay boshqa ma'no. Bunday so'zlar 'soxta do'stlar' deyiladi. Buvijon haq: nonni hech kimga bermaymiz!",
+        "type": "cultural",
+        "level": "A2",
+        "learningPoints": [
+            "False friends between languages",
+            "Prefix non-",
+            "Loanwords: chai, bazaar"
+        ],
+        "id": "joke-79"
+    },
+    {
+        "text": "Tourist at Tashkent bazaar: 'Is this bread fresh?' Baker: 'Fresh? Brother, it is so fresh it is still warm from saying goodbye to the oven!'",
+        "analysis": "The baker does not just say 'yes'. He uses playful exaggeration (hyperbole) — the bread 'said goodbye to the oven'. In many cultures, market sellers answer with humor and big images instead of plain facts. This is friendly talk, not information — do not take it literally!",
+        "analysisUz": "Novvoy oddiygina 'ha' demaydi — u quvnoq mubolag'a ishlatadi: non 'tandir bilan endigina xayrlashgan'! Bozorda sotuvchilar ko'pincha quruq fakt o'rniga obrazli, hazilkash javob berishadi. Bu ma'lumot emas — samimiy muloqot. So'zma-so'z qabul qilmang!",
+        "type": "cultural",
+        "level": "A2",
+        "learningPoints": [
+            "Hyperbole (exaggeration)",
+            "Friendly market talk",
+            "Literal vs playful language"
+        ],
+        "id": "joke-80"
     }
-    ]
-    
+]
