@@ -298,12 +298,34 @@
                 `;
             }
 
-            // Update analysis
+            // Update analysis (show Uzbek explanation when UZB language is selected and available).
+            // Consistent language logic: if a translation exists, always show a one-click switch;
+            // if it doesn't (in UZB mode), say so explicitly instead of silently showing English.
             if (DOM.jokeAnalysis) {
-                DOM.jokeAnalysis.innerHTML = `
-                    <h4>📚 Analysis</h4>
-                    <p>${sanitizeHTML(joke.analysis)}</p>
+                const lang = localStorage.getItem('preferredLanguage') || 'en';
+                const useUz = lang === 'uz' && joke.analysisUz;
+                let analysisHtml = `
+                    <h4>📚 ${useUz ? 'Tahlil' : 'Analysis'}</h4>
+                    <p>${sanitizeHTML(useUz ? joke.analysisUz : joke.analysis)}</p>
                 `;
+                const switchStyle = 'margin-top:10px;padding:8px 14px;border:1px solid #6366f1;border-radius:8px;background:#eef2ff;color:#3730a3;font-size:0.875rem;font-weight:600;cursor:pointer;';
+                if (lang !== 'uz' && joke.analysisUz) {
+                    analysisHtml += `<button type="button" id="joke-lang-switch" style="${switchStyle}">👉 O'zbekcha tahlilni o'qish</button>`;
+                } else if (useUz) {
+                    analysisHtml += `<button type="button" id="joke-lang-switch" style="${switchStyle}">👉 Read this analysis in English</button>`;
+                } else if (lang === 'uz' && !joke.analysisUz) {
+                    analysisHtml += `<p style="margin-top:10px;font-size:0.85rem;color:#6b7280;">ℹ️ Bu tahlil hozircha faqat ingliz tilida. O'zbekcha tahlillar boshlang'ich (A1–A2) va 1-modul hazillarida mavjud.</p>`;
+                }
+                DOM.jokeAnalysis.innerHTML = analysisHtml;
+
+                const langSwitchBtn = document.getElementById('joke-lang-switch');
+                if (langSwitchBtn) {
+                    langSwitchBtn.addEventListener('click', function() {
+                        const target = (localStorage.getItem('preferredLanguage') || 'en') === 'uz' ? 'en' : 'uz';
+                        const globalBtn = document.querySelector('.lang-btn[data-lang="' + target + '"]');
+                        if (globalBtn) globalBtn.click();
+                    });
+                }
             }
 
             // Update tags
