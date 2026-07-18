@@ -4,7 +4,19 @@
         var gotoBtn = document.getElementById('joke-goto-btn');
         
         if (!gotoInput || !gotoBtn) return;
-        
+
+        // Keep max/placeholder in sync with however many jokes are loaded
+        function syncTotal() {
+            if (window.DATA && window.DATA.jokes) {
+                var total = window.DATA.jokes.length;
+                gotoInput.max = total;
+                gotoInput.placeholder = '1-' + total;
+            } else {
+                setTimeout(syncTotal, 500);
+            }
+        }
+        syncTotal();
+
         gotoBtn.addEventListener('click', function() {
             var n = parseInt(gotoInput.value, 10);
             var total = (window.DATA && window.DATA.jokes) ? window.DATA.jokes.length : 57;
