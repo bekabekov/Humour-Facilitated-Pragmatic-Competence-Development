@@ -148,3 +148,50 @@
         }
     });
 })();
+
+
+/* Joke of the Day: deterministic daily pick, rendered on Home once data loads. */
+(function() {
+    'use strict';
+    function initJokeOfDay() {
+        var box = document.getElementById('joke-of-day');
+        if (!box) return;
+        var tries = 0;
+        (function wait() {
+            if (window.DATA && window.DATA.jokes && window.DATA.jokes.length) {
+                var jokes = window.DATA.jokes;
+                var idx = Math.floor(Date.now() / 86400000) % jokes.length;
+                var joke = jokes[idx];
+                var textEl = document.getElementById('joke-of-day-text');
+                if (textEl) textEl.textContent = joke.text;
+                var openBtn = document.getElementById('joke-of-day-open');
+                if (openBtn) {
+                    openBtn.addEventListener('click', function() {
+                        if (window.JokeModule && typeof window.JokeModule.renderJoke === 'function') {
+                            window.JokeModule.renderJoke(idx);
+                        }
+                        if (window.Navigation && typeof window.Navigation.showSection === 'function') {
+                            window.Navigation.showSection('joke');
+                        } else {
+                            window.location.hash = '#joke';
+                        }
+                    });
+                }
+                var share = document.getElementById('joke-of-day-share');
+                if (share) {
+                    share.href = 'https://t.me/share/url?url=' +
+                        encodeURIComponent('https://learnwithhumour.uz/') +
+                        '&text=' + encodeURIComponent(joke.text + '\n\nLearn why it\'s funny:');
+                }
+                box.style.display = 'block';
+            } else if (tries++ < 40) {
+                setTimeout(wait, 250);
+            }
+        })();
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initJokeOfDay);
+    } else {
+        initJokeOfDay();
+    }
+})();
