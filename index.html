@@ -25,6 +25,11 @@
     <meta name="twitter:title" content="Learn with Humour — Teaching Pragmatic Competence Through Humour">
     <meta name="twitter:description" content="Understand British humour, sarcasm and irony through 80 analysed jokes, 6 self-paced modules and quizzes. Free, in English and Uzbek.">
 
+    <!-- Share preview image: activates once og-image.png (1200x630) is uploaded to the repo root -->
+    <meta property="og:image" content="https://learnwithhumour.uz/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2268%22 font-family=%22Georgia,serif%22 font-size=%2252%22 font-weight=%22bold%22 fill=%22white%22 text-anchor=%22middle%22>LH</text></svg>">
 
     <!-- Structured data for Google -->
@@ -69,11 +74,6 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co;">
 </head>
 <body>
-    <!-- Dark Mode Toggle -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle Dark Mode">
-        <span id="theme-icon">🌙</span>
-    </button>
-
     <!-- Language Toggle -->
     <div class="language-toggle" id="language-toggle">
         <button class="lang-btn active" data-lang="en" aria-label="Switch to English">ENG</button>
@@ -219,7 +219,7 @@
                         <div class="modal-tour-item">
                             <span class="modal-emoji-tour">❓</span>
                             <div>
-                                <strong class="modal-tour-item-title">12 Questions:</strong>
+                                <strong class="modal-tour-item-title">15 Questions:</strong>
                                 <span class="modal-tour-item-desc"> Multiple choice questions about humor and pragmatics</span>
                             </div>
                         </div>
@@ -304,6 +304,7 @@
                 <nav class="primary-nav">
                     <a href="#home" class="nav-link" aria-label="Go to home dashboard">🏠 Home</a>
                     <a href="#guide" class="nav-link" aria-label="Go to learning path">📚 Learn</a>
+                    <a href="#joke" class="nav-link" aria-label="Go to joke collection">Jokes</a>
                     <a href="#progress" class="nav-link" aria-label="Go to progress tracking">📊 Progress</a>
                     <a href="#resources" class="nav-link" aria-label="Go to resources">📖 Resources</a>
                     <a href="#about" class="nav-link" aria-label="Go to about section">ℹ️ About</a>
@@ -360,6 +361,16 @@
                             <h3 style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">3️⃣ Start Learning</h3>
                             <p style="color:var(--text-secondary); margin-bottom:12px;">Jump into jokes, theory, and practice tailored to you.</p>
                             <button class="nav-btn secondary-btn" type="button" data-action="nav-section" data-section="activities" aria-label="Open activities section to start learning">Open Activities</button>
+                        </div>
+                    </div>
+
+                    <!-- Joke of the Day (filled by index-init.js once data loads) -->
+                    <div id="joke-of-day" style="display: none; background: white; border-radius: 16px; padding: 20px 24px; margin-top: 24px; border-left: 4px solid #6366f1; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <h3 style="margin-bottom: 8px;">😂 Joke of the Day</h3>
+                        <p id="joke-of-day-text" style="font-size: 1.05rem; color: #1f2937; line-height: 1.6; margin-bottom: 12px;"></p>
+                        <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
+                            <button class="nav-btn" type="button" id="joke-of-day-open">See why it's funny →</button>
+                            <a id="joke-of-day-share" href="#" target="_blank" rel="noopener noreferrer" style="color: #6366f1; font-weight: 600;">📤 Share on Telegram</a>
                         </div>
                     </div>
 
@@ -599,7 +610,7 @@
 
                         <div style="margin: 32px 0;">
                             <div id="placement-score" style="font-size: 4em; font-weight: 700; color: #10b981; line-height: 1;">0</div>
-                            <div style="color: #6b7280; font-size: 1.1em;">out of 12 correct</div>
+                            <div style="color: #6b7280; font-size: 1.1em;">out of 15 correct</div>
                         </div>
 
                         <div style="background: white; border-radius: 12px; padding: 24px; margin: 24px 0;">
@@ -773,7 +784,7 @@
                 </div>
 
                 <div class="joke-card">
-                    <button class="joke-favorite" id="joke-favorite-btn" aria-label="Add joke to favorites">?</button>
+                    <button class="joke-favorite" id="joke-favorite-btn" aria-label="Add joke to favorites">☆</button>
                     <div class="joke-text" id="joke-text" aria-live="polite">Loading joke...</div>
                     <div class="badge-container">
                         <span class="level-badge" id="joke-level-tag"></span>
@@ -843,7 +854,7 @@
                             <strong>SOCIOPRAGMATIC</strong>
                             <p style="font-size: 0.9em; margin-top: 10px;">Social Context</p>
                         </div>
-                        <div class="model-arrow">?</div>
+                        <div class="model-arrow">=</div>
                         <div class="model-box" style="background: var(--success);">
                             <strong>PRAGMATIC COMPETENCE</strong>
                             <p style="font-size: 0.9em; margin-top: 10px;">Appropriate Communication</p>
@@ -861,7 +872,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header" data-target="theory-intro-body" aria-expanded="false" aria-controls="theory-intro-body" aria-label="What is Pragmatic Competence? Toggle to expand or collapse">
                         <span>🎯 What is Pragmatic Competence? (Start Here!) <span class="section-time-estimate">⏱️ 3 min</span></span>
-                        <span>?</span>
+                        <span>▼</span>
                     </button>
                     <div class="accordion-body" id="theory-intro-body">
     <div class="theory-content-enhanced">
@@ -870,8 +881,8 @@
                         <h4 style="margin-top: 20px;">Why Grammar Alone Isn't Enough:</h4>
                         <div class="theory-box">
                             <p><strong>Example 1:</strong></p>
-                            <p>? <em>"Give me water."</em> (Grammatically correct, pragmatically rude in most contexts)</p>
-                            <p>? <em>"Could I have some water, please?"</em> (Grammatically correct AND pragmatically appropriate)</p>
+                            <p>✗ <em>"Give me water."</em> (Grammatically correct, pragmatically rude in most contexts)</p>
+                            <p>✓ <em>"Could I have some water, please?"</em> (Grammatically correct AND pragmatically appropriate)</p>
                             
                             <p style="margin-top: 15px;"><strong>Example 2:</strong></p>
                             <p>Student to teacher: <em>"Hey, you got a pen?"</em></p>
@@ -905,7 +916,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header" data-target="pragmalinguistic-body" aria-expanded="false" aria-controls="pragmalinguistic-body" aria-label="Pragmalinguistic Knowledge: The Linguistic Tools. Toggle to expand or collapse">
                         <span>🔤 Pragmalinguistic Knowledge: The Linguistic Tools <span class="section-time-estimate">⏱️ 5 min</span></span>
-                        <span>?</span>
+                        <span>▼</span>
                     </button>
                     <div class="accordion-body" id="pragmalinguistic-body">
     <div class="theory-content-enhanced">
@@ -1061,7 +1072,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header" data-target="sociopragmatic-body" aria-expanded="false" aria-controls="sociopragmatic-body" aria-label="Sociopragmatic Knowledge: Reading Social Context. Toggle to expand or collapse">
                         <span>🌍 Sociopragmatic Knowledge: Reading Social Context <span class="section-time-estimate">⏱️ 4 min</span></span>
-                        <span>?</span>
+                        <span>▼</span>
                     </button>
                     <div class="accordion-body" id="sociopragmatic-body">
     <div class="theory-content-enhanced">
@@ -1150,7 +1161,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header" data-target="humor-theory-body">
                         <span>💡 Why Humor Works for Teaching Pragmatics</span>
-                        <span>?</span>
+                        <span>▼</span>
                     </button>
                     <div class="accordion-body" id="humor-theory-body">
     <div class="theory-content-enhanced">
@@ -1226,7 +1237,7 @@
                 <div class="accordion-item">
                     <button class="accordion-header" data-target="pragmatic-failure-body">
                         <span>⚠️ Pragmatic Failure: When Communication Breaks Down</span>
-                        <span>?</span>
+                        <span>▼</span>
                     </button>
                     <div class="accordion-body" id="pragmatic-failure-body">
     <div class="theory-content-enhanced">
@@ -1398,7 +1409,7 @@
                 <div style="text-align: center; margin-top: 30px;">
                     <button class="nav-btn no-print" id="reset-progress-btn" style="background: var(--danger); color: white;">🔄 Reset All Progress</button>
                     <p style="margin-top: 16px; color: var(--text-secondary); font-size: 0.9em;">
-                        💡 Your progress is saved securely in your browser. Use browser sync to access your progress across devices!
+                        💡 Your progress is saved in this browser. Use the QR backup below to move it to another device.
                     </p>
                 </div>
                 <!-- Progress Backup (Optional) -->
@@ -1465,48 +1476,6 @@
                         </p>
                     </div>
 
-                    <!-- Certificate -->
-                    <div id="certificate-container" class="theory-box" style="background: white; border: 8px double var(--primary); padding: 48px; margin-bottom: 32px; box-shadow: var(--shadow-2xl); position: relative;">
-                        <div style="position: absolute; top: 16px; right: 16px; font-size: 2rem; opacity: 0.1;">🎓</div>
-                        <div style="position: absolute; top: 16px; left: 16px; font-size: 2rem; opacity: 0.1;">🎓</div>
-                        <div style="position: absolute; bottom: 16px; right: 16px; font-size: 2rem; opacity: 0.1;">🎓</div>
-                        <div style="position: absolute; bottom: 16px; left: 16px; font-size: 2rem; opacity: 0.1;">🎓</div>
-
-                        <h3 style="font-family: 'Georgia', serif; font-size: 2rem; color: var(--primary-dark); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px;">
-                            Certificate of Completion
-                        </h3>
-
-                        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px; font-style: italic;">
-                            This is to certify that
-                        </p>
-
-                        <div id="certificate-name" style="font-family: 'Georgia', serif; font-size: 2.5rem; color: var(--text-primary); margin-bottom: 24px; border-bottom: 2px solid var(--border); padding-bottom: 8px; font-weight: bold;">
-                            Pragmatics Student
-                        </div>
-
-                        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.8;">
-                            has successfully completed all six modules of<br>
-                            <strong style="color: var(--primary-dark);">Teaching Pragmatic Competence Through Humor</strong>
-                        </p>
-
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0; padding: 24px; background: var(--bg-secondary); border-radius: 12px;">
-                            <div>
-                                <div style="color: var(--text-tertiary); font-size: 0.9rem; margin-bottom: 4px;">Completion Date</div>
-                                <div id="certificate-date" style="color: var(--text-primary); font-weight: 600;">-</div>
-                            </div>
-                            <div>
-                                <div style="color: var(--text-tertiary); font-size: 0.9rem; margin-bottom: 4px;">Overall Mastery</div>
-                                <div id="certificate-score" style="color: var(--success); font-weight: 600; font-size: 1.5rem;">-</div>
-                            </div>
-                        </div>
-
-                        <div style="margin-top: 32px; padding-top: 24px; border-top: 2px solid var(--border);">
-                            <p style="font-size: 0.9rem; color: var(--text-tertiary); font-style: italic;">
-                                Certificate ID: <span id="certificate-id">-</span>
-                            </p>
-                        </div>
-                    </div>
-
                     <!-- Achievement Stats -->
                     <div class="theory-box" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border-left: 4px solid var(--primary); margin-bottom: 32px;">
                         <h3 style="color: var(--primary-dark); margin-bottom: 20px; font-size: 1.5rem;">🏆 Your Achievement Summary</h3>
@@ -1520,23 +1489,6 @@
                         <h3 style="color: var(--text-primary); margin-bottom: 20px; font-size: 1.5rem;">🎯 What's Next?</h3>
 
                         <div style="display: grid; gap: 16px; text-align: left;">
-                            <!-- Share Achievement -->
-                            <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 12px; border-left: 4px solid var(--warning);">
-                                <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                                    <span style="font-size: 2rem; margin-right: 12px;">📢</span>
-                                    <h4 style="color: #78350f; margin: 0; font-size: 1.1rem;">Share Your Achievement</h4>
-                                </div>
-                                <p style="color: #92400e; margin-bottom: 12px; line-height: 1.6;">
-                                    Let others know about your accomplishment! Download your certificate or share your progress.
-                                </p>
-                                <button class="cta-primary" type="button" data-action="certificate-download" style="margin-right: 8px;">
-                                    📥 Download Certificate
-                                </button>
-                                <button class="nav-btn" type="button" data-action="certificate-share">
-                                    📤 Share
-                                </button>
-                            </div>
-
                             <!-- Review Modules -->
                             <div style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); padding: 20px; border-radius: 12px; border-left: 4px solid var(--primary);">
                                 <div style="display: flex; align-items: center; margin-bottom: 12px;">
@@ -2466,7 +2418,7 @@
                     <div class="accordion-item">
                         <button class="accordion-header" data-target="act-comparison">
                             <span>Activity 1: Cross-Cultural Pragmatic Comparison</span>
-                            <span>?</span>
+                            <span>▼</span>
                         </button>
                         <div class="accordion-body" id="act-comparison">
                             <p><strong>Level:</strong> B2-C1</p>
@@ -2486,7 +2438,7 @@
                     <div class="accordion-item">
                         <button class="accordion-header" data-target="act-roleplay">
                             <span>Activity 2: Pragmatic Role-Play Scenarios</span>
-                            <span>?</span>
+                            <span>▼</span>
                         </button>
                         <div class="accordion-body" id="act-roleplay">
                             <p><strong>Level:</strong> B1-C1</p>
@@ -2506,7 +2458,7 @@
                     <div class="accordion-item">
                         <button class="accordion-header" data-target="act-failure">
                             <span>Activity 3: Pragmatic Failure Analysis</span>
-                            <span>?</span>
+                            <span>▼</span>
                         </button>
                         <div class="accordion-body" id="act-failure">
                             <p><strong>Level:</strong> B2-C1</p>
@@ -2525,7 +2477,7 @@
                     <div class="accordion-item">
                         <button class="accordion-header" data-target="act-humor">
                             <span>Activity 4: Create Your Own Pragmatic Humor</span>
-                            <span>?</span>
+                            <span>▼</span>
                         </button>
                         <div class="accordion-body" id="act-humor">
                             <p><strong>Level:</strong> B1-C1</p>
